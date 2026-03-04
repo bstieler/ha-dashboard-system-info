@@ -1,0 +1,65 @@
+title: System Info
+views:
+  - title: System Info
+    path: system-info
+    icon: mdi:chip
+    cards:
+      - type: markdown
+        content: |
+          # Raspberry Pi
+          Key system information and history
+
+      - type: entities
+        title: Current Values
+        show_header_toggle: false
+        entities:
+          - entity: sensor.processor_use
+            name: Processor use
+          - entity: sensor.last_boot
+            name: Last boot
+          - entity: sensor.system_since_last_boot
+            name: Since last boot
+          - entity: sensor.disk_free
+            name: Disk free (/)
+          - entity: sensor.memory_free
+            name: Memory free
+          - entity: sensor.processor_temperature
+            name: Processor temperature
+
+      - type: history-graph
+        title: Processor Load (2h)
+        hours_to_show: 2
+        min_y_axis: 0
+        max_y_axis: 100
+        refresh_interval: 60
+        entities:
+          - entity: sensor.processor_use
+            name: Processor use
+
+      - type: history-graph
+        title: Free Memory (2h)
+        hours_to_show: 2
+        min_y_axis: 0
+        refresh_interval: 60
+        entities:
+          - entity: sensor.memory_free
+            name: Memory free
+
+      - type: history-graph
+        title: Disk Free / (48h)
+        hours_to_show: 48
+        min_y_axis: 0
+        max_y_axis: 100
+        refresh_interval: 60
+        entities:
+          - entity: sensor.disk_free
+            name: Disk free (/)
+
+      - type: history-graph
+        title: Processor Temperature (2h)
+        hours_to_show: 2
+        min_y_axis: 0
+        refresh_interval: 60
+        entities:
+          - entity: sensor.processor_temperature
+            name: Processor temperature
