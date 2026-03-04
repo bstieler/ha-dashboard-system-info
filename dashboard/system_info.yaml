@@ -21,7 +21,7 @@ views:
             name: Since last boot
           - entity: sensor.disk_free
             name: Disk free (/)
-          - entity: sensor.home_assistant_core_memory_percent
+          - entity: sensor.memory_usage
             name: Memory usage
           - entity: sensor.processor_temperature
             name: Processor temperature
@@ -43,7 +43,7 @@ views:
         max_y_axis: 100
         refresh_interval: 60
         entities:
-          - entity: sensor.home_assistant_core_memory_percent
+          - entity: sensor.memory_usage
             name: Memory usage
 
       - type: history-graph
