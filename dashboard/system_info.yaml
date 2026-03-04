@@ -21,7 +21,7 @@ views:
             name: Since last boot
           - entity: sensor.disk_free
             name: Disk free (/)
-          - entity: sensor.memory_available
+          - entity: sensor.memory_free
             name: Available memory
           - entity: sensor.processor_temperature
             name: Processor temperature
@@ -42,7 +42,7 @@ views:
         min_y_axis: 0
         refresh_interval: 60
         entities:
-          - entity: sensor.memory_available
+          - entity: sensor.memory_free
             name: Available memory
 
       - type: history-graph
