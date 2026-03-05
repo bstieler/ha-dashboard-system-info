@@ -1,0 +1,67 @@
+# Feature package: System information sensors
+command_line:
+  - sensor:
+      name: Processor use
+      unique_id: system_processor_use
+      command: >-
+        sh -c 'PREV_IDLE=$(awk '"'"'/^cpu / {print $5}'"'"' /proc/stat); PREV_TOTAL=$(awk '"'"'/^cpu / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); sleep 1; IDLE=$(awk '"'"'/^cpu / {print $5}'"'"' /proc/stat); TOTAL=$(awk '"'"'/^cpu / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); DIFF_IDLE=$((IDLE-PREV_IDLE)); DIFF_TOTAL=$((TOTAL-PREV_TOTAL)); awk -v idle=$DIFF_IDLE -v total=$DIFF_TOTAL '"'"'BEGIN { if (total <= 0) print 0; else printf "%.1f", (100 * (total - idle) / total) }'"'"''
+      unit_of_measurement: "%"
+      scan_interval: 60
+
+  - sensor:
+      name: Memory free
+      unique_id: system_memory_free
+      command: >-
+        sh -c 'free -m | awk '"'"'/^Mem:/ {print $4}'"'"''
+      unit_of_measurement: "MiB"
+      scan_interval: 60
+
+  - sensor:
+      name: Memory usage
+      unique_id: system_memory_usage
+      command: >-
+        sh -c 'free -m | awk '"'"'/^Mem:/ { if ($2 > 0) printf "%.1f", ($3 / $2) * 100; else print 0 }'"'"''
+      unit_of_measurement: "%"
+      scan_interval: 60
+
+  - sensor:
+      name: Disk free
+      unique_id: system_disk_free_root
+      command: >-
+        sh -c 'df -BG / | awk '"'"'NR==2 {gsub(/G/, "", $4); print $4}'"'"''
+      unit_of_measurement: "GiB"
+      scan_interval: 300
+
+  - sensor:
+      name: Processor temperature
+      unique_id: system_processor_temperature
+      command: >-
+        sh -c 'awk '"'"'{printf "%.1f", $1/1000}'"'"' /sys/class/thermal/thermal_zone0/temp'
+      unit_of_measurement: "°C"
+      device_class: temperature
+      scan_interval: 60
+
+  - sensor:
+      name: Last boot
+      unique_id: system_last_boot
+      command: >-
+        sh -c 'BOOT=$(awk '"'"'/^btime / {print $2}'"'"' /proc/stat); date -d "@$BOOT" "+%Y-%m-%dT%H:%M:%S%z" 2>/dev/null || echo unavailable'
+      scan_interval: 3600
+
+template:
+  - sensor:
+      - name: System Since Last Boot
+        unique_id: system_since_last_boot
+        icon: mdi:clock-outline
+        state: >-
+          {% set last_boot_raw = states('sensor.last_boot') %}
+          {% set last_boot = last_boot_raw | as_datetime(default=None) %}
+          {% if last_boot is none %}
+            unavailable
+          {% else %}
+            {% set seconds = (now() - (last_boot | as_local)).total_seconds() | int(0) %}
+            {% set days = (seconds // 86400) | int %}
+            {% set hours = ((seconds % 86400) // 3600) | int %}
+            {% set minutes = ((seconds % 3600) // 60) | int %}
+            {{ days }}d {{ hours }}h {{ minutes }}m
+          {% endif %}
