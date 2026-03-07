@@ -1,0 +1,53 @@
+{
+  "project_id": "ha-dashboard-system-info",
+  "functional_deploy_root": "ha-dashboard-system-info-package",
+  "verify_reload": "yaml_reload",
+  "owned_entity_patterns": [
+    "sensor.processor_use",
+    "sensor.memory_free",
+    "sensor.memory_usage",
+    "sensor.disk_free",
+    "sensor.processor_temperature",
+    "sensor.last_boot",
+    "sensor.system_since_last_boot"
+  ],
+  "activations": [
+    {
+      "kind": "dashboard_package",
+      "deploy_project_id": "ha-dashboard-system-info-package",
+      "dashboard_key": "system-info",
+      "registration_repo_path": "ha-dashboard-system-info/packages/ha_dashboard_system_info.yaml",
+      "registration_server_path": "/config/packages/ha_dashboard_system_info.yaml",
+      "dashboard_repo_path": "ha-dashboard-system-info/dashboard/system_info.yaml",
+      "dashboard_server_path": "/config/dashboards/system_info.yaml"
+    }
+  ],
+  "smoke_checks": [
+    {
+      "type": "remote_file_exists",
+      "label": "system info dashboard file",
+      "path": "/config/dashboards/system_info.yaml"
+    },
+    {
+      "type": "remote_file_contains",
+      "label": "system info dashboard registration",
+      "path": "/config/packages/ha_dashboard_system_info.yaml",
+      "pattern": "system-info:"
+    },
+    {
+      "type": "entity_registry_contains",
+      "label": "processor use entity",
+      "entity_id": "sensor.processor_use"
+    },
+    {
+      "type": "entity_registry_contains",
+      "label": "since last boot entity",
+      "entity_id": "sensor.system_since_last_boot"
+    }
+  ],
+  "log_keywords": [
+    "system_info",
+    "processor_use",
+    "sensors_system_info"
+  ]
+}

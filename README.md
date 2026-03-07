@@ -18,6 +18,12 @@ cd /Users/bjoern/dev/ha-dev/ha-config
 ./scripts/deploy_ha_raspi.sh --project ha-dashboard-system-info-package --with-deps
 ```
 
+Release-relevanter Deploy mit Contract-/Smoke-Verifikation:
+
+```bash
+./scripts/deploy_ha_raspi.sh --project ha-dashboard-system-info-package --with-deps --verify
+```
+
 Low-level Deploys bleiben moeglich:
 
 ```bash
@@ -30,3 +36,11 @@ Low-level Deploys bleiben moeglich:
 - Sollzustand ist die repo-owned Registrierung ueber `/config/packages/ha_dashboard_system_info.yaml`.
 - Eine alte Registrierung in `/config/configuration.yaml` unter `lovelace.dashboards.system-info`
   kann als Altzustand noch vorhanden sein, ist aber nicht mehr der gewuenschte Betriebsweg.
+
+## Project Contract
+- Maschinenlesbarer Vertrag: `project.yaml`
+- Contract-Check:
+
+```bash
+python3 ./scripts/check_ha_contracts.py --project ha-dashboard-system-info
+```
