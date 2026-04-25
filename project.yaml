@@ -4,6 +4,10 @@
   "verify_reload": "yaml_reload",
   "owned_entity_patterns": [
     "sensor.processor_use",
+    "sensor.processor_use_core_0",
+    "sensor.processor_use_core_1",
+    "sensor.processor_use_core_2",
+    "sensor.processor_use_core_3",
     "sensor.memory_free",
     "sensor.memory_usage",
     "sensor.disk_free",

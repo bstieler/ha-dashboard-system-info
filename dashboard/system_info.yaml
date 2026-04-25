@@ -37,6 +37,22 @@ views:
             name: Processor use
 
       - type: history-graph
+        title: Per-Core Load (2h)
+        hours_to_show: 2
+        min_y_axis: 0
+        max_y_axis: 100
+        refresh_interval: 60
+        entities:
+          - entity: sensor.processor_use_core_0
+            name: Core 0
+          - entity: sensor.processor_use_core_1
+            name: Core 1
+          - entity: sensor.processor_use_core_2
+            name: Core 2
+          - entity: sensor.processor_use_core_3
+            name: Core 3
+
+      - type: history-graph
         title: Memory Usage (2h)
         hours_to_show: 2
         min_y_axis: 0
