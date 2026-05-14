@@ -80,6 +80,17 @@ command_line:
       unit_of_measurement: "%"
       scan_interval: 60
 
+command_line:
+  - sensor:
+      name: HA Config Deploy Overview
+      unique_id: ha_config_deploy_overview
+      command: >-
+        python3 -c "import json, glob; files=sorted(glob.glob('/config/.ha-config-deploy/state/*.json')); projects=[]; [projects.append(json.load(open(f))) for f in files if f.endswith('.json')]; print(json.dumps({'count': len(projects), 'projects': projects}))"
+      value_template: "{{ value_json.count }}"
+      json_attributes:
+        - projects
+      scan_interval: 300
+
 template:
   - sensor:
       - name: System Since Last Boot
