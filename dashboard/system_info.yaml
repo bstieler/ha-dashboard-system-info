@@ -1,5 +1,23 @@
 title: System Info
 views:
+  - title: HA Config Deploy
+    path: ha-config-deploy
+    icon: mdi:source-branch
+    cards:
+      - type: markdown
+        title: Projekt Overview
+        content: >-
+          {% set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] %}
+          {% if projects | count == 0 %}
+          _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
+          {% else %}
+          | Projekt | Version | Deploy-Zeit | Branch |
+          |---------|---------|-------------|--------|
+          {% for p in projects %}
+          | {{ p.project_id }} | `{{ p.version }}` | {{ (p.deployed_at | default(''))[:16] }} | {{ p.branch }} |
+          {% endfor %}
+          {% endif %}
+
   - title: System Info
     path: system-info
     icon: mdi:chip
