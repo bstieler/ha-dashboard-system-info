@@ -25,6 +25,4 @@
   3. nur bei weiter fehlender Sidebar-Aktivierung `ha core restart`
 
 ## Validation
-- Vor release-relevanten Aenderungen:
-  - `python3 ./scripts/check_ha_contracts.py --project ha-dashboard-system-info`
-  - `./scripts/deploy_ha_raspi.sh --project ha-dashboard-system-info-package --with-deps --dry-run`
+- Keine projektspezifischen Zusatz-Validations erforderlich. Siehe root-AGENTS.md fuer Standard-Workflow.
