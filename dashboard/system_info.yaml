@@ -11,10 +11,10 @@ views:
           {%- if projects | count == 0 -%}
           _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
           {%- else -%}
-          | Projekt | Version | Deploy-Zeit | Branch |
-          |---------|---------|-------------|--------|
+          | Projekt | Version | Erstellt | Letzter Deploy | Branch |
+          |---------|---------|----------|----------------|--------|
           {%- for p in projects %}
-          | {{ p.project_id }} | `{{ p.version }}` | {{ (p.deployed_at | default(''))[:16] }} | {{ p.branch }} |
+          | {{ p.project_id }} | `{{ p.version }}` | {{ p.created_at_local | default('—') }} | {{ p.deployed_at_local | default('—') }} | {{ p.branch }} |
           {%- endfor -%}
           {%- endif -%}
 

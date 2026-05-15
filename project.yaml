@@ -53,5 +53,6 @@
     "system_info",
     "processor_use",
     "sensors_system_info"
-  ]
+  ],
+  "version": "0.1"
 }
