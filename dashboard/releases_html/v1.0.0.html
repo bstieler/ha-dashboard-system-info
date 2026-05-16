@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Release v1.0.0</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #333; }
+  h1 { border-bottom: 2px solid #03a9f4; padding-bottom: 0.5rem; }
+  h2 { color: #555; margin-top: 2rem; font-size: 1.25rem; }
+  ul { padding-left: 1.5rem; }
+  li { margin: 0.5rem 0; }
+  .meta { color: #666; margin-bottom: 2rem; }
+  .back { margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; }
+  a { color: #03a9f4; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1>Release v1.0.0</h1>
+<p><strong>Datum:</strong> 2026-05-16</p>
+<p><strong>Items:</strong> 115</p>
+<p><strong>Gesamt-Deployment:</strong> core_restart</p>
+<h2>Neue Features</h2>
+<ul>
+<li><strong>STG-2.100</strong> — System Info Dashboard: View &#x27;HA Config Projekt Overview&#x27; anlegen (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.101</strong> — Projekt Overview: echte Versionsnummern und lesbare Zeitstempel (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.109</strong> — Sensor-Fallback und Outlier-Filter im Session-Log sichtbar machen (<code>core_restart</code>)</li>
+<li><strong>STG-2.116</strong> — PV-History-Cache: Eigene SQLite-DB mit stündlichen Daten, 366-Tage-Training, kein Purge (<code>core_restart</code>)</li>
+<li><strong>STG-2.32</strong> — T1 dynamisch an aktuelles SOC und Ladegeschwindigkeit koppeln (<code>core_restart</code>)</li>
+<li><strong>STG-2.35</strong> — Periodische Verifikation im Skip-Apply-Pfad bei stabilem Self-Use (<code>core_restart</code>)</li>
+<li><strong>STG-2.48</strong> — PV-Forecast Dashboard V2: Delta IST/Latest vs. BoD Diagramm erweitern (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.51</strong> — SOC-Regelung: Degradationslogik fuer Sensor-Missing statt Hard-Reset (<code>core_restart</code>)</li>
+<li><strong>STG-2.52</strong> — SOC-Regelung: Telemetry-Erweiterung fuer Sensor-Missing-Analyse (<code>core_restart</code>)</li>
+<li><strong>STG-2.62</strong> — Phasen-Hysterese: Rückschritte nach Erreichen einer höheren Phase verhindern (<code>core_restart</code>)</li>
+<li><strong>STG-2.63</strong> — Dashboard-Fixierung: Abgeschlossene Phasen-Werte einfrieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.67</strong> — SQLite-Optimierung Teil 1: Query-LIMIT und Connection-Reuse (<code>core_restart</code>)</li>
+<li><strong>STG-2.68</strong> — SQLite-Optimierung Teil 2: Executor-Timeout für Evaluation-Sensoren (<code>core_restart</code>)</li>
+<li><strong>STG-2.70</strong> — house_consumption_forecast: k-NN Performance-Optimierung bei gleicher Forecast-Qualitaet (<code>core_restart</code>)</li>
+<li><strong>STG-2.71</strong> — house_consumption_forecast: SCAN_INTERVAL auf 30 Minuten erhoehen (<code>core_restart</code>)</li>
+<li><strong>STG-2.73</strong> — house_consumption_forecast: Vorhersage cachen input-basiert (<code>core_restart</code>)</li>
+<li><strong>STG-2.88</strong> — Zirkulationspumpe: Stuck-/Recovery-Erkennung für beliebige Plugs designen (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.89</strong> — Batterie-Steuerung: Leistungskommando-Dispatch-Chart aus Dashboard entfernen (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.90</strong> — Batterie-Steuerung: Soll-SOC-Plan-Kurve (grün, 6h Forward) im Dashboard (<code>core_restart</code>)</li>
+<li><strong>STG-2.93</strong> — Charge-Control Warm-Start Teil 1: Snapshot erweitern und sofort bei Live persistieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.94</strong> — Charge-Control Warm-Start Teil 2: Runtime-Sensor sofortige Initialisierung (<code>core_restart</code>)</li>
+<li><strong>STG-2.95</strong> — Charge-Control Warm-Start Teil 3: Konsistenzmarker und Tests (<code>core_restart</code>)</li>
+<li><strong>STG-2.98</strong> — Deploy-Metadaten: Pro-Projekt JSON mit Version, Zeit und Branch persistieren (<code>none</code>)</li>
+<li><strong>STG-2.99</strong> — HA-Sensoren: Projekt-Deploy-Metadaten aus Server-JSON lesen (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.12</strong> — PV-Forecast V2 Dashboard: Tages-Verlaufsdiagramme in View &#x27;Tabelle&#x27; – Temperatur entfernen, Forecast/Band als Spline-Kurven (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.14</strong> — Dashboard Session-Log visuell aufwerten (Farben, Struktur, Limit-Anzeige) (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.4</strong> — Zirkulationspumpe: Anwesenheitssteuerung auf Zeitfenster umstellen, Steuerung nur manuell (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.5a</strong> — PV-Forecast Confidence: Python-Code für kontinuierlichen Drift-Score und Band-Relativierung vorbereiten (<code>core_restart</code>)</li>
+<li><strong>STG-4.5b</strong> — PV-Forecast Confidence: Template-Sensor Formel überarbeiten – relative Band-Penalty + kontinuierlicher Drift (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.6a</strong> — PV-Forecast V2 Dashboard: Default-Seite auf &#x27;Heute&#x27; setzen (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.6b</strong> — PV-Forecast V2 Dashboard: Diagramme zwischen Modell- und Historie-Tab verschieben (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.7</strong> — PV-Forecast V2 Dashboard: Overview-Seite aus V1 als neue Seite übernehmen (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.8</strong> — PV-Forecast V2 Dashboard: Zeitraum-Historien-Diagramme in View Modell von 10 auf 14 Tage erweitern (<code>core_restart</code>)</li>
+<li><strong>STG-5.2</strong> — Testabdeckung über alle Projekte analysieren und Handlungsempfehlung erarbeiten (<code>none</code>)</li>
+<li><strong>STG-5.3</strong> — Smoke-Tests für testlose Subprojekte: alexa-automation, circulation-pump, dashboard-system-info, dashboard-zs7status (<code>yaml_reload</code>)</li>
+<li><strong>STG-6.11</strong> — runtime_decision.py: Null-Handling konsistent machen und Snapshot-Fallback robuster gestalten (<code>core_restart</code>)</li>
+<li><strong>STG-6.12</strong> — Backlog-Epic-Struktur analysieren und sauber regeln (oder ersetzen) (<code>none</code>)</li>
+<li><strong>STG-6.7</strong> — Dashboard-Logging überarbeiten — verständliche Ereignisanzeige statt Fachbegriffe (<code>core_restart</code>)</li>
+<li><strong>STG-6.8</strong> — AGENTS.md vereinheitlichen: allgemeine Regeln zentralisieren, nur projektspezifische Infos lokal belassen (<code>none</code>)</li>
+<li><strong>STG-7.1b</strong> — Release Pipeline Skript: scripts/release_pipeline.py erstellen (<code>none</code>)</li>
+<li><strong>STG-7.1c</strong> — Release Pipeline Dashboard: Releases-Seite in System-Info-Dashboard (<code>yaml_reload</code>)</li>
+</ul>
+<h2>Bugfixes</h2>
+<ul>
+<li><strong>STG-2.110</strong> — SOC-Plan-Kurve: Maximalwert auf 100% begrenzen statt Ziel-SOC 105% (<code>core_restart</code>)</li>
+<li><strong>STG-2.111</strong> — pv_forecast entity.py: native_value und available mit isinstance-Prüfungen härten (<code>core_restart</code>)</li>
+<li><strong>STG-2.112</strong> — house_consumption_forecast: Past-only intervals sollten Forecast-Quantile auf None setzen (<code>core_restart</code>)</li>
+<li><strong>STG-2.115</strong> — Recorder-Purge auf 30 Tage erhöhen — Dashboard-Charts fixen (<code>none</code>)</li>
+<li><strong>STG-2.22</strong> — Zirkulationspumpe: Guard-Klausel für switch.turn_on/turn_off gegen Switchbot-BLE-Race-Condition (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.23</strong> — PV-Forecast v2: Template-Sensoren mit unit_of_measurement dürfen nicht den String &#x27;unavailable&#x27; zurückgeben (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.25</strong> — Zirkulationspumpe: Guard-Klausel vervollständigen und konsistent machen (Follow-up zu STG-2.22) (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.26</strong> — PV-Forecast V2 Template-Sensoren: Fehlerbehandlung vereinheitlichen und Edge Cases härten (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.30</strong> — ForecastScheduler: CancelledError-Handling in teardown(), Typ-Hints für Tasks, WeakRef-Callbacks (<code>core_restart</code>)</li>
+<li><strong>STG-2.54</strong> — Zirkulationspumpe: Durchspülungstimer bleibt nach Abwesenheit im Zustand idle (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.87</strong> — Zirkulationspumpe: Track Last Run End und Flush Timer Reset auf dynamischen Switch umstellen (<code>yaml_reload</code>)</li>
+<li><strong>STG-2.92</strong> — Bugfix: SOC Plan Curve Sensor schreibt nie einen Zustand (<code>core_restart</code>)</li>
+<li><strong>STG-4.9</strong> — PV-Forecast V2 Dashboard: Delta IST vs BoD – letzter Punkt soll letzte abgeschlossene Stunde sein (<code>yaml_reload</code>)</li>
+</ul>
+<h2>Technisch</h2>
+<ul>
+<li><strong>STG-1.1</strong> — Shared Component Library: open_meteo_client.py und Recorder-Attribute-Helpers deduplizieren (<code>core_restart</code>)</li>
+<li><strong>STG-1.2</strong> — Hartcodierte Defaults aus sensor.py in const.py pro Component auslagern (<code>core_restart</code>)</li>
+<li><strong>STG-2.1</strong> — sensor.py God Objects entflechten – Coordinator / Entities / Utilities trennen (<code>core_restart</code>)</li>
+<li><strong>STG-2.10</strong> — Coordinator entflechten (3/3): MeteoAdapter für Open-Meteo-API-Calls extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.103</strong> — sensor.py Phase 1: State-Helper und DB-Queries extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.104</strong> — sensor.py Phase 2: Sunrise/Sunset, Renderers und Forecast-Source extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.105</strong> — sensor.py Phase 3: Phase3-Strategy und Solar-History extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.106</strong> — sensor.py Phase 4: Control-Targets und Runtime-Decision extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.107</strong> — sensor.py Phase 5: Konkrete Sensor-Klassen extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.108</strong> — MeteoAdapter: Retry-Backoff mit konfigurierbarem Maximum absichern (<code>core_restart</code>)</li>
+<li><strong>STG-2.113</strong> — entity.py Return-Typen: extra_state_attributes auf dict[str, Any] | None alignieren (<code>none</code>)</li>
+<li><strong>STG-2.13</strong> — entity.py Code-Robustheit – explizite Returns und Typprüfungen vereinheitlichen (<code>core_restart</code>)</li>
+<li><strong>STG-2.14</strong> — entity.py Divergenz-Dokumentation – state_class und projektspezifische Keys (<code>core_restart</code>)</li>
+<li><strong>STG-2.2</strong> — except Exception: durch spezifische Exceptions ersetzen (25+ Vorkommen) (<code>core_restart</code>)</li>
+<li><strong>STG-2.27</strong> — ForecastScheduler Basisklasse: Initial-Refresh-Scheduling (async_call_later, HA-Start-Listener) extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.28</strong> — PV-Forecast: Intraday-Minute-Tick, Entity-Lifecycle und Teardown in ForecastScheduler integrieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.31</strong> — pv_forecast entity.py – _prune_attributes_for_recorder O(n²) beheben (<code>core_restart</code>)</li>
+<li><strong>STG-2.33</strong> — GenCounter: Abflachende Hysterese statt Hard-Reset bei Last ≥ Generation (<code>core_restart</code>)</li>
+<li><strong>STG-2.34</strong> — P1-Berechnung: Fenster-bezogen statt globaler Tagesvergleich (<code>core_restart</code>)</li>
+<li><strong>STG-2.36</strong> — T2-Berechnung mit nichtlinearer SOC-Kurve korrigieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.4</strong> — Ungenutzte Imports in coordinator.py, entity.py und sensor.py bereinigen (<code>core_restart</code>)</li>
+<li><strong>STG-2.40</strong> — Phase-1-Entlade-Logik bedingt auf T1-Nähe einschränken (<code>core_restart</code>)</li>
+<li><strong>STG-2.42</strong> — house_consumption_forecast entity.py – _prune_attributes_for_recorder O(n²) beheben (<code>core_restart</code>)</li>
+<li><strong>STG-2.43</strong> — pv_forecast entity.py – PvForecastIntervalSensor Caching einführen (<code>core_restart</code>)</li>
+<li><strong>STG-2.44</strong> — house_consumption_forecast entity.py – IntervalSensor Cache-Granularität auf Minute fixen (<code>core_restart</code>)</li>
+<li><strong>STG-2.59</strong> — Solar-Forecast-History: DB-Query-Last reduzieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.6</strong> — Gemeinsame Patterns in pv_forecast/entity.py und house_consumption_forecast/entity.py analysieren und deduplizieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.60</strong> — Usable-Capacity-Estimate: DB-Query-Last reduzieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.61</strong> — Night-History (Control-Target-Source): DB-Query-Last reduzieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.7</strong> — entity.py Review-Follow-up: ValueError-Handling, Template-Exceptions, Performance und Divergenzen (<code>core_restart</code>)</li>
+<li><strong>STG-2.8</strong> — Coordinator entflechten (1/3): StateRepository für Persistenz und Storage extrahieren (<code>core_restart</code>)</li>
+<li><strong>STG-2.85</strong> — T2-Berechnung: 15-Minuten-Slot-Ansatz durch direkte Cross-Over-Funktion ersetzen (<code>core_restart</code>)</li>
+<li><strong>STG-3.1</strong> — Domain-Logik (model.py, history.py, interval.py, backtest.py) von homeassistant-Imports entkoppeln (<code>core_restart</code>)</li>
+<li><strong>STG-4.10</strong> — PV-Forecast V2 Dashboard: Delta IST vs BoD – Code-Review-Follow-up (Duplikation, Client-Zeit, Invalid-Date) (<code>yaml_reload</code>)</li>
+<li><strong>STG-4.11</strong> — PV-Forecast V2 Dashboard: Neue View &#x27;Tabelle&#x27; – Code-Review-Follow-up (Duplikation, sum-Filter, Layout-Konsistenz) (<code>yaml_reload</code>)</li>
+<li><strong>STG-6.1</strong> — Backlog-System auf UUID-basierte interne Referenzen umstellen (<code>none</code>)</li>
+<li><strong>STG-6.2</strong> — Backlog-Datenmodell: uuid Feld optional in Template und Parser einführen (<code>none</code>)</li>
+<li><strong>STG-6.3</strong> — Migrationsskript: Allen bestehenden Backlog-Items UUIDs vergeben (<code>none</code>)</li>
+<li><strong>STG-6.4</strong> — Backlog-Validierung: UUID-Einzigartigkeit und Konsistenz prüfen (<code>none</code>)</li>
+<li><strong>STG-6.5</strong> — Backlog-Referenzen: depends_on und superseded_by auf UUID umstellen (<code>none</code>)</li>
+<li><strong>STG-6.6</strong> — Backlog-Dokumentation und Tooling-Abschluss für UUID-Referenzen (<code>none</code>)</li>
+</ul>
+<h2>Erforderliche Schritte</h2>
+<ol>
+<li><code>yaml_reload</code></li>
+<li><code>core_restart</code></li>
+</ol>
+<div class="back"><a href="index.html">← Zurück zur Release-Übersicht</a></div>
+
+</body>
+</html>
