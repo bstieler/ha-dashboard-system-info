@@ -1,3 +1,54 @@
+# Release v1.2.0
+
+**Datum:** 2026-05-16  
+**Items:** 4  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-7.6** — Release Notes: Übersicht statt Wall-of-Text (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.91** — SOC-Plan-Kurve: Forecast-Daten für nächsten Tag bei Über-Mitternacht-Forward (`none`)
+- **STG-7.2** — Release Pipeline: YAML-Escaping in releases_card.yaml robuster machen (`none`)
+- **STG-7.3** — Release Pipeline: !include Verhalten fuer einzelne Cards in HA validieren (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
+# Release v1.1.0
+
+**Datum:** 2026-05-16  
+**Items:** 9  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-5.4** — pytest-cov einführen und Coverage-Schwellen definieren (`none`)
+- **STG-7.1d** — Release Pipeline Erstaktivierung: Test-Release v1.0.0 und Doku (`none`)
+- **STG-7.4** — Release Pipeline: Automatisches Deployment auf HA-Server beim Release (`none`)
+- **STG-7.6** — Release Notes: Übersicht statt Wall-of-Text (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.117** — PV-Forecast Bootstrap-CSV aktualisieren — Lücken zwischen altem CSV und heute schließen (`none`)
+- **STG-2.91** — SOC-Plan-Kurve: Forecast-Daten für nächsten Tag bei Über-Mitternacht-Forward (`none`)
+- **STG-7.1e** — Bugfix: duplicate command_line blocks in sensors_system_info.yaml (`yaml_reload`)
+- **STG-7.2** — Release Pipeline: YAML-Escaping in releases_card.yaml robuster machen (`none`)
+- **STG-7.3** — Release Pipeline: !include Verhalten fuer einzelne Cards in HA validieren (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.1.0
 
 **Datum:** 2026-05-16  
