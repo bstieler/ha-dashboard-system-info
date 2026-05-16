@@ -80,7 +80,6 @@ command_line:
       unit_of_measurement: "%"
       scan_interval: 60
 
-command_line:
   - sensor:
       name: HA Config Deploy Overview
       unique_id: ha_config_deploy_overview

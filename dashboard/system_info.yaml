@@ -18,6 +18,19 @@ views:
           {%- endfor -%}
           {%- endif -%}
 
+      - type: button
+        name: Releases
+        icon: mdi:tag-multiple
+        tap_action:
+          action: navigate
+          navigation_path: /dashboard-system-info/releases
+
+  - title: Releases
+    path: releases
+    icon: mdi:tag-multiple
+    cards:
+      - !include releases_card.yaml
+
   - title: System Info
     path: system-info
     icon: mdi:chip
