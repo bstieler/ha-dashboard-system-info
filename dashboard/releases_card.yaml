@@ -1,26 +1,35 @@
-type: markdown
-title: Release History
-content: '## Release v1.2.1 — 2026-05-16
+type: vertical-stack
+cards:
+- type: markdown
+  title: Release History
+  content: '## Release v1.3.0 — 2026-05-16
 
 
-  **Items:** 1 | **Deployment:** core_restart
+    **Items:** 4 | **Deployment:** core_restart
 
 
-  ---
+    ---
 
 
-  ## Frühere Releases
+    ## Frühere Releases
 
 
-  | Version | Datum | Items | Deployment |
+    | Version | Datum | Items | Deployment |
 
-  |---------|-------|-------|------------|
+    |---------|-------|-------|------------|
 
-  | v1.2.0 | 2026-05-16 | 4 | yaml_reload |
+    | v1.2.1 | 2026-05-16 | 1 | core_restart |
 
-  | v1.1.0 | 2026-05-16 | 9 | yaml_reload |
+    | v1.2.0 | 2026-05-16 | 4 | yaml_reload |
 
-  | v1.0.0 | 2026-05-16 | 115 | core_restart |
+    | v1.1.0 | 2026-05-16 | 9 | yaml_reload |
 
+    | v1.0.0 | 2026-05-16 | 115 | core_restart |
 
-  _Vollständige Details: siehe [releases](/local/releases/index.html)_'
+    '
+- type: button
+  name: Vollständige Release Notes
+  icon: mdi:file-document-outline
+  tap_action:
+    action: url
+    url_path: /local/releases/index.html

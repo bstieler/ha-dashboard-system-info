@@ -1,3 +1,30 @@
+# Release v1.3.0
+
+**Datum:** 2026-05-16  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-7.7** — Release Notes als statische HTML-Seiten in www/releases/ (`core_restart`)
+
+## Bugfixes
+
+- **STG-7.7a** — Release Pipeline für STG-7.7 nachholen + Link fixen (`yaml_reload`)
+
+## Technisch
+
+- **STG-2.18** — Deploy-Refactoring Phase A: RemoteExecutor-Interface einführen (`none`)
+- **STG-2.19** — Deploy-Refactoring Phase B: Verify und HA-Restart in deploy_verify.py extrahieren (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.2.1
 
 **Datum:** 2026-05-16  
