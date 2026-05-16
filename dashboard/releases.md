@@ -1,3 +1,16 @@
+# Release v1.3.1
+
+**Datum:** 2026-05-16  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-2.118** — Orange Linie: Steiler Initialabfall auf 80% im Dashboard untersuchen (`none`)
+
+
+---
+
 # Release v1.3.0
 
 **Datum:** 2026-05-16  
