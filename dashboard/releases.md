@@ -1,3 +1,21 @@
+# Release v1.4.0
+
+**Datum:** 2026-05-16  
+**Items:** 3  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-7.9** — Release-Workflow: Dashboard und Release-Notes müssen immer mitdeployed werden (`none`)
+
+## Technisch
+
+- **STG-2.20** — Deploy-Refactoring Phase C: Manifest-Engine in deploy_manifest.py extrahieren (`none`)
+- **STG-2.21** — Deploy-Refactoring Phase D: Transaction-Core in deploy_core.py extrahieren (`none`)
+
+
+---
+
 # Release v1.3.1
 
 **Datum:** 2026-05-16  
