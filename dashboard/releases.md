@@ -1,3 +1,18 @@
+# Release v1.1.0
+
+**Datum:** 2026-05-16  
+**Items:** 3  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-5.4** — pytest-cov einführen und Coverage-Schwellen definieren (`none`)
+- **STG-7.1d** — Release Pipeline Erstaktivierung: Test-Release v1.0.0 und Doku (`none`)
+- **STG-7.4** — Release Pipeline: Automatisches Deployment auf HA-Server beim Release (`none`)
+
+
+---
+
 # Release v1.0.1
 
 **Datum:** 2026-05-16  
