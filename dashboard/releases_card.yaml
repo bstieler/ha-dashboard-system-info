@@ -1,0 +1,4 @@
+type: markdown
+title: Release History
+content: |
+  _No releases yet. Run `python3 scripts/release_pipeline.py` to generate release notes._
