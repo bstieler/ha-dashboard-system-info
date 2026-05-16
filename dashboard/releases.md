@@ -1,3 +1,16 @@
+# Release v1.4.1
+
+**Datum:** 2026-05-16  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.10** — released_items.json aus Submodule in Superproject verschieben (`none`)
+
+
+---
+
 # Release v1.4.0
 
 **Datum:** 2026-05-16  
