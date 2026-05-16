@@ -1,3 +1,25 @@
+# Release v1.5.0
+
+**Datum:** 2026-05-16  
+**Items:** 4  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-7.8** — Deployment nur durch Release-Manager zulassen (`none`)
+
+## Bugfixes
+
+- **STG-2.120** — _check_enforced_dependencies wirft bei --all fälschlich Fehler (`none`)
+- **STG-7.11** — Release-Pipeline: Submodule-Commit und -Push automatisieren (`none`)
+
+## Technisch
+
+- **STG-2.45** — T1-Dynamik verfeinern: Ladeleistungsmodell ueber Vorlauf-Fenster statt nur Best-Hour-Slot (`none`)
+
+
+---
+
 # Release v1.4.1
 
 **Datum:** 2026-05-16  
