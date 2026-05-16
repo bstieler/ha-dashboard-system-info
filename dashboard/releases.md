@@ -1,3 +1,20 @@
+# Release v1.2.1
+
+**Datum:** 2026-05-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-7.1f** — Bugfix: releases.md Link führt auf Startseite (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.2.0
 
 **Datum:** 2026-05-16  

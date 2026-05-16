@@ -1,9 +1,9 @@
 type: markdown
 title: Release History
-content: '## Release v1.2.0 — 2026-05-16
+content: '## Release v1.2.1 — 2026-05-16
 
 
-  **Items:** 4 | **Deployment:** yaml_reload
+  **Items:** 1 | **Deployment:** core_restart
 
 
   ---
@@ -15,6 +15,8 @@ content: '## Release v1.2.0 — 2026-05-16
   | Version | Datum | Items | Deployment |
 
   |---------|-------|-------|------------|
+
+  | v1.2.0 | 2026-05-16 | 4 | yaml_reload |
 
   | v1.1.0 | 2026-05-16 | 9 | yaml_reload |
 
