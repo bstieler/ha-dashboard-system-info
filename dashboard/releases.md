@@ -1,3 +1,16 @@
+# Release v1.10.0
+
+**Datum:** 2026-05-17  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-2.126** — Min-SOC Sensor: Modbus als Primärquelle, Cloud als Fallback (`none`)
+
+
+---
+
 # Release v1.9.0
 
 **Datum:** 2026-05-17  
