@@ -1,28 +1,39 @@
-# AGENTS.md - ha-dashboard-system-info
+# AGENTS.md — ha-dashboard-system-info
 
 ## Scope
-- Gilt nur fuer `ha-dashboard-system-info/`.
-- Ergaenzt das Top-Level-[AGENTS.md](/Users/bjoern/dev/ha-dev/ha-config/AGENTS.md).
+
+- Applies only to `ha-dashboard-system-info/` and all subdirectories beneath it.
+- Complements the [root AGENTS.md](/AGENTS.md). The stricter rule wins.
 
 ## Ownership
-- Dieses Projekt besitzt:
+
+- This project owns:
   - `dashboard/system_info.yaml`
   - `packages/sensors_system_info.yaml`
   - `packages/ha_dashboard_system_info.yaml`
-- Alte Registrierungen in `/config/configuration.yaml` gelten nur als Altzustand und duerfen nicht wieder zum Sollzustand werden.
+- Old registrations in `/config/configuration.yaml` are legacy state only and must
+  not be re-established as target state.
 
 ## Runtime Contract
-- Funktionaler Deploy-Root ist `ha-dashboard-system-info-package`.
-- Stabile Dashboard-Key-/Datei-Kombination:
-  - Key `system-info`
-  - Dashboard-Datei `/config/dashboards/system_info.yaml`
-- Sensor-Entities muessen mit `project.yaml` und dem Runtime-Dependency-Register konsistent bleiben.
 
-## Activation
-- Aktivierungsworkflow:
+- Functional deploy root: `ha-dashboard-system-info-package`.
+- Stable dashboard key / file combination:
+  - Key: `system-info`
+  - Dashboard file: `/config/dashboards/system_info.yaml`
+- Sensor entities must remain consistent with `project.yaml` and the runtime
+  dependency register.
+
+## Architecture Decisions
+
+- No project-specific architecture decisions beyond root AGENTS.md.
+
+## Deployment
+
+- Activation workflow:
   1. `ha core check`
-  2. YAML/Config-Reload
-  3. nur bei weiter fehlender Sidebar-Aktivierung `ha core restart`
+  2. YAML / config reload
+  3. Only if sidebar activation is still missing: `ha core restart`
 
 ## Validation
-- Keine projektspezifischen Zusatz-Validations erforderlich. Siehe root-AGENTS.md fuer Standard-Workflow.
+
+- No project-specific validations — root checks apply.
