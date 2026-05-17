@@ -1,3 +1,26 @@
+# Release v1.8.0
+
+**Datum:** 2026-05-17  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-10.1** — DWD-Wetterdashboard: Projektstruktur und Entitäten-Setup (`deploy_project: ha-dashboard-dwd-package`)
+- **STG-10.2** — DWD-Wetterdashboard: Hero-Bereich Jetzt & heute + Regen-Nowcast-Text (`none`)
+
+## Bugfixes
+
+- **STG-2.125** — STG-2.123 nachziehen: SOC Plan Curve Startup-Warnings auf Server deployen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `deploy_project: ha-dashboard-dwd-package`
+
+
+---
+
 # Release v1.7.0
 
 **Datum:** 2026-05-17  
