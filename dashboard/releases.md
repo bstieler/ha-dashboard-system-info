@@ -1,3 +1,16 @@
+# Release v1.9.0
+
+**Datum:** 2026-05-17  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-10.3** — DWD-Wetterdashboard: Heute im Verlauf (Stunden-Timeline + Diagramme) (`none`)
+
+
+---
+
 # Release v1.8.0
 
 **Datum:** 2026-05-17  
