@@ -1,3 +1,32 @@
+# Release v1.7.0
+
+**Datum:** 2026-05-17  
+**Items:** 7  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-2.41** — Erreichbarkeitsprüfung P1→P2 im Fenster T1→T2 mit P90/P10-Betrachtung (`Deploy ha-pv-config package to HA`)
+- **STG-6.9** — Backlog-Konflikte: UUID-basierte Auflösung bei konkurrierenden Änderungen (`none`)
+
+## Bugfixes
+
+- **STG-7.13** — Release-Pipeline: Atomarität und Submodule-Push-Resilienz (`none`)
+- **STG-7.14** — Deploy-State-Drift: Reconciliation und Force-Override (`none`)
+- **STG-7.15** — Backlog-Status: 'completed' vs 'done' normalisieren (`none`)
+- **STG-7.16** — Release-Dashboard wird nicht aktualisiert — Dashboard-Release-Projekte bleiben zurück (`none`)
+
+## Technisch
+
+- **STG-2.39** — Tomorrow Reserve: Explizite morgige Recovery-Zeit statt heutiger Proxy (`Deploy ha-pv-config package to HA`)
+
+## Erforderliche Schritte
+
+1. `Deploy ha-pv-config package to HA`
+
+
+---
+
 # Release v1.6.0
 
 **Datum:** 2026-05-17  
