@@ -1,3 +1,35 @@
+# Release v1.6.0
+
+**Datum:** 2026-05-17  
+**Items:** 7  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.46** — Batterie-Steuerung: Dashboard-Beschreibungen klarer und verstaendlicher ueberarbeiten (`core_restart`)
+- **STG-5.5** — Dashboard-YAML-Regression-Tests für ha-dashboard-energy einführen (`none`)
+
+## Bugfixes
+
+- **STG-2.123** — SOC Plan Curve: Startup-Warnings auf Debug-Level herunterstufen (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.122** — Capacitaetsschaetzung: Update dauert >10s — DB-Query-Optimierung oder Caching (`core_restart`)
+- **STG-7.12** — Release-Pipeline: Dashboard-Release-Projekte unabhaengig vom HA-Deploy-Status deployen (`none`)
+
+## Technisch
+
+- **STG-2.121** — AGENTS.md Konsistenz: Verbleibende 5 Subprojekte auf Template-Struktur bringen (`none`)
+- **STG-2.24** — AGENTS.md Konsistenz: Template einführen und Subprojekte inkrementell aufräumen (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.5.0
 
 **Datum:** 2026-05-16  
