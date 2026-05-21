@@ -1,3 +1,29 @@
+# Release v1.12.0
+
+**Datum:** 2026-05-21  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.19** — PV-Forecast: Mahalanobis Feature Weights im Modell-Status anzeigen (`core_restart`)
+
+## Bugfixes
+
+- **STG-7.17** — Release Pipeline: Deploy-Automatisierung und Drift-Handling stabilisieren (`none`)
+
+## Bugfixes
+
+- **STG-2.128** — SOC-Verlauf: IST-Kurve zeigt Anstieg vor dem realen Ereignis (15-Min-Bucket-Floor) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.11.0
 
 **Datum:** 2026-05-21  
