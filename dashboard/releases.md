@@ -1,3 +1,33 @@
+# Release v1.11.0
+
+**Datum:** 2026-05-21  
+**Items:** 7  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.17** — Energy-Dashboard: Erwarteter Morgen-Crossover in alphaess_integration berechnen (`core_restart`)
+- **STG-6.13** — Konsolidiere Regel-Hierarchie: rules.md als Master, AGENTS.md als Spezialisierung (`none`)
+
+## Bugfixes
+
+- **STG-10.7** — DWD-Wetterdashboard: Bugfixes für Hero-Bereich und Stunden-Timeline (`yaml_reload`)
+- **STG-2.86** — Zirkulationspumpe: Hardcoded Switch-Trigger auf dynamische Auswahl umstellen (`none`)
+
+## Bugfixes
+
+- **STG-2.50** — SOC-Regelung: Ursachen fuer fehlende Sensorwerte und robuste Degradationslogik ermitteln (`none`)
+- **STG-4.16** — Energy-Dashboard: Crossover-Sensoren referenzieren falsche Quell-Entität (`yaml_reload`)
+- **STG-8.2** — Zirkulationspumpe: SwitchBot IndexError bei turn_on abfangen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.10.0
 
 **Datum:** 2026-05-17  
