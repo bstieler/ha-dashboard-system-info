@@ -1,3 +1,20 @@
+# Release v1.12.1
+
+**Datum:** 2026-05-22  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.21** — Bugfix: Markdown-Tabellen-Rendering in PV Forecast V2 (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.12.0
 
 **Datum:** 2026-05-21  
