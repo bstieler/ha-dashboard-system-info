@@ -1,3 +1,30 @@
+# Release v1.13.0
+
+**Datum:** 2026-05-23  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.8** — Anwesenheitserkennung im Consumption Forecast per Dashboard-Toggle steuerbar (`yaml_reload, core_restart`)
+
+## Bugfixes
+
+- **STG-4.22** — Bugfix: pv_alphaess_battery_fill_level liefert unknown (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-3.10** — pv_forecast: Modell-Training liefert keine Daten — Diagnose und Logging verbessern (`core_restart`)
+- **STG-3.9** — pv_forecast: NameError 'np' in Exception-Handler bei Model-Training-Fehler (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.12.1
 
 **Datum:** 2026-05-22  
