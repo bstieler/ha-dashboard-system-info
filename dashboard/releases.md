@@ -1,3 +1,25 @@
+# Release v1.14.0
+
+**Datum:** 2026-05-23  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.12** — pv_forecast: Lokales Wetter-Archiv mit abgestufter Refresh-Strategie (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.11** — pv_forecast: Offline-Fallback wenn Open-Meteo Archive API nicht erreichbar (`core_restart`)
+- **STG-7.18** — Release-Deploy: Timeout/SSH-Fehler analysieren und Ablauf korrigieren (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.13.0
 
 **Datum:** 2026-05-23  
