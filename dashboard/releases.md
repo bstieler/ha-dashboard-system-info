@@ -1,6 +1,24 @@
 # Release v1.15.0
 
 **Datum:** 2026-05-24  
+**Items:** 3  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-3.8** — Weather-Archive Diagnose-Metriken in Model Health Tabelle anzeigen (`none`)
+- **STG-3.9** — Inkrementelles Weather-Archive-Fetching: nur fehlende/stale Ranges von API holen (`none`)
+
+## Bugfixes
+
+- **STG-10.9** — Release-Pipeline: Robustheit und Backlog-Validierung nach v1.15.0-Incident (`none`)
+
+
+---
+
+# Release v1.15.0
+
+**Datum:** 2026-05-24  
 **Items:** 6  
 **Gesamt-Deployment:** none
 
