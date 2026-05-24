@@ -1,3 +1,20 @@
+# Release v1.18.1
+
+**Datum:** 2026-05-24  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-8.5** — Zirkulationspumpe: BLE-Verbindungsfehler bei SwitchBot führt zu unzuverlässigem Schalten (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.18.0
 
 **Datum:** 2026-05-24  
