@@ -1,3 +1,21 @@
+# Release v1.16.2
+
+**Datum:** 2026-05-24  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.11a** — Entity-Layer entflechten Phase A: Recorder-Pruning und Template-Rendering extrahieren (`core_restart`)
+- **STG-2.11b** — Entity-Layer entflechten Phase B: Intervall-Berechnung in Coordinator/Service verschieben (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.16.1
 
 **Datum:** 2026-05-24  
