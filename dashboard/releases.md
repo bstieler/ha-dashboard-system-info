@@ -1,3 +1,20 @@
+# Release v1.18.0
+
+**Datum:** 2026-05-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.15** — PV-Forecast Nachbar-Matches: Wetter-Features wieder in Dashboard-Tabelle anzeigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.17.0
 
 **Datum:** 2026-05-24  
