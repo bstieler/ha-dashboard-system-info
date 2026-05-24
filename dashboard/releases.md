@@ -21,6 +21,29 @@
 
 ---
 
+# Release v1.17.0
+
+**Datum:** 2026-05-24  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.13** — PV-Forecast Dashboard: Modell-Interpretation auf eigene Seite mit Amateur-Erklärungen (`core_restart`)
+- **STG-3.14** — PV-Forecast: Nachbar-Matches mit echter Distanz, Uhrzeit und Feature-Delta anzeigen (`core_restart`)
+
+## Bugfixes
+
+- **BL-3.12** — PV-Forecast: Nachbar-Matches werden geprunt und sind im Dashboard nicht sichtbar (`core_restart`)
+- **BL-3.13** — PV-Forecast Dashboard: Nachbar-Matches Tabelle wird nicht als Markdown-Tabelle gerendert (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.16.2
 
 **Datum:** 2026-05-24  
