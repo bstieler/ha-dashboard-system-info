@@ -1,3 +1,24 @@
+# Release v1.15.0
+
+**Datum:** 2026-05-24  
+**Items:** 6  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-10.4** — DWD-Wetterdashboard: Regenradar-Integration (`none`)
+- **STG-10.5** — DWD-Wetterdashboard: 7-Tage-Ausblick (Karten + Trenddiagramm) (`none`)
+- **STG-10.6** — DWD-Wetterdashboard: Warnungen + Layout-Finalisierung und Abnahme (`none`)
+- **STG-9.2** — Gate-Agent: Standardisiertes Prompt-Template erstellen (`none`)
+- **STG-9.3** — Gate-Agent: Komplettes Optimierungspaket (Pre-Flight + Trivial-Bypass + Diff-Optimierer) (`none`)
+
+## Dokumentation
+
+- **STG-10.8** — Release-Prozess in rules.md und eigenes Guide dokumentieren (`none`)
+
+
+---
+
 # Release v1.14.0
 
 **Datum:** 2026-05-23  
