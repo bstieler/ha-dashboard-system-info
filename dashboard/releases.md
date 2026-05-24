@@ -1,3 +1,20 @@
+# Release v1.16.1
+
+**Datum:** 2026-05-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **BL-3.10** — Weather-Archive: Incremental-Fetch funktioniert nicht nach HA-Neustart (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.16.0
 
 **Datum:** 2026-05-24  
