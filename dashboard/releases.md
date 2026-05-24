@@ -1,3 +1,20 @@
+# Release v1.16.0
+
+**Datum:** 2026-05-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.5** — PV-Forecast: Permutation Importance für Feature-Einfluss berechnen und anzeigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.15.0
 
 **Datum:** 2026-05-24  
