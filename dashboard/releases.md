@@ -1,3 +1,20 @@
+# Release v1.18.2
+
+**Datum:** 2026-06-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.16** — PV-Forecast: Weather-Archive force_refresh lädt unnötig alles von API (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.18.1
 
 **Datum:** 2026-05-24  
