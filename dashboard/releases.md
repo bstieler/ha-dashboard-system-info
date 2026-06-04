@@ -1,3 +1,17 @@
+# Release v1.18.3
+
+**Datum:** 2026-06-04  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.18.2
 
 **Datum:** 2026-06-04  
