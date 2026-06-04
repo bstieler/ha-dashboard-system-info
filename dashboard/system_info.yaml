@@ -1,36 +1,5 @@
 title: System Info
 views:
-  - title: HA Config Deploy
-    path: ha-config-deploy
-    icon: mdi:source-branch
-    cards:
-      - type: markdown
-        title: Projekt Overview
-        content: |
-          {%- set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] -%}
-          {%- if projects | count == 0 -%}
-          _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
-          {%- else -%}
-          | Projekt | Version | Erstellt | Letzter Deploy | Branch |
-          |---------|---------|----------|----------------|--------|
-          {%- for p in projects %}
-          | {{ p.project_id }} | `{{ p.version }}` | {{ p.created_at_local | default('—') }} | {{ p.deployed_at_local | default('—') }} | {{ p.branch }} |
-          {%- endfor -%}
-          {%- endif -%}
-
-      - type: button
-        name: Releases
-        icon: mdi:tag-multiple
-        tap_action:
-          action: navigate
-          navigation_path: /dashboard-system-info/releases
-
-  - title: Releases
-    path: releases
-    icon: mdi:tag-multiple
-    cards:
-      - !include releases_card.yaml
-
   - title: System Info
     path: system-info
     icon: mdi:chip
@@ -111,3 +80,34 @@ views:
         entities:
           - entity: sensor.processor_temperature
             name: Processor temperature
+
+  - title: HA Config Deploy
+    path: ha-config-deploy
+    icon: mdi:source-branch
+    cards:
+      - type: markdown
+        title: Projekt Overview
+        content: |
+          {%- set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] -%}
+          {%- if projects | count == 0 -%}
+          _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
+          {%- else -%}
+          | Projekt | Version | Erstellt | Letzter Deploy | Branch |
+          |---------|---------|----------|----------------|--------|
+          {%- for p in projects %}
+          | {{ p.project_id }} | `{{ p.version }}` | {{ p.created_at_local | default('—') }} | {{ p.deployed_at_local | default('—') }} | {{ p.branch }} |
+          {%- endfor -%}
+          {%- endif -%}
+
+      - type: button
+        name: Releases
+        icon: mdi:tag-multiple
+        tap_action:
+          action: navigate
+          navigation_path: /dashboard-system-info/releases
+
+  - title: Releases
+    path: releases
+    icon: mdi:tag-multiple
+    cards:
+      - !include releases_card.yaml
