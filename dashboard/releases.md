@@ -1,3 +1,16 @@
+# Release v1.18.4
+
+**Datum:** 2026-06-04  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-5.6** — Kaputte Tests fixen: backlog_integrity + circulation_pump (`none`)
+
+
+---
+
 # Release v1.18.3
 
 **Datum:** 2026-06-04  
