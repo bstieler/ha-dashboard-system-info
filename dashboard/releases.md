@@ -1,3 +1,25 @@
+# Release v1.19.0
+
+**Datum:** 2026-06-06  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.23** — System Info Dashboard: Default-Seite auf 'system-info' setzen (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-3.17** — PV-Forecast: Nachbar-Matches verschwinden durch Payload-Pruning (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.18.4
 
 **Datum:** 2026-06-04  
