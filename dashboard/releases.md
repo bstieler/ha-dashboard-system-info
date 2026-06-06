@@ -1,3 +1,20 @@
+# Release v1.19.1
+
+**Datum:** 2026-06-06  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.18** — PV-Forecast: Nachbar-Matches zeigen normalisierte statt absolute kWh-Werte (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.19.0
 
 **Datum:** 2026-06-06  
