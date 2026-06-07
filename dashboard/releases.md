@@ -1,3 +1,20 @@
+# Release v1.21.0
+
+**Datum:** 2026-06-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.20** — PV-Forecast: Nachbar-Matches als natürlichsprachliche Wetter-Story (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.20.0
 
 **Datum:** 2026-06-06  
