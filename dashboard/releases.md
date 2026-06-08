@@ -1,3 +1,26 @@
+# Release v1.22.0
+
+**Datum:** 2026-06-08  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.23** — PV-Forecast: hourly_neighbor_matches auf eigenen Sensor auslagern (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.130** — Phase-3 Renderer-Beschreibung korrigieren und no_evening_excess-Fallback prüfen (`core_restart`)
+- **STG-3.21** — PV-Forecast: hourly_neighbor_matches verdrängt stündliche Daten auf Tomorrow-Sensoren (`core_restart`)
+- **STG-3.22** — PV-Forecast: hourly_neighbor_matches verdrängt table_rows/hourly_forecast auf today (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.21.0
 
 **Datum:** 2026-06-07  
