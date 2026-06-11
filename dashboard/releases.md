@@ -1,3 +1,20 @@
+# Release v1.22.1
+
+**Datum:** 2026-06-11  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-2.131** — Batterie-Steuerung Dashboard: Configuration-Seite Berechnungserklärung konsistent mit Runtime-Logik (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.22.0
 
 **Datum:** 2026-06-08  
