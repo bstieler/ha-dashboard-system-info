@@ -1,3 +1,34 @@
+# Release v1.22.0
+
+**Datum:** 2026-06-12  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.26** — PV-Forecast Dashboard V2: Globaler Skalierungsfaktor in Modell-Erklärung anzeigen (`yaml_reload`)
+- **STG-8.3** — Zirkulationspumpe: Dashboard-Toggle für Anwesenheitserkennung (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-3.24** — PV-Forecast: Auto-Retrain-Status in model_status Attributen exponieren (`core_restart`)
+
+## Bugfixes
+
+- **STG-4.20** — PV-Forecast: Gate-Agent-Follow-up zu STG-4.19 (Test + Recorder-Pruning) (`none`)
+
+## Technisch
+
+- **STG-2.132** — Batterie-Steuerung Dashboard: Configuration-Seite Berechnungserklärung konsistent mit Runtime-Logik (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.22.1
 
 **Datum:** 2026-06-11  

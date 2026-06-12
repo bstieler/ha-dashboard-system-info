@@ -18,21 +18,29 @@
 </head>
 <body>
 <h1>Release v1.22.0</h1>
-<p><strong>Datum:</strong> 2026-06-08</p>
-<p><strong>Items:</strong> 4</p>
+<p><strong>Datum:</strong> 2026-06-12</p>
+<p><strong>Items:</strong> 6</p>
 <p><strong>Gesamt-Deployment:</strong> core_restart</p>
 <h2>Neue Features</h2>
 <ul>
-<li><strong>STG-3.23</strong> — PV-Forecast: hourly_neighbor_matches auf eigenen Sensor auslagern (<code>core_restart</code>)</li>
+<li><strong>STG-3.26</strong> — PV-Forecast Dashboard V2: Globaler Skalierungsfaktor in Modell-Erklärung anzeigen (<code>yaml_reload</code>)</li>
+<li><strong>STG-8.3</strong> — Zirkulationspumpe: Dashboard-Toggle für Anwesenheitserkennung (<code>yaml_reload</code>)</li>
 </ul>
 <h2>Bugfixes</h2>
 <ul>
-<li><strong>STG-2.130</strong> — Phase-3 Renderer-Beschreibung korrigieren und no_evening_excess-Fallback prüfen (<code>core_restart</code>)</li>
-<li><strong>STG-3.21</strong> — PV-Forecast: hourly_neighbor_matches verdrängt stündliche Daten auf Tomorrow-Sensoren (<code>core_restart</code>)</li>
-<li><strong>STG-3.22</strong> — PV-Forecast: hourly_neighbor_matches verdrängt table_rows/hourly_forecast auf today (<code>core_restart</code>)</li>
+<li><strong>STG-3.24</strong> — PV-Forecast: Auto-Retrain-Status in model_status Attributen exponieren (<code>core_restart</code>)</li>
+</ul>
+<h2>Bugfixes</h2>
+<ul>
+<li><strong>STG-4.20</strong> — PV-Forecast: Gate-Agent-Follow-up zu STG-4.19 (Test + Recorder-Pruning) (<code>none</code>)</li>
+</ul>
+<h2>Technisch</h2>
+<ul>
+<li><strong>STG-2.132</strong> — Batterie-Steuerung Dashboard: Configuration-Seite Berechnungserklärung konsistent mit Runtime-Logik (<code>yaml_reload</code>)</li>
 </ul>
 <h2>Erforderliche Schritte</h2>
 <ol>
+<li><code>yaml_reload</code></li>
 <li><code>core_restart</code></li>
 </ol>
 <div class="back"><a href="index.html">← Zurück zur Release-Übersicht</a></div>
