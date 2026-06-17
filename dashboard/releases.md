@@ -1,3 +1,22 @@
+# Release v1.23.0
+
+**Datum:** 2026-06-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.133** — Ziel-SOC Phase 3 nie unter 80 % begrenzen (`yaml_reload, core_restart`)
+- **STG-3.25** — PV-Forecast: Globaler Tages-Skalierungsfaktor für strukturelle Drift-Korrektur (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.22.0
 
 **Datum:** 2026-06-12  
