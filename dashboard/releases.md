@@ -1,3 +1,21 @@
+# Release v1.24.0
+
+**Datum:** 2026-06-19  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.134** — Max-Battery Button fuer Batterie-Steuerung (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.23.0
 
 **Datum:** 2026-06-17  
