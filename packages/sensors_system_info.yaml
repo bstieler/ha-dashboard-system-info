@@ -144,7 +144,7 @@ template:
             {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
             {% set timestamps = [pv_ts, hcf_ts] | select('string') | list %}
             {% if timestamps | count > 0 %}
-              {{ timestamps | max | as_datetime | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
               unavailable
             {% endif %}
@@ -158,7 +158,7 @@ template:
               {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
               {% set timestamps = [pv_ts, hcf_ts] | select('string') | list %}
               {% if timestamps | count > 0 %}
-                {{ timestamps | max | as_datetime | as_local | strftime('%d.%m.%Y %H:%M') }}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
               {% else %}
                 unavailable
               {% endif %}
@@ -192,7 +192,7 @@ template:
           source_entity: "sensor.alphaess_charge_control_runtime"
           last_call: >-
             {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
-              {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
               unavailable
             {% endif %}
@@ -202,7 +202,7 @@ template:
               unavailable
             {% else %}
               {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
-                {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+                {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
               {% else %}
                 unavailable
               {% endif %}
@@ -240,7 +240,7 @@ template:
               {% set timestamps = timestamps + [states.sensor.dwd_radar_image_url.last_updated] %}
             {% endif %}
             {% if timestamps | count > 0 %}
-              {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {{ timestamps | max | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
               unavailable
             {% endif %}
@@ -264,7 +264,7 @@ template:
                 {% set timestamps = timestamps + [states.sensor.dwd_radar_image_url.last_updated] %}
               {% endif %}
               {% if timestamps | count > 0 %}
-                {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
+                {{ timestamps | max | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
               {% else %}
                 unavailable
               {% endif %}
@@ -291,13 +291,13 @@ template:
           source_entity: "input_boolean.zs7_circ_pump_ble_error"
           last_call: >-
             {% if states('input_boolean.zs7_circ_pump_ble_error') not in ['unavailable', 'unknown', 'none'] %}
-              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
               unavailable
             {% endif %}
           last_success: >-
             {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
-              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
               unavailable
             {% endif %}
