@@ -1,3 +1,28 @@
+# Release v1.25.3
+
+**Datum:** 2026-06-20  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.141** — DWD Dashboard: Forecast-Sensoren reparieren (weather.get_forecasts funktioniert nicht in Template-Trigger-Actions) (`yaml_reload, core_restart`)
+- **STG-2.142** — DWD Dashboard: Wetterwarnungs-Entität optional machen oder ersetzen (`yaml_reload`)
+- **STG-2.143** — DWD Dashboard: Robustere Fehleranzeige und ApexCharts-Optionalität (`yaml_reload`)
+
+## Technisch
+
+- **STG-2.138** — Batterie-Refactor Phase 4: Phase-3-Strategie in phase3_power_window.py auslagern (`core_restart`)
+- **STG-2.139** — Batterie-Refactor Phase 5: Phase-1/Phase-2-Logik in phase1_phase2.py auslagern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.25.2
 
 **Datum:** 2026-06-20  
