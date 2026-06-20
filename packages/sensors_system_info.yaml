@@ -191,9 +191,8 @@ template:
         attributes:
           source_entity: sensor.alphaess_charge_control_runtime
           last_call: >-
-            {% set runtime = states['sensor.alphaess_charge_control_runtime'] %}
-            {% if runtime is not none %}
-              {{ runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
+              {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
               unavailable
             {% endif %}
@@ -202,9 +201,8 @@ template:
             {% if missing | count > 0 %}
               unavailable
             {% else %}
-              {% set runtime = states['sensor.alphaess_charge_control_runtime'] %}
-              {% if runtime is not none %}
-                {{ runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
+                {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
               {% else %}
                 unavailable
               {% endif %}
@@ -228,8 +226,19 @@ template:
         attributes:
           source_entity: "sensor.dwd_nowcast_text, sensor.dwd_forecast_json, sensor.dwd_forecast_daily_json, sensor.dwd_radar_image_url"
           last_call: >-
-            {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
-            {% set timestamps = [states[e].last_updated for e in entities if states[e] is not none] %}
+            {% set timestamps = [] %}
+            {% if states('sensor.dwd_nowcast_text') not in ['unavailable', 'unknown', 'none'] %}
+              {% set timestamps = timestamps + [states.sensor.dwd_nowcast_text.last_updated] %}
+            {% endif %}
+            {% if states('sensor.dwd_forecast_json') not in ['unavailable', 'unknown', 'none'] %}
+              {% set timestamps = timestamps + [states.sensor.dwd_forecast_json.last_updated] %}
+            {% endif %}
+            {% if states('sensor.dwd_forecast_daily_json') not in ['unavailable', 'unknown', 'none'] %}
+              {% set timestamps = timestamps + [states.sensor.dwd_forecast_daily_json.last_updated] %}
+            {% endif %}
+            {% if states('sensor.dwd_radar_image_url') not in ['unavailable', 'unknown', 'none'] %}
+              {% set timestamps = timestamps + [states.sensor.dwd_radar_image_url.last_updated] %}
+            {% endif %}
             {% if timestamps | count > 0 %}
               {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
@@ -241,7 +250,19 @@ template:
             {% if unavailable_count > 0 %}
               unavailable
             {% else %}
-              {% set timestamps = [states[e].last_updated for e in entities if states[e] is not none] %}
+              {% set timestamps = [] %}
+              {% if states('sensor.dwd_nowcast_text') not in ['unavailable', 'unknown', 'none'] %}
+                {% set timestamps = timestamps + [states.sensor.dwd_nowcast_text.last_updated] %}
+              {% endif %}
+              {% if states('sensor.dwd_forecast_json') not in ['unavailable', 'unknown', 'none'] %}
+                {% set timestamps = timestamps + [states.sensor.dwd_forecast_json.last_updated] %}
+              {% endif %}
+              {% if states('sensor.dwd_forecast_daily_json') not in ['unavailable', 'unknown', 'none'] %}
+                {% set timestamps = timestamps + [states.sensor.dwd_forecast_daily_json.last_updated] %}
+              {% endif %}
+              {% if states('sensor.dwd_radar_image_url') not in ['unavailable', 'unknown', 'none'] %}
+                {% set timestamps = timestamps + [states.sensor.dwd_radar_image_url.last_updated] %}
+              {% endif %}
               {% if timestamps | count > 0 %}
                 {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
               {% else %}
@@ -249,10 +270,10 @@ template:
               {% endif %}
             {% endif %}
           details: >-
-            {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
-            {% for e in entities %}
-            {{ e }}: {{ states(e) | default('unknown') }}{% if not loop.last %}, {% endif %}
-            {%- endfor %}
+            sensor.dwd_nowcast_text: {{ states('sensor.dwd_nowcast_text') | default('unknown') }},
+            sensor.dwd_forecast_json: {{ states('sensor.dwd_forecast_json') | default('unknown') }},
+            sensor.dwd_forecast_daily_json: {{ states('sensor.dwd_forecast_daily_json') | default('unknown') }},
+            sensor.dwd_radar_image_url: {{ states('sensor.dwd_radar_image_url') | default('unknown') }}
 
       - name: API Health SwitchBot BLE
         unique_id: api_health_switchbot_ble
@@ -269,20 +290,14 @@ template:
         attributes:
           source_entity: input_boolean.zs7_circ_pump_ble_error
           last_call: >-
-            {% set err_entity = states['input_boolean.zs7_circ_pump_ble_error'] %}
-            {% if err_entity is not none %}
-              {{ err_entity.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% if states('input_boolean.zs7_circ_pump_ble_error') not in ['unavailable', 'unknown', 'none'] %}
+              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
               unavailable
             {% endif %}
           last_success: >-
             {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
-              {% set err_entity = states['input_boolean.zs7_circ_pump_ble_error'] %}
-              {% if err_entity is not none %}
-                {{ err_entity.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
-              {% else %}
-                unavailable
-              {% endif %}
+              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
               unavailable
             {% endif %}
