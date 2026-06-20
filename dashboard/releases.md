@@ -1,4 +1,4 @@
-# Release v1.22.1
+# Release v1.25.0
 
 **Datum:** 2026-06-20  
 **Items:** 1  
