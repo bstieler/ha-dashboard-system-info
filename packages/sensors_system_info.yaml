@@ -189,7 +189,7 @@ template:
             {% endif %}
           {% endif %}
         attributes:
-          source_entity: sensor.alphaess_charge_control_runtime
+          source_entity: "sensor.alphaess_charge_control_runtime"
           last_call: >-
             {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
               {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
@@ -288,7 +288,7 @@ template:
             unknown
           {% endif %}
         attributes:
-          source_entity: input_boolean.zs7_circ_pump_ble_error
+          source_entity: "input_boolean.zs7_circ_pump_ble_error"
           last_call: >-
             {% if states('input_boolean.zs7_circ_pump_ble_error') not in ['unavailable', 'unknown', 'none'] %}
               {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
@@ -301,7 +301,7 @@ template:
             {% else %}
               unavailable
             {% endif %}
-          details: SwitchBot BLE error flag
+          details: "SwitchBot BLE error flag"
 
       - name: API Health Overall
         unique_id: api_health_overall
@@ -327,4 +327,4 @@ template:
           alphaess: "{{ states('sensor.api_health_alphaess') }}"
           dwd: "{{ states('sensor.api_health_dwd') }}"
           switchbot_ble: "{{ states('sensor.api_health_switchbot_ble') }}"
-          details: Aggregated worst status of all monitored external connections
+          details: "Aggregated worst status of all monitored external connections"
