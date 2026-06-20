@@ -1,3 +1,20 @@
+# Release v1.26.2
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-6.18** — API Status Dashboard: HA-spezifische Zeitformatierung in Template-Sensoren korrigieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.26.1
 
 **Datum:** 2026-06-20  
