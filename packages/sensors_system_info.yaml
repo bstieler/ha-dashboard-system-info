@@ -107,3 +107,205 @@ template:
             {% set minutes = ((seconds % 3600) // 60) | int %}
             {{ days }}d {{ hours }}h {{ minutes }}m
           {% endif %}
+
+      # API Health sensors for the System Info Dashboard (STG-6.14 Phase A).
+      # These are template sensors that derive status from existing HA entities.
+      # Real-time instrumentation at every API call is planned for STG-6.15/6.16.
+      - name: API Health Open-Meteo
+        unique_id: api_health_open_meteo
+        icon: mdi:cloud
+        state: >-
+          {% set pv_status = states('sensor.pv_forecast_model_status') %}
+          {% set hcf_status = states('sensor.house_consumption_forecast_model_status') %}
+          {% if pv_status in ['unavailable', 'unknown', 'none'] and hcf_status in ['unavailable', 'unknown', 'none'] %}
+            unknown
+          {% else %}
+            {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
+            {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
+            {% set pv_source = state_attr('sensor.pv_forecast_model_status', 'weather_context_source') %}
+            {% set hcf_archive = state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') %}
+            {% set hcf_forecast = state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') %}
+            {% if pv_error or hcf_error %}
+              failed
+            {% elif pv_source in ['cache', 'mixed'] or hcf_archive == 'failed' or hcf_forecast == 'failed' %}
+              degraded
+            {% else %}
+              ok
+            {% endif %}
+          {% endif %}
+        attributes:
+          source_entity: "sensor.pv_forecast_model_status, sensor.house_consumption_forecast_model_status"
+          last_call: >-
+            {% set pv_ts = state_attr('sensor.pv_forecast_model_status', 'weather_last_incremental_sync') %}
+            {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
+            {% set timestamps = [pv_ts, hcf_ts] | select('string') | list %}
+            {% if timestamps | count > 0 %}
+              {{ timestamps | max | as_datetime | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% else %}
+              unavailable
+            {% endif %}
+          last_success: >-
+            {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
+            {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
+            {% if pv_error or hcf_error %}
+              unavailable
+            {% else %}
+              {% set pv_ts = state_attr('sensor.pv_forecast_model_status', 'weather_last_incremental_sync') %}
+              {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
+              {% set timestamps = [pv_ts, hcf_ts] | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% endif %}
+          details: >-
+            PV source: {{ state_attr('sensor.pv_forecast_model_status', 'weather_context_source') | default('unknown') }},
+            HCF archive: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') | default('unknown') }},
+            HCF forecast: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') | default('unknown') }}
+
+      - name: API Health AlphaESS
+        unique_id: api_health_alphaess
+        icon: mdi:battery
+        state: >-
+          {% set runtime = states('sensor.alphaess_charge_control_runtime') %}
+          {% if runtime in ['unavailable', 'unknown', 'none'] %}
+            unknown
+          {% else %}
+            {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
+            {% set modbus_missing = missing | select('match', 'sensor\.alpha_ess_.*') | list | count > 0 %}
+            {% set cloud_missing = missing | select('match', 'sensor\.instantaneous_.*') | list | list | count > 0 %}
+            {% set cloud_soc_missing = 'sensor.pv_battery_soc' in missing %}
+            {% if modbus_missing and (cloud_missing or cloud_soc_missing) %}
+              failed
+            {% elif modbus_missing or cloud_missing or cloud_soc_missing %}
+              degraded
+            {% else %}
+              ok
+            {% endif %}
+          {% endif %}
+        attributes:
+          source_entity: sensor.alphaess_charge_control_runtime
+          last_call: >-
+            {% set ts = states['sensor.alphaess_charge_control_runtime'].last_updated | default(None) %}
+            {% if ts is not none %}
+              {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% else %}
+              unavailable
+            {% endif %}
+          last_success: >-
+            {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
+            {% if missing | count > 0 %}
+              unavailable
+            {% else %}
+              {% set ts = states['sensor.alphaess_charge_control_runtime'].last_updated | default(None) %}
+              {% if ts is not none %}
+                {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% endif %}
+          details: >-
+            Missing entities: {{ state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') | default(['unknown']) | join(', ') }}
+
+      - name: API Health DWD
+        unique_id: api_health_dwd
+        icon: mdi:weather-cloudy
+        state: >-
+          {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
+          {% set unavailable_count = entities | map('states') | select('in', ['unavailable', 'unknown', 'none']) | list | count %}
+          {% if unavailable_count == entities | count %}
+            unknown
+          {% elif unavailable_count > 0 %}
+            failed
+          {% else %}
+            ok
+          {% endif %}
+        attributes:
+          source_entity: "sensor.dwd_nowcast_text, sensor.dwd_forecast_json, sensor.dwd_forecast_daily_json, sensor.dwd_radar_image_url"
+          last_call: >-
+            {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
+            {% set timestamps = entities | map('states') | select('defined') | map('last_updated') | select | list %}
+            {% if timestamps | count > 0 %}
+              {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% else %}
+              unavailable
+            {% endif %}
+          last_success: >-
+            {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
+            {% set unavailable_count = entities | map('states') | select('in', ['unavailable', 'unknown', 'none']) | list | count %}
+            {% if unavailable_count > 0 %}
+              unavailable
+            {% else %}
+              {% set timestamps = entities | map('states') | select('defined') | map('last_updated') | select | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% endif %}
+          details: >-
+            {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
+            {% for e in entities %}
+            {{ e }}: {{ states(e) | default('unknown') }}{% if not loop.last %}, {% endif %}
+            {%- endfor %}
+
+      - name: API Health SwitchBot BLE
+        unique_id: api_health_switchbot_ble
+        icon: mdi:bluetooth
+        state: >-
+          {% set err = states('input_boolean.zs7_circ_pump_ble_error') %}
+          {% if err == 'on' %}
+            failed
+          {% elif err == 'off' %}
+            ok
+          {% else %}
+            unknown
+          {% endif %}
+        attributes:
+          source_entity: input_boolean.zs7_circ_pump_ble_error
+          last_call: >-
+            {% set ts = states['input_boolean.zs7_circ_pump_ble_error'].last_updated | default(None) %}
+            {% if ts is not none %}
+              {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% else %}
+              unavailable
+            {% endif %}
+          last_success: >-
+            {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
+              {% set ts = states['input_boolean.zs7_circ_pump_ble_error'].last_updated | default(None) %}
+              {% if ts is not none %}
+                {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% else %}
+              unavailable
+            {% endif %}
+          details: SwitchBot BLE error flag
+
+      - name: API Health Overall
+        unique_id: api_health_overall
+        icon: mdi:web
+        state: >-
+          {% set statuses = [
+            states('sensor.api_health_open_meteo'),
+            states('sensor.api_health_alphaess'),
+            states('sensor.api_health_dwd'),
+            states('sensor.api_health_switchbot_ble')
+          ] %}
+          {% if 'failed' in statuses %}
+            failed
+          {% elif 'degraded' in statuses %}
+            degraded
+          {% elif 'unknown' in statuses %}
+            unknown
+          {% else %}
+            ok
+          {% endif %}
+        attributes:
+          open_meteo: "{{ states('sensor.api_health_open_meteo') }}"
+          alphaess: "{{ states('sensor.api_health_alphaess') }}"
+          dwd: "{{ states('sensor.api_health_dwd') }}"
+          switchbot_ble: "{{ states('sensor.api_health_switchbot_ble') }}"
+          details: Aggregated worst status of all monitored external connections
