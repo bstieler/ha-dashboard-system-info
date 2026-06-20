@@ -1,3 +1,20 @@
+# Release v1.26.0
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-6.14** — API Status Dashboard: Phase A — Dashboard-Seite + zentrale Template-Sensoren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.25.3
 
 **Datum:** 2026-06-20  
