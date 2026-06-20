@@ -1,3 +1,20 @@
+# Release v1.22.1
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.27** — PV-Forecast: Globaler Scale Factor lernt aus eigener Ausgabe (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.24.0
 
 **Datum:** 2026-06-19  
