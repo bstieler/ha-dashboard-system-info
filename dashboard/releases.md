@@ -1,3 +1,22 @@
+# Release v1.25.1
+
+**Datum:** 2026-06-20  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.135** — Batterie-Refactor Phase 1: _build_snapshot() in sensor.py als Pipeline aufteilen (`core_restart`)
+- **STG-2.136** — Batterie-Refactor Phase 2: Energy-Math und Capacity-Schätzung auslagern (`core_restart`)
+- **STG-2.137** — Batterie-Refactor Phase 3: Forecast-Extraktion in forecast_parser.py auslagern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.25.0
 
 **Datum:** 2026-06-20  
