@@ -117,8 +117,12 @@ template:
         state: >-
           {% set pv_status = states('sensor.pv_forecast_model_status') %}
           {% set hcf_status = states('sensor.house_consumption_forecast_model_status') %}
-          {% if pv_status in ['unavailable', 'unknown', 'none'] and hcf_status in ['unavailable', 'unknown', 'none'] %}
+          {% set pv_unknown = pv_status in ['unavailable', 'unknown', 'none'] %}
+          {% set hcf_unknown = hcf_status in ['unavailable', 'unknown', 'none'] %}
+          {% if pv_unknown and hcf_unknown %}
             unknown
+          {% elif pv_unknown or hcf_unknown %}
+            degraded
           {% else %}
             {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
             {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
@@ -174,7 +178,7 @@ template:
           {% else %}
             {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
             {% set modbus_missing = missing | select('match', 'sensor\.alpha_ess_.*') | list | count > 0 %}
-            {% set cloud_missing = missing | select('match', 'sensor\.instantaneous_.*') | list | list | count > 0 %}
+            {% set cloud_missing = missing | select('match', 'sensor\.instantaneous_.*') | list | count > 0 %}
             {% set cloud_soc_missing = 'sensor.pv_battery_soc' in missing %}
             {% if modbus_missing and (cloud_missing or cloud_soc_missing) %}
               failed
@@ -187,9 +191,9 @@ template:
         attributes:
           source_entity: sensor.alphaess_charge_control_runtime
           last_call: >-
-            {% set ts = states['sensor.alphaess_charge_control_runtime'].last_updated | default(None) %}
-            {% if ts is not none %}
-              {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% set runtime = states['sensor.alphaess_charge_control_runtime'] %}
+            {% if runtime is not none %}
+              {{ runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
               unavailable
             {% endif %}
@@ -198,9 +202,9 @@ template:
             {% if missing | count > 0 %}
               unavailable
             {% else %}
-              {% set ts = states['sensor.alphaess_charge_control_runtime'].last_updated | default(None) %}
-              {% if ts is not none %}
-                {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% set runtime = states['sensor.alphaess_charge_control_runtime'] %}
+              {% if runtime is not none %}
+                {{ runtime.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
               {% else %}
                 unavailable
               {% endif %}
@@ -225,7 +229,7 @@ template:
           source_entity: "sensor.dwd_nowcast_text, sensor.dwd_forecast_json, sensor.dwd_forecast_daily_json, sensor.dwd_radar_image_url"
           last_call: >-
             {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
-            {% set timestamps = entities | map('states') | select('defined') | map('last_updated') | select | list %}
+            {% set timestamps = [states[e].last_updated for e in entities if states[e] is not none] %}
             {% if timestamps | count > 0 %}
               {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
@@ -237,7 +241,7 @@ template:
             {% if unavailable_count > 0 %}
               unavailable
             {% else %}
-              {% set timestamps = entities | map('states') | select('defined') | map('last_updated') | select | list %}
+              {% set timestamps = [states[e].last_updated for e in entities if states[e] is not none] %}
               {% if timestamps | count > 0 %}
                 {{ timestamps | max | as_local | strftime('%d.%m.%Y %H:%M') }}
               {% else %}
@@ -265,17 +269,17 @@ template:
         attributes:
           source_entity: input_boolean.zs7_circ_pump_ble_error
           last_call: >-
-            {% set ts = states['input_boolean.zs7_circ_pump_ble_error'].last_updated | default(None) %}
-            {% if ts is not none %}
-              {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+            {% set err_entity = states['input_boolean.zs7_circ_pump_ble_error'] %}
+            {% if err_entity is not none %}
+              {{ err_entity.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
             {% else %}
               unavailable
             {% endif %}
           last_success: >-
             {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
-              {% set ts = states['input_boolean.zs7_circ_pump_ble_error'].last_updated | default(None) %}
-              {% if ts is not none %}
-                {{ ts | as_local | strftime('%d.%m.%Y %H:%M') }}
+              {% set err_entity = states['input_boolean.zs7_circ_pump_ble_error'] %}
+              {% if err_entity is not none %}
+                {{ err_entity.last_updated | as_local | strftime('%d.%m.%Y %H:%M') }}
               {% else %}
                 unavailable
               {% endif %}
