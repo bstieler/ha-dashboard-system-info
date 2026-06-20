@@ -1,3 +1,20 @@
+# Release v1.25.2
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.140** — Batterie-Refactor Phase 6: Auflösungslogik konsolidieren, Defaults zentralisieren und Phase-3-Duplikate entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.25.1
 
 **Datum:** 2026-06-20  
