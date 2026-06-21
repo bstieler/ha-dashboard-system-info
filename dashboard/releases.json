@@ -1,5 +1,11 @@
 [
   {
+    "version": "v1.26.3",
+    "date": "2026-06-21",
+    "items": 4,
+    "deployment": "yaml_reload"
+  },
+  {
     "version": "v1.26.2",
     "date": "2026-06-20",
     "items": 1,

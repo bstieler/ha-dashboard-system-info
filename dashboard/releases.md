@@ -1,3 +1,22 @@
+# Release v1.26.3
+
+**Datum:** 2026-06-21  
+**Items:** 4  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.144** — PV-Config: Modbus-Hausverbrauch-Tool von hartkodierten Verbindungsdaten befreien (`none`)
+- **STG-2.145** — PV-Config: Modbus-Hausverbrauchs-Sensor mit Triple-Guard absichern (`yaml_reload`)
+- **STG-3.28** — PV-Forecast: Deploy-Dependency fuer V2-Entities korrigieren (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.26.2
 
 **Datum:** 2026-06-20  
