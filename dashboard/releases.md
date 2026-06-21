@@ -1,3 +1,21 @@
+# Release v1.26.5
+
+**Datum:** 2026-06-21  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-3.34** — House-Consumption-Forecast: ModelTrainingService aus Coordinator extrahieren (`core_restart`)
+- **STG-3.35** — House-Consumption-Forecast: ForecastSnapshotBuilder aus Coordinator extrahieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.26.4
 
 **Datum:** 2026-06-21  
