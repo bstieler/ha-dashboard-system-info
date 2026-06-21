@@ -122,12 +122,8 @@ views:
   - title: API Status
     path: api-status
     icon: mdi:cloud-check
+    max_columns: 1
     cards:
-      - type: markdown
-        content: |
-          # API Status
-          Health and reachability of external services.
-
       - type: entities
         title: Overall Status
         show_header_toggle: false
@@ -146,19 +142,12 @@ views:
             ('SwitchBot BLE', 'sensor.api_health_switchbot_ble')
           ] -%}
           | Service | Status | Last Call | Last Success | Details |
-          |---------|--------|-----------|--------------|---------|
+          |:--------|:------:|:---------:|:------------:|:--------|
           {%- for name, entity in sources %}
           {%- set status = states(entity) | default('unknown') %}
           {%- set icon = '🔴' if status == 'failed' else '🟡' if status == 'degraded' else '🟢' if status == 'ok' else '⚪' %}
           {%- set last_call = state_attr(entity, 'last_call') | default('—') %}
           {%- set last_success = state_attr(entity, 'last_success') | default('—') %}
-          {%- set details = state_attr(entity, 'details') | default('—') %}
+          {%- set details = state_attr(entity, 'details') | default('—') | truncate(45) %}
           | {{ name }} | {{ icon }} {{ status }} | {{ last_call }} | {{ last_success }} | {{ details }} |
           {%- endfor %}
-
-      - type: button
-        name: Back to System Info
-        icon: mdi:arrow-left
-        tap_action:
-          action: navigate
-          navigation_path: /dashboard-system-info/system-info
