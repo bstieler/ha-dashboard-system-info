@@ -1,3 +1,22 @@
+# Release v1.26.4
+
+**Datum:** 2026-06-21  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-3.31** — House-Consumption-Forecast: StateReaderService aus Coordinator extrahieren (`core_restart`)
+- **STG-3.32** — House-Consumption-Forecast: WeatherContextService aus Coordinator extrahieren (`core_restart`)
+- **STG-3.33** — House-Consumption-Forecast: PresenceContextService aus Coordinator extrahieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.26.3
 
 **Datum:** 2026-06-21  
