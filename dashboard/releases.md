@@ -1,3 +1,20 @@
+# Release v1.27.1
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.2** — AlphaESS Batteriesteuerung: Min-SOC über number.batusescap steuern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.27.0
 
 **Datum:** 2026-06-22  
