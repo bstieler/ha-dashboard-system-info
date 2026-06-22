@@ -1,3 +1,20 @@
+# Release v1.27.0
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-11.1** — AlphaESS Batteriesteuerung: Min-SOC bei Max Battery automatisch anpassen und anzeigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.26.5
 
 **Datum:** 2026-06-21  
