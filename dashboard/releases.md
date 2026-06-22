@@ -1,3 +1,20 @@
+# Release v1.27.5
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.6** — AlphaESS Batteriesteuerung: Min-SOC-Automation in Automations-Paket verschieben (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.27.4
 
 **Datum:** 2026-06-22  
