@@ -1,3 +1,20 @@
+# Release v1.27.3
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.4** — AlphaESS Batteriesteuerung: Min-SOC-Anzeige über UPS-Reserve-Sensor reparieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.27.2
 
 **Datum:** 2026-06-22  
