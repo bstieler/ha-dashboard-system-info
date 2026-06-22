@@ -1,3 +1,20 @@
+# Release v1.27.4
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.5** — AlphaESS Batteriesteuerung: Min-SOC-Anzeige zeigt korrekten Wert und broken Sensoren entfernt (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.27.3
 
 **Datum:** 2026-06-22  
