@@ -1,3 +1,16 @@
+# Release v1.28.1
+
+**Datum:** 2026-06-23  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-3.39** — House Consumption Forecast: Pre-existing Test-Failures beheben (`none`)
+
+
+---
+
 # Release v1.28.0
 
 **Datum:** 2026-06-23  
