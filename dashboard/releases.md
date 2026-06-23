@@ -1,3 +1,20 @@
+# Release v1.28.0
+
+**Datum:** 2026-06-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.38** — House Consumption Forecast: AC-Modus-Schalter im Dashboard und als Modellfeature (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.27.6
 
 **Datum:** 2026-06-22  
