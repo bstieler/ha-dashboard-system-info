@@ -1,3 +1,16 @@
+# Release v1.28.2
+
+**Datum:** 2026-06-24  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-11.8** — Release Pipeline: Änderungen an ha-pv-config/packages müssen auch ha-pv-config-package deployen (`none`)
+
+
+---
+
 # Release v1.28.1
 
 **Datum:** 2026-06-23  
