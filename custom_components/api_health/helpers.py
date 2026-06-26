@@ -43,6 +43,13 @@ def compute_overall_status(reports: dict[str, dict[str, Any]]) -> str:
     return "unknown"
 
 
+def _get_value(result: Any, name: str, default: Any = None) -> Any:
+    """Read ``name`` from a mapping or an object attribute."""
+    if isinstance(result, dict):
+        return result.get(name, default)
+    return getattr(result, name, default)
+
+
 def derive_api_health_report(
     source: str,
     result: Any,
@@ -51,16 +58,16 @@ def derive_api_health_report(
 ) -> dict[str, Any]:
     """Derive an api_health.report payload from a weather fetch result.
 
-    ``result`` is expected to expose at least ``warnings`` (list[str]).
-    It may provide ``cache_hits``/``cache_misses`` (PV adapter) or
-    ``cache_hit`` (HCF adapter); missing counters default to zero.
+    ``result`` may be a mapping or an object exposing at least ``warnings``
+    (list[str]). It may provide ``cache_hits``/``cache_misses`` (PV adapter)
+    or ``cache_hit`` (HCF adapter); missing counters default to zero.
     """
-    warnings = list(getattr(result, "warnings", []) or [])
-    cache_hits = int(getattr(result, "cache_hits", 0) or 0)
-    cache_misses = int(getattr(result, "cache_misses", 0) or 0)
+    warnings = list(_get_value(result, "warnings", []) or [])
+    cache_hits = int(_get_value(result, "cache_hits", 0) or 0)
+    cache_misses = int(_get_value(result, "cache_misses", 0) or 0)
     if cache_hits == 0 and cache_misses == 0:
         # Fall back to the boolean flag used by the house-consumption adapter.
-        if getattr(result, "cache_hit", False):
+        if _get_value(result, "cache_hit", False):
             cache_hits = 1
         else:
             cache_misses = 1

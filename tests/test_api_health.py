@@ -172,6 +172,22 @@ class TestDeriveApiHealthReport:
         report = derive_api_health_report("hcf.open_meteo_forecast", result)
         assert report["status"] == "degraded"
 
+    def test_dict_failure_result_is_failed(self):
+        result = {
+            "warnings": ["weather_archive_fetch_failed", "Connection timeout"],
+            "cache_hit": False,
+        }
+        report = derive_api_health_report("house_consumption_forecast.open_meteo_archive", result)
+        assert report["status"] == "failed"
+        assert "weather_archive_fetch_failed" in report["error"]
+        assert "Connection timeout" in report["error"]
+
+    def test_dict_success_result_is_ok(self):
+        result = {"warnings": [], "cache_hit": True}
+        report = derive_api_health_report("house_consumption_forecast.open_meteo_forecast", result)
+        assert report["status"] == "ok"
+        assert "cache" in report["details"]
+
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
