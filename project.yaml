@@ -1,7 +1,7 @@
 {
   "project_id": "ha-dashboard-system-info",
   "functional_deploy_root": "ha-dashboard-system-info-package",
-  "verify_reload": "yaml_reload",
+  "verify_reload": "core_restart",
   "owned_entity_patterns": [
     "sensor.processor_use",
     "sensor.processor_use_core_0",

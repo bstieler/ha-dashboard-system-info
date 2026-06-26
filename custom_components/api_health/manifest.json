@@ -1,0 +1,12 @@
+{
+  "domain": "api_health",
+  "name": "API Health",
+  "version": "0.1.0",
+  "documentation": "https://github.com/bstieler/ha-config",
+  "issue_tracker": "https://github.com/bstieler/ha-config/issues",
+  "requirements": [],
+  "codeowners": [
+    "@bstieler"
+  ],
+  "iot_class": "local_push"
+}

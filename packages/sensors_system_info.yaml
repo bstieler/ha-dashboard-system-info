@@ -109,50 +109,73 @@ template:
           {% endif %}
 
       # API Health sensors for the System Info Dashboard (STG-6.14 Phase A).
-      # These are template sensors that derive status from existing HA entities.
-      # Real-time instrumentation at every API call is planned for STG-6.15/6.16.
+      # Real-time Open-Meteo instrumentation from STG-6.15 is used when available;
+      # otherwise the sensor falls back to deriving status from model entities.
       - name: API Health Open-Meteo
         unique_id: api_health_open_meteo
         icon: mdi:cloud
         state: >-
-          {% set pv_status = states('sensor.pv_forecast_model_status') %}
-          {% set hcf_status = states('sensor.house_consumption_forecast_model_status') %}
-          {% set pv_unknown = pv_status in ['unavailable', 'unknown', 'none'] %}
-          {% set hcf_unknown = hcf_status in ['unavailable', 'unknown', 'none'] %}
-          {% if pv_unknown and hcf_unknown %}
-            unknown
-          {% elif pv_unknown or hcf_unknown %}
-            degraded
-          {% else %}
-            {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
-            {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
-            {% set pv_source = state_attr('sensor.pv_forecast_model_status', 'weather_context_source') %}
-            {% set hcf_archive = state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') %}
-            {% set hcf_forecast = state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') %}
-            {% if pv_error or hcf_error %}
+          {% set overall = states('sensor.api_health_overall') %}
+          {% set rt_forecast = state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_status') %}
+          {% if overall not in ['unavailable', 'unknown', 'none'] and rt_forecast is not none %}
+            {% set statuses = [
+              state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_status'),
+              state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_archive_status'),
+              state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_forecast_status'),
+              state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_archive_status')
+            ] | select('defined') | select('ne', none) | list %}
+            {% if 'failed' in statuses %}
               failed
-            {% elif pv_source in ['cache', 'mixed'] or hcf_archive == 'failed' or hcf_forecast == 'failed' %}
+            {% elif 'degraded' in statuses %}
+              degraded
+            {% elif 'unknown' in statuses %}
+              unknown
+            {% elif statuses | count > 0 %}
+              ok
+            {% else %}
+              unknown
+            {% endif %}
+          {% else %}
+            {% set pv_status = states('sensor.pv_forecast_model_status') %}
+            {% set hcf_status = states('sensor.house_consumption_forecast_model_status') %}
+            {% set pv_unknown = pv_status in ['unavailable', 'unknown', 'none'] %}
+            {% set hcf_unknown = hcf_status in ['unavailable', 'unknown', 'none'] %}
+            {% if pv_unknown and hcf_unknown %}
+              unknown
+            {% elif pv_unknown or hcf_unknown %}
               degraded
             {% else %}
-              ok
+              {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
+              {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
+              {% set pv_source = state_attr('sensor.pv_forecast_model_status', 'weather_context_source') %}
+              {% set hcf_archive = state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') %}
+              {% set hcf_forecast = state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') %}
+              {% if pv_error or hcf_error %}
+                failed
+              {% elif pv_source in ['cache', 'mixed'] or hcf_archive == 'failed' or hcf_forecast == 'failed' %}
+                degraded
+              {% else %}
+                ok
+              {% endif %}
             {% endif %}
           {% endif %}
         attributes:
-          source_entity: "sensor.pv_forecast_model_status, sensor.house_consumption_forecast_model_status"
+          source_entity: "sensor.api_health_overall, sensor.pv_forecast_model_status, sensor.house_consumption_forecast_model_status"
           last_call: >-
-            {% set pv_ts = state_attr('sensor.pv_forecast_model_status', 'weather_last_incremental_sync') %}
-            {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
-            {% set timestamps = [pv_ts, hcf_ts] | select('string') | list %}
-            {% if timestamps | count > 0 %}
-              {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
-            {% else %}
-              unavailable
-            {% endif %}
-          last_success: >-
-            {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
-            {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
-            {% if pv_error or hcf_error %}
-              unavailable
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_last_call = state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_last_call') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_call is not none %}
+              {% set timestamps = [
+                state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_last_call'),
+                state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_archive_last_call'),
+                state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_forecast_last_call'),
+                state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_archive_last_call')
+              ] | select('defined') | select('ne', none) | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
             {% else %}
               {% set pv_ts = state_attr('sensor.pv_forecast_model_status', 'weather_last_incremental_sync') %}
               {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
@@ -163,10 +186,50 @@ template:
                 unavailable
               {% endif %}
             {% endif %}
+          last_success: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_last_success = state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_last_success') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_success is not none %}
+              {% set timestamps = [
+                state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_last_success'),
+                state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_archive_last_success'),
+                state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_forecast_last_success'),
+                state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_archive_last_success')
+              ] | select('defined') | select('ne', none) | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% else %}
+              {% set pv_error = state_attr('sensor.pv_forecast_model_status', 'last_refresh_error') %}
+              {% set hcf_error = state_attr('sensor.house_consumption_forecast_model_status', 'last_refresh_error') %}
+              {% if pv_error or hcf_error %}
+                unavailable
+              {% else %}
+                {% set pv_ts = state_attr('sensor.pv_forecast_model_status', 'weather_last_incremental_sync') %}
+                {% set hcf_ts = state_attr('sensor.house_consumption_forecast_model_status', 'weather_last_incremental_sync') %}
+                {% set timestamps = [pv_ts, hcf_ts] | select('string') | list %}
+                {% if timestamps | count > 0 %}
+                  {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+                {% else %}
+                  unavailable
+                {% endif %}
+              {% endif %}
+            {% endif %}
           details: >-
-            PV source: {{ state_attr('sensor.pv_forecast_model_status', 'weather_context_source') | default('unknown') }},
-            HCF archive: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') | default('unknown') }},
-            HCF forecast: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') | default('unknown') }}
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_forecast = state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_status') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_forecast is not none %}
+              PV forecast: {{ rt_forecast | default('unknown') }},
+              PV archive: {{ state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_archive_status') | default('unknown') }},
+              HCF forecast: {{ state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_forecast_status') | default('unknown') }},
+              HCF archive: {{ state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_archive_status') | default('unknown') }}
+            {% else %}
+              PV source: {{ state_attr('sensor.pv_forecast_model_status', 'weather_context_source') | default('unknown') }},
+              HCF archive: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') | default('unknown') }},
+              HCF forecast: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') | default('unknown') }}
+            {% endif %}
 
       - name: API Health AlphaESS
         unique_id: api_health_alphaess
@@ -303,28 +366,9 @@ template:
             {% endif %}
           details: "SwitchBot BLE error flag"
 
-      - name: API Health Overall
-        unique_id: api_health_overall
-        icon: mdi:web
-        state: >-
-          {% set statuses = [
-            states('sensor.api_health_open_meteo'),
-            states('sensor.api_health_alphaess'),
-            states('sensor.api_health_dwd'),
-            states('sensor.api_health_switchbot_ble')
-          ] %}
-          {% if 'failed' in statuses %}
-            failed
-          {% elif 'degraded' in statuses %}
-            degraded
-          {% elif 'unknown' in statuses %}
-            unknown
-          {% else %}
-            ok
-          {% endif %}
-        attributes:
-          open_meteo: "{{ states('sensor.api_health_open_meteo') }}"
-          alphaess: "{{ states('sensor.api_health_alphaess') }}"
-          dwd: "{{ states('sensor.api_health_dwd') }}"
-          switchbot_ble: "{{ states('sensor.api_health_switchbot_ble') }}"
-          details: "Aggregated worst status of all monitored external connections"
+# STG-6.15: Load the api_health sensor platform so sensor.api_health_overall
+# is created and the api_health.report service becomes available. The overall
+# sensor replaces the previous Phase-A template sensor and is updated in real
+# time by the api_health service.
+sensor:
+  - platform: api_health
