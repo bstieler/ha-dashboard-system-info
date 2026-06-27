@@ -1,3 +1,20 @@
+# Release v1.31.0
+
+**Datum:** 2026-06-27  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.29** — SOC-Kurven visuell glätten ohne Rampen (shape: hvh) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.30.0
 
 **Datum:** 2026-06-27  
