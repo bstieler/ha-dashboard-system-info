@@ -1,3 +1,26 @@
+# Release v1.30.0
+
+**Datum:** 2026-06-27  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.148** — SOC-Plan-Diagramm auf 24 + 12 Stunden Zeitfenster erweitern (`core_restart, yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.147** — Min-SOC (Entladungsgrenze) in SOC-Plan-Kurve berücksichtigen (`core_restart`)
+- **STG-4.28** — SOC-Ist- und SOC-Plan-Verlauf als Treppenfunktion darstellen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.29.0
 
 **Datum:** 2026-06-27  
