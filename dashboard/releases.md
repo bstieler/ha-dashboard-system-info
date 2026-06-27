@@ -1,3 +1,33 @@
+# Release v1.29.0
+
+**Datum:** 2026-06-27  
+**Items:** 7  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-6.15** — API Status Dashboard: Phase B — Open-Meteo Echtzeit-Status via zentralem api_health-Service (`core_restart`)
+- **STG-6.16** — API Status Dashboard: Phase C — AlphaESS Modbus, DWD und SwitchBot BLE Status (`yaml_reload, core_restart`)
+
+## Bugfixes
+
+- **STG-2.146** — AlphaESS Evaluation Sensoren: Update dauert wieder >10s (`core_restart`)
+- **STG-3.36** — House Consumption Forecast: Coordinator-Methoden-Aufrufe in IntervalEvaluator reparieren (`core_restart`)
+- **STG-3.42** — House Consumption Forecast: Weather Archive Fetch Failed analysieren (`core_restart`)
+- **STG-8.11** — Zirkulationspumpe: ZS7 Switch mit Retry - Already running (`yaml_reload`)
+
+## Technisch
+
+- **STG-2.11** — Entity-Layer entflechten: Attributes-Pruning, Rendering und Formatierung in Domain/Service verschieben (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.28.2
 
 **Datum:** 2026-06-24  
