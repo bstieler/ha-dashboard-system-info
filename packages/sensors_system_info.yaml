@@ -221,14 +221,14 @@ template:
             {% set overall = states('sensor.api_health_overall') %}
             {% set rt_forecast = state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_forecast_status') %}
             {% if overall not in ['unavailable', 'unknown', 'none'] and rt_forecast is not none %}
-              PV forecast: {{ rt_forecast | default('unknown') }},
-              PV archive: {{ state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_archive_status') | default('unknown') }},
-              HCF forecast: {{ state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_forecast_status') | default('unknown') }},
-              HCF archive: {{ state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_archive_status') | default('unknown') }}
+              PV forecast: {{ rt_forecast | default('unknown', true) }},
+              PV archive: {{ state_attr('sensor.api_health_overall', 'pv_forecast_open_meteo_archive_status') | default('unknown', true) }},
+              HCF forecast: {{ state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_forecast_status') | default('unknown', true) }},
+              HCF archive: {{ state_attr('sensor.api_health_overall', 'house_consumption_forecast_open_meteo_archive_status') | default('unknown', true) }}
             {% else %}
-              PV source: {{ state_attr('sensor.pv_forecast_model_status', 'weather_context_source') | default('unknown') }},
-              HCF archive: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') | default('unknown') }},
-              HCF forecast: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') | default('unknown') }}
+              PV source: {{ state_attr('sensor.pv_forecast_model_status', 'weather_context_source') | default('unknown', true) }},
+              HCF archive: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_archive_fetch_status') | default('unknown', true) }},
+              HCF forecast: {{ state_attr('sensor.house_consumption_forecast_model_status', 'weather_forecast_fetch_status') | default('unknown', true) }}
             {% endif %}
 
       - name: API Health AlphaESS
