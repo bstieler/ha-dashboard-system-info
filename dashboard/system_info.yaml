@@ -81,6 +81,13 @@ views:
           - entity: sensor.processor_temperature
             name: Processor temperature
 
+      - type: button
+        name: API Status
+        icon: mdi:cloud-check
+        tap_action:
+          action: navigate
+          navigation_path: /dashboard-system-info/api-status
+
   - title: HA Config Deploy
     path: ha-config-deploy
     icon: mdi:source-branch
@@ -111,3 +118,36 @@ views:
     icon: mdi:tag-multiple
     cards:
       - !include releases_card.yaml
+
+  - title: API Status
+    path: api-status
+    icon: mdi:cloud-check
+    max_columns: 1
+    cards:
+      - type: entities
+        title: Overall Status
+        show_header_toggle: false
+        state_color: true
+        entities:
+          - entity: sensor.api_health_overall
+            name: Overall
+
+      - type: markdown
+        title: External Connections
+        content: |
+          {%- set sources = [
+            ('Open-Meteo', 'sensor.api_health_open_meteo'),
+            ('AlphaESS', 'sensor.api_health_alphaess'),
+            ('DWD', 'sensor.api_health_dwd'),
+            ('SwitchBot BLE', 'sensor.api_health_switchbot_ble')
+          ] -%}
+          | Service | Status | Last Call | Last Success | Details |
+          |:--------|:------:|:---------:|:------------:|:--------|
+          {%- for name, entity in sources %}
+          {%- set status = states(entity) | default('unknown') %}
+          {%- set icon = '🔴' if status == 'failed' else '🟡' if status == 'degraded' else '🟢' if status == 'ok' else '⚪' %}
+          {%- set last_call = state_attr(entity, 'last_call') | default('—') %}
+          {%- set last_success = state_attr(entity, 'last_success') | default('—') %}
+          {%- set details = state_attr(entity, 'details') | default('—') | truncate(45) %}
+          | {{ name }} | {{ icon }} {{ status }} | {{ last_call }} | {{ last_success }} | {{ details }} |
+          {%- endfor %}

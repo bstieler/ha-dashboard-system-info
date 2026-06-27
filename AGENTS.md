@@ -33,6 +33,11 @@
   1. `ha core check`
   2. YAML / config reload
   3. Only if sidebar activation is still missing: `ha core restart`
+- The project now includes the `api_health` custom component
+  (`custom_components/api_health/`). Changes to the component or to the
+  `sensor: - platform: api_health` activation require an `ha core restart` to
+  load the service and create `sensor.api_health_overall`. Dashboard and package
+  YAML changes still only need a config reload after the component is loaded.
 
 ## Validation
 

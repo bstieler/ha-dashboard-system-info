@@ -1,3 +1,350 @@
+# Release v1.28.2
+
+**Datum:** 2026-06-24  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-11.8** — Release Pipeline: Änderungen an ha-pv-config/packages müssen auch ha-pv-config-package deployen (`none`)
+
+
+---
+
+# Release v1.28.1
+
+**Datum:** 2026-06-23  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-3.39** — House Consumption Forecast: Pre-existing Test-Failures beheben (`none`)
+
+
+---
+
+# Release v1.28.0
+
+**Datum:** 2026-06-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.38** — House Consumption Forecast: AC-Modus-Schalter im Dashboard und als Modellfeature (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.6
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.7** — AlphaESS Batteriesteuerung: Min-SOC-Automation ID kleinschreiben und Bedingungen vereinfachen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.5
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.6** — AlphaESS Batteriesteuerung: Min-SOC-Automation in Automations-Paket verschieben (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.4
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.5** — AlphaESS Batteriesteuerung: Min-SOC-Anzeige zeigt korrekten Wert und broken Sensoren entfernt (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.3
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.4** — AlphaESS Batteriesteuerung: Min-SOC-Anzeige über UPS-Reserve-Sensor reparieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.2
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.3** — AlphaESS Batteriesteuerung: Min-SOC-Anzeige im Dashboard reparieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.1
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-11.2** — AlphaESS Batteriesteuerung: Min-SOC über number.batusescap steuern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.27.0
+
+**Datum:** 2026-06-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-11.1** — AlphaESS Batteriesteuerung: Min-SOC bei Max Battery automatisch anpassen und anzeigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.26.5
+
+**Datum:** 2026-06-21  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-3.34** — House-Consumption-Forecast: ModelTrainingService aus Coordinator extrahieren (`core_restart`)
+- **STG-3.35** — House-Consumption-Forecast: ForecastSnapshotBuilder aus Coordinator extrahieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.26.4
+
+**Datum:** 2026-06-21  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-3.31** — House-Consumption-Forecast: StateReaderService aus Coordinator extrahieren (`core_restart`)
+- **STG-3.32** — House-Consumption-Forecast: WeatherContextService aus Coordinator extrahieren (`core_restart`)
+- **STG-3.33** — House-Consumption-Forecast: PresenceContextService aus Coordinator extrahieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.26.3
+
+**Datum:** 2026-06-21  
+**Items:** 4  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.144** — PV-Config: Modbus-Hausverbrauch-Tool von hartkodierten Verbindungsdaten befreien (`none`)
+- **STG-2.145** — PV-Config: Modbus-Hausverbrauchs-Sensor mit Triple-Guard absichern (`yaml_reload`)
+- **STG-3.28** — PV-Forecast: Deploy-Dependency fuer V2-Entities korrigieren (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
+# Release v1.26.2
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-6.18** — API Status Dashboard: HA-spezifische Zeitformatierung in Template-Sensoren korrigieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
+# Release v1.26.1
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-6.17** — API Status Dashboard Phase A: Template-Konfiguration korrigieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
+# Release v1.26.0
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-6.14** — API Status Dashboard: Phase A — Dashboard-Seite + zentrale Template-Sensoren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
+# Release v1.25.3
+
+**Datum:** 2026-06-20  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.141** — DWD Dashboard: Forecast-Sensoren reparieren (weather.get_forecasts funktioniert nicht in Template-Trigger-Actions) (`yaml_reload, core_restart`)
+- **STG-2.142** — DWD Dashboard: Wetterwarnungs-Entität optional machen oder ersetzen (`yaml_reload`)
+- **STG-2.143** — DWD Dashboard: Robustere Fehleranzeige und ApexCharts-Optionalität (`yaml_reload`)
+
+## Technisch
+
+- **STG-2.138** — Batterie-Refactor Phase 4: Phase-3-Strategie in phase3_power_window.py auslagern (`core_restart`)
+- **STG-2.139** — Batterie-Refactor Phase 5: Phase-1/Phase-2-Logik in phase1_phase2.py auslagern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
+# Release v1.25.2
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.140** — Batterie-Refactor Phase 6: Auflösungslogik konsolidieren, Defaults zentralisieren und Phase-3-Duplikate entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.25.1
+
+**Datum:** 2026-06-20  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.135** — Batterie-Refactor Phase 1: _build_snapshot() in sensor.py als Pipeline aufteilen (`core_restart`)
+- **STG-2.136** — Batterie-Refactor Phase 2: Energy-Math und Capacity-Schätzung auslagern (`core_restart`)
+- **STG-2.137** — Batterie-Refactor Phase 3: Forecast-Extraktion in forecast_parser.py auslagern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.25.0
+
+**Datum:** 2026-06-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.27** — PV-Forecast: Globaler Scale Factor lernt aus eigener Ausgabe (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.24.0
 
 **Datum:** 2026-06-19  

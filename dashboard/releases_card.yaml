@@ -2,10 +2,10 @@ type: vertical-stack
 cards:
 - type: markdown
   title: Release History
-  content: '## Release v1.24.0 — 2026-06-19
+  content: '## Release v1.28.2 — 2026-06-24
 
 
-    **Items:** 1 | **Deployment:** core_restart
+    **Items:** 1 | **Deployment:** none
 
 
     ---
@@ -18,27 +18,27 @@ cards:
 
     |---------|-------|-------|------------|
 
-    | v1.23.0 | 2026-06-17 | 2 | core_restart |
+    | v1.28.1 | 2026-06-23 | 2 | none |
 
-    | v1.22.0 | 2026-06-12 | 6 | core_restart |
+    | v1.28.0 | 2026-06-23 | 1 | core_restart |
 
-    | v1.22.1 | 2026-06-11 | 1 | yaml_reload |
+    | v1.27.6 | 2026-06-22 | 1 | core_restart |
 
-    | v1.21.0 | 2026-06-07 | 1 | core_restart |
+    | v1.27.5 | 2026-06-22 | 1 | core_restart |
 
-    | v1.20.0 | 2026-06-06 | 1 | core_restart |
+    | v1.27.4 | 2026-06-22 | 1 | core_restart |
 
-    | v1.19.1 | 2026-06-06 | 1 | core_restart |
+    | v1.27.3 | 2026-06-22 | 1 | core_restart |
 
-    | v1.19.0 | 2026-06-06 | 2 | core_restart |
+    | v1.27.2 | 2026-06-22 | 1 | core_restart |
 
-    | v1.18.4 | 2026-06-04 | 1 | none |
+    | v1.27.1 | 2026-06-22 | 1 | core_restart |
 
-    | v1.18.3 | 2026-06-04 | 2 | core_restart |
+    | v1.27.0 | 2026-06-22 | 1 | core_restart |
 
-    | v1.18.2 | 2026-06-04 | 1 | core_restart |
+    | v1.26.5 | 2026-06-21 | 2 | core_restart |
 
-    | _..._ | _26 ältere_ | _Releases_ | _siehe releases/index.html_ |
+    | _..._ | _45 ältere_ | _Releases_ | _siehe releases/index.html_ |
 
     '
 - type: button

@@ -1,7 +1,7 @@
 {
   "project_id": "ha-dashboard-system-info",
   "functional_deploy_root": "ha-dashboard-system-info-package",
-  "verify_reload": "yaml_reload",
+  "verify_reload": "core_restart",
   "owned_entity_patterns": [
     "sensor.processor_use",
     "sensor.processor_use_core_0",
@@ -13,7 +13,12 @@
     "sensor.disk_free",
     "sensor.processor_temperature",
     "sensor.last_boot",
-    "sensor.system_since_last_boot"
+    "sensor.system_since_last_boot",
+    "sensor.api_health_open_meteo",
+    "sensor.api_health_alphaess",
+    "sensor.api_health_dwd",
+    "sensor.api_health_switchbot_ble",
+    "sensor.api_health_overall"
   ],
   "activations": [
     {
@@ -47,6 +52,11 @@
       "type": "entity_registry_contains",
       "label": "since last boot entity",
       "entity_id": "sensor.system_since_last_boot"
+    },
+    {
+      "type": "entity_registry_contains",
+      "label": "api health overall entity",
+      "entity_id": "sensor.api_health_overall"
     }
   ],
   "log_keywords": [
