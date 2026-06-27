@@ -235,34 +235,53 @@ template:
         unique_id: api_health_alphaess
         icon: mdi:battery
         state: >-
-          {% set runtime = states('sensor.alphaess_charge_control_runtime') %}
-          {% if runtime in ['unavailable', 'unknown', 'none'] %}
-            unknown
-          {% else %}
-            {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
-            {% set modbus_missing = missing | select('match', 'sensor\.alpha_ess_.*') | list | count > 0 %}
-            {% set cloud_missing = missing | select('match', 'sensor\.instantaneous_.*') | list | count > 0 %}
-            {% set cloud_soc_missing = 'sensor.pv_battery_soc' in missing %}
-            {% if modbus_missing and (cloud_missing or cloud_soc_missing) %}
+          {% set overall = states('sensor.api_health_overall') %}
+          {% set rt_modbus = state_attr('sensor.api_health_overall', 'alphaess_modbus_status') %}
+          {% set rt_cloud = state_attr('sensor.api_health_overall', 'alphaess_cloud_status') %}
+          {% if overall not in ['unavailable', 'unknown', 'none'] and (rt_modbus is not none or rt_cloud is not none) %}
+            {% set statuses = [rt_modbus, rt_cloud] | select('defined') | select('ne', none) | list %}
+            {% if 'failed' in statuses %}
               failed
-            {% elif modbus_missing or cloud_missing or cloud_soc_missing %}
+            {% elif 'degraded' in statuses %}
               degraded
-            {% else %}
+            {% elif 'unknown' in statuses %}
+              unknown
+            {% elif statuses | count > 0 %}
               ok
+            {% else %}
+              unknown
+            {% endif %}
+          {% else %}
+            {% set runtime = states('sensor.alphaess_charge_control_runtime') %}
+            {% if runtime in ['unavailable', 'unknown', 'none'] %}
+              unknown
+            {% else %}
+              {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
+              {% set modbus_missing = missing | select('match', 'sensor\.alpha_ess_.*') | list | count > 0 %}
+              {% set cloud_missing = missing | select('match', 'sensor\.instantaneous_.*') | list | count > 0 %}
+              {% set cloud_soc_missing = 'sensor.pv_battery_soc' in missing %}
+              {% if modbus_missing and (cloud_missing or cloud_soc_missing) %}
+                failed
+              {% elif modbus_missing or cloud_missing or cloud_soc_missing %}
+                degraded
+              {% else %}
+                ok
+              {% endif %}
             {% endif %}
           {% endif %}
         attributes:
-          source_entity: "sensor.alphaess_charge_control_runtime"
+          source_entity: "sensor.api_health_overall, sensor.alphaess_charge_control_runtime"
           last_call: >-
-            {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
-              {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
-            {% else %}
-              unavailable
-            {% endif %}
-          last_success: >-
-            {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
-            {% if missing | count > 0 %}
-              unavailable
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_modbus = state_attr('sensor.api_health_overall', 'alphaess_modbus_last_call') %}
+            {% set rt_cloud = state_attr('sensor.api_health_overall', 'alphaess_cloud_last_call') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and (rt_modbus is not none or rt_cloud is not none) %}
+              {% set timestamps = [rt_modbus, rt_cloud] | select('defined') | select('ne', none) | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
             {% else %}
               {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
                 {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
@@ -270,48 +289,84 @@ template:
                 unavailable
               {% endif %}
             {% endif %}
+          last_success: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_modbus = state_attr('sensor.api_health_overall', 'alphaess_modbus_last_success') %}
+            {% set rt_cloud = state_attr('sensor.api_health_overall', 'alphaess_cloud_last_success') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and (rt_modbus is not none or rt_cloud is not none) %}
+              {% set timestamps = [rt_modbus, rt_cloud] | select('defined') | select('ne', none) | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% else %}
+              {% set missing = state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') or [] %}
+              {% if missing | count > 0 %}
+                unavailable
+              {% else %}
+                {% if states('sensor.alphaess_charge_control_runtime') not in ['unavailable', 'unknown', 'none'] %}
+                  {{ states.sensor.alphaess_charge_control_runtime.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+                {% else %}
+                  unavailable
+                {% endif %}
+              {% endif %}
+            {% endif %}
           details: >-
-            Missing entities: {{ state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') | default(['unknown']) | join(', ') }}
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_modbus = state_attr('sensor.api_health_overall', 'alphaess_modbus_status') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_modbus is not none %}
+              Modbus: {{ rt_modbus | default('unknown') }}, Cloud: {{ state_attr('sensor.api_health_overall', 'alphaess_cloud_status') | default('unknown') }}
+            {% else %}
+              Missing entities: {{ state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') | default(['unknown']) | join(', ') }}
+            {% endif %}
 
       - name: API Health DWD
         unique_id: api_health_dwd
         icon: mdi:weather-cloudy
         state: >-
-          {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
-          {% set unavailable_count = entities | map('states') | select('in', ['unavailable', 'unknown', 'none']) | list | count %}
-          {% if unavailable_count == entities | count %}
-            unknown
-          {% elif unavailable_count > 0 %}
-            failed
-          {% else %}
-            ok
-          {% endif %}
-        attributes:
-          source_entity: "sensor.dwd_nowcast_text, sensor.dwd_forecast_json, sensor.dwd_forecast_daily_json, sensor.dwd_radar_image_url"
-          last_call: >-
-            {% set timestamps = [] %}
-            {% if states('sensor.dwd_nowcast_text') not in ['unavailable', 'unknown', 'none'] %}
-              {% set timestamps = timestamps + [states.sensor.dwd_nowcast_text.last_updated] %}
-            {% endif %}
-            {% if states('sensor.dwd_forecast_json') not in ['unavailable', 'unknown', 'none'] %}
-              {% set timestamps = timestamps + [states.sensor.dwd_forecast_json.last_updated] %}
-            {% endif %}
-            {% if states('sensor.dwd_forecast_daily_json') not in ['unavailable', 'unknown', 'none'] %}
-              {% set timestamps = timestamps + [states.sensor.dwd_forecast_daily_json.last_updated] %}
-            {% endif %}
-            {% if states('sensor.dwd_radar_image_url') not in ['unavailable', 'unknown', 'none'] %}
-              {% set timestamps = timestamps + [states.sensor.dwd_radar_image_url.last_updated] %}
-            {% endif %}
-            {% if timestamps | count > 0 %}
-              {{ timestamps | max | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+          {% set overall = states('sensor.api_health_overall') %}
+          {% set rt_nowcast = state_attr('sensor.api_health_overall', 'dwd_nowcast_status') %}
+          {% set rt_hourly = state_attr('sensor.api_health_overall', 'dwd_forecast_hourly_status') %}
+          {% set rt_daily = state_attr('sensor.api_health_overall', 'dwd_forecast_daily_status') %}
+          {% if overall not in ['unavailable', 'unknown', 'none'] and (rt_nowcast is not none or rt_hourly is not none or rt_daily is not none) %}
+            {% set statuses = [rt_nowcast, rt_hourly, rt_daily] | select('defined') | select('ne', none) | list %}
+            {% if 'failed' in statuses %}
+              failed
+            {% elif 'degraded' in statuses %}
+              degraded
+            {% elif 'unknown' in statuses %}
+              unknown
+            {% elif statuses | count > 0 %}
+              ok
             {% else %}
-              unavailable
+              unknown
             {% endif %}
-          last_success: >-
+          {% else %}
             {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
             {% set unavailable_count = entities | map('states') | select('in', ['unavailable', 'unknown', 'none']) | list | count %}
-            {% if unavailable_count > 0 %}
-              unavailable
+            {% if unavailable_count == entities | count %}
+              unknown
+            {% elif unavailable_count > 0 %}
+              failed
+            {% else %}
+              ok
+            {% endif %}
+          {% endif %}
+        attributes:
+          source_entity: "sensor.api_health_overall, sensor.dwd_nowcast_text, sensor.dwd_forecast_json, sensor.dwd_forecast_daily_json, sensor.dwd_radar_image_url"
+          last_call: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_nowcast = state_attr('sensor.api_health_overall', 'dwd_nowcast_last_call') %}
+            {% set rt_hourly = state_attr('sensor.api_health_overall', 'dwd_forecast_hourly_last_call') %}
+            {% set rt_daily = state_attr('sensor.api_health_overall', 'dwd_forecast_daily_last_call') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and (rt_nowcast is not none or rt_hourly is not none or rt_daily is not none) %}
+              {% set timestamps = [rt_nowcast, rt_hourly, rt_daily] | select('defined') | select('ne', none) | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
             {% else %}
               {% set timestamps = [] %}
               {% if states('sensor.dwd_nowcast_text') not in ['unavailable', 'unknown', 'none'] %}
@@ -332,39 +387,110 @@ template:
                 unavailable
               {% endif %}
             {% endif %}
+          last_success: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_nowcast = state_attr('sensor.api_health_overall', 'dwd_nowcast_last_success') %}
+            {% set rt_hourly = state_attr('sensor.api_health_overall', 'dwd_forecast_hourly_last_success') %}
+            {% set rt_daily = state_attr('sensor.api_health_overall', 'dwd_forecast_daily_last_success') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and (rt_nowcast is not none or rt_hourly is not none or rt_daily is not none) %}
+              {% set timestamps = [rt_nowcast, rt_hourly, rt_daily] | select('defined') | select('ne', none) | select('string') | list %}
+              {% if timestamps | count > 0 %}
+                {{ timestamps | max | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% else %}
+              {% set entities = ['sensor.dwd_nowcast_text', 'sensor.dwd_forecast_json', 'sensor.dwd_forecast_daily_json', 'sensor.dwd_radar_image_url'] %}
+              {% set unavailable_count = entities | map('states') | select('in', ['unavailable', 'unknown', 'none']) | list | count %}
+              {% if unavailable_count > 0 %}
+                unavailable
+              {% else %}
+                {% set timestamps = [] %}
+                {% if states('sensor.dwd_nowcast_text') not in ['unavailable', 'unknown', 'none'] %}
+                  {% set timestamps = timestamps + [states.sensor.dwd_nowcast_text.last_updated] %}
+                {% endif %}
+                {% if states('sensor.dwd_forecast_json') not in ['unavailable', 'unknown', 'none'] %}
+                  {% set timestamps = timestamps + [states.sensor.dwd_forecast_json.last_updated] %}
+                {% endif %}
+                {% if states('sensor.dwd_forecast_daily_json') not in ['unavailable', 'unknown', 'none'] %}
+                  {% set timestamps = timestamps + [states.sensor.dwd_forecast_daily_json.last_updated] %}
+                {% endif %}
+                {% if states('sensor.dwd_radar_image_url') not in ['unavailable', 'unknown', 'none'] %}
+                  {% set timestamps = timestamps + [states.sensor.dwd_radar_image_url.last_updated] %}
+                {% endif %}
+                {% if timestamps | count > 0 %}
+                  {{ timestamps | max | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+                {% else %}
+                  unavailable
+                {% endif %}
+              {% endif %}
+            {% endif %}
           details: >-
-            sensor.dwd_nowcast_text: {{ states('sensor.dwd_nowcast_text') | default('unknown') }},
-            sensor.dwd_forecast_json: {{ states('sensor.dwd_forecast_json') | default('unknown') }},
-            sensor.dwd_forecast_daily_json: {{ states('sensor.dwd_forecast_daily_json') | default('unknown') }},
-            sensor.dwd_radar_image_url: {{ states('sensor.dwd_radar_image_url') | default('unknown') }}
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_nowcast = state_attr('sensor.api_health_overall', 'dwd_nowcast_status') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_nowcast is not none %}
+              nowcast: {{ rt_nowcast | default('unknown') }},
+              hourly: {{ state_attr('sensor.api_health_overall', 'dwd_forecast_hourly_status') | default('unknown') }},
+              daily: {{ state_attr('sensor.api_health_overall', 'dwd_forecast_daily_status') | default('unknown') }}
+            {% else %}
+              sensor.dwd_nowcast_text: {{ states('sensor.dwd_nowcast_text') | default('unknown') }},
+              sensor.dwd_forecast_json: {{ states('sensor.dwd_forecast_json') | default('unknown') }},
+              sensor.dwd_forecast_daily_json: {{ states('sensor.dwd_forecast_daily_json') | default('unknown') }},
+              sensor.dwd_radar_image_url: {{ states('sensor.dwd_radar_image_url') | default('unknown') }}
+            {% endif %}
 
       - name: API Health SwitchBot BLE
         unique_id: api_health_switchbot_ble
         icon: mdi:bluetooth
         state: >-
-          {% set err = states('input_boolean.zs7_circ_pump_ble_error') %}
-          {% if err == 'on' %}
-            failed
-          {% elif err == 'off' %}
-            ok
+          {% set overall = states('sensor.api_health_overall') %}
+          {% set rt_status = state_attr('sensor.api_health_overall', 'switchbot_ble_status') %}
+          {% if overall not in ['unavailable', 'unknown', 'none'] and rt_status is not none %}
+            {{ rt_status }}
           {% else %}
-            unknown
+            {% set err = states('input_boolean.zs7_circ_pump_ble_error') %}
+            {% if err == 'on' %}
+              failed
+            {% elif err == 'off' %}
+              ok
+            {% else %}
+              unknown
+            {% endif %}
           {% endif %}
         attributes:
-          source_entity: "input_boolean.zs7_circ_pump_ble_error"
+          source_entity: "sensor.api_health_overall, input_boolean.zs7_circ_pump_ble_error"
           last_call: >-
-            {% if states('input_boolean.zs7_circ_pump_ble_error') not in ['unavailable', 'unknown', 'none'] %}
-              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_last_call = state_attr('sensor.api_health_overall', 'switchbot_ble_last_call') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_call is not none %}
+              {{ rt_last_call | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
-              unavailable
+              {% if states('input_boolean.zs7_circ_pump_ble_error') not in ['unavailable', 'unknown', 'none'] %}
+                {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
             {% endif %}
           last_success: >-
-            {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
-              {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_last_success = state_attr('sensor.api_health_overall', 'switchbot_ble_last_success') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_success is not none %}
+              {{ rt_last_success | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
-              unavailable
+              {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
+                {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
             {% endif %}
-          details: "SwitchBot BLE error flag"
+          details: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_error = state_attr('sensor.api_health_overall', 'switchbot_ble_error') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_error is not none %}
+              {{ rt_error }}
+            {% else %}
+              SwitchBot BLE error flag
+            {% endif %}
 
 # STG-6.15: Load the api_health sensor platform so sensor.api_health_overall
 # is created and the api_health.report service becomes available. The overall
