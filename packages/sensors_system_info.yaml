@@ -316,7 +316,7 @@ template:
             {% set overall = states('sensor.api_health_overall') %}
             {% set rt_modbus = state_attr('sensor.api_health_overall', 'alphaess_modbus_status') %}
             {% if overall not in ['unavailable', 'unknown', 'none'] and rt_modbus is not none %}
-              Modbus: {{ rt_modbus | default('unknown') }}, Cloud: {{ state_attr('sensor.api_health_overall', 'alphaess_cloud_status') | default('unknown') }}
+              Modbus: {{ rt_modbus | default('unknown', true) }}, Cloud: {{ state_attr('sensor.api_health_overall', 'alphaess_cloud_status') | default('unknown', true) }}
             {% else %}
               Missing entities: {{ state_attr('sensor.alphaess_charge_control_runtime', 'control_runtime_missing_entities') | default(['unknown']) | join(', ') }}
             {% endif %}
@@ -429,9 +429,9 @@ template:
             {% set overall = states('sensor.api_health_overall') %}
             {% set rt_nowcast = state_attr('sensor.api_health_overall', 'dwd_nowcast_status') %}
             {% if overall not in ['unavailable', 'unknown', 'none'] and rt_nowcast is not none %}
-              nowcast: {{ rt_nowcast | default('unknown') }},
-              hourly: {{ state_attr('sensor.api_health_overall', 'dwd_forecast_hourly_status') | default('unknown') }},
-              daily: {{ state_attr('sensor.api_health_overall', 'dwd_forecast_daily_status') | default('unknown') }}
+              nowcast: {{ rt_nowcast | default('unknown', true) }},
+              hourly: {{ state_attr('sensor.api_health_overall', 'dwd_forecast_hourly_status') | default('unknown', true) }},
+              daily: {{ state_attr('sensor.api_health_overall', 'dwd_forecast_daily_status') | default('unknown', true) }}
             {% else %}
               sensor.dwd_nowcast_text: {{ states('sensor.dwd_nowcast_text') | default('unknown') }},
               sensor.dwd_forecast_json: {{ states('sensor.dwd_forecast_json') | default('unknown') }},

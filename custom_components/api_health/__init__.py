@@ -29,8 +29,8 @@ REPORT_SCHEMA = vol.Schema(
         vol.Required("source"): cv.string,
         vol.Required("status"): vol.In(["ok", "degraded", "failed", "unknown"]),
         vol.Optional("timestamp"): cv.datetime,
-        vol.Optional("error"): cv.string,
-        vol.Optional("details"): cv.string,
+        vol.Optional("error"): vol.Any(cv.string, None),
+        vol.Optional("details"): vol.Any(cv.string, None),
     }
 )
 
