@@ -1,3 +1,20 @@
+# Release v1.32.2
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.47** — PV-Forecast: ForecastScheduler plant delayed Initial-Refresh nicht zuverlässig nach HA-Restart (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.1
 
 **Datum:** 2026-06-28  
