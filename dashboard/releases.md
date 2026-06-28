@@ -1,3 +1,20 @@
+# Release v1.32.1
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.46** — PV-Forecast: Mahalanobis-Distanz in model.py:_distance robust gegen fehlende/ungültige Features machen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.0
 
 **Datum:** 2026-06-28  
