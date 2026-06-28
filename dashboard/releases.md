@@ -1,3 +1,20 @@
+# Release v1.28.3
+
+**Datum:** 2026-06-28  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.52** — AC-Modus aus House Consumption Forecast entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.7
 
 **Datum:** 2026-06-28  
