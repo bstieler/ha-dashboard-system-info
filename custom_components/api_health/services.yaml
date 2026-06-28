@@ -1,0 +1,42 @@
+report:
+  name: Report API health status
+  description: Publish a real-time status report for an external API call.
+  fields:
+    source:
+      name: Source
+      description: Identifier of the API or integration reporting the status.
+      required: true
+      example: "open_meteo"
+      selector:
+        text:
+    status:
+      name: Status
+      description: Current health status of the API.
+      required: true
+      example: "ok"
+      selector:
+        select:
+          options:
+            - "ok"
+            - "degraded"
+            - "failed"
+            - "unknown"
+          mode: list
+    timestamp:
+      name: Timestamp
+      description: Optional ISO timestamp when the status was observed.
+      required: false
+      selector:
+        datetime:
+    error:
+      name: Error
+      description: Optional error message or reason for a failed/degraded status.
+      required: false
+      selector:
+        text:
+    details:
+      name: Details
+      description: Optional additional details about the API call or response.
+      required: false
+      selector:
+        text:

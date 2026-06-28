@@ -1,3 +1,20 @@
+# Release v1.32.6
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-8.12** — api_health: services.yaml hinzufügen um HA-Warnung zu vermeiden (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.5
 
 **Datum:** 2026-06-28  
