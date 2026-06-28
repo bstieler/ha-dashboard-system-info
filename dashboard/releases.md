@@ -1,3 +1,24 @@
+# Release v1.32.0
+
+**Datum:** 2026-06-28  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.44** — PV-Forecast Confidence: Modell-Band durch historische Kalibrierung relativieren (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.45** — PV-Forecast: Drift-Score um MAE- und Bias-Anteil ergänzen (STG-4.5a Nachhole) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.31.0
 
 **Datum:** 2026-06-27  
