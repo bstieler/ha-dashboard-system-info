@@ -1,3 +1,20 @@
+# Release v1.34.0
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.57** — Feature-Einfluss-Tabelle für Temperatur und ACs im Consumption Forecast Dashboard (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.33.1
 
 **Datum:** 2026-06-28  
