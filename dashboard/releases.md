@@ -1,3 +1,20 @@
+# Release v1.32.5
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.49** — PV-Forecast: Training beschleunigen durch vektorisierte Distanz und Sunrise-Fenster-Filter (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.3
 
 **Datum:** 2026-06-28  
