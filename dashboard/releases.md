@@ -1,3 +1,20 @@
+# Release v1.32.7
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.51** — Forecast-Integrations: api_health Service-Call awaiten (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.6
 
 **Datum:** 2026-06-28  
