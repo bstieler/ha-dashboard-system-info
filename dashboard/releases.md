@@ -1,3 +1,20 @@
+# Release v1.32.3
+
+**Datum:** 2026-06-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.48** — PV-Forecast: _distance weiter robust machen und Exception-Typ diagnostizieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.32.2
 
 **Datum:** 2026-06-28  
