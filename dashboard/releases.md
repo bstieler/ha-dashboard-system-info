@@ -1,3 +1,22 @@
+# Release v1.33.0
+
+**Datum:** 2026-06-28  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.54** — Dashboard: SwitchBot AC-Steckdosen anzeigen (`yaml_reload`)
+- **STG-3.55** — Forecast: SwitchBot AC-Zustände und -Leistung als Modell-Features nutzen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.32.8
 
 **Datum:** 2026-06-28  
