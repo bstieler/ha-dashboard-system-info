@@ -1,3 +1,22 @@
+# Release v1.36.0
+
+**Datum:** 2026-06-30  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.59** — House Consumption Forecast: Feature-Skalierung korrigieren (Z-Score vs. MinMax) (`core_restart`)
+- **STG-3.60** — House Consumption Forecast: Feature-Selektion einfuehren (`core_restart`)
+- **STG-3.61** — House Consumption Forecast: Open-Meteo Wetterfeatures erweitern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.35.0
 
 **Datum:** 2026-06-29  
