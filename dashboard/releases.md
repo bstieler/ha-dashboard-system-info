@@ -1,3 +1,25 @@
+# Release v1.37.0
+
+**Datum:** 2026-06-30  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.67** — House Consumption Forecast: Hartkodierte Entity-IDs aus Dashboard und Package entfernen (`core_restart`)
+- **STG-3.70** — House Consumption Forecast: Wettercode als kategoriales Feature one-hot encoden (`core_restart`)
+
+## Technisch
+
+- **STG-3.71** — House Consumption Forecast: Permutation-Feature-Selektion performancetechnisch begrenzen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.36.0
 
 **Datum:** 2026-06-30  
