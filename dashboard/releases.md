@@ -1,3 +1,20 @@
+# Release v1.38.4
+
+**Datum:** 2026-07-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-8.13** — rpi_power: Workaround für NoneType-Fehler in binary_sensor update (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.38.3
 
 **Datum:** 2026-07-01  
