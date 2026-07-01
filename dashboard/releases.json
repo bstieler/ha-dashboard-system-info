@@ -1,5 +1,47 @@
 [
   {
+    "version": "v1.38.3",
+    "date": "2026-07-01",
+    "items": 1,
+    "deployment": "core_restart"
+  },
+  {
+    "version": "v1.38.2",
+    "date": "2026-07-01",
+    "items": 2,
+    "deployment": "core_restart"
+  },
+  {
+    "version": "v1.38.1",
+    "date": "2026-07-01",
+    "items": 1,
+    "deployment": "yaml_reload"
+  },
+  {
+    "version": "v1.38.0",
+    "date": "2026-07-01",
+    "items": 3,
+    "deployment": "core_restart"
+  },
+  {
+    "version": "v1.37.0",
+    "date": "2026-06-30",
+    "items": 3,
+    "deployment": "core_restart"
+  },
+  {
+    "version": "v1.36.0",
+    "date": "2026-06-30",
+    "items": 3,
+    "deployment": "core_restart"
+  },
+  {
+    "version": "v1.35.0",
+    "date": "2026-06-29",
+    "items": 1,
+    "deployment": "core_restart"
+  },
+  {
     "version": "v1.34.1",
     "date": "2026-06-28",
     "items": 1,

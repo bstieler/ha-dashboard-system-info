@@ -1,3 +1,140 @@
+# Release v1.38.3
+
+**Datum:** 2026-07-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.81** — PV-Forecast: NumPy aus manifest.json requirements entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.38.2
+
+**Datum:** 2026-07-01  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.149** — AlphaESS Charge Control: SOC-Plan-Kurve wird im Dashboard nicht mehr angezeigt (`yaml_reload`)
+- **STG-3.80** — PV-Forecast: NumPy-Requirement an HA-System mit NumPy 2.x anpassen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
+# Release v1.38.1
+
+**Datum:** 2026-07-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-3.79** — PV-Forecast: AC-Entities im House Consumption Forecast Package konfigurieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
+# Release v1.38.0
+
+**Datum:** 2026-07-01  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.76** — PV-Forecast: Intraday-Refresh-Intervall konfigurierbar und Deep-Copy-Overhead eliminieren (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.75** — PV-Forecast: NumPy als hartes Requirement deklarieren (`core_restart`)
+
+## Technisch
+
+- **STG-1.4** — Anwesenheits-Tracking aus Zirkulationspumpe und House Consumption Forecast entfernen (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
+# Release v1.37.0
+
+**Datum:** 2026-06-30  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.67** — House Consumption Forecast: Hartkodierte Entity-IDs aus Dashboard und Package entfernen (`core_restart`)
+- **STG-3.70** — House Consumption Forecast: Wettercode als kategoriales Feature one-hot encoden (`core_restart`)
+
+## Technisch
+
+- **STG-3.71** — House Consumption Forecast: Permutation-Feature-Selektion performancetechnisch begrenzen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.36.0
+
+**Datum:** 2026-06-30  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.59** — House Consumption Forecast: Feature-Skalierung korrigieren (Z-Score vs. MinMax) (`core_restart`)
+- **STG-3.60** — House Consumption Forecast: Feature-Selektion einfuehren (`core_restart`)
+- **STG-3.61** — House Consumption Forecast: Open-Meteo Wetterfeatures erweitern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
+# Release v1.35.0
+
+**Datum:** 2026-06-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.37** — House Consumption Forecast: Cooling-Degree-Hours als wetterbasiertes Kühlfeature (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.34.1
 
 **Datum:** 2026-06-28  

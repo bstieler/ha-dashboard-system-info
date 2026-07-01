@@ -18,7 +18,8 @@
     "sensor.api_health_alphaess",
     "sensor.api_health_dwd",
     "sensor.api_health_switchbot_ble",
-    "sensor.api_health_overall"
+    "sensor.api_health_overall",
+    "binary_sensor.rpi_power"
   ],
   "activations": [
     {
