@@ -1,3 +1,20 @@
+# Release v1.38.1
+
+**Datum:** 2026-07-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-3.79** — PV-Forecast: AC-Entities im House Consumption Forecast Package konfigurieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.38.0
 
 **Datum:** 2026-07-01  
