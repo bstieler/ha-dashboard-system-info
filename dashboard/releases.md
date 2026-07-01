@@ -1,3 +1,20 @@
+# Release v1.38.3
+
+**Datum:** 2026-07-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.81** — PV-Forecast: NumPy aus manifest.json requirements entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.38.2
 
 **Datum:** 2026-07-01  
