@@ -1,3 +1,29 @@
+# Release v1.38.0
+
+**Datum:** 2026-07-01  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.76** — PV-Forecast: Intraday-Refresh-Intervall konfigurierbar und Deep-Copy-Overhead eliminieren (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.75** — PV-Forecast: NumPy als hartes Requirement deklarieren (`core_restart`)
+
+## Technisch
+
+- **STG-1.4** — Anwesenheits-Tracking aus Zirkulationspumpe und House Consumption Forecast entfernen (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.37.0
 
 **Datum:** 2026-06-30  
