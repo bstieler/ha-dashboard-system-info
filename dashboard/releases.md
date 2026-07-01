@@ -1,3 +1,22 @@
+# Release v1.38.2
+
+**Datum:** 2026-07-01  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.149** — AlphaESS Charge Control: SOC-Plan-Kurve wird im Dashboard nicht mehr angezeigt (`yaml_reload`)
+- **STG-3.80** — PV-Forecast: NumPy-Requirement an HA-System mit NumPy 2.x anpassen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.38.1
 
 **Datum:** 2026-07-01  
