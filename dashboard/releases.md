@@ -1,3 +1,25 @@
+# Release v1.43.0
+
+**Datum:** 2026-07-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.159** — Dynamischer MIN-SOC sofort neu berechnen bei Toggle (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.160** — Dynamischer MIN-SOC direkt nach Sensor-Start berechnen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.42.1
 
 **Datum:** 2026-07-02  
