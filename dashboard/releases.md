@@ -1,3 +1,20 @@
+# Release v1.43.1
+
+**Datum:** 2026-07-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.161** — Dynamischer MIN-SOC bei Änderung der Eingaben neu berechnen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.43.0
 
 **Datum:** 2026-07-02  
