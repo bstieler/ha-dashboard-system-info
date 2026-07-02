@@ -1,3 +1,20 @@
+# Release v1.44.1
+
+**Datum:** 2026-07-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.163** — SOC-Plan-Kurve in der Nacht aktiv zum dynamischen MIN-SOC abfallen lassen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.44.0
 
 **Datum:** 2026-07-02  
