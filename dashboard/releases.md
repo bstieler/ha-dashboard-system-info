@@ -1,3 +1,20 @@
+# Release v1.40.0
+
+**Datum:** 2026-07-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.151** — Ziel-SOC Phase 3: Verfügbare Energie aus Batterie + PV mit Verbrauch vergleichen und erwarteten SOC zum Recovery zeigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.39.0
 
 **Datum:** 2026-07-02  
