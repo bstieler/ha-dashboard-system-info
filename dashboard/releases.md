@@ -1,3 +1,21 @@
+# Release v1.41.2
+
+**Datum:** 2026-07-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.156** — Phasen-Vorschau: Null-Längen-Phasen vermeiden und Darstellung verbessern (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.41.1
 
 **Datum:** 2026-07-02  
