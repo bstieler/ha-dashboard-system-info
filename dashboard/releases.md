@@ -1,3 +1,20 @@
+# Release v1.39.0
+
+**Datum:** 2026-07-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.150** — Ziel-SOC Phase 3: Angenommenen Verbrauch zwischen Abend- und Recovery-Crossover anzeigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.38.4
 
 **Datum:** 2026-07-01  
