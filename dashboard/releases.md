@@ -1,3 +1,20 @@
+# Release v1.42.0
+
+**Datum:** 2026-07-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.157** — Dynamische MIN-SOC Steuerung in Night-Phase und Randphasen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.41.2
 
 **Datum:** 2026-07-02  
