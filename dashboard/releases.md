@@ -1,3 +1,20 @@
+# Release v1.46.0
+
+**Datum:** 2026-07-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.166** — Dynamische MIN-SOC-Steuerung ab Cross-Over-Termin abends starten (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.45.0
 
 **Datum:** 2026-07-03  
