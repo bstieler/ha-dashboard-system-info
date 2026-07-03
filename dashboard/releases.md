@@ -1,3 +1,20 @@
+# Release v1.48.1
+
+**Datum:** 2026-07-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.170** — Fix: SOC-Plan-Kurve springt vor Sonnenaufgang auf alten dynamischen MIN-SOC (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.48.0
 
 **Datum:** 2026-07-03  
