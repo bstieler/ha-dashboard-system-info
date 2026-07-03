@@ -1,3 +1,20 @@
+# Release v1.46.1
+
+**Datum:** 2026-07-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.167** — Regression-Fix: dynamische MIN-SOC-Steuerung bleibt nach Crossover aktiv (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.46.0
 
 **Datum:** 2026-07-03  
