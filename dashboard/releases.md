@@ -1,3 +1,20 @@
+# Release v1.51.1
+
+**Datum:** 2026-07-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.175** — Phasen-Vorschau zeigt Load-up Phase nicht, wenn T2 auf Sunset fällt (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.51.0
 
 **Datum:** 2026-07-04  
