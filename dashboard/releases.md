@@ -1,3 +1,31 @@
+# Release v1.49.0
+
+**Datum:** 2026-07-04  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.172** — Backlog Claim/Unassign: exklusive Zuweisung von Backlog-Items (`none`)
+- **STG-2.173** — Backlog Claim: vor Claim prüfen, ob Item auf origin/main bereits vergeben ist (`none`)
+
+## Bugfixes
+
+- **STG-2.171** — Fix: Automation 'PV Dynamic MIN-SOC Write' meldet 'Already running' (`yaml_reload`)
+
+## Technisch
+
+- **STG-9.4** — PV-Forecast: Recorder- und SQLite-Zugriffe robust und performant machen (`core_restart`)
+- **STG-9.6** — PV-Forecast: Thread-lokale SQLite-Verbindungen beim Shutdown für alle Threads schließen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.48.1
 
 **Datum:** 2026-07-03  
