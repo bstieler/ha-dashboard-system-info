@@ -1,3 +1,20 @@
+# Release v1.50.1
+
+**Datum:** 2026-07-04  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.32** — Dashboard: Markdown-Tabellenformatierung nach v1.50.0 reparieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.50.0
 
 **Datum:** 2026-07-04  
