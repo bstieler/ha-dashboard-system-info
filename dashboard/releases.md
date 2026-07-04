@@ -1,3 +1,25 @@
+# Release v1.51.0
+
+**Datum:** 2026-07-04  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.33** — PV-Ereignisanzeige: eigenes Dashboard, aussagekräftigere Einträge, 24h/10-Eintrag-Filter (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.174** — PV Dynamic MIN-SOC Write Automation: Setup-Fehler 'max' >= 2 beheben (`yaml_reload`)
+- **STG-7.19** — Deploy-Pipeline: Mehrfache core_restart-Ausführung verhindern (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.50.1
 
 **Datum:** 2026-07-04  
