@@ -1,3 +1,26 @@
+# Release v1.52.0
+
+**Datum:** 2026-07-05  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.34** — Consumption Forecast Intraday-Chart auf 24h Vergangenheit/Zukunft und PV-Forecast-Farbschema anpassen (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.179** — AlphaESS dynamic_min_soc_sensor: deprecated async_track_state_change durch async_track_state_change_event ersetzen (`core_restart`)
+- **STG-3.82** — PV-Forecast Coordinator: _async_refresh_intraday_only Task beim HA-Stop-Event abbrechen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.38.0
 
 **Datum:** 2026-07-05  
