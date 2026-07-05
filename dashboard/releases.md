@@ -1,3 +1,20 @@
+# Release v1.52.1
+
+**Datum:** 2026-07-05  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.180** — Regression-Fix: dynamic_min_soc_sensor Event-Listener ignoriert Attribut-only-Updates (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.52.0
 
 **Datum:** 2026-07-05  
