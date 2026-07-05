@@ -18,20 +18,17 @@
 </head>
 <body>
 <h1>Release v1.38.0</h1>
-<p><strong>Datum:</strong> 2026-07-01</p>
+<p><strong>Datum:</strong> 2026-07-05</p>
 <p><strong>Items:</strong> 3</p>
 <p><strong>Gesamt-Deployment:</strong> core_restart</p>
 <h2>Neue Features</h2>
 <ul>
-<li><strong>STG-3.76</strong> — PV-Forecast: Intraday-Refresh-Intervall konfigurierbar und Deep-Copy-Overhead eliminieren (<code>core_restart</code>)</li>
+<li><strong>STG-4.34</strong> — Consumption Forecast Intraday-Chart auf 24h Vergangenheit/Zukunft und PV-Forecast-Farbschema anpassen (<code>yaml_reload</code>)</li>
 </ul>
 <h2>Bugfixes</h2>
 <ul>
-<li><strong>STG-3.75</strong> — PV-Forecast: NumPy als hartes Requirement deklarieren (<code>core_restart</code>)</li>
-</ul>
-<h2>Technisch</h2>
-<ul>
-<li><strong>STG-1.4</strong> — Anwesenheits-Tracking aus Zirkulationspumpe und House Consumption Forecast entfernen (<code>yaml_reload, core_restart</code>)</li>
+<li><strong>STG-2.179</strong> — AlphaESS dynamic_min_soc_sensor: deprecated async_track_state_change durch async_track_state_change_event ersetzen (<code>core_restart</code>)</li>
+<li><strong>STG-3.82</strong> — PV-Forecast Coordinator: _async_refresh_intraday_only Task beim HA-Stop-Event abbrechen (<code>core_restart</code>)</li>
 </ul>
 <h2>Erforderliche Schritte</h2>
 <ol>
