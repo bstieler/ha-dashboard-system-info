@@ -1,3 +1,26 @@
+# Release v1.51.2
+
+**Datum:** 2026-07-05  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.176** — Phase-3 Energiebilanz verwendet target_end_soc_pct als Untergrenze (`core_restart`)
+- **STG-2.177** — Phase-3 Energiebilanz begrenzt PV-Überschuss bei voller Batterie (`core_restart`)
+
+## Dokumentation
+
+- **STG-2.178** — Phase-3 Dashboard-Texte präzisieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.51.1
 
 **Datum:** 2026-07-04  
