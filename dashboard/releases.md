@@ -1,3 +1,20 @@
+# Release v1.53.0
+
+**Datum:** 2026-07-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.181** — Dynamische MIN-SOC Nacht-Protokoll-Tabelle für Nachvollziehbarkeit (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.52.0
 
 **Datum:** 2026-07-07  
