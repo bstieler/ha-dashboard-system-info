@@ -1,3 +1,24 @@
+# Release v1.54.0
+
+**Datum:** 2026-07-07  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.73** — PV-Forecast: Batched k-NN Prediction für alle Forecast-Stunden (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.72** — PV Forecast: Windgeschwindigkeits-Parameter auf offiziellen Open-Meteo Namen pruefen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.53.0
 
 **Datum:** 2026-07-07  
