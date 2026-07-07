@@ -1,3 +1,20 @@
+# Release v1.55.0
+
+**Datum:** 2026-07-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.83** — House Consumption Forecast: Latest Forecast immer 24h in die Zukunft nachfuehren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.54.0
 
 **Datum:** 2026-07-07  
