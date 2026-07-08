@@ -1,3 +1,21 @@
+# Release v1.57.1
+
+**Datum:** 2026-07-08  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.189** — SOC Plan Curve Plot bleibt leer: robuste Fehlerbehandlung und Logging (`core_restart`)
+- **STG-3.86** — House Consumption Forecast rolling_24h: state_class auf None setzen und ausrollen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.0
 
 **Datum:** 2026-07-08  
