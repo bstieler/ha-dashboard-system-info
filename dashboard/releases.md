@@ -1,3 +1,20 @@
+# Release v1.57.3
+
+**Datum:** 2026-07-08  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.192** — Fix PV Dynamic MIN-SOC Write automation max validation error (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.57.2
 
 **Datum:** 2026-07-08  
