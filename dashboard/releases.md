@@ -1,3 +1,25 @@
+# Release v1.57.0
+
+**Datum:** 2026-07-08  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.185** — Dynamisches MIN-SOC Nachtprotokoll: abgelaufene Nacht weiter sichtbar halten (`core_restart`)
+- **STG-2.186** — Dynamische MIN-SOC Steuerung bis Morgen-Crossover statt Sonnenaufgang (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.187** — Dynamischer MIN-SOC Zielwert darf Ist-SOC nie überschreiten (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.56.0
 
 **Datum:** 2026-07-07  
