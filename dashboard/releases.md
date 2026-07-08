@@ -1,3 +1,22 @@
+# Release v1.57.2
+
+**Datum:** 2026-07-08  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.190** — Fix dynamic MIN-SOC night-log persistence (Store.async_save) (`core_restart`)
+- **STG-2.191** — Fix PV Dynamic MIN-SOC Write automation overlap (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.57.1
 
 **Datum:** 2026-07-08  
