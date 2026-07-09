@@ -1,3 +1,20 @@
+# Release v1.57.10
+
+**Datum:** 2026-07-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.196** — Dynamischer MIN-SOC: Nachtprotokoll-Zukunftszeilen auch bei fehlendem evening_crossover filtern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.9
 
 **Datum:** 2026-07-09  
