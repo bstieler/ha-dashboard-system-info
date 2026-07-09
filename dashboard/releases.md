@@ -1,3 +1,20 @@
+# Release v1.57.6
+
+**Datum:** 2026-07-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-7.22** — AlphaESS Deploy-Verify ignoriert __pycache__ (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.57.5
 
 **Datum:** 2026-07-09  
