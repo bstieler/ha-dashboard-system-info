@@ -1,3 +1,20 @@
+# Release v1.57.11
+
+**Datum:** 2026-07-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.197** — Dynamischer MIN-SOC: Sub-Minuten-Duplikate im Nachtprotokoll verhindern und bereinigen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.10
 
 **Datum:** 2026-07-09  
