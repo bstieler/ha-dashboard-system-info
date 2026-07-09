@@ -1,3 +1,20 @@
+# Release v1.57.5
+
+**Datum:** 2026-07-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-7.21** — Deployment-Prozess: unnötige HA-Core-Restarts vermeiden (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.57.4
 
 **Datum:** 2026-07-09  
