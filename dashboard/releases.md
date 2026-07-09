@@ -1,3 +1,20 @@
+# Release v1.57.8
+
+**Datum:** 2026-07-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-7.23** — Release-Pipeline: Dashboard-Release-Deploys triggern mehrfache Restarts (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.57.7
 
 **Datum:** 2026-07-09  
