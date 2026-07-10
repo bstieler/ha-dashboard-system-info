@@ -1,3 +1,20 @@
+# Release v1.57.12
+
+**Datum:** 2026-07-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.198** — STG-2.197 Follow-up: Keine Protokollzeile für aus now abgeleiteten Abend-Crossover (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.11
 
 **Datum:** 2026-07-09  
