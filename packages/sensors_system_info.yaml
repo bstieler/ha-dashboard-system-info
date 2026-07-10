@@ -1,4 +1,6 @@
 # Feature package: System information sensors
+# Scan-Intervalle auf 300 s erhöht, um die Grundlast zu senken
+# (reine Monitoring-Werte, keine Automatisierungen hängen davon ab).
 command_line:
   - sensor:
       name: Processor use
@@ -6,7 +8,7 @@ command_line:
       command: >-
         sh -c 'PREV_IDLE=$(awk '"'"'/^cpu / {print $5}'"'"' /proc/stat); PREV_TOTAL=$(awk '"'"'/^cpu / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); sleep 1; IDLE=$(awk '"'"'/^cpu / {print $5}'"'"' /proc/stat); TOTAL=$(awk '"'"'/^cpu / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); DIFF_IDLE=$((IDLE-PREV_IDLE)); DIFF_TOTAL=$((TOTAL-PREV_TOTAL)); awk -v idle=$DIFF_IDLE -v total=$DIFF_TOTAL '"'"'BEGIN { if (total <= 0) print 0; else printf "%.1f", (100 * (total - idle) / total) }'"'"''
       unit_of_measurement: "%"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Memory free
@@ -14,7 +16,7 @@ command_line:
       command: >-
         sh -c 'free -m | awk '"'"'/^Mem:/ {print $4}'"'"''
       unit_of_measurement: "MiB"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Memory usage
@@ -22,7 +24,7 @@ command_line:
       command: >-
         sh -c 'free -m | awk '"'"'/^Mem:/ { if ($2 > 0) printf "%.1f", ($3 / $2) * 100; else print 0 }'"'"''
       unit_of_measurement: "%"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Disk free
@@ -39,7 +41,7 @@ command_line:
         sh -c 'awk '"'"'{printf "%.1f", $1/1000}'"'"' /sys/class/thermal/thermal_zone0/temp'
       unit_of_measurement: "°C"
       device_class: temperature
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Last boot
@@ -54,7 +56,7 @@ command_line:
       command: >-
         sh -c 'PREV_IDLE=$(awk '"'"'/^cpu0 / {print $5}'"'"' /proc/stat); PREV_TOTAL=$(awk '"'"'/^cpu0 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); sleep 1; IDLE=$(awk '"'"'/^cpu0 / {print $5}'"'"' /proc/stat); TOTAL=$(awk '"'"'/^cpu0 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); DIFF_IDLE=$((IDLE-PREV_IDLE)); DIFF_TOTAL=$((TOTAL-PREV_TOTAL)); awk -v idle=$DIFF_IDLE -v total=$DIFF_TOTAL '"'"'BEGIN { if (total <= 0) print 0; else printf "%.1f", (100 * (total - idle) / total) }'"'"''
       unit_of_measurement: "%"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Processor use core 1
@@ -62,7 +64,7 @@ command_line:
       command: >-
         sh -c 'PREV_IDLE=$(awk '"'"'/^cpu1 / {print $5}'"'"' /proc/stat); PREV_TOTAL=$(awk '"'"'/^cpu1 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); sleep 1; IDLE=$(awk '"'"'/^cpu1 / {print $5}'"'"' /proc/stat); TOTAL=$(awk '"'"'/^cpu1 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); DIFF_IDLE=$((IDLE-PREV_IDLE)); DIFF_TOTAL=$((TOTAL-PREV_TOTAL)); awk -v idle=$DIFF_IDLE -v total=$DIFF_TOTAL '"'"'BEGIN { if (total <= 0) print 0; else printf "%.1f", (100 * (total - idle) / total) }'"'"''
       unit_of_measurement: "%"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Processor use core 2
@@ -70,7 +72,7 @@ command_line:
       command: >-
         sh -c 'PREV_IDLE=$(awk '"'"'/^cpu2 / {print $5}'"'"' /proc/stat); PREV_TOTAL=$(awk '"'"'/^cpu2 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); sleep 1; IDLE=$(awk '"'"'/^cpu2 / {print $5}'"'"' /proc/stat); TOTAL=$(awk '"'"'/^cpu2 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); DIFF_IDLE=$((IDLE-PREV_IDLE)); DIFF_TOTAL=$((TOTAL-PREV_TOTAL)); awk -v idle=$DIFF_IDLE -v total=$DIFF_TOTAL '"'"'BEGIN { if (total <= 0) print 0; else printf "%.1f", (100 * (total - idle) / total) }'"'"''
       unit_of_measurement: "%"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: Processor use core 3
@@ -78,7 +80,7 @@ command_line:
       command: >-
         sh -c 'PREV_IDLE=$(awk '"'"'/^cpu3 / {print $5}'"'"' /proc/stat); PREV_TOTAL=$(awk '"'"'/^cpu3 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); sleep 1; IDLE=$(awk '"'"'/^cpu3 / {print $5}'"'"' /proc/stat); TOTAL=$(awk '"'"'/^cpu3 / {sum=0; for (i=2; i<=8; i++) sum+=$i; print sum}'"'"' /proc/stat); DIFF_IDLE=$((IDLE-PREV_IDLE)); DIFF_TOTAL=$((TOTAL-PREV_TOTAL)); awk -v idle=$DIFF_IDLE -v total=$DIFF_TOTAL '"'"'BEGIN { if (total <= 0) print 0; else printf "%.1f", (100 * (total - idle) / total) }'"'"''
       unit_of_measurement: "%"
-      scan_interval: 60
+      scan_interval: 300
 
   - sensor:
       name: HA Config Deploy Overview
