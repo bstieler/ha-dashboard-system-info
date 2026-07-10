@@ -1,3 +1,23 @@
+# Release v1.57.13
+
+**Datum:** 2026-07-10  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.184** — Dynamisches MIN-SOC Nachtprotokoll: Retry bei Store-Fehlern und Sensor-Tests für Persistenz (`core_restart`)
+- **STG-2.188** — Dynamischer MIN-SOC: Sicherheitspuffer im verzögerten Entlademodus reduzieren (`core_restart`)
+- **STG-7.20** — Deploy-Prozess vermeidet mehrfache HA-Core-Restarts pro Release (`none`)
+- **STG-7.24** — Release-Manager deploy verwendet vorherigen Deploy-Tag für --since-tag (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.12
 
 **Datum:** 2026-07-10  
