@@ -1,3 +1,21 @@
+# Release v1.57.14
+
+**Datum:** 2026-07-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.153a** — Legacy Entity-IDs der alten Phase-1/2/3-Steuerung aus YAML und Runtime entfernen (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.57.15
 
 **Datum:** 2026-07-10  
