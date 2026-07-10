@@ -1,6 +1,24 @@
 # Release v1.57.13
 
 **Datum:** 2026-07-10  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-3.74** — PV-Forecast: Online-Updates batchen und Statistik-Refresh reduzieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
+# Release v1.57.13
+
+**Datum:** 2026-07-10  
 **Items:** 4  
 **Gesamt-Deployment:** core_restart
 
