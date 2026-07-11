@@ -1,3 +1,29 @@
+# Release v1.59.0
+
+**Datum:** 2026-07-11  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.203** — Nachtsteuerung mit Vorlauf-Freigabe (`core_restart`)
+- **STG-2.205** — Erweiterte Protokollierung und Dashboard für dynamischen Min-SOC (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.209** — Fix: _build_upcoming_phases loadup_start Argument-Fehler (`core_restart`)
+
+## Dokumentation
+
+- **STG-2.208** — Dokumentation der überarbeiteten dynamischen Min-SOC-Strategie (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.58.0
 
 **Datum:** 2026-07-11  
