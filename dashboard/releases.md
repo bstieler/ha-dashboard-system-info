@@ -1,3 +1,29 @@
+# Release v1.61.0
+
+**Datum:** 2026-07-11  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.213** — Dynamischer MIN-SOC: Tagsueber-Modus setzt aktiven Wert direkt aus Prognose (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.214** — Dynamischer MIN-SOC: Dashboard und Helpers fuer neuen Tagsueber-Modus anpassen (`yaml_reload`)
+
+## Dokumentation
+
+- **STG-2.215** — Dynamischer MIN-SOC: Dokumentation fuer neuen Tagsueber-Modus aktualisieren (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.60.1
 
 **Datum:** 2026-07-11  
