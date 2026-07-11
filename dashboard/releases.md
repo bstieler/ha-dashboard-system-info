@@ -1,3 +1,25 @@
+# Release v1.58.0
+
+**Datum:** 2026-07-11  
+**Items:** 7  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.199** — Forecast-Zeitreihen-Extraktion für 15-Minuten-Auflösung (`core_restart`)
+- **STG-2.200** — Erkennung des nächsten relevanten PV-Überschussfensters (`core_restart`)
+- **STG-2.201** — Berechnung des finalen Ziel-Min-SOC (`core_restart`)
+- **STG-2.202** — Konfigurierbare Grenzen und PV-Aufnahmepuffer (`core_restart`)
+- **STG-2.204** — Sicherheitsmodi und Hysterese für dynamischen Min-SOC (`core_restart`)
+- **STG-2.206** — Integration neuer Min-SOC-Logik mit Plan-Kurve und Modbus-Write (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.16
 
 **Datum:** 2026-07-11  
