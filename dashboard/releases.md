@@ -1,3 +1,20 @@
+# Release v1.60.1
+
+**Datum:** 2026-07-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.212** — Dynamischer MIN-SOC: Tagsueber-Schutzwert respektiert max_min_soc_pct nicht (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.60.0
 
 **Datum:** 2026-07-11  
