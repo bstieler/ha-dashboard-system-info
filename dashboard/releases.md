@@ -1,3 +1,21 @@
+# Release v1.60.0
+
+**Datum:** 2026-07-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.210** — Dynamischer MIN-SOC: Mehrtages-Reserve und Tagsueber-Vorschau (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.59.1
 
 **Datum:** 2026-07-11  
