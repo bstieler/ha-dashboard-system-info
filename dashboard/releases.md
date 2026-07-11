@@ -1,3 +1,16 @@
+# Release v1.59.1
+
+**Datum:** 2026-07-11  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.24** — Gate-Agent Checks beschleunigen und Wiederholungen reduzieren (`none`)
+
+
+---
+
 # Release v1.59.0
 
 **Datum:** 2026-07-11  
