@@ -1,3 +1,20 @@
+# Release v1.57.16
+
+**Datum:** 2026-07-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.153b** — Interne Python-Terminologie der Batteriesteuerung auf Day/Loadup/Night umbenennen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.57.15
 
 **Datum:** 2026-07-10  
