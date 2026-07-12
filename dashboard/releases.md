@@ -1,3 +1,21 @@
+# Release v1.61.1
+
+**Datum:** 2026-07-12  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.216** — Dynamischer MIN-SOC: Dashboard Nachtprotokoll toleriert alte Zeilen ohne neue Felder (`yaml_reload`)
+- **STG-2.217** — Dashboard Day-Start/Window-Regel-Auflösung korrigieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.61.0
 
 **Datum:** 2026-07-11  
