@@ -1,3 +1,20 @@
+# Release v1.61.2
+
+**Datum:** 2026-07-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.219** — Load-up-Ziel-Minimum von 80 % auf 75 % reduzieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.61.1
 
 **Datum:** 2026-07-12  
