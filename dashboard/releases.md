@@ -1,3 +1,20 @@
+# Release v1.62.0
+
+**Datum:** 2026-07-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.220** — PV-Fenster im MIN-SOC-Dashboard mit Tag/Datum kennzeichnen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.61.2
 
 **Datum:** 2026-07-12  
