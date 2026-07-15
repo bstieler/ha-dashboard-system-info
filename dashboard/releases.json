@@ -1,11 +1,5 @@
 [
   {
-    "version": "v1.58.0",
-    "date": "2026-07-15",
-    "items": 3,
-    "deployment": "core_restart"
-  },
-  {
     "version": "v1.62.0",
     "date": "2026-07-12",
     "items": 1,
@@ -51,6 +45,12 @@
     "version": "v1.59.0",
     "date": "2026-07-11",
     "items": 4,
+    "deployment": "core_restart"
+  },
+  {
+    "version": "v1.58.0",
+    "date": "2026-07-11",
+    "items": 7,
     "deployment": "core_restart"
   },
   {
