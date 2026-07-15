@@ -1,3 +1,25 @@
+# Release v1.63.0
+
+**Datum:** 2026-07-15  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.223** — Mehrtages-Reserve: Day-after-tomorrow-Daten für echte 48 h und ehrlicher Gap-Verbrauch (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.221** — Nachtprotokoll: Erwarteter Verbrauch bis Morgen aus 15-Min-Serie statt Tages-Skalar (`core_restart`)
+- **STG-2.222** — MIN-SOC: Band-konsistente PV-/Last-Serien (Mean) über die Tagesgrenze (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.62.0
 
 **Datum:** 2026-07-12  
