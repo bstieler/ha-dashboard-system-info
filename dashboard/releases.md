@@ -1,3 +1,23 @@
+# Release v1.66.0
+
+**Datum:** 2026-07-16  
+**Items:** 4  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.37** — Batterie-Steuerung Dashboard V2: View „Übersicht" aufbauen (`yaml_reload`)
+- **STG-4.38** — Batterie-Steuerung Dashboard V2: View „Berechnung Batteriesteuerung" aufbauen (`yaml_reload`)
+- **STG-4.39** — Batterie-Steuerung Dashboard V2: View „Berechnung Dynamischer Min-SoC" aufbauen (`yaml_reload`)
+- **STG-4.40** — Batterie-Steuerung Dashboard V2: View „Log & Config" aufbauen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.65.0
 
 **Datum:** 2026-07-16  
