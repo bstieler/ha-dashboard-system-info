@@ -1,3 +1,20 @@
+# Release v1.63.1
+
+**Datum:** 2026-07-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.224** — Nachtprotokoll: Evening-Crossover-Drift > 2 h spaltet die Nacht und kappt die Anzeige (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.63.0
 
 **Datum:** 2026-07-15  
