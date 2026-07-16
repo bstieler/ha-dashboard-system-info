@@ -1,3 +1,23 @@
+# Release v1.65.0
+
+**Datum:** 2026-07-16  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.225** — Charge-Control Runtime: Entscheidungsgrund und wirksame Schwellwerte als Attribute (`core_restart`)
+- **STG-2.228** — Dynamischer Min-SoC: Letzten Register-Schreibzugriff (2128) als Entity sichtbar machen (`yaml_reload`)
+- **STG-2.229** — Charge-Control: Auto-Sync der Ziel-Helfer protokollieren (letzte Ausführung/Blockierung) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.64.0
 
 **Datum:** 2026-07-16  
