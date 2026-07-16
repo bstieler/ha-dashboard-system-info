@@ -1,3 +1,26 @@
+# Release v1.64.0
+
+**Datum:** 2026-07-16  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.226** — Dynamischer Min-SoC: Zwischengrößen der Berechnung als Attribute exponieren (`core_restart`)
+- **STG-2.227** — Charge-Control: Auflösungs-Grund der wirksamen Ziele als Enum-Attribut (`core_restart`)
+- **STG-2.232** — Charge-Control: Konfigurations-Gesundheitssensor (Vollständigkeit/Plausibilität der Helfer) (`yaml_reload`)
+- **STG-4.35** — Batterie-Steuerung Dashboard V2: Verbindliches Begriffsglossar als Doku anlegen (`none`)
+- **STG-4.36** — Batterie-Steuerung Dashboard V2: Gerüst, Registrierung und Deploy-Vertrag (Parallelbetrieb) (`yaml_reload`)
+- **STG-6.25** — Gate-Agent beschleunigen: Fix-Verifikations-Modus, Prompt-Disziplin, Diff-Verschlankung (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.63.1
 
 **Datum:** 2026-07-16  
