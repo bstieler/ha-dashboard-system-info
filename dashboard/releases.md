@@ -1,3 +1,20 @@
+# Release v1.67.1
+
+**Datum:** 2026-07-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.238** — Dynamische MIN-SOC: Konkave Rampe für späte Entladung und Prognose-Unsicherheit (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.67.0
 
 **Datum:** 2026-07-17  
