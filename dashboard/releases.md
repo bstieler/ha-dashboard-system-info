@@ -1,3 +1,20 @@
+# Release v1.66.1
+
+**Datum:** 2026-07-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.233** — Dynamischer Min-SoC: Nachtprotokoll bricht nach dem Abend-Crossover ab (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.66.0
 
 **Datum:** 2026-07-16  
