@@ -1,3 +1,22 @@
+# Release v1.66.3
+
+**Datum:** 2026-07-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.218** — Runtime verwendet Day-Start (P1) nicht aktiv für Steuerung (`core_restart`)
+- **STG-4.44** — Batterie-Steuerung Dashboard V2: Conditional aus Karte „SoC-Plan für die kommende Nacht" entfernen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.66.2
 
 **Datum:** 2026-07-17  
