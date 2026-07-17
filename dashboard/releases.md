@@ -1,3 +1,20 @@
+# Release v1.67.0
+
+**Datum:** 2026-07-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.211** — SOC-Plan-Kurve nutzt konfigurierte dynamische MIN-SOC-Helper (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.66.4
 
 **Datum:** 2026-07-17  
