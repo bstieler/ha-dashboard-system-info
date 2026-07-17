@@ -1,3 +1,22 @@
+# Release v1.66.2
+
+**Datum:** 2026-07-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.234** — Crossover-Sensoren: PV>Verbrauch-Suche erst nach Sonnenuntergang verankern (`core_restart`)
+- **STG-4.43** — Batterie-Steuerung Dashboard V2: Karte „SoC-Plan für die kommende Nacht" korrigieren (Benennung, Zeitstempel, Conditional) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.66.1
 
 **Datum:** 2026-07-17  
