@@ -1,3 +1,20 @@
+# Release v1.66.4
+
+**Datum:** 2026-07-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.235** — Dynamischer MIN-SOC: Prognose-Anzeige und Diagnostik auf einheitliches Fenster bis Morgen-Crossover begrenzen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.66.3
 
 **Datum:** 2026-07-17  
