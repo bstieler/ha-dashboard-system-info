@@ -1,3 +1,24 @@
+# Release v1.70.0
+
+**Datum:** 2026-07-18  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.46** — Energie-Dashboard V2: Gerüst und Registrierung (zs7-energy-v2) (`yaml_reload`)
+
+## Dokumentation
+
+- **STG-4.45** — Energie-Dashboard V2: Begriffs-Glossar als verbindliche Grundlage (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.69.1
 
 **Datum:** 2026-07-18  
