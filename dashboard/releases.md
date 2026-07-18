@@ -1,3 +1,20 @@
+# Release v1.69.1
+
+**Datum:** 2026-07-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.246** — Fix: Geplanter SoC am Entladeende zeigt letzten Kurvenpunkt statt leer (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.69.0
 
 **Datum:** 2026-07-18  
