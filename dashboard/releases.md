@@ -1,3 +1,20 @@
+# Release v1.67.2
+
+**Datum:** 2026-07-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.239** — Dynamische MIN-SOC: Just-in-time Rampe mit Gesamtverbrauch korrigieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.67.1
 
 **Datum:** 2026-07-17  
