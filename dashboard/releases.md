@@ -1,3 +1,24 @@
+# Release v1.71.0
+
+**Datum:** 2026-07-18  
+**Items:** 5  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.47** — Energie-Dashboard V2: View Übersicht (Live-Fluss und Tages-Kennzahlen) (`yaml_reload`)
+- **STG-4.48** — Energie-Dashboard V2: View Prognose (PV, Verbrauch, Batterie Tag/Nacht) (`yaml_reload`)
+- **STG-4.49** — Energie-Dashboard V2: View Verlauf (Bilanz, PV vs. Prognose, Verbrauchskurve) (`yaml_reload`)
+- **STG-4.50** — Energie-Dashboard V2: View Details (Tabellen-Auswertungen) (`yaml_reload`)
+- **STG-4.51** — Energie-Dashboard V2: View Einstellungen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.70.0
 
 **Datum:** 2026-07-18  
