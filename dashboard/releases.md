@@ -1,3 +1,25 @@
+# Release v1.68.0
+
+**Datum:** 2026-07-18  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.241** — Dynamische MIN-SOC: Default-Min-SOC auf 10 % festlegen (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.240** — Dynamische MIN-SOC: Just-in-time Rampe nur bei Knappheit aktivieren (`core_restart`)
+- **STG-2.242** — Batterie-Steuerung: Halte-Niedrig-Regel bei Day-Phase greift nicht (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.67.2
 
 **Datum:** 2026-07-18  
