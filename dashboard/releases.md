@@ -1,3 +1,20 @@
+# Release v1.71.1
+
+**Datum:** 2026-07-18  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.55** — Fix: YAML-Titel in Anführungszeichen in zs7_energy_v2.yaml (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.71.0
 
 **Datum:** 2026-07-18  
