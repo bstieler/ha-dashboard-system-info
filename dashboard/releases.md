@@ -1,3 +1,20 @@
+# Release v1.68.1
+
+**Datum:** 2026-07-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.244** — Fix: Import DEFAULT_TARGET_DAY_START in sensor.py (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.68.0
 
 **Datum:** 2026-07-18  
