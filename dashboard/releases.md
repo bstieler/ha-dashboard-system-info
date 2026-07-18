@@ -1,3 +1,20 @@
+# Release v1.69.0
+
+**Datum:** 2026-07-18  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.42** — Batterie-Steuerung: Altes Dashboard abschalten und neues umbenennen (Migration) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.68.1
 
 **Datum:** 2026-07-18  
