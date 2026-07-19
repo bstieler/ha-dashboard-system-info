@@ -1,3 +1,20 @@
+# Release v1.72.3
+
+**Datum:** 2026-07-19  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.70** — Batterie-Steuerung: Load-up Phase verwendet berechnetes Ziel statt Helper-Wert (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.72.2
 
 **Datum:** 2026-07-19  
