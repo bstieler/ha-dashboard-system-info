@@ -1,3 +1,20 @@
+# Release v1.71.3
+
+**Datum:** 2026-07-19  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.56** — Fix: power-flow-card-plus und energy-flow-card-plus Konfiguration (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.71.2
 
 **Datum:** 2026-07-19  
