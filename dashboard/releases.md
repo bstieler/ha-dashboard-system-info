@@ -1,3 +1,22 @@
+# Release v1.71.4
+
+**Datum:** 2026-07-19  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.62** — Energie-Dashboard V2: Reihenfolge in der Sidebar (`yaml_reload`)
+- **STG-4.63** — Energie-Dashboard V2: Details-Dashboard zeigt keine Daten (`yaml_reload`)
+- **STG-4.64** — Energie-Dashboard V2: Batterie-Ausblick nicht mit Batterie-Steuerung synchronisiert (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.71.3
 
 **Datum:** 2026-07-19  
