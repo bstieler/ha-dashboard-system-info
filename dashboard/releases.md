@@ -1,3 +1,20 @@
+# Release v1.72.0
+
+**Datum:** 2026-07-19  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.65** — Min-SoC-Verlauf im SoC-Verlauf-Dashboard ergänzen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.71.4
 
 **Datum:** 2026-07-19  
