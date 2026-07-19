@@ -1,3 +1,21 @@
+# Release v1.72.4
+
+**Datum:** 2026-07-19  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.71** — Energie-Dashboard V2: PV-Erzeugung und PV-Prognose Chart zeigt keine Daten (`yaml_reload`)
+- **STG-4.72** — Energie-Dashboard V2: energy-usage-graph zeigt negative Werte (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.72.3
 
 **Datum:** 2026-07-19  
