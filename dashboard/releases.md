@@ -1,3 +1,20 @@
+# Release v1.71.2
+
+**Datum:** 2026-07-19  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.248** — Dynamische MIN-SOC: Hysterese gegen Zackenmuster (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.71.1
 
 **Datum:** 2026-07-18  
