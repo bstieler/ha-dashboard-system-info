@@ -1,3 +1,22 @@
+# Release v1.72.1
+
+**Datum:** 2026-07-19  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.66** — Energie-Dashboard V2: Verbrauchsprognose-Tabellen formatieren (`yaml_reload`)
+- **STG-4.67** — Energie-Dashboard V2: PV-Erzeugung und PV-Prognose Chart korrigieren (`yaml_reload`)
+- **STG-4.68** — Energie-Dashboard V2: Übersicht Gauges Configuration error (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.72.0
 
 **Datum:** 2026-07-19  
