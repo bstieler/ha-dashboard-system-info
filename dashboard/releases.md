@@ -1,3 +1,20 @@
+# Release v1.72.2
+
+**Datum:** 2026-07-19  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.69** — Batterie-Steuerung: Aktives Ziel zeigt Max statt berechnetes Ziel (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.72.1
 
 **Datum:** 2026-07-19  
