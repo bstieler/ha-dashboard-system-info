@@ -1,3 +1,20 @@
+# Release v1.72.5
+
+**Datum:** 2026-07-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.249** — Dynamische MIN-SOC: Debugging für Zackenmuster einbauen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.72.4
 
 **Datum:** 2026-07-19  
