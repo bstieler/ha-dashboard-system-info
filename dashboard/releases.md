@@ -1,3 +1,23 @@
+# Release v1.72.7
+
+**Datum:** 2026-07-21  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.252** — Min-SOC: UnboundLocalError im Debug-Log des Nacht-Hauptpfads beheben (`core_restart`)
+- **STG-2.253** — Min-SOC: Evening-Crossover nach Mitternacht auf den Vorabend datieren (`core_restart`)
+- **STG-2.254** — Min-SOC: Consumption-Fallback auch bei State unavailable/unknown (`core_restart`)
+- **STG-2.255** — Min-SOC: Diagnose-Attribute temporär in Recorder-Historie aufnehmen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.72.6
 
 **Datum:** 2026-07-20  
