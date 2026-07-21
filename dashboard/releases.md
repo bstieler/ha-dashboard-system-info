@@ -1,3 +1,20 @@
+# Release v1.73.1
+
+**Datum:** 2026-07-21  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.266** — Min-SOC: Skalarer Consumption-Wert nutzt Fallback-Entity nicht (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.73.0
 
 **Datum:** 2026-07-21  
