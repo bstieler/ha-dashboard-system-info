@@ -1,3 +1,25 @@
+# Release v1.73.0
+
+**Datum:** 2026-07-21  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.256** — Min-SOC: NightPlan-Anker — final_target und Halte-Zweig vom Ist-SOC entkoppeln (`core_restart`)
+- **STG-2.257** — Min-SOC: Einheitliche Ausgangsdämpfung, Planrevision und Rate-Limit (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.258** — Min-SOC: JIT↔Fallback-Kippe gegen Anker-Werte stabilisieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.72.7
 
 **Datum:** 2026-07-21  
