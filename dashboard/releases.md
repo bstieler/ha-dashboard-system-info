@@ -1,3 +1,28 @@
+# Release v1.74.0
+
+**Datum:** 2026-07-22  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.87** — PV-Forecast: Deadband aus globalem Skalierungsfaktor entfernen (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.268** — Min-SOC: Nachtprotokoll wird bei Tages-Modi nicht archiviert (`core_restart`)
+
+## Dokumentation
+
+- **STG-2.265** — Min-SOC: Strategie-Doku nach Zackenmuster-Fixes synchronisieren (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.73.1
 
 **Datum:** 2026-07-21  
