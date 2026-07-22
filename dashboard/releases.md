@@ -1,3 +1,20 @@
+# Release v1.74.1
+
+**Datum:** 2026-07-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.267** — Min-SOC: Gate-Review-Follow-ups zu Paket A/B (Härtung + Testausbau) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.74.0
 
 **Datum:** 2026-07-22  
