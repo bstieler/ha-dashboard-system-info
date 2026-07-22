@@ -1,3 +1,28 @@
+# Release v1.75.0
+
+**Datum:** 2026-07-22  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.262** — Min-SOC: Fenster-Persistenz (≥2 Zyklen) für Fenster- und Safety-Wechsel (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.259** — Min-SOC: Write-Automation härten (Zahlenvergleich, State-Trigger, Modus-Gate) (`yaml_reload`)
+- **STG-2.260** — Min-SOC: Register-2128-Konflikt beim HA-Start auflösen (`yaml_reload`)
+- **STG-2.261** — Min-SOC: Sensor-Listener debouncen und Regelkreis durchbrechen (`core_restart`)
+- **STG-2.263** — Min-SOC: Morning-Crossover stabilisieren (Plankurven-Horizont) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.74.1
 
 **Datum:** 2026-07-22  
