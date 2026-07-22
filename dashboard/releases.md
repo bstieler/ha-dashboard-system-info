@@ -1,3 +1,20 @@
+# Release v1.76.1
+
+**Datum:** 2026-07-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.270** — Min-SOC: Nachtprotokoll bricht ab, wenn Evening-Crossover-Attribut verschwindet (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.76.0
 
 **Datum:** 2026-07-22  
