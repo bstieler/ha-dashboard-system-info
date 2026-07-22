@@ -1,3 +1,17 @@
+# Release v1.76.0
+
+**Datum:** 2026-07-22  
+**Items:** 3  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-5.1** — Live-Regression Tests: Konzept und erste Implementierung für Verfügbarkeits- und Plausibilitätsprüfung (`none`)
+- **STG-7.1** — Release Pipeline: Semantische Releases, aggregierte Notes und System-Info-Dashboard (`none`)
+
+
+---
+
 # Release v1.75.1
 
 **Datum:** 2026-07-22  
