@@ -1,3 +1,20 @@
+# Release v1.75.1
+
+**Datum:** 2026-07-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.269** — Min-SOC: Night-Plan-Anker und Nachtprotokoll bei Morgen-Restart schützen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.75.0
 
 **Datum:** 2026-07-22  
