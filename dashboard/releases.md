@@ -1,3 +1,20 @@
+# Release v1.76.2
+
+**Datum:** 2026-07-23  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.88** — PV-Forecast: Physikalische Stunden-Kappung nach Denormierung (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.76.1
 
 **Datum:** 2026-07-22  
