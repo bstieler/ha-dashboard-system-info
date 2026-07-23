@@ -1,3 +1,24 @@
+# Release v1.77.0
+
+**Datum:** 2026-07-23  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.90** — PV-Forecast: +1h-Zeitversatz Wetterseite (Archiv) beheben (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.89** — PV-Forecast: Trainings-Samples mit winziger Baseline härtung (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.76.2
 
 **Datum:** 2026-07-23  
