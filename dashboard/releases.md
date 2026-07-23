@@ -1,3 +1,20 @@
+# Release v1.77.1
+
+**Datum:** 2026-07-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.92** — HCF: Open-Meteo-Datenkorrektheit-Fix aus PV-Client nachziehen (Preceding-Hour + Zeitzonen-Fix) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.77.0
 
 **Datum:** 2026-07-23  
