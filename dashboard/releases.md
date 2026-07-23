@@ -1,3 +1,20 @@
+# Release v1.77.2
+
+**Datum:** 2026-07-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.275** — Min-SOC: Evening-Crossover persistent cachen (Anker unabhängig vom flüchtigen Attribut) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.77.1
 
 **Datum:** 2026-07-23  
