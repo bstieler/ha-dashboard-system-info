@@ -1,3 +1,20 @@
+# Release v1.78.2
+
+**Datum:** 2026-07-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.276** — Charge-Control: Phase-1-Halte-Niedrig geht nach HA-Restart irreversibel verloren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.78.1
 
 **Datum:** 2026-07-24  
