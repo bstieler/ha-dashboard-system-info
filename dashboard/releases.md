@@ -1,3 +1,21 @@
+# Release v1.81.0
+
+**Datum:** 2026-07-24  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.97** — Consumption Forecast: AC-Aktiv-Features aus Leistungsschwelle statt Switch-State ableiten (`core_restart`)
+- **STG-3.98** — Consumption Forecast: gleitende 14d-Bias-Korrektur auf today/tomorrow-Prognosen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.80.1
 
 **Datum:** 2026-07-24  
