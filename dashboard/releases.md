@@ -1,3 +1,25 @@
+# Release v1.79.0
+
+**Datum:** 2026-07-24  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.94** — Consumption Forecast: Bootstrap-CSV aus Wechselrichter-Export befüllen (380 Tage Historie) (`core_restart`)
+- **STG-3.95** — Consumption Forecast: History-Archiver (Recorder → Bootstrap-CSV, täglich, idempotent) (`core_restart`)
+
+## Technisch
+
+- **STG-2.271** — Thread-Safety: hass.states-Zugriffe aus Executor-Threads in AlphaESS-Sensoren entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.78.2
 
 **Datum:** 2026-07-24  
