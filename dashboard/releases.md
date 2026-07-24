@@ -1,3 +1,21 @@
+# Release v1.80.1
+
+**Datum:** 2026-07-24  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.272** — Exception-Handling: spezifische Exceptions fangen, available=False statt Scheinwerte (`core_restart`)
+- **STG-2.274** — Stabile unique_id in alphaess_evaluation und intraday_solar_forecast (entkoppelt vom Anzeigenamen) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.80.0
 
 **Datum:** 2026-07-24  
