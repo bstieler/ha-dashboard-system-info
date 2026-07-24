@@ -1,3 +1,20 @@
+# Release v1.80.0
+
+**Datum:** 2026-07-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.96** — Consumption Forecast: training_days auf ~400 erhöhen und kNN-Performance auf Raspi verifizieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.79.0
 
 **Datum:** 2026-07-24  
