@@ -1,3 +1,29 @@
+# Release v1.78.0
+
+**Datum:** 2026-07-24  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.273** — Manifeste vervollständigen: iot_class, integration_type, requirements; Version an Release koppeln (`core_restart`)
+
+## Bugfixes
+
+- **STG-5.7** — Toten Dashboard-Duplikat-Test reparieren (Set eliminiert Duplikate vor der Prüfung) (`none`)
+- **STG-6.26** — Dev-Dependencies vervollständigen: pytest, pytest-asyncio, PyYAML; Re-Exec-Hack entfernen (`none`)
+
+## Technisch
+
+- **STG-9.8** — Recorder-Hygiene AlphaESS-Sensoren: unrecorded Attribute, Write-Gating, Poll-Doppelpfad (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.77.2
 
 **Datum:** 2026-07-23  
