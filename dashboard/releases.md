@@ -1,3 +1,20 @@
+# Release v1.83.3
+
+**Datum:** 2026-07-25  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.79** — ZS7 Energy Dashboard: apexcharts cards reject top-level 'title' key (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.83.2
 
 **Datum:** 2026-07-25  
