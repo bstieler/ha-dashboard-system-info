@@ -1,3 +1,20 @@
+# Release v1.83.4
+
+**Datum:** 2026-07-25  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.80** — ZS7 Energy Dashboard: apexcharts strict validation rejects column_span (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.83.3
 
 **Datum:** 2026-07-25  
