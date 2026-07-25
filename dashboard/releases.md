@@ -1,3 +1,20 @@
+# Release v1.82.0
+
+**Datum:** 2026-07-25  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.278** — alphaess_evaluation: auf bias-korrigierte Consumption-Forecast-Sensoren umstellen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.81.0
 
 **Datum:** 2026-07-24  
