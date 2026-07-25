@@ -1,3 +1,24 @@
+# Release v1.83.2
+
+**Datum:** 2026-07-25  
+**Items:** 5  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.74** — ZS7 Energy Dashboard: date picker does not update diagrams (`yaml_reload`)
+- **STG-4.75** — ZS7 Energy Dashboard: technical statistic names in energy graph legend (`none`)
+- **STG-4.76** — ZS7 Energy Dashboard: 'Configuration error' card on Verlauf view (`yaml_reload`)
+- **STG-4.77** — ZS7 Energy Dashboard: PV production chart plots cumulative sensor, forecast flat (`yaml_reload`)
+- **STG-4.78** — ZS7 Energy Dashboard: markdown tables on Details view not rendered (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.83.1
 
 **Datum:** 2026-07-25  
