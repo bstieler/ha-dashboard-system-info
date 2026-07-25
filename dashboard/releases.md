@@ -1,3 +1,21 @@
+# Release v1.83.0
+
+**Datum:** 2026-07-25  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.280** — Bias-Korrektur auch auf Stundenkurven der Verbrauchsprognose anwenden (`core_restart`)
+- **STG-6.29** — Post-Deploy-Verifikation durch unabhängigen Agenten etablieren (Workflow + Verdict-Datei + Findings-Check bei Arbeitsaufnahme) (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.82.0
 
 **Datum:** 2026-07-25  
