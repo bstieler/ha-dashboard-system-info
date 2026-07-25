@@ -20,6 +20,28 @@
 
 ---
 
+# Release v1.83.1
+
+**Datum:** 2026-07-25  
+**Items:** 5  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.279** — Untersuchung: Modbus-Sensor-Teilmenge (pvcontrol/local/dispatch) dauerhaft unavailable (`yaml_reload`)
+- **STG-7.26** — Deploy: Dev-Artefakte (.venv, Symlinks) aus Projektquellen ausschließen und Fehlschlag sichtbar machen (`none`)
+
+## Dokumentation
+
+- **STG-6.30** — Enforce English for all new project documentation and communication (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.83.0
 
 **Datum:** 2026-07-25  
