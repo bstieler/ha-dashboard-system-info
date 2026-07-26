@@ -1,3 +1,21 @@
+# Release v1.83.7
+
+**Datum:** 2026-07-26  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.102** — Forecasts: prevent zero-width band on exact k-NN match (`core_restart`)
+- **STG-3.105** — PV Forecast: period bands miscalibrated for partial-day windows (coverage scaling) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.83.6
 
 **Datum:** 2026-07-26  
