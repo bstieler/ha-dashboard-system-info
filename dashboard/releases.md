@@ -1,3 +1,20 @@
+# Release v1.84.0
+
+**Datum:** 2026-07-26  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.103** — Forecast bands: rolling coverage evaluation for hourly and period P10/P90 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.83.7
 
 **Datum:** 2026-07-26  
