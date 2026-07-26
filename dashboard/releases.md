@@ -1,3 +1,21 @@
+# Release v1.83.6
+
+**Datum:** 2026-07-26  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.100** — PV Forecast: compute window/day P10-P90 bands from neighbor period sums (`core_restart`)
+- **STG-3.101** — Consumption Forecast: compute total and period bands from per-neighbor component sums (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.83.5
 
 **Datum:** 2026-07-26  
