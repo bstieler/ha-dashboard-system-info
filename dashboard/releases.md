@@ -1,3 +1,21 @@
+# Release v1.83.5
+
+**Datum:** 2026-07-26  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.281** — Dynamischer MIN-SOC: Nachtprotokoll laeuft ueber 1,5 Tage (stale Evening-Crossover-Anker) (`core_restart`)
+- **STG-2.283** — Dynamischer MIN-SOC: Finales Ziel im Nachtpfad am Nachtplan ankern (Zackenmuster) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.83.4
 
 **Datum:** 2026-07-25  
