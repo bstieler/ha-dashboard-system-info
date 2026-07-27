@@ -1,3 +1,20 @@
+# Release v1.84.1
+
+**Datum:** 2026-07-27  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.286** — Dynamischer MIN-SOC: Nachtplan um Fensterstart und Netto-Verbrauch erweitern (Rest-Zackenmuster) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.84.0
 
 **Datum:** 2026-07-26  
