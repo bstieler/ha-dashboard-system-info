@@ -1,3 +1,20 @@
+# Release v1.84.2
+
+**Datum:** 2026-07-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.106** — AC live status in consumption forecast dashboard is up to 30 min stale (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.84.0
 
 **Datum:** 2026-07-29  
