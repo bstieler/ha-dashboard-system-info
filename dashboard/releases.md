@@ -1,3 +1,29 @@
+# Release v1.84.0
+
+**Datum:** 2026-07-29  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.285** — Battery Control: shadow-mode dashboard page to compare legacy and period-level net band strategies (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-7.27** — Release pipeline: failed deploys record fallback projects and hide the real failure (`none`)
+
+## Bugfixes
+
+- **STG-4.57** — Energie-Dashboard V2: View Übersicht — Layout verbessern (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.84.1
 
 **Datum:** 2026-07-27  
