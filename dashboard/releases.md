@@ -1,3 +1,30 @@
+# Release v1.84.3
+
+**Datum:** 2026-07-29  
+**Items:** 8  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.287** — Min-SOC: Evening-Crossover-Quelle zeigt auf falsche Entität — NightPlan-Anker seit 2026-07-24 inaktiv (`core_restart`)
+- **STG-2.288** — Min-SOC: inactive-Zyklen vergiften die Dämpfungsreferenz (Fallback 10 % landet auf der Hardware) (`core_restart`)
+- **STG-3.84** — HA Startzeit optimieren: Modbus-Integration verzoegert initialisieren (`core_restart`)
+
+## Bugfixes
+
+- **STG-4.58** — Energie-Dashboard V2: View Prognose — Layout verbessern (`yaml_reload`)
+- **STG-4.59** — Energie-Dashboard V2: View Verlauf — Layout verbessern (`yaml_reload`)
+- **STG-4.60** — Energie-Dashboard V2: View Details — Layout verbessern (`yaml_reload`)
+- **STG-4.61** — Energie-Dashboard V2: View Einstellungen — Layout verbessern (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.84.2
 
 **Datum:** 2026-07-29  
