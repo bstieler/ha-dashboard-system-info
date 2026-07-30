@@ -1,3 +1,20 @@
+# Release v1.89.0
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.93** — Consumption-Forecast-Dashboard V2: remove 'Feature-Einfluss heute' chart card (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.88.0
 
 **Datum:** 2026-07-30  
