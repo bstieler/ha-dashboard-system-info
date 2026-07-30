@@ -1,3 +1,20 @@
+# Release v1.87.2
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.92** — PV-Forecast dashboards: scatter 'Forecast vs Ist' renders years on x-axis (plotly date-axis default) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.87.1
 
 **Datum:** 2026-07-30  
