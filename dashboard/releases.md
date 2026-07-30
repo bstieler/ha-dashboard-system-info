@@ -1,3 +1,20 @@
+# Release v1.86.0
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.91** — PV-Forecast-Dashboard V2: use period-level P10/P90 attributes in summaries and score card (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.85.0
 
 **Datum:** 2026-07-30  
