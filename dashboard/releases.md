@@ -1,3 +1,21 @@
+# Release v1.85.0
+
+**Datum:** 2026-07-30  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-2.290** — Offline backtest: period bands and PV-minus-Load net band for battery reserve sizing (`none`)
+- **STG-4.82** — Consumption-Forecast-Dashboard V2: scaffold and registration (consumption-forecast-v2) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.84.5
 
 **Datum:** 2026-07-30  
