@@ -1,3 +1,20 @@
+# Release v1.84.4
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.289** — Min-SOC: 5,5h Dauer-inactive mit gesunden Inputs — inactive-Diagnostik recorden + Fenster-Fallback härten (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.84.3
 
 **Datum:** 2026-07-29  
