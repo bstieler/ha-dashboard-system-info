@@ -1,3 +1,22 @@
+# Release v1.87.0
+
+**Datum:** 2026-07-30  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.83** — Consumption-Forecast-Dashboard V2: view 'Heute' (KPI band and intraday chart) (`yaml_reload`)
+- **STG-4.84** — Consumption-Forecast-Dashboard V2: view 'Ausblick' (tomorrow, day after tomorrow, next 24 h) (`yaml_reload`)
+- **STG-4.85** — Consumption-Forecast-Dashboard V2: view 'Modell-Labor' (model health and quality) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.86.0
 
 **Datum:** 2026-07-30  
