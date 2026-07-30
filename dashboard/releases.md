@@ -1,3 +1,20 @@
+# Release v1.89.1
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-4.88** — Consumption-Forecast-Dashboard V2: cutover — migrate/retire old dashboard consumption-forecast (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.89.0
 
 **Datum:** 2026-07-30  
