@@ -1,3 +1,12 @@
+# Release v1.87.1
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+
+---
+
 # Release v1.87.0
 
 **Datum:** 2026-07-30  
