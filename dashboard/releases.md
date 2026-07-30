@@ -1,3 +1,16 @@
+# Release v1.88.0
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-4.87** — Consumption-Forecast-Dashboard V2: overall acceptance (checklist, README, visual inspection) (`none`)
+
+
+---
+
 # Release v1.87.2
 
 **Datum:** 2026-07-30  
