@@ -1,3 +1,20 @@
+# Release v1.89.2
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.291** — Dynamic MIN-SOC: post-start publish grace against restart-transient mode flapping (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.89.1
 
 **Datum:** 2026-07-30  
