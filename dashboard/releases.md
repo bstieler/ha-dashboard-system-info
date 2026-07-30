@@ -1,3 +1,20 @@
+# Release v1.84.5
+
+**Datum:** 2026-07-30  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.107** — Consumption forecast: minimum qualified neighbor days for interval period bands (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.84.4
 
 **Datum:** 2026-07-30  
