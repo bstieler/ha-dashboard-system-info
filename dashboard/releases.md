@@ -24,6 +24,32 @@
 
 ---
 
+# Release v1.92.0
+
+**Datum:** 2026-07-31  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.53** — Energie-Dashboard V2: Gesamt-Abnahme (Checkliste, README, Sichtprüfung) (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-4.81** — PV-Forecast Dashboard V2: freshness templates reference non-existent attribute generated_at (`core_restart`)
+
+## Technisch
+
+- **STG-2.236** — MIN-SOC-Helper-Leselogik in Sensoren zusammenführen (DRY) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.91.0
 
 **Datum:** 2026-07-31  
