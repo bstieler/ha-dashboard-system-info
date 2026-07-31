@@ -1,3 +1,20 @@
+# Release v1.93.1
+
+**Datum:** 2026-07-31  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-12.7** — Fix invalid Lovelace dashboard key 'oepnv' (HA requires a hyphen in YAML dashboard keys) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.93.0
 
 **Datum:** 2026-07-31  
