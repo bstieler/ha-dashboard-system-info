@@ -1,3 +1,24 @@
+# Release v1.91.0
+
+**Datum:** 2026-07-31  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.109** — PV Forecast: publish period-band start/date metadata so consumers can validate freshness (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.294** — Dynamic MIN-SOC: transient 15-min-forecast gaps write safety value 10 to hardware (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.90.0
 
 **Datum:** 2026-07-31  
