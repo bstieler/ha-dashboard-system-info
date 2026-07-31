@@ -1,3 +1,25 @@
+# Release v1.93.0
+
+**Datum:** 2026-07-31  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.1** — Scaffold ha-dashboard-oepnv subproject with departure board for Hagsfeld Bahnhof (`yaml_reload`)
+- **STG-12.2** — Evaluate and install openpublictransport-card Lovelace card for the departure board (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-7.28** — release_pipeline.py: git push fails from detached-HEAD worktrees (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.92.0
 
 **Datum:** 2026-07-31  
