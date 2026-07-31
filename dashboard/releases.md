@@ -1,3 +1,22 @@
+# Release v1.94.0
+
+**Datum:** 2026-07-31  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.3** — Enable departure board camera entity and add classic station display to the dashboard (`yaml_reload`)
+- **STG-12.4** — Add disruption and punctuality information to the ÖPNV dashboard (`yaml_reload`)
+- **STG-6.27** — Ruff konfigurieren und durchsetzen: [tool.ruff], Baseline-Fix, pre-commit-Framework (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.93.1
 
 **Datum:** 2026-07-31  
