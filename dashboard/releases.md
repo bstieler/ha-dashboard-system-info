@@ -1,3 +1,20 @@
+# Release v1.94.1
+
+**Datum:** 2026-07-31  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-12.8** — Fix delay-banner list rendering and camera card cropping/overlay on the ÖPNV dashboard (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.94.0
 
 **Datum:** 2026-07-31  
