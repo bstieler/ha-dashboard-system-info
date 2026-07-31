@@ -1,3 +1,20 @@
+# Release v1.90.0
+
+**Datum:** 2026-07-31  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.282** — Battery Control: use period-level net (PV - Load) uncertainty band instead of summed P10/P90 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.89.3
 
 **Datum:** 2026-07-31  
