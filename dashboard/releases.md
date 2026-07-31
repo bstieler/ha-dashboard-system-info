@@ -1,3 +1,21 @@
+# Release v1.89.3
+
+**Datum:** 2026-07-31  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.292** — Min-SOC: implausible far-future morning crossover strands controller in inactive (24h window cap gap) (`core_restart`)
+- **STG-2.293** — Crossover-Forecast: morning-crossover Attribut rutscht nach Mitternacht auf ~now+18h (sliding evening timestamp) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.89.2
 
 **Datum:** 2026-07-30  
