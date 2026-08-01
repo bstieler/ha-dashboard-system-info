@@ -1,3 +1,25 @@
+# Release v1.97.0
+
+**Datum:** 2026-08-01  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.11** — Alexa-triggerbares Script für ÖPNV-Abfahrtsansage (`yaml_reload`)
+- **STG-6.28** — Minimal-CI: GitHub Action mit pytest und ruff (`none`)
+
+## Dokumentation
+
+- **STG-6.31** — Sync repo topology documentation with actual subproject set (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.96.0
 
 **Datum:** 2026-08-01  
