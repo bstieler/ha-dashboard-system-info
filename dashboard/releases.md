@@ -1,3 +1,20 @@
+# Release v1.99.0
+
+**Datum:** 2026-08-01  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-7.29** — Release/Deploy guard: enforce merged and origin-synced main state (`none`)
+
+## Bugfixes
+
+- **STG-7.30** — Investigate frozen HA core log stream after core restarts (docker/journald pipeline) (`none`)
+
+
+---
+
 # Release v1.98.3
 
 **Datum:** 2026-08-01  
