@@ -3,11 +3,10 @@
 from collections.abc import Awaitable
 from typing import Any
 
-from rpi_bad_power import new_under_voltage
-
 from homeassistant.config_entries import ConfigFlowResult
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.config_entry_flow import DiscoveryFlowHandler
+from rpi_bad_power import new_under_voltage
 
 from .const import DOMAIN
 
