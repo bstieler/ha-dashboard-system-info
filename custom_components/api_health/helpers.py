@@ -80,10 +80,7 @@ def derive_api_health_report(
         source_type = "mixed"
 
     has_failure = any(code in warnings for code in FAILURE_WARNING_CODES)
-    has_fallback = any(
-        any(str(code).startswith(prefix) for prefix in DEGRADED_WARNING_PREFIXES)
-        for code in warnings
-    )
+    has_fallback = any(any(str(code).startswith(prefix) for prefix in DEGRADED_WARNING_PREFIXES) for code in warnings)
 
     if has_failure:
         status = "failed"
@@ -124,9 +121,7 @@ def build_attributes(reports: dict[str, dict[str, Any]]) -> dict[str, Any]:
         safe = _safe_source_key(source)
         attrs[f"{safe}_status"] = report.get("status")
         attrs[f"{safe}_last_call"] = report.get("timestamp")
-        attrs[f"{safe}_last_success"] = (
-            report.get("timestamp") if report.get("status") == "ok" else None
-        )
+        attrs[f"{safe}_last_success"] = report.get("timestamp") if report.get("status") == "ok" else None
         attrs[f"{safe}_error"] = report.get("error")
         attrs[f"{safe}_details"] = report.get("details")
     return attrs

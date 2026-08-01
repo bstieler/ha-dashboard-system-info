@@ -30,9 +30,7 @@ class RPiPowerFlow(DiscoveryFlowHandler[Awaitable[bool]], domain=DOMAIN):
             _async_supported,
         )
 
-    async def async_step_onboarding(
-        self, data: dict[str, Any] | None = None
-    ) -> ConfigFlowResult:
+    async def async_step_onboarding(self, data: dict[str, Any] | None = None) -> ConfigFlowResult:
         """Handle a flow initialized by onboarding."""
         has_devices = await self._discovery_function(self.hass)
 

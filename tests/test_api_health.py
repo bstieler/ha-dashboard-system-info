@@ -13,12 +13,7 @@ from types import SimpleNamespace
 
 import pytest
 
-HELPERS_PATH = (
-    Path(__file__).resolve().parents[1]
-    / "custom_components"
-    / "api_health"
-    / "helpers.py"
-)
+HELPERS_PATH = Path(__file__).resolve().parents[1] / "custom_components" / "api_health" / "helpers.py"
 
 _helpers_spec = importlib.util.spec_from_file_location("api_health_helpers", HELPERS_PATH)
 assert _helpers_spec is not None and _helpers_spec.loader is not None
