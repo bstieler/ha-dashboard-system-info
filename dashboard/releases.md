@@ -1,3 +1,25 @@
+# Release v1.99.2
+
+**Datum:** 2026-08-01  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-8.15** — api_health: stale entity sensor.api_health_overall vs live _2 — registry cleanup (`none`)
+
+## Technisch
+
+- **STG-1.6** — ha-forecast-common: Subprojekt scaffolden + state_repository/startup migrieren (`core_restart`)
+- **STG-1.7** — ha-forecast-common: recorder_utils.py migrieren (3 Diff-Zeilen aufloesen) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.99.1
 
 **Datum:** 2026-08-01  
