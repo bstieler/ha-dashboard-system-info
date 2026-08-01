@@ -6,18 +6,17 @@ This override adds a null-check in the update path and keeps the entity
 unavailable until the client is ready.
 """
 
-from rpi_bad_power import UnderVoltage, new_under_voltage
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryError
+from rpi_bad_power import UnderVoltage, new_under_voltage
 
 from .const import DOMAIN
 
 PLATFORMS = [Platform.BINARY_SENSOR]
 
-type RpiPowerConfigEntry = ConfigEntry[UnderVoltage]
+RpiPowerConfigEntry = ConfigEntry[UnderVoltage]
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: RpiPowerConfigEntry) -> bool:
