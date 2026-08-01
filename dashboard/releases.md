@@ -1,3 +1,20 @@
+# Release v1.99.4
+
+**Datum:** 2026-08-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-1.9** — ha-forecast-common: gemeinsame SQLite-Connection-Basisklasse (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.99.3
 
 **Datum:** 2026-08-01  
