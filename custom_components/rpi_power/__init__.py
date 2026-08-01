@@ -17,7 +17,7 @@ from .const import DOMAIN
 
 PLATFORMS = [Platform.BINARY_SENSOR]
 
-type RpiPowerConfigEntry = ConfigEntry[UnderVoltage]
+RpiPowerConfigEntry = ConfigEntry[UnderVoltage]
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: RpiPowerConfigEntry) -> bool:
