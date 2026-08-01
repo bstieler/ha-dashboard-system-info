@@ -1,3 +1,16 @@
+# Release v1.95.0
+
+**Datum:** 2026-08-01  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-12.5** — Configure walking time and line/destination filters for the Hagsfeld stop (`none`)
+
+
+---
+
 # Release v1.94.1
 
 **Datum:** 2026-07-31  
