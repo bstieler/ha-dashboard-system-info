@@ -1,3 +1,20 @@
+# Release v1.98.0
+
+**Datum:** 2026-08-01  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-6.35** — CI robustness: avoid silent coverage gaps (project scoping, tool versions) (`none`)
+
+## Technisch
+
+- **STG-6.36** — Ruff rollout in submodule ha-dashboard-zs7status: own [tool.ruff] config and baseline check (`none`)
+
+
+---
+
 # Release v1.97.0
 
 **Datum:** 2026-08-01  
