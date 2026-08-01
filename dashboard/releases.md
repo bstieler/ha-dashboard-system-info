@@ -1,3 +1,24 @@
+# Release v1.98.2
+
+**Datum:** 2026-08-01  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.111** — Intraday correction factor is dropped at midnight — extend to tomorrow with decay (`core_restart`)
+
+## Technisch
+
+- **STG-6.38** — Ruff rollout in submodule ha-pv-config: config and baseline fix (~216 findings) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.98.1
 
 **Datum:** 2026-08-01  
