@@ -1,3 +1,21 @@
+# Release v1.96.0
+
+**Datum:** 2026-08-01  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.10** — Morning TTS departure announcement on the kitchen speaker (`yaml_reload`)
+- **STG-12.9** — Push notification on delays at the Hagsfeld stop (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.95.0
 
 **Datum:** 2026-08-01  
