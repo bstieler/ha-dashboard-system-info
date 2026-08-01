@@ -1,3 +1,17 @@
+# Release v1.98.3
+
+**Datum:** 2026-08-01  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.34** — Ruff-Rollout in Submodule: eigene [tool.ruff]-Config und Baseline pro Submodul (`none`)
+- **STG-6.39** — Ruff rollout superproject cleanup: drop submodule excludes, optional per-submodule pre-commit configs (`none`)
+
+
+---
+
 # Release v1.98.2
 
 **Datum:** 2026-08-01  
