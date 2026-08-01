@@ -1,3 +1,20 @@
+# Release v1.99.1
+
+**Datum:** 2026-08-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.295** — alphaess_evaluation renderers: 8 computed values never wired into output (suspected latent bugs) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.99.0
 
 **Datum:** 2026-08-01  
