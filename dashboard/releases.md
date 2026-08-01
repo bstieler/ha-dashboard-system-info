@@ -1,3 +1,20 @@
+# Release v1.98.1
+
+**Datum:** 2026-08-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-6.37** — Ruff rollout in submodule ha-dashboard-system-info: config, baseline fixes, PEP-695 type-alias decision (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.98.0
 
 **Datum:** 2026-08-01  
