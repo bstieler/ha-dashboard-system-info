@@ -2,8 +2,8 @@ lovelace:
   dashboards:
     system-info:
       mode: yaml
-      title: System Info
-      icon: mdi:chip
+      title: System
+      icon: mdi:server-outline
       show_in_sidebar: true
       require_admin: false
       filename: /config/dashboards/system_info.yaml

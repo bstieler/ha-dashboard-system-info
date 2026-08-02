@@ -1,157 +1,1103 @@
-title: System Info
+title: System
 views:
-  - title: System Info
+  - title: System
+    type: sections
     theme: zs7
     path: system-info
-    icon: mdi:chip
-    cards:
-      - type: markdown
-        content: |
-          # Raspberry Pi
-          Key system information and history
+    icon: mdi:server-outline
+    max_columns: 3
+    sections:
+      - type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: System
+            subtitle: Raspberry Pi · Releases · API Status
 
-      - type: entities
-        title: Current Values
-        show_header_toggle: false
-        entities:
-          - entity: sensor.processor_use
-            name: Processor use
-          - entity: sensor.last_boot
-            name: Last boot
-          - entity: sensor.system_since_last_boot
-            name: Since last boot
-          - entity: sensor.disk_free
-            name: Disk free (/)
-          - entity: sensor.memory_usage
-            name: Memory usage
-          - entity: sensor.processor_temperature
-            name: Processor temperature
+      - type: grid
+        title: Raspberry Pi
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: sensor.processor_use
+            name: Prozessorlast
+          - type: custom:mushroom-entity-card
+            entity: sensor.processor_temperature
+            name: Prozessortemperatur
+          - type: custom:mushroom-entity-card
+            entity: sensor.memory_usage
+            name: Speichernutzung
+          - type: custom:mushroom-entity-card
+            entity: sensor.disk_free
+            name: Festplatte frei (/)
+          - type: custom:mushroom-entity-card
+            entity: sensor.last_boot
+            name: Letzter Boot
+          - type: custom:mushroom-entity-card
+            entity: sensor.system_since_last_boot
+            name: Uptime
 
-      - type: history-graph
-        title: Processor Load (2h)
-        hours_to_show: 2
-        min_y_axis: 0
-        max_y_axis: 100
-        refresh_interval: 60
-        entities:
-          - entity: sensor.processor_use
-            name: Processor use
+      - type: grid
+        title: Verlauf
+        cards:
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Prozessorlast (2h)
+            graph_span: 2h
+            series:
+              - entity: sensor.processor_use
+                name: Prozessor
+                type: line
+                color: var(--zs7-accent)
 
-      - type: history-graph
-        title: Per-Core Load (2h)
-        hours_to_show: 2
-        min_y_axis: 0
-        max_y_axis: 100
-        refresh_interval: 60
-        entities:
-          - entity: sensor.processor_use_core_0
-            name: Core 0
-          - entity: sensor.processor_use_core_1
-            name: Core 1
-          - entity: sensor.processor_use_core_2
-            name: Core 2
-          - entity: sensor.processor_use_core_3
-            name: Core 3
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Kerne (2h)
+            graph_span: 2h
+            series:
+              - entity: sensor.processor_use_core_0
+                name: Core 0
+                type: line
+                color: var(--zs7-pv)
+              - entity: sensor.processor_use_core_1
+                name: Core 1
+                type: line
+                color: var(--zs7-grid-import)
+              - entity: sensor.processor_use_core_2
+                name: Core 2
+                type: line
+                color: var(--zs7-grid-export)
+              - entity: sensor.processor_use_core_3
+                name: Core 3
+                type: line
+                color: var(--zs7-battery)
 
-      - type: history-graph
-        title: Memory Usage (2h)
-        hours_to_show: 2
-        min_y_axis: 0
-        max_y_axis: 100
-        refresh_interval: 60
-        entities:
-          - entity: sensor.memory_usage
-            name: Memory usage
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Speichernutzung (2h)
+            graph_span: 2h
+            series:
+              - entity: sensor.memory_usage
+                name: Speicher
+                type: line
+                color: var(--zs7-accent)
 
-      - type: history-graph
-        title: Disk Free / (48h)
-        hours_to_show: 48
-        min_y_axis: 0
-        max_y_axis: 100
-        refresh_interval: 60
-        entities:
-          - entity: sensor.disk_free
-            name: Disk free (/)
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Festplatte frei / (48h)
+            graph_span: 48h
+            series:
+              - entity: sensor.disk_free
+                name: Frei
+                type: line
+                color: var(--zs7-accent)
 
-      - type: history-graph
-        title: Processor Temperature (2h)
-        hours_to_show: 2
-        min_y_axis: 0
-        refresh_interval: 60
-        entities:
-          - entity: sensor.processor_temperature
-            name: Processor temperature
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Prozessortemperatur (2h)
+            graph_span: 2h
+            series:
+              - entity: sensor.processor_temperature
+                name: Temperatur
+                type: line
+                color: var(--zs7-heat)
 
-      - type: button
-        name: API Status
-        icon: mdi:cloud-check
-        tap_action:
-          action: navigate
-          navigation_path: /dashboard-system-info/api-status
+      - type: grid
+        title: Releases
+        cards:
+          - type: markdown
+            title: Projekt Overview
+            content: |
+              {%- set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] -%}
+              {%- if projects | count == 0 -%}
+              _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
+              {%- else -%}
+              | Projekt | Version | Erstellt | Letzter Deploy | Branch |
+              |---------|---------|----------|----------------|--------|
+              {%- for p in projects %}
+              | {{ p.project_id }} | `{{ p.version }}` | {{ p.created_at_local | default('—') }} | {{ p.deployed_at_local | default('—') }} | {{ p.branch }} |
+              {%- endfor -%}
+              {%- endif -%}
 
-  - title: HA Config Deploy
+          - !include releases_card.yaml
+
+      - type: grid
+        title: API Status
+        cards:
+          - type: custom:mushroom-template-card
+            primary: "{{ states('sensor.api_health_overall') }}"
+            secondary: Gesamtstatus externe Schnittstellen
+            icon: mdi:cloud-outline
+            icon_color: >-
+              {% set s = states('sensor.api_health_overall') %}
+              {% if s == 'failed' %}var(--zs7-crit)
+              {% elif s == 'degraded' %}var(--zs7-warn)
+              {% elif s == 'ok' %}var(--zs7-ok)
+              {% else %}var(--zs7-offline){% endif %}
+
+          - type: markdown
+            title: External Connections
+            content: |
+              {%- set sources = [
+                ('Open-Meteo', 'sensor.api_health_open_meteo'),
+                ('AlphaESS', 'sensor.api_health_alphaess'),
+                ('DWD', 'sensor.api_health_dwd'),
+                ('SwitchBot BLE', 'sensor.api_health_switchbot_ble')
+              ] -%}
+              | Service | Status | Last Call | Last Success | Details |
+              |:--------|:------:|:---------:|:------------:|:--------|
+              {%- for name, entity in sources %}
+              {%- set status = states(entity) | default('unknown') %}
+              {%- set icon = '🔴' if status == 'failed' else '🟡' if status == 'degraded' else '🟢' if status == 'ok' else '⚪' %}
+              {%- set last_call = state_attr(entity, 'last_call') | default('—') %}
+              {%- set last_success = state_attr(entity, 'last_success') | default('—') %}
+              {%- set details = state_attr(entity, 'details') | default('—') | truncate(45) %}
+              | {{ name }} | {{ icon }} {{ status }} | {{ last_call }} | {{ last_success }} | {{ details }} |
+              {%- endfor %}
+
+  - title: Zirkulation
+    type: sections
     theme: zs7
-    path: ha-config-deploy
-    icon: mdi:source-branch
-    cards:
-      - type: markdown
-        title: Projekt Overview
-        content: |
-          {%- set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] -%}
-          {%- if projects | count == 0 -%}
-          _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
-          {%- else -%}
-          | Projekt | Version | Erstellt | Letzter Deploy | Branch |
-          |---------|---------|----------|----------------|--------|
-          {%- for p in projects %}
-          | {{ p.project_id }} | `{{ p.version }}` | {{ p.created_at_local | default('—') }} | {{ p.deployed_at_local | default('—') }} | {{ p.branch }} |
-          {%- endfor -%}
-          {%- endif -%}
+    path: zirkulation
+    icon: mdi:heat-pump-outline
+    max_columns: 3
+    sections:
+      - type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: Zirkulation
+            subtitle: Warmwasser-Zirkulationspumpe · SwitchBot Plug
 
-      - type: button
-        name: Releases
-        icon: mdi:tag-multiple
-        tap_action:
-          action: navigate
-          navigation_path: /dashboard-system-info/releases
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_boolean.zs7_circ_pump_ble_error
+                state: "on"
+            card:
+              type: custom:mushroom-template-card
+              primary: BLE Verbindungsfehler
+              secondary: >-
+                Der SwitchBot Plug ist nicht erreichbar. Die Pumpe konnte nicht
+                geschaltet werden. Prüfe die Bluetooth-Verbindung oder den Plug.
+              icon: mdi:alert-circle-outline
+              icon_color: var(--zs7-crit)
 
-  - title: Releases
+      - type: grid
+        title: Steuerung
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: input_select.zs7_circ_pump_switch
+            name: Switchbot Plug
+            icon: mdi:power-plug-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_boolean.zs7_circ_pump_enabled
+              name: Steuerung aktivieren
+              icon: mdi:power
+              tap_action:
+                action: more-info
+              hold_action:
+                action: toggle
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_boolean.zs7_circ_window_enabled
+              name: Zeitfenster aktivieren
+              icon: mdi:calendar-clock-outline
+              tap_action:
+                action: more-info
+              hold_action:
+                action: toggle
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_boolean.zs7_circ_flush_enabled
+              name: Durchspülung aktivieren
+              icon: mdi:water-sync
+              tap_action:
+                action: more-info
+              hold_action:
+                action: toggle
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_number.zs7_circ_runtime_minutes
+              name: Laufzeit pro Aktivierung
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_number.zs7_circ_pause_minutes
+              name: Pause zwischen Aktivierungen
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_number.zs7_circ_flush_runtime_minutes
+              name: Laufzeit pro Durchspülung
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_number.zs7_circ_flush_interval_minutes
+              name: Pause vor Durchspülung
+
+      - type: grid
+        title: Status
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: binary_sensor.zs7_circ_pump_running
+            name: Pumpe läuft
+            icon: mdi:heat-pump-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: binary_sensor.zs7_circ_window_active
+              name: Zeitfenster aktiv
+              icon: mdi:calendar-clock-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: binary_sensor.zs7_circ_pump_should_run
+              name: Pumpe soll laufen (Zeitfenster)
+              icon: mdi:heat-pump-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: binary_sensor.zs7_circ_flush_running
+              name: Durchspülung läuft
+              icon: mdi:water-sync
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: sensor.zs7_circ_selected_switch_state
+              name: Aktueller Plug-Status
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: sensor.zs7_circ_next_cycle_label
+              name: Nächster Pumpenlauf
+              icon: mdi:clock-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: sensor.zs7_circ_next_activation
+              name: Nächste Aktivierung
+              icon: mdi:clock-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: timer.zs7_circ_flush_timer
+              name: Durchspülung Timer
+              icon: mdi:timer-outline
+
+      - type: grid
+        title: Zeitfenster
+        cards:
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_datetime.zs7_circ_window_1_start
+              name: Fenster 1 Start
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_datetime.zs7_circ_window_1_end
+              name: Fenster 1 Ende
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_datetime.zs7_circ_window_2_start
+              name: Fenster 2 Start
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_datetime.zs7_circ_window_2_end
+              name: Fenster 2 Ende
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_datetime.zs7_circ_window_3_start
+              name: Fenster 3 Start
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: input_datetime.zs7_circ_window_3_end
+              name: Fenster 3 Ende
+
+      - type: grid
+        title: Verbrauch
+        cards:
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: sensor.plug_mini_eu_4392_leistung
+              name: Aktuelle Leistung
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
+              entity: sensor.plug_mini_eu_4392_energie
+              name: Gesamtverbrauch
+
+      - type: grid
+        title: Verlauf & Logbuch
+        cards:
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_boolean.zs7_circ_pump_enabled
+                state: "on"
+            card:
+              type: history-graph
+              title: Pumpen-Status (24h)
+              hours_to_show: 24
+              refresh_interval: 60
+              entities:
+                - entity: binary_sensor.zs7_circ_pump_should_run
+                  name: Soll-Zustand
+                - entity: sensor.zs7_circ_selected_switch_state
+                  name: Ist-Zustand
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: logbook
+              title: Ereignis-Log
+              hours_to_show: 24
+              refresh_interval: 60
+              entities:
+                - entity: binary_sensor.zs7_circ_pump_should_run
+                  name: Soll-Zustand
+                - entity: sensor.zs7_circ_selected_switch_state
+                  name: Ist-Zustand
+                - entity: input_boolean.zs7_circ_pump_enabled
+                  name: Steuerung
+                - entity: binary_sensor.zs7_circ_window_active
+                  name: Zeitfenster
+
+  - title: Status
+    type: sections
     theme: zs7
-    path: releases
-    icon: mdi:tag-multiple
-    cards:
-      - !include releases_card.yaml
+    path: status
+    icon: mdi:clipboard-check-outline
+    max_columns: 3
+    sections:
+      - type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: Status
+            subtitle: Drucker · Heizung · PV-Anlage
 
-  - title: API Status
-    theme: zs7
-    path: api-status
-    icon: mdi:cloud-check
-    max_columns: 1
-    cards:
-      - type: entities
-        title: Overall Status
-        show_header_toggle: false
-        state_color: true
-        entities:
-          - entity: sensor.api_health_overall
-            name: Overall
+      - type: grid
+        title: Drucker
+        cards:
+          - type: custom:mushroom-template-card
+            primary: >-
+              {% set details = state_attr('sensor.printerstatus_supply_alert_summary', 'details') %}
+              {% set details_text = details if details not in [none, '', 'unknown', 'unavailable'] else '' %}
+              {% set details_lc = details_text | lower %}
+              {% set first_hint = details_text.split(', ')[0] if details_text else '' %}
+              {% if details_text == '' or details_text == 'Keine Bedarfsmeldungen' %}
+              OK — alles in Ordnung
+              {% elif 'leer' in details_lc or 'kritisch' in details_lc or 'replace' in details_lc %}
+              Fehler — {{ first_hint }}
+              {% else %}
+              Warnung — {{ first_hint }}
+              {% endif %}
+            secondary: Brother HL-3142CW · Bedarfsmeldungen
+            icon: mdi:printer-outline
+            icon_color: >-
+              {% set details = state_attr('sensor.printerstatus_supply_alert_summary', 'details') %}
+              {% set details_text = details if details not in [none, '', 'unknown', 'unavailable'] else '' %}
+              {% set details_lc = details_text | lower %}
+              {% if 'leer' in details_lc or 'kritisch' in details_lc or 'replace' in details_lc %}
+              var(--zs7-crit)
+              {% elif details_text == '' or details_text == 'Keine Bedarfsmeldungen' %}
+              var(--zs7-ok)
+              {% else %}
+              var(--zs7-warn)
+              {% endif %}
 
-      - type: markdown
-        title: External Connections
-        content: |
-          {%- set sources = [
-            ('Open-Meteo', 'sensor.api_health_open_meteo'),
-            ('AlphaESS', 'sensor.api_health_alphaess'),
-            ('DWD', 'sensor.api_health_dwd'),
-            ('SwitchBot BLE', 'sensor.api_health_switchbot_ble')
-          ] -%}
-          | Service | Status | Last Call | Last Success | Details |
-          |:--------|:------:|:---------:|:------------:|:--------|
-          {%- for name, entity in sources %}
-          {%- set status = states(entity) | default('unknown') %}
-          {%- set icon = '🔴' if status == 'failed' else '🟡' if status == 'degraded' else '🟢' if status == 'ok' else '⚪' %}
-          {%- set last_call = state_attr(entity, 'last_call') | default('—') %}
-          {%- set last_success = state_attr(entity, 'last_success') | default('—') %}
-          {%- set details = state_attr(entity, 'details') | default('—') | truncate(45) %}
-          | {{ name }} | {{ icon }} {{ status }} | {{ last_call }} | {{ last_success }} | {{ details }} |
-          {%- endfor %}
+          - type: entities
+            title: Druckerstatus
+            show_header_toggle: false
+            entities:
+              - entity: sensor.brother_hl_3142cw_series
+                name: Drucker
+              - entity: sensor.hl_3142cw_status
+                name: Status
+              - entity: sensor.hl_3142cw_seitenzahler
+                name: Seitenzaehler
+              - entity: sensor.printerstatus_supply_alert_summary
+                name: Bedarfsmeldungen
+              - entity: sensor.printerstatus_supply_alert_count
+                name: Anzahl Bedarfsmeldungen
+
+          - type: custom:mushroom-entity-card
+            entity: sensor.printerstatus_toner_black_percent
+            name: Schwarz Toner
+          - type: custom:mushroom-entity-card
+            entity: sensor.printerstatus_toner_cyan_percent
+            name: Cyan Toner
+          - type: custom:mushroom-entity-card
+            entity: sensor.printerstatus_toner_magenta_percent
+            name: Magenta Toner
+          - type: custom:mushroom-entity-card
+            entity: sensor.printerstatus_toner_yellow_percent
+            name: Gelb Toner
+
+          - type: entities
+            title: Lebensdauer Trommeln
+            show_header_toggle: false
+            entities:
+              - entity: sensor.hl_3142cw_restlebensdauer_der_schwarz_trommel
+                name: Schwarz Trommel
+              - entity: sensor.hl_3142cw_restlebensdauer_der_cyan_trommel
+                name: Cyan Trommel
+              - entity: sensor.hl_3142cw_restlebensdauer_der_magenta_trommel
+                name: Magenta Trommel
+              - entity: sensor.hl_3142cw_restlebensdauer_der_gelb_trommel
+                name: Gelb Trommel
+
+          - type: entities
+            title: Lebensdauer Komponenten
+            show_header_toggle: false
+            entities:
+              - entity: sensor.hl_3142cw_restlebensdauer_der_bandeinheit
+                name: Bandeinheit
+              - entity: sensor.hl_3142cw_restlebensdauer_der_fixiereinheit
+                name: Fixiereinheit
+              - entity: sensor.hl_3142cw_restlebensdauer_des_pf_kit_1
+                name: PF Kit 1
+
+      - type: grid
+        title: Heizung (Tado)
+        cards:
+          - type: custom:mushroom-template-card
+            primary: >-
+              {% set devices = [
+                {'id':'va3984081408', 'room':'Bad'},
+                {'id':'va0428821760', 'room':'Arbeitszimmer'},
+                {'id':'va4219555072', 'room':'Lenya'},
+                {'id':'va2543013120', 'room':'Malin'},
+                {'id':'va0244534528', 'room':'Malin'}
+              ] %}
+              {% set ns = namespace(level='OK', message='Alles in Ordnung.') %}
+              {% for d in devices %}
+                {% set cloud = states('binary_sensor.tado_smart_radiator_thermostat_' ~ d.id ~ '_cloud_verbindung') %}
+                {% if ns.level != 'Fehler' and cloud != 'on' %}
+                  {% set ns.level = 'Fehler' %}
+                  {% if cloud in ['unknown', 'unavailable', 'none', ''] %}
+                    {% set ns.message = 'Cloud-Verbindung unbekannt: ' ~ d.room ~ ' (' ~ (d.id | upper) ~ ')' %}
+                  {% else %}
+                    {% set ns.message = 'Cloud-Verbindung unterbrochen: ' ~ d.room ~ ' (' ~ (d.id | upper) ~ ')' %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if ns.level == 'OK' %}
+                {% for d in devices %}
+                  {% set battery = states('binary_sensor.tado_smart_radiator_thermostat_' ~ d.id ~ '_batterie') %}
+                  {% if ns.level == 'OK' and battery == 'on' %}
+                    {% set ns.level = 'Warnung' %}
+                    {% set ns.message = 'Batterie-Warnung: ' ~ d.room ~ ' (' ~ (d.id | upper) ~ ')' %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              {{ ns.level }} — {{ ns.message }}
+            secondary: Tado Thermostate · Cloud und Batterien
+            icon: mdi:home-thermometer-outline
+            icon_color: >-
+              {% set devices = [
+                {'id':'va3984081408'},
+                {'id':'va0428821760'},
+                {'id':'va4219555072'},
+                {'id':'va2543013120'},
+                {'id':'va0244534528'}
+              ] %}
+              {% set ns = namespace(level='OK') %}
+              {% for d in devices %}
+                {% set cloud = states('binary_sensor.tado_smart_radiator_thermostat_' ~ d.id ~ '_cloud_verbindung') %}
+                {% if ns.level != 'Fehler' and cloud != 'on' %}
+                  {% set ns.level = 'Fehler' %}
+                {% endif %}
+              {% endfor %}
+              {% if ns.level == 'OK' %}
+                {% for d in devices %}
+                  {% if is_state('binary_sensor.tado_smart_radiator_thermostat_' ~ d.id ~ '_batterie', 'on') %}
+                    {% set ns.level = 'Warnung' %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              {% if ns.level == 'Fehler' %}var(--zs7-crit)
+              {% elif ns.level == 'Warnung' %}var(--zs7-warn)
+              {% else %}var(--zs7-ok){% endif %}
+
+          - type: custom:mushroom-entity-card
+            entity: binary_sensor.tado_ib_z7_cloud_connection
+            name: Tado Bridge Cloud
+            icon: mdi:cloud-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.tado_z7_api_status
+            name: Tado API Status
+            icon: mdi:cloud-outline
+
+          - type: custom:mushroom-template-card
+            primary: >-
+              {{ states('sensor.tado_smart_radiator_thermostat_va3984081408_current_temperature') }} °C ·
+              {{ states('sensor.tado_smart_radiator_thermostat_va3984081408_current_humidity') }} %
+            secondary: >-
+              Bad (VA3984081408) · Batterie: {{ states('binary_sensor.tado_smart_radiator_thermostat_va3984081408_batterie') }} ·
+              Cloud: {{ states('binary_sensor.tado_smart_radiator_thermostat_va3984081408_cloud_verbindung') }}
+            icon: mdi:home-thermometer-outline
+
+          - type: custom:mushroom-template-card
+            primary: >-
+              {{ states('sensor.tado_smart_radiator_thermostat_va0428821760_current_temperature') }} °C ·
+              {{ states('sensor.tado_smart_radiator_thermostat_va0428821760_current_humidity') }} %
+            secondary: >-
+              Arbeitszimmer (VA0428821760) · Batterie: {{ states('binary_sensor.tado_smart_radiator_thermostat_va0428821760_batterie') }} ·
+              Cloud: {{ states('binary_sensor.tado_smart_radiator_thermostat_va0428821760_cloud_verbindung') }}
+            icon: mdi:home-thermometer-outline
+
+          - type: custom:mushroom-template-card
+            primary: >-
+              {{ states('sensor.tado_smart_radiator_thermostat_va4219555072_current_temperature') }} °C ·
+              {{ states('sensor.tado_smart_radiator_thermostat_va4219555072_current_humidity') }} %
+            secondary: >-
+              Lenya (VA4219555072) · Batterie: {{ states('binary_sensor.tado_smart_radiator_thermostat_va4219555072_batterie') }} ·
+              Cloud: {{ states('binary_sensor.tado_smart_radiator_thermostat_va4219555072_cloud_verbindung') }}
+            icon: mdi:home-thermometer-outline
+
+          - type: custom:mushroom-template-card
+            primary: >-
+              {{ states('sensor.tado_smart_radiator_thermostat_va2543013120_current_temperature') }} °C /
+              {{ states('sensor.tado_smart_radiator_thermostat_va0244534528_current_temperature') }} °C
+            secondary: >-
+              Malin (VA2543013120, VA0244534528) ·
+              Luftfeuchte: {{ states('sensor.tado_smart_radiator_thermostat_va2543013120_current_humidity') }} % / {{ states('sensor.tado_smart_radiator_thermostat_va0244534528_current_humidity') }} % ·
+              Batterie: {{ states('binary_sensor.tado_smart_radiator_thermostat_va2543013120_batterie') }} / {{ states('binary_sensor.tado_smart_radiator_thermostat_va0244534528_batterie') }} ·
+              Cloud: {{ states('binary_sensor.tado_smart_radiator_thermostat_va2543013120_cloud_verbindung') }} / {{ states('binary_sensor.tado_smart_radiator_thermostat_va0244534528_cloud_verbindung') }}
+            icon: mdi:home-thermometer-outline
+
+          - type: markdown
+            content: >-
+              ## Tado Warnungen/Fehler (letzte 100)
+              {% set count = states('sensor.tado_heating_log_tail') | int(0) %}
+              {% set lines = state_attr('sensor.tado_heating_log_tail', 'lines') %}
+              {% if count == 0 %}
+              <small>Keine Warnungen/Fehler gefunden.</small>
+              {% else %}
+              <small>{{ lines | replace('\n', '<br>') }}</small>
+              {% endif %}
+
+      - type: grid
+        title: PV Status
+        cards:
+          - type: custom:mushroom-template-card
+            primary: >-
+              {% set required_entities = [
+                'sensor.alpha_ess_actual_production',
+                'sensor.alpha_ess_actual_house_consumption',
+                'sensor.pv_battery_soc',
+                'sensor.alpha_ess_total_power_grid',
+                'sensor.alpha_ess_system_fault',
+                'sensor.zs7_energy_pv_to_sunset_forecast_kwh'
+              ] %}
+              {% set missing = namespace(items=[]) %}
+              {% for entity_id in required_entities %}
+                {% set value = states(entity_id) %}
+                {% if value in ['unknown', 'unavailable', 'none', ''] %}
+                  {% set missing.items = missing.items + [entity_id] %}
+                {% endif %}
+              {% endfor %}
+              {% set fault_entities = [
+                'sensor.alpha_ess_inverter_fault_1',
+                'sensor.alpha_ess_inverter_fault_2',
+                'sensor.alpha_ess_inverter_extended_fault_1',
+                'sensor.alpha_ess_inverter_extended_fault_2',
+                'sensor.alpha_ess_system_fault'
+              ] %}
+              {% set fault = namespace(active='') %}
+              {% for entity_id in fault_entities %}
+                {% set raw = states(entity_id) %}
+                {% if fault.active == '' and raw not in ['unknown', 'unavailable', 'none', ''] and (raw | float(0)) != 0 %}
+                  {% set fault.active = entity_id %}
+                {% endif %}
+              {% endfor %}
+              {% set soc = states('sensor.pv_battery_soc') | float(0) %}
+              {% set min_temp = states('sensor.alpha_ess_battery_min_cell_temp') | float(0) %}
+              {% set max_temp = states('sensor.alpha_ess_battery_max_cell_temp') | float(0) %}
+              {% set pv = states('sensor.alpha_ess_actual_production') | float(0) %}
+              {% set grid = states('sensor.alpha_ess_total_power_grid') | float(0) %}
+              {% if missing.items | count > 0 %}
+              Fehler — Kernsensoren fehlen: {{ missing.items[0] }}
+              {% elif fault.active != '' %}
+              Fehler — Fehlerregister aktiv: {{ state_attr(fault.active, 'friendly_name') or fault.active }}
+              {% elif soc < 20 %}
+              Warnung — Batterie-SOC niedrig: {{ soc | round(1) }} %
+              {% elif min_temp <= 0 or max_temp >= 45 %}
+              Warnung — Batterietemperatur auffaellig: {{ min_temp | round(1) }} bis {{ max_temp | round(1) }} °C
+              {% elif is_state('sun.sun', 'above_horizon') and pv > 500 and grid > 1500 %}
+              Warnung — Trotz PV aktuell hoher Netzbezug: {{ grid | round(0) }} W
+              {% else %}
+              OK — PV-Anlage arbeitet ohne erkennbare Auffaelligkeit
+              {% endif %}
+            secondary: AlphaESS · Erzeugung, Batterie, Netz
+            icon: mdi:solar-power-variant-outline
+            icon_color: >-
+              {% set required_entities = [
+                'sensor.alpha_ess_actual_production',
+                'sensor.alpha_ess_actual_house_consumption',
+                'sensor.pv_battery_soc',
+                'sensor.alpha_ess_total_power_grid',
+                'sensor.alpha_ess_system_fault',
+                'sensor.zs7_energy_pv_to_sunset_forecast_kwh'
+              ] %}
+              {% set missing = namespace(items=[]) %}
+              {% for entity_id in required_entities %}
+                {% set value = states(entity_id) %}
+                {% if value in ['unknown', 'unavailable', 'none', ''] %}
+                  {% set missing.items = missing.items + [entity_id] %}
+                {% endif %}
+              {% endfor %}
+              {% set soc = states('sensor.pv_battery_soc') | float(-1) %}
+              {% set fault = namespace(active=false) %}
+              {% for entity_id in [
+                'sensor.alpha_ess_inverter_fault_1',
+                'sensor.alpha_ess_inverter_fault_2',
+                'sensor.alpha_ess_inverter_extended_fault_1',
+                'sensor.alpha_ess_inverter_extended_fault_2',
+                'sensor.alpha_ess_system_fault'
+              ] %}
+                {% set raw = states(entity_id) %}
+                {% if not fault.active and raw not in ['unknown', 'unavailable', 'none', ''] and (raw | float(0)) != 0 %}
+                  {% set fault.active = true %}
+                {% endif %}
+              {% endfor %}
+              {% if missing.items | count > 0 or fault.active %}var(--zs7-crit)
+              {% elif soc >= 0 and soc < 20 %}var(--zs7-warn)
+              {% else %}var(--zs7-ok){% endif %}
+
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_actual_production
+            name: PV Leistung
+            icon: mdi:solar-power-variant-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_actual_house_consumption
+            name: Hausverbrauch
+            icon: mdi:home-lightning-bolt-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.pv_battery_soc
+            name: Batterie-SOC
+            icon: mdi:battery-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.pv_power_battery
+            name: Batterie-Leistung
+            icon: mdi:battery-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_total_power_grid
+            name: Netzleistung
+            icon: mdi:transmission-tower
+
+          - type: entities
+            title: Batterie
+            show_header_toggle: false
+            entities:
+              - entity: sensor.pv_battery_soc
+                name: SOC
+              - entity: sensor.alpha_ess_battery_min_cell_temp
+                name: Min Cell Temp
+              - entity: sensor.alpha_ess_battery_max_cell_temp
+                name: Max Cell Temp
+              - entity: sensor.alpha_ess_battery_voltage
+                name: Batterie-Spannung
+              - entity: sensor.alpha_ess_battery_remaining_time
+                name: Restzeit
+              - entity: sensor.alpha_ess_ups_soc_battery
+                name: UPS Reserve SOC
+
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Temperaturen (24h)
+            graph_span: 24h
+            series:
+              - entity: sensor.alpha_ess_inv_temperature
+                name: Inverter
+                type: line
+                color: var(--zs7-heat)
+              - entity: sensor.alpha_ess_battery_min_cell_temp
+                name: Zelle min
+                type: line
+                color: var(--zs7-water)
+              - entity: sensor.alpha_ess_battery_max_cell_temp
+                name: Zelle max
+                type: line
+                color: var(--zs7-grid-import)
+
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: PV / Hausverbrauch (24h)
+            graph_span: 24h
+            series:
+              - entity: sensor.alpha_ess_actual_production
+                name: PV
+                type: line
+                color: var(--zs7-pv)
+              - entity: sensor.alpha_ess_actual_house_consumption
+                name: Hausverbrauch
+                type: line
+                color: var(--zs7-accent)
+
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Netz / Batterie (24h)
+            graph_span: 24h
+            series:
+              - entity: sensor.alpha_ess_total_power_grid
+                name: Netz
+                type: line
+                color: var(--zs7-grid-import)
+              - entity: sensor.pv_power_battery
+                name: Batterie
+                type: line
+                color: var(--zs7-battery)
+
+          - type: custom:apexcharts-card
+            apex_config: !include templates/apexcharts_standard.yaml
+            header:
+              show: true
+              title: Batterie-SOC (24h)
+            graph_span: 24h
+            series:
+              - entity: sensor.pv_battery_soc
+                name: SOC
+                type: line
+                color: var(--zs7-battery)
+              - entity: sensor.alpha_ess_ups_soc_battery
+                name: UPS Reserve
+                type: line
+                color: var(--zs7-accent)
+
+          - type: entities
+            title: Netz & Energie
+            show_header_toggle: false
+            entities:
+              - entity: sensor.zs7_energy_grid_import_today_kwh
+                name: Netzimport heute
+              - entity: sensor.zs7_energy_feed_to_grid_today_kwh
+                name: Einspeisung heute
+              - entity: sensor.zs7_energy_pv_today_kwh
+                name: PV-Ertrag heute
+              - entity: sensor.zs7_energy_house_consumption_today_kwh
+                name: Hausverbrauch heute
+              - entity: sensor.zs7_energy_autarky_today_pct
+                name: Autarkie heute
+              - entity: sensor.zs7_energy_self_consumption_today_pct
+                name: Eigenverbrauch heute
+
+          - type: entities
+            title: Analyse / Prognose
+            show_header_toggle: false
+            entities:
+              - entity: sensor.zs7_energy_pv_to_sunset_forecast_kwh
+                name: PV bis Sunset
+              - entity: sensor.zs7_energy_battery_soc_sunset_forecast_pct
+                name: SOC bei Sunset
+              - entity: sensor.zs7_energy_battery_soc_sunrise_forecast_pct
+                name: SOC bei Sunrise
+              - entity: sensor.zs7_energy_grid_usage_to_sunrise_kwh
+                name: Netzbedarf bis Sunrise
+              - entity: sensor.zs7_energy_house_mode
+                name: Hausmodus
+              - entity: sensor.zs7_energy_battery_surplus_until_sunset_kwh
+                name: Batterieueberschuss bis Sunset
+
+          - type: markdown
+            title: Aktuelle Bandbreiten
+            content: >-
+              {% set capacity = states('sensor.alphaess_battery_usable_capacity_estimated') | float(none) %}
+              {% set energy_90 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_90_pct_kwh') | float(none) %}
+              {% set energy_100 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_100_pct_kwh') | float(none) %}
+              {% set energy_105 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_105_pct_kwh') | float(none) %}
+              {% if capacity is none or energy_90 is none or energy_100 is none or energy_105 is none %}
+              <small>Bandbreiten werden geladen.</small>
+              {% else %}
+              <small>
+              - 20-90% (linear): {{ (((energy_90 - (capacity * 0.2)) / 70.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent<br>
+              - 90-100%: {{ (((energy_100 - energy_90) / 10.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent<br>
+              - 100-105% (Top-off): {{ (((energy_105 - energy_100) / 5.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent
+              </small>
+              {% endif %}
+
+          - type: entities
+            title: Speicher-Kapazitaet
+            show_header_toggle: false
+            entities:
+              - entity: sensor.alphaess_battery_usable_capacity_estimated
+                name: Nutzkapazitaet (linear)
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: charge_energy_factor
+                name: Korrekturfaktor Laden
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: charge_energy_factor_status
+                name: Faktor-Status
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: estimation_status
+                name: Status
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: median_capacity_kwh
+                name: Median
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: weighted_capacity_kwh
+                name: Gewichtet
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: inlier_interval_count
+                name: Inlier-Intervalle
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: valid_interval_count
+                name: Valide Intervalle
+              - type: attribute
+                entity: sensor.alphaess_battery_usable_capacity_estimated
+                attribute: fallback_reason
+                name: Fallback
+
+          - type: entities
+            title: Generator / Strings
+            show_header_toggle: false
+            entities:
+              - entity: sensor.alpha_ess_total_power_string_1
+                name: String 1
+              - entity: sensor.alpha_ess_total_power_string_2
+                name: String 2
+              - entity: sensor.alpha_ess_total_power_string_3
+                name: String 3
+              - entity: sensor.alpha_ess_total_power_string_4
+                name: String 4
+              - entity: sensor.alpha_ess_pv1_voltage
+                name: PV1 Spannung
+              - entity: sensor.alpha_ess_pv1_current
+                name: PV1 Strom
+              - entity: sensor.alpha_ess_pv2_voltage
+                name: PV2 Spannung
+              - entity: sensor.alpha_ess_pv2_current
+                name: PV2 Strom
+
+          - type: entities
+            title: Systemstatus
+            show_header_toggle: false
+            entities:
+              - entity: sensor.alpha_ess_inverter_mode
+                name: Inverter Mode
+              - entity: sensor.alpha_ess_inv_temperature
+                name: Inverter Temperatur
+              - entity: sensor.alpha_ess_grid_frequency
+                name: Netzfrequenz
+              - entity: sensor.alpha_ess_inverter_fault_1
+                name: Inverter Fault 1
+              - entity: sensor.alpha_ess_inverter_fault_2
+                name: Inverter Fault 2
+              - entity: sensor.alpha_ess_inverter_extended_fault_1
+                name: Extended Fault 1
+              - entity: sensor.alpha_ess_inverter_extended_fault_2
+                name: Extended Fault 2
+              - entity: sensor.alpha_ess_system_fault
+                name: System Fault
