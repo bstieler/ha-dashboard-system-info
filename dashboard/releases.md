@@ -1,3 +1,25 @@
+# Release v1.103.0
+
+**Datum:** 2026-08-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.101** — ÖPNV dashboard migration to ZS7 design system (`yaml_reload`)
+
+## Technisch
+
+- **STG-4.102** — Consolidate system info, circulation pump and ZS7 status into one admin view (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.102.0
 
 **Datum:** 2026-08-02  
