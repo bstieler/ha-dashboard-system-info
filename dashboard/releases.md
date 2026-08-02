@@ -1,3 +1,20 @@
+# Release v1.102.0
+
+**Datum:** 2026-08-02  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.95** — ApexCharts standard template with house palette as shared YAML anchor (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.101.0
 
 **Datum:** 2026-08-02  
