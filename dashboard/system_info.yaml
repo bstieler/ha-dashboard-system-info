@@ -1,6 +1,7 @@
 title: System Info
 views:
   - title: System Info
+    theme: zs7
     path: system-info
     icon: mdi:chip
     cards:
@@ -89,6 +90,7 @@ views:
           navigation_path: /dashboard-system-info/api-status
 
   - title: HA Config Deploy
+    theme: zs7
     path: ha-config-deploy
     icon: mdi:source-branch
     cards:
@@ -114,12 +116,14 @@ views:
           navigation_path: /dashboard-system-info/releases
 
   - title: Releases
+    theme: zs7
     path: releases
     icon: mdi:tag-multiple
     cards:
       - !include releases_card.yaml
 
   - title: API Status
+    theme: zs7
     path: api-status
     icon: mdi:cloud-check
     max_columns: 1
