@@ -1,3 +1,23 @@
+# Release v1.99.5
+
+**Datum:** 2026-08-02  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-1.10** — forecast_common open_meteo_client: inflight-dedupe waiter-timeout race fix (`core_restart`)
+- **STG-1.11** — ThreadLocalDatabase: close untracked connection on non-sqlite3 init failure (`core_restart`)
+- **STG-3.112** — PV-Forecast: weather archive DB into project deploy tree (mirror of STG-3.29) (`core_restart`)
+- **STG-3.29** — PV-Forecast: History-DB in Deploy-Bereich verschieben und V2-Sensoren haerten (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.99.4
 
 **Datum:** 2026-08-01  
