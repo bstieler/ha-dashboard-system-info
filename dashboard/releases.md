@@ -1,3 +1,22 @@
+# Release v1.100.0
+
+**Datum:** 2026-08-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.12** — Next reachable Hagsfeld Bahnhof → Karlsruhe Marktplatz connection with transfer info on the ÖPNV dashboard (`yaml_reload`)
+- **STG-2.230** — Charge-Control: Separater T1-Override (Tagesstart-Fensterende) im Manual Override (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.99.5
 
 **Datum:** 2026-08-02  
