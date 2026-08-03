@@ -1,3 +1,20 @@
+# Release v1.104.0
+
+**Datum:** 2026-08-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.296** — Load-up start (T2): crossover deadline + calibrated safety margin (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.103.1
 
 **Datum:** 2026-08-03  
