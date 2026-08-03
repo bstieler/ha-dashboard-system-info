@@ -1,3 +1,21 @@
+# Release v1.106.0
+
+**Datum:** 2026-08-03  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.15** — Wire kvv-cards Lovelace resource registration into deploy/verify flow (`yaml_reload`)
+- **STG-12.16** — KVV cards polish: alternatives parity, S-Bahn color, notices off, short platform, remove camera monitor (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.105.0
 
 **Datum:** 2026-08-03  
