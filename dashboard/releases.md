@@ -1,3 +1,24 @@
+# Release v1.103.1
+
+**Datum:** 2026-08-03  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-12.13** — Mobilität view: reference implementation of Desktop Composition Rules (`yaml_reload`)
+
+## Dokumentation
+
+- **STG-4.104** — Desktop Composition Rules for sections views (ZS7-DS foundation) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.103.0
 
 **Datum:** 2026-08-02  
