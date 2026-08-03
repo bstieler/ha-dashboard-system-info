@@ -1,3 +1,20 @@
+# Release v1.105.0
+
+**Datum:** 2026-08-03  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.14** — Mobilität dashboard: KVV-inspired rework of departure board and next connections (ZS7-DS compliant) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.104.0
 
 **Datum:** 2026-08-03  
