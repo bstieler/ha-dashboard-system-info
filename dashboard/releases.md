@@ -1,3 +1,20 @@
+# Release v1.107.0
+
+**Datum:** 2026-08-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.298** — Load-up safety margin: backtest-based calibration (follow-up STG-2.296) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.106.1
 
 **Datum:** 2026-08-04  
