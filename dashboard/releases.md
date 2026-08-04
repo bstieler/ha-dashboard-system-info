@@ -1,3 +1,20 @@
+# Release v1.106.1
+
+**Datum:** 2026-08-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.297** — Night plan consumption revision: structural shrink of future-only forecast series triggers false mid-night re-anchors (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.106.0
 
 **Datum:** 2026-08-03  
