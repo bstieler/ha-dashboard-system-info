@@ -48,7 +48,7 @@ views:
               - entity: sensor.processor_use
                 name: Prozessor
                 type: line
-                color: var(--zs7-accent)
+                color: "#4C9EEB"  # token: --zs7-accent
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -60,19 +60,19 @@ views:
               - entity: sensor.processor_use_core_0
                 name: Core 0
                 type: line
-                color: var(--zs7-pv)
+                color: "#F5B942"  # token: --zs7-pv
               - entity: sensor.processor_use_core_1
                 name: Core 1
                 type: line
-                color: var(--zs7-grid-import)
+                color: "#E0584C"  # token: --zs7-grid-import
               - entity: sensor.processor_use_core_2
                 name: Core 2
                 type: line
-                color: var(--zs7-grid-export)
+                color: "#3FB96B"  # token: --zs7-grid-export
               - entity: sensor.processor_use_core_3
                 name: Core 3
                 type: line
-                color: var(--zs7-battery)
+                color: "#9B6DE0"  # token: --zs7-battery
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -84,7 +84,7 @@ views:
               - entity: sensor.memory_usage
                 name: Speicher
                 type: line
-                color: var(--zs7-accent)
+                color: "#4C9EEB"  # token: --zs7-accent
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -96,7 +96,7 @@ views:
               - entity: sensor.disk_free
                 name: Frei
                 type: line
-                color: var(--zs7-accent)
+                color: "#4C9EEB"  # token: --zs7-accent
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -108,7 +108,7 @@ views:
               - entity: sensor.processor_temperature
                 name: Temperatur
                 type: line
-                color: var(--zs7-heat)
+                color: "#E08A3C"  # token: --zs7-heat
 
       - type: grid
         title: Releases
@@ -912,15 +912,15 @@ views:
               - entity: sensor.alpha_ess_inv_temperature
                 name: Inverter
                 type: line
-                color: var(--zs7-heat)
+                color: "#E08A3C"  # token: --zs7-heat
               - entity: sensor.alpha_ess_battery_min_cell_temp
                 name: Zelle min
                 type: line
-                color: var(--zs7-water)
+                color: "#4CB8E0"  # token: --zs7-water
               - entity: sensor.alpha_ess_battery_max_cell_temp
                 name: Zelle max
                 type: line
-                color: var(--zs7-grid-import)
+                color: "#E0584C"  # token: --zs7-grid-import
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -932,11 +932,11 @@ views:
               - entity: sensor.alpha_ess_actual_production
                 name: PV
                 type: line
-                color: var(--zs7-pv)
+                color: "#F5B942"  # token: --zs7-pv
               - entity: sensor.alpha_ess_actual_house_consumption
                 name: Hausverbrauch
                 type: line
-                color: var(--zs7-accent)
+                color: "#4C9EEB"  # token: --zs7-accent
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -948,11 +948,11 @@ views:
               - entity: sensor.alpha_ess_total_power_grid
                 name: Netz
                 type: line
-                color: var(--zs7-grid-import)
+                color: "#E0584C"  # token: --zs7-grid-import
               - entity: sensor.pv_power_battery
                 name: Batterie
                 type: line
-                color: var(--zs7-battery)
+                color: "#9B6DE0"  # token: --zs7-battery
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -964,11 +964,11 @@ views:
               - entity: sensor.pv_battery_soc
                 name: SOC
                 type: line
-                color: var(--zs7-battery)
+                color: "#9B6DE0"  # token: --zs7-battery
               - entity: sensor.alpha_ess_ups_soc_battery
                 name: UPS Reserve
                 type: line
-                color: var(--zs7-accent)
+                color: "#4C9EEB"  # token: --zs7-accent
 
           - type: entities
             title: Netz & Energie
