@@ -1,3 +1,29 @@
+# Release v1.109.0
+
+**Datum:** 2026-08-05  
+**Items:** 4  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.97** — Home dashboard: new unified entry view (chips, hero, topic tiles, today) (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-5.13** — CI fix: skip test_backtest_loadup_margin when private ha-pv-config submodule is not checked out (`none`)
+
+## Technisch
+
+- **STG-4.98** — Energy dashboard migration to ZS7 design system (`yaml_reload`)
+- **STG-4.99** — PV forecast dashboard migration: remove markdown UI, unify charts (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.108.0
 
 **Datum:** 2026-08-05  
