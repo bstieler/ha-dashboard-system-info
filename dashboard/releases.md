@@ -1,3 +1,20 @@
+# Release v1.109.1
+
+**Datum:** 2026-08-05  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.107** — Fix ZS7 ApexCharts live rendering: token colors, dual-axis, PV hourly table (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.109.0
 
 **Datum:** 2026-08-05  
