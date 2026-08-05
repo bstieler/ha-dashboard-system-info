@@ -1,3 +1,28 @@
+# Release v1.108.0
+
+**Datum:** 2026-08-05  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.100** — DWD weather dashboard migration to ZS7 design system (`yaml_reload`)
+
+## Technisch
+
+- **STG-4.73** — PV-Forecast-Dashboards konsolidieren (3→1), Confidence-Score zentralisieren, unique_id-Mismatch fixen (`yaml_reload`)
+
+## Dokumentation
+
+- **STG-4.96** — Icon and terminology mapping as binding reference (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.107.1
 
 **Datum:** 2026-08-05  
