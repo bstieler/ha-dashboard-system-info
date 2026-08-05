@@ -1,3 +1,20 @@
+# Release v1.107.1
+
+**Datum:** 2026-08-05  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.299** — Night Min-SOC: SOC-referenced floor release + fix midnight PV-triggered re-anchor (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.107.0
 
 **Datum:** 2026-08-04  
