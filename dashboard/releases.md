@@ -1,3 +1,26 @@
+# Release v1.111.0
+
+**Datum:** 2026-08-06  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.115** — Expose continuous rolling consumption forecast for Min-SOC consumption (`core_restart`)
+
+## Bugfixes
+
+- **STG-3.114** — Fix midnight rollover jump in remaining consumption forecast (`none`)
+- **STG-4.108** — Fix undefined values in PV Forecast 'Stunden im Detail' flex-table (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.110.0
 
 **Datum:** 2026-08-06  
