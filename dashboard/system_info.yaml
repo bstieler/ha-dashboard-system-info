@@ -6,38 +6,62 @@ views:
     path: system-info
     icon: mdi:server-outline
     max_columns: 3
+    header:
+      card:
+        type: heading
+        heading: System
+        subheading: Raspberry Pi · Releases · API Status
     sections:
       - type: grid
         cards:
-          - type: custom:mushroom-title-card
-            title: System
-            subtitle: Raspberry Pi · Releases · API Status
-
-      - type: grid
-        title: Raspberry Pi
-        cards:
+          - type: heading
+            heading: Raspberry Pi
+            heading_style: title
+            icon: mdi:raspberry-pi
           - type: custom:mushroom-entity-card
             entity: sensor.processor_use
             name: Prozessorlast
+            icon: mdi:chart-line
+            grid_options:
+              columns: 6
           - type: custom:mushroom-entity-card
             entity: sensor.processor_temperature
             name: Prozessortemperatur
+            icon: mdi:thermometer
+            grid_options:
+              columns: 6
           - type: custom:mushroom-entity-card
             entity: sensor.memory_usage
             name: Speichernutzung
+            icon: mdi:memory
+            grid_options:
+              columns: 6
           - type: custom:mushroom-entity-card
             entity: sensor.disk_free
             name: Festplatte frei (/)
+            icon: mdi:harddisk
+            grid_options:
+              columns: 6
           - type: custom:mushroom-entity-card
             entity: sensor.last_boot
             name: Letzter Boot
+            icon: mdi:restart
+            grid_options:
+              columns: 6
           - type: custom:mushroom-entity-card
             entity: sensor.system_since_last_boot
             name: Uptime
+            icon: mdi:timer-outline
+            grid_options:
+              columns: 6
 
       - type: grid
-        title: Verlauf
+        column_span: 2
         cards:
+          - type: heading
+            heading: Verlauf
+            heading_style: title
+            icon: mdi:chart-timeline-variant
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
             header:
@@ -111,11 +135,16 @@ views:
                 color: "#E08A3C"  # token: --zs7-heat
 
       - type: grid
-        title: Releases
         cards:
+          - type: heading
+            heading: Releases
+            heading_style: title
+            icon: mdi:rocket-launch-outline
           - type: markdown
-            title: Projekt Overview
+            title: Projekt Report
             content: |
+              <small>Dokumentativer Report der aktuellen Deploy-Metadaten.</small>
+
               {%- set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] -%}
               {%- if projects | count == 0 -%}
               _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
@@ -130,8 +159,11 @@ views:
           - !include releases_card.yaml
 
       - type: grid
-        title: API Status
         cards:
+          - type: heading
+            heading: API Status
+            heading_style: title
+            icon: mdi:cloud-outline
           - type: custom:mushroom-template-card
             primary: "{{ states('sensor.api_health_overall') }}"
             secondary: Gesamtstatus externe Schnittstellen
@@ -142,26 +174,68 @@ views:
               {% elif s == 'degraded' %}var(--zs7-warn)
               {% elif s == 'ok' %}var(--zs7-ok)
               {% else %}var(--zs7-offline){% endif %}
+            grid_options:
+              columns: 12
 
-          - type: markdown
-            title: External Connections
-            content: |
-              {%- set sources = [
-                ('Open-Meteo', 'sensor.api_health_open_meteo'),
-                ('AlphaESS', 'sensor.api_health_alphaess'),
-                ('DWD', 'sensor.api_health_dwd'),
-                ('SwitchBot BLE', 'sensor.api_health_switchbot_ble')
-              ] -%}
-              | Service | Status | Last Call | Last Success | Details |
-              |:--------|:------:|:---------:|:------------:|:--------|
-              {%- for name, entity in sources %}
-              {%- set status = states(entity) | default('unknown') %}
-              {%- set icon = '🔴' if status == 'failed' else '🟡' if status == 'degraded' else '🟢' if status == 'ok' else '⚪' %}
-              {%- set last_call = state_attr(entity, 'last_call') | default('—') %}
-              {%- set last_success = state_attr(entity, 'last_success') | default('—') %}
-              {%- set details = state_attr(entity, 'details') | default('—') | truncate(45) %}
-              | {{ name }} | {{ icon }} {{ status }} | {{ last_call }} | {{ last_success }} | {{ details }} |
-              {%- endfor %}
+          - type: custom:mushroom-template-card
+            primary: Open-Meteo
+            secondary: >-
+              {{ states('sensor.api_health_open_meteo') }} ·
+              {{ state_attr('sensor.api_health_open_meteo', 'last_success') | default('—') }}
+            icon: mdi:weather-partly-cloudy
+            icon_color: >-
+              {% set s = states('sensor.api_health_open_meteo') %}
+              {% if s == 'failed' %}var(--zs7-crit)
+              {% elif s == 'degraded' %}var(--zs7-warn)
+              {% elif s == 'ok' %}var(--zs7-ok)
+              {% else %}var(--zs7-offline){% endif %}
+            grid_options:
+              columns: 6
+
+          - type: custom:mushroom-template-card
+            primary: AlphaESS
+            secondary: >-
+              {{ states('sensor.api_health_alphaess') }} ·
+              {{ state_attr('sensor.api_health_alphaess', 'last_success') | default('—') }}
+            icon: mdi:solar-power-variant-outline
+            icon_color: >-
+              {% set s = states('sensor.api_health_alphaess') %}
+              {% if s == 'failed' %}var(--zs7-crit)
+              {% elif s == 'degraded' %}var(--zs7-warn)
+              {% elif s == 'ok' %}var(--zs7-ok)
+              {% else %}var(--zs7-offline){% endif %}
+            grid_options:
+              columns: 6
+
+          - type: custom:mushroom-template-card
+            primary: DWD
+            secondary: >-
+              {{ states('sensor.api_health_dwd') }} ·
+              {{ state_attr('sensor.api_health_dwd', 'last_success') | default('—') }}
+            icon: mdi:weather-lightning
+            icon_color: >-
+              {% set s = states('sensor.api_health_dwd') %}
+              {% if s == 'failed' %}var(--zs7-crit)
+              {% elif s == 'degraded' %}var(--zs7-warn)
+              {% elif s == 'ok' %}var(--zs7-ok)
+              {% else %}var(--zs7-offline){% endif %}
+            grid_options:
+              columns: 6
+
+          - type: custom:mushroom-template-card
+            primary: SwitchBot BLE
+            secondary: >-
+              {{ states('sensor.api_health_switchbot_ble') }} ·
+              {{ state_attr('sensor.api_health_switchbot_ble', 'last_success') | default('—') }}
+            icon: mdi:bluetooth
+            icon_color: >-
+              {% set s = states('sensor.api_health_switchbot_ble') %}
+              {% if s == 'failed' %}var(--zs7-crit)
+              {% elif s == 'degraded' %}var(--zs7-warn)
+              {% elif s == 'ok' %}var(--zs7-ok)
+              {% else %}var(--zs7-offline){% endif %}
+            grid_options:
+              columns: 6
 
   - title: Zirkulation
     type: sections
