@@ -1,3 +1,25 @@
+# Release v1.112.0
+
+**Datum:** 2026-08-06  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.17** — Mobility dashboard: use home-adjacent stop as trip origin instead of Hagsfeld Bahnhof (`yaml_reload`)
+
+## Technisch
+
+- **STG-4.110** — System dashboard design-system compliance (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.111.1
 
 **Datum:** 2026-08-06  
