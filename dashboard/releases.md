@@ -1,3 +1,20 @@
+# Release v1.112.1
+
+**Datum:** 2026-08-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-12.19** — KVV Trip sensor shows stale trip data / past departures (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.112.0
 
 **Datum:** 2026-08-06  
