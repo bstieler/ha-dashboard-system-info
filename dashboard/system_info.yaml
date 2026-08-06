@@ -210,7 +210,7 @@ views:
               type: custom:mushroom-entity-card
               entity: input_boolean.zs7_circ_pump_enabled
               name: Steuerung aktivieren
-              icon: mdi:power
+              icon: mdi:power-plug-outline
               tap_action:
                 action: more-info
               hold_action:
@@ -228,7 +228,7 @@ views:
               type: custom:mushroom-entity-card
               entity: input_boolean.zs7_circ_window_enabled
               name: Zeitfenster aktivieren
-              icon: mdi:calendar-clock-outline
+              icon: mdi:clock-outline
               tap_action:
                 action: more-info
               hold_action:
@@ -246,7 +246,7 @@ views:
               type: custom:mushroom-entity-card
               entity: input_boolean.zs7_circ_flush_enabled
               name: Durchspülung aktivieren
-              icon: mdi:water-sync
+              icon: mdi:water-outline
               tap_action:
                 action: more-info
               hold_action:
@@ -352,7 +352,7 @@ views:
               type: custom:mushroom-entity-card
               entity: binary_sensor.zs7_circ_flush_running
               name: Durchspülung läuft
-              icon: mdi:water-sync
+              icon: mdi:water-outline
 
           - type: conditional
             conditions:
