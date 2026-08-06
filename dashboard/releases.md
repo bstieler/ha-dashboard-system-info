@@ -1,3 +1,20 @@
+# Release v1.110.0
+
+**Datum:** 2026-08-06  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.300** — Dynamic Min-SOC: replace average-load JIT ramp with backward-integrated consumption ramp (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.109.1
 
 **Datum:** 2026-08-05  
