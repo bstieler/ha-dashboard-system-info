@@ -1,3 +1,20 @@
+# Release v1.111.1
+
+**Datum:** 2026-08-06  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.116** — Use continuous rolling consumption forecast in dynamic Min-SOC (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.111.0
 
 **Datum:** 2026-08-06  
