@@ -1,3 +1,20 @@
+# Release v1.112.2
+
+**Datum:** 2026-08-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.307** — Min-SOC plan-deviation floor guard uses wrong trajectory deadline (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.112.1
 
 **Datum:** 2026-08-07  
