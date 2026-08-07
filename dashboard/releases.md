@@ -1,3 +1,20 @@
+# Release v1.112.3
+
+**Datum:** 2026-08-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-12.20** — KVV Trip API returns mojibake for umlauts in stop/address names (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.112.2
 
 **Datum:** 2026-08-07  
