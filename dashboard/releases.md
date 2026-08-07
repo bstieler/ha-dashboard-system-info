@@ -1,3 +1,20 @@
+# Release v1.113.0
+
+**Datum:** 2026-08-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.308** — Dynamic Min-SOC: replace early target release with backward staircase from crossover (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.112.3
 
 **Datum:** 2026-08-07  
