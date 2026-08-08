@@ -2,10 +2,10 @@ type: vertical-stack
 cards:
 - type: markdown
   title: Release History
-  content: '## Release v1.113.1 — 2026-08-08
+  content: '## Release v1.114.0 — 2026-08-08
 
 
-    **Items:** 3 | **Deployment:** core_restart
+    **Items:** 7 | **Deployment:** submodule_update
 
 
     ---
@@ -17,6 +17,8 @@ cards:
     | Version | Datum | Items | Deployment |
 
     |---------|-------|-------|------------|
+
+    | v1.113.1 | 2026-08-08 | 3 | core_restart |
 
     | v1.113.0 | 2026-08-07 | 1 | core_restart |
 
@@ -36,9 +38,7 @@ cards:
 
     | v1.109.1 | 2026-08-05 | 1 | yaml_reload |
 
-    | v1.109.0 | 2026-08-05 | 4 | yaml_reload |
-
-    | _..._ | _240 ältere_ | _Releases_ | _siehe releases/index.html_ |
+    | _..._ | _241 ältere_ | _Releases_ | _siehe releases/index.html_ |
 
     '
 - type: button

@@ -1,3 +1,30 @@
+# Release v1.114.0
+
+**Datum:** 2026-08-08  
+**Items:** 7  
+**Gesamt-Deployment:** submodule_update
+
+## Neue Features
+
+- **STG-1.12** — Shared recorder gap and recovery-artifact detection and annotation utility (`core_restart`)
+- **STG-7.34** — HAOS-to-Docker migration: replace ha CLI with docker commands in deploy_verify (`none`)
+
+## Technisch
+
+- **STG-7.33** — HAOS-to-Docker migration: SSH target and central remote config root (`none`)
+
+## Dokumentation
+
+- **STG-7.36** — HAOS-to-Docker migration: update docs, prompts and rules for the Docker host (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.113.1
 
 **Datum:** 2026-08-08  
