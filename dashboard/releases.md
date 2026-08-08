@@ -1,3 +1,25 @@
+# Release v1.115.0
+
+**Datum:** 2026-08-09  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.118** — House Consumption Forecast: exclude recorder data gaps from training and backtesting (`core_restart`)
+
+## Bugfixes
+
+- **STG-4.113** — Frontend: fix duplicate Mushroom custom element registration (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.114.0
 
 **Datum:** 2026-08-08  
