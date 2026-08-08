@@ -27,21 +27,21 @@
       "deploy_project_id": "ha-dashboard-system-info-package",
       "dashboard_key": "system-info",
       "registration_repo_path": "ha-dashboard-system-info/packages/ha_dashboard_system_info.yaml",
-      "registration_server_path": "/config/packages/ha_dashboard_system_info.yaml",
+      "registration_server_path": "/opt/homeassistant/config/packages/ha_dashboard_system_info.yaml",
       "dashboard_repo_path": "ha-dashboard-system-info/dashboard/system_info.yaml",
-      "dashboard_server_path": "/config/dashboards/system_info.yaml"
+      "dashboard_server_path": "/opt/homeassistant/config/dashboards/system_info.yaml"
     }
   ],
   "smoke_checks": [
     {
       "type": "remote_file_exists",
       "label": "system info dashboard file",
-      "path": "/config/dashboards/system_info.yaml"
+      "path": "/opt/homeassistant/config/dashboards/system_info.yaml"
     },
     {
       "type": "remote_file_contains",
       "label": "system info dashboard registration",
-      "path": "/config/packages/ha_dashboard_system_info.yaml",
+      "path": "/opt/homeassistant/config/packages/ha_dashboard_system_info.yaml",
       "pattern": "system-info:"
     },
     {
