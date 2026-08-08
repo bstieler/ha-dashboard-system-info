@@ -1,3 +1,20 @@
+# Release v1.116.0
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.117** — PV Forecast: exclude recorder data gaps from training and backtesting (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.115.0
 
 **Datum:** 2026-08-09  
