@@ -1,3 +1,16 @@
+# Release v1.116.1
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.41** — Fix PV forecast dashboard smoke test container path (`none`)
+
+
+---
+
 # Release v1.116.0
 
 **Datum:** 2026-08-09  
