@@ -1,5 +1,11 @@
 [
   {
+    "version": "v1.113.1",
+    "date": "2026-08-08",
+    "items": 3,
+    "deployment": "core_restart"
+  },
+  {
     "version": "v1.113.0",
     "date": "2026-08-07",
     "items": 1,

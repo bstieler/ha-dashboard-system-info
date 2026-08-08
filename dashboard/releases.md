@@ -1,3 +1,22 @@
+# Release v1.113.1
+
+**Datum:** 2026-08-08  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.310** — Night-log 'Puffer' column shows pv_buffer_kwh instead of crossover_buffer_kwh (`core_restart`)
+- **STG-2.311** — MIN-SOC floor reaches 5% before the crossover buffer is consumed (`core_restart`)
+- **STG-2.312** — Morning MIN-SOC spike near PV crossover leaves battery underutilised (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.113.0
 
 **Datum:** 2026-08-07  
