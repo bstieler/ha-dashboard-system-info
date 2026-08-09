@@ -1,3 +1,20 @@
+# Release v1.123.1
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.117** — PV Forecast V2 Historie-View shows undefined for anomaly-excluded days (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.123.0
 
 **Datum:** 2026-08-09  
