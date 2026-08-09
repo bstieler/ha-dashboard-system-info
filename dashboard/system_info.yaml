@@ -227,7 +227,7 @@ views:
             secondary: >-
               {{ states('sensor.api_health_smartplug') }} ·
               {{ state_attr('sensor.api_health_smartplug', 'last_success') | default('—') }}
-            icon: mdi:power-plug
+            icon: mdi:power-plug-outline
             icon_color: >-
               {% set s = states('sensor.api_health_smartplug') %}
               {% if s == 'failed' %}var(--zs7-crit)
