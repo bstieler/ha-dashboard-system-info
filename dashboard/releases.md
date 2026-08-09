@@ -1,3 +1,24 @@
+# Release v1.120.0
+
+**Datum:** 2026-08-09  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.24** — Ensure destination footpath is parsed and displayed (`core_restart`)
+
+## Bugfixes
+
+- **STG-5.14** — Fix pytest conftest name collision between ha-kvv-trip and ha-house-consumption-forecast (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.119.0
 
 **Datum:** 2026-08-09  
