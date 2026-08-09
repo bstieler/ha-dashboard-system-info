@@ -1,3 +1,20 @@
+# Release v1.123.0
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.27** — New dashboard view 'Verbindungssuche' (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.122.0
 
 **Datum:** 2026-08-09  
