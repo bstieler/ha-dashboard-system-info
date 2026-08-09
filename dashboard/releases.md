@@ -18,6 +18,32 @@
 1. `yaml_reload`
 1. `core_restart`
 1. `emergency deploy ha-kvv-trip-component`
+1. `merge ADR to main`
+1. `merge stopfinder wrapper to main`
+
+
+---
+
+# Release v1.118.0
+
+**Datum:** 2026-08-09  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.22** — Stopfinder wrapper in kvv_trip (`merge stopfinder wrapper to main, emergency deploy ha-kvv-trip-component`)
+- **STG-8.27** — SmartPlug abstraction: add templates and input_selects (`core_restart`)
+
+## Technisch
+
+- **STG-8.9** — Zirkulationspumpe: Zeitfenster-Logik zusammenfuehren und Templates robust machen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+1. `emergency deploy ha-kvv-trip-component`
 1. `merge stopfinder wrapper to main`
 1. `merge ADR to main`
 
