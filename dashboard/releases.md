@@ -1,3 +1,20 @@
+# Release v1.119.0
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.23** — Dynamic trip service kvv_trip.search (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.118.0
 
 **Datum:** 2026-08-09  
