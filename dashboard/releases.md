@@ -1,3 +1,20 @@
+# Release v1.122.0
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.26** — Render search results in prototype style (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.121.0
 
 **Datum:** 2026-08-09  
