@@ -1,3 +1,20 @@
+# Release v1.123.2
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.122** — Keep daily forecast history metrics visible for anomaly-excluded days (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.123.1
 
 **Datum:** 2026-08-09  
