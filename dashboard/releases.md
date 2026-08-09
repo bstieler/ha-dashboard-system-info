@@ -1,3 +1,20 @@
+# Release v1.123.3
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-12.31** — Fix origin/destination input fields in kvv-search-card (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.123.2
 
 **Datum:** 2026-08-09  
