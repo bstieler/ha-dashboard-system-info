@@ -1,3 +1,21 @@
+# Release v1.121.0
+
+**Datum:** 2026-08-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.25** — kvv-search-card: input form with autocomplete (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.120.0
 
 **Datum:** 2026-08-09  
