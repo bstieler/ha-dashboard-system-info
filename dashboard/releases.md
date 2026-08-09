@@ -1,3 +1,30 @@
+# Release v1.117.0
+
+**Datum:** 2026-08-09  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.119** — Forecast quality metrics: exclude data gap periods from MAE, drift and skill calculations (`core_restart`)
+
+## Bugfixes
+
+- **STG-7.40** — Deploy inventory: add missing dwd_radar_camera custom component (`core_restart`)
+- **STG-8.18** — Circulation pump: power sensor returns invalid 'unavailable' state for numeric sensor (`yaml_reload`)
+
+## Technisch
+
+- **STG-1.13** — Custom components: attach devices via config entry to avoid HA 2027.8 deprecation (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.116.3
 
 **Datum:** 2026-08-09  
