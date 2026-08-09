@@ -143,7 +143,7 @@ views:
             ('Open-Meteo', 'sensor.api_health_open_meteo'),
             ('AlphaESS', 'sensor.api_health_alphaess'),
             ('DWD', 'sensor.api_health_dwd'),
-            ('SwitchBot BLE', 'sensor.api_health_switchbot_ble')
+            ('SmartPlug', 'sensor.api_health_smartplug')
           ] -%}
           | Service | Status | Last Call | Last Success | Details |
           |:--------|:------:|:---------:|:------------:|:--------|

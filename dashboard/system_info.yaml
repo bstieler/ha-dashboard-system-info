@@ -223,13 +223,13 @@ views:
               columns: 6
 
           - type: custom:mushroom-template-card
-            primary: SwitchBot BLE
+            primary: SmartPlug
             secondary: >-
-              {{ states('sensor.api_health_switchbot_ble') }} ·
-              {{ state_attr('sensor.api_health_switchbot_ble', 'last_success') | default('—') }}
-            icon: mdi:bluetooth
+              {{ states('sensor.api_health_smartplug') }} ·
+              {{ state_attr('sensor.api_health_smartplug', 'last_success') | default('—') }}
+            icon: mdi:power-plug
             icon_color: >-
-              {% set s = states('sensor.api_health_switchbot_ble') %}
+              {% set s = states('sensor.api_health_smartplug') %}
               {% if s == 'failed' %}var(--zs7-crit)
               {% elif s == 'degraded' %}var(--zs7-warn)
               {% elif s == 'ok' %}var(--zs7-ok)
@@ -253,14 +253,14 @@ views:
           - type: conditional
             conditions:
               - condition: state
-                entity: input_boolean.zs7_circ_pump_ble_error
+                entity: input_boolean.zs7_plug_circ_pump_error
                 state: "on"
             card:
               type: custom:mushroom-template-card
-              primary: BLE Verbindungsfehler
+              primary: Plug Verbindungsfehler
               secondary: >-
-                Der SwitchBot Plug ist nicht erreichbar. Die Pumpe konnte nicht
-                geschaltet werden. Prüfe die Bluetooth-Verbindung oder den Plug.
+                Der gewaehlte Plug ist nicht erreichbar. Die Pumpe konnte nicht
+                geschaltet werden. Prüfe die Verbindung oder den Plug.
               icon: mdi:alert-circle-outline
               icon_color: var(--zs7-crit)
 
@@ -577,7 +577,7 @@ views:
                 state_not: "unavailable"
             card:
               type: custom:mushroom-entity-card
-              entity: sensor.plug_mini_eu_4392_leistung
+              entity: sensor.zs7_plug_circ_pump_power
               name: Aktuelle Leistung
 
           - type: conditional
@@ -590,7 +590,7 @@ views:
                 state_not: "unavailable"
             card:
               type: custom:mushroom-entity-card
-              entity: sensor.plug_mini_eu_4392_energie
+              entity: sensor.zs7_plug_circ_pump_energy
               name: Gesamtverbrauch
 
       - type: grid

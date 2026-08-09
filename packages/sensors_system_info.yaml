@@ -441,58 +441,48 @@ template:
               sensor.dwd_radar_image_url: {{ states('sensor.dwd_radar_image_url') | default('unknown') }}
             {% endif %}
 
-      - name: API Health SwitchBot BLE
-        unique_id: api_health_switchbot_ble
-        icon: mdi:bluetooth
+      - name: API Health SmartPlug
+        unique_id: api_health_smartplug
+        icon: mdi:power-plug
         state: >-
-          {% set overall = states('sensor.api_health_overall') %}
-          {% set rt_status = state_attr('sensor.api_health_overall', 'switchbot_ble_status') %}
-          {% if overall not in ['unavailable', 'unknown', 'none'] and rt_status is not none %}
-            {{ rt_status }}
+          {% set plugs = [
+            states('sensor.zs7_plug_circ_pump_connection'),
+            states('sensor.zs7_plug_ac_dg_connection'),
+            states('sensor.zs7_plug_ac_sz_connection')
+          ] %}
+          {% if 'disconnected' in plugs %}
+            degraded
+          {% elif 'unknown' in plugs %}
+            unknown
           {% else %}
-            {% set err = states('input_boolean.zs7_circ_pump_ble_error') %}
-            {% if err == 'on' %}
-              failed
-            {% elif err == 'off' %}
-              ok
-            {% else %}
-              unknown
-            {% endif %}
+            ok
           {% endif %}
         attributes:
-          source_entity: "sensor.api_health_overall, input_boolean.zs7_circ_pump_ble_error"
+          source_entity: "sensor.zs7_plug_circ_pump_connection, sensor.zs7_plug_ac_dg_connection, sensor.zs7_plug_ac_sz_connection"
+          circ_pump: "{{ states('sensor.zs7_plug_circ_pump_connection') }}"
+          ac_dg: "{{ states('sensor.zs7_plug_ac_dg_connection') }}"
+          ac_sz: "{{ states('sensor.zs7_plug_ac_sz_connection') }}"
           last_call: >-
-            {% set overall = states('sensor.api_health_overall') %}
-            {% set rt_last_call = state_attr('sensor.api_health_overall', 'switchbot_ble_last_call') %}
-            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_call is not none %}
-              {{ rt_last_call | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+            {% set timestamps = [
+              states.sensor.zs7_plug_circ_pump_connection.last_updated | default(none, true),
+              states.sensor.zs7_plug_ac_dg_connection.last_updated | default(none, true),
+              states.sensor.zs7_plug_ac_sz_connection.last_updated | default(none, true)
+            ] | select('defined') | select('ne', none) | list %}
+            {% if timestamps | count > 0 %}
+              {{ timestamps | max | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
-              {% if states('input_boolean.zs7_circ_pump_ble_error') not in ['unavailable', 'unknown', 'none'] %}
-                {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
-              {% else %}
-                unavailable
-              {% endif %}
+              unavailable
             {% endif %}
           last_success: >-
-            {% set overall = states('sensor.api_health_overall') %}
-            {% set rt_last_success = state_attr('sensor.api_health_overall', 'switchbot_ble_last_success') %}
-            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_success is not none %}
-              {{ rt_last_success | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+            {% if is_state('sensor.api_health_smartplug', 'ok') %}
+              {{ states.sensor.api_health_smartplug.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
             {% else %}
-              {% if is_state('input_boolean.zs7_circ_pump_ble_error', 'off') %}
-                {{ states.input_boolean.zs7_circ_pump_ble_error.last_updated | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
-              {% else %}
-                unavailable
-              {% endif %}
+              unavailable
             {% endif %}
           details: >-
-            {% set overall = states('sensor.api_health_overall') %}
-            {% set rt_error = state_attr('sensor.api_health_overall', 'switchbot_ble_error') %}
-            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_error is not none %}
-              {{ rt_error }}
-            {% else %}
-              SwitchBot BLE error flag
-            {% endif %}
+            circ_pump: {{ states('sensor.zs7_plug_circ_pump_connection') }},
+            ac_dg: {{ states('sensor.zs7_plug_ac_dg_connection') }},
+            ac_sz: {{ states('sensor.zs7_plug_ac_sz_connection') }}
 
 # STG-6.15: Load the api_health sensor platform so sensor.api_health_overall
 # is created and the api_health.report service becomes available. The overall

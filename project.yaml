@@ -17,7 +17,7 @@
     "sensor.api_health_open_meteo",
     "sensor.api_health_alphaess",
     "sensor.api_health_dwd",
-    "sensor.api_health_switchbot_ble",
+    "sensor.api_health_smartplug",
     "sensor.api_health_overall",
     "binary_sensor.rpi_power"
   ],
