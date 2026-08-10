@@ -1,3 +1,12 @@
+# Release v1.123.5
+
+**Datum:** 2026-08-10  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+
+---
+
 # Release v1.123.4
 
 **Datum:** 2026-08-10  
