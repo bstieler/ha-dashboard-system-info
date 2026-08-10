@@ -1,3 +1,20 @@
+# Release v1.123.4
+
+**Datum:** 2026-08-10  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-12.33** — Fix search inputs still not accepting keystrokes after STG-12.31 (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.123.3
 
 **Datum:** 2026-08-09  
