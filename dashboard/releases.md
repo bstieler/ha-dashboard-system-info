@@ -1,3 +1,16 @@
+# Release v1.123.7
+
+**Datum:** 2026-08-10  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-12.35** — Fix kvv-search-card datetime payload type for kvv_trip/search (`none`)
+
+
+---
+
 # Release v1.123.6
 
 **Datum:** 2026-08-10  
