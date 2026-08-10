@@ -1,3 +1,16 @@
+# Release v1.123.6
+
+**Datum:** 2026-08-10  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-12.34** — Fix kvv-search-card losing focus after every keystroke (`none`)
+
+
+---
+
 # Release v1.123.5
 
 **Datum:** 2026-08-10  

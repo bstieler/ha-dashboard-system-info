@@ -1,5 +1,11 @@
 [
   {
+    "version": "v1.123.6",
+    "date": "2026-08-10",
+    "items": 1,
+    "deployment": "none"
+  },
+  {
     "version": "v1.123.5",
     "date": "2026-08-10",
     "items": 1,
