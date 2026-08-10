@@ -1,3 +1,20 @@
+# Release v1.123.8
+
+**Datum:** 2026-08-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-12.36** — Fix kvv_trip/search datetime schema to accept string input (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.123.7
 
 **Datum:** 2026-08-10  
