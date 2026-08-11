@@ -1,3 +1,22 @@
+# Release v1.124.0
+
+**Datum:** 2026-08-11  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.28** — Location favourites: storage and management (`core_restart`)
+- **STG-12.29** — Connection favourites (`core_restart`)
+- **STG-12.30** — Hardening and documentation for trip planner rollout (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.123.8
 
 **Datum:** 2026-08-10  
