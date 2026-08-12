@@ -1,3 +1,20 @@
+# Release v1.127.1
+
+**Datum:** 2026-08-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-12.42** — kvv trip search / kvv-search-card: follow-up review and hardening after STG-12.37-12.41 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.127.0
 
 **Datum:** 2026-08-12  
