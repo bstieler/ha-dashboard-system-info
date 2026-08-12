@@ -1,3 +1,25 @@
+# Release v1.128.0
+
+**Datum:** 2026-08-12  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.44** — Query 6 connections and hide alternatives no longer reachable due to initial walking time (`core_restart`)
+
+## Bugfixes
+
+- **STG-12.43** — kvv-cards: permanent fix for the kvv-base.js load-order race (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.127.1
 
 **Datum:** 2026-08-12  
