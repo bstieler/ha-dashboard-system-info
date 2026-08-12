@@ -1,3 +1,20 @@
+# Release v1.127.0
+
+**Datum:** 2026-08-12  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.41** — kvv-search-card: expandable alternatives in the same style as the main connection (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.126.2
 
 **Datum:** 2026-08-12  
