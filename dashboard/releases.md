@@ -1,3 +1,20 @@
+# Release v1.126.0
+
+**Datum:** 2026-08-12  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-12.38** — kvv-search-card: rework connection detail view per itinerary UX best practices (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.125.0
 
 **Datum:** 2026-08-12  
