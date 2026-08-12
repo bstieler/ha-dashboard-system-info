@@ -1,3 +1,25 @@
+# Release v1.129.0
+
+**Datum:** 2026-08-12  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.45** — Show realtime delays and actual departure time in the trip display (`core_restart, yaml_reload`)
+
+## Bugfixes
+
+- **STG-12.46** — kvv-search-card: fix click-through from suggestion dropdown to favourites and add keyboard navigation (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.128.0
 
 **Datum:** 2026-08-12  
