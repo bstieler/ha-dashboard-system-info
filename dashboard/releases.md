@@ -1,3 +1,20 @@
+# Release v1.126.1
+
+**Datum:** 2026-08-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-12.39** — kvv_trip search: filter or mark connections unreachable due to origin footpath (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.126.0
 
 **Datum:** 2026-08-12  
