@@ -1,3 +1,20 @@
+# Release v1.126.2
+
+**Datum:** 2026-08-12  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-12.40** — kvv-search-card: favourites cannot be deleted (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.126.1
 
 **Datum:** 2026-08-12  
