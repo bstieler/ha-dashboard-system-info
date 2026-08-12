@@ -1,3 +1,20 @@
+# Release v1.125.0
+
+**Datum:** 2026-08-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-12.37** — kvv_trip: expose line headsign and departure platform in search legs (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.124.0
 
 **Datum:** 2026-08-11  
