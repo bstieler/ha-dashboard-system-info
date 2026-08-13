@@ -1,3 +1,20 @@
+# Release v1.131.2
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.120** — Pump status chart: reduce graph span to 6h for readable resolution (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.131.1
 
 **Datum:** 2026-08-13  
