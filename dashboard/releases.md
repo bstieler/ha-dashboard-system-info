@@ -1,3 +1,20 @@
+# Release v1.130.2
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.118** — Pump status chart stuck on Loading (update_interval regression) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.130.1
 
 **Datum:** 2026-08-13  
