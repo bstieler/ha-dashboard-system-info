@@ -1,3 +1,20 @@
+# Release v1.130.1
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.123** — Config entry import ignores YAML changes (stale ac_entities) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.130.0
 
 **Datum:** 2026-08-13  
