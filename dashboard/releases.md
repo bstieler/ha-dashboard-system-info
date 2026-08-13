@@ -1,3 +1,16 @@
+# Release v1.131.0
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-7.42** — Push notification to iPhone/Watch after successful release deploy (`none`)
+
+
+---
+
 # Release v1.130.2
 
 **Datum:** 2026-08-13  

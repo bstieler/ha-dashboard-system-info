@@ -612,12 +612,14 @@ views:
                 - entity: binary_sensor.zs7_circ_pump_should_run
                   name: Soll-Zustand
                   type: area
+                  curve: stepline
                   opacity: 0.4
                   transform: "return x === 'on' ? 1 : 0;"
                   color: "#4CB8E0"  # token: --zs7-water
                 - entity: sensor.zs7_circ_selected_switch_state
                   name: Ist-Zustand
                   type: area
+                  curve: stepline
                   opacity: 0.4
                   transform: "return x === 'on' ? 1 : 0;"
                   color: "#3FB96B"  # token: --zs7-ok
