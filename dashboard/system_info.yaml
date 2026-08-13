@@ -606,8 +606,8 @@ views:
               apex_config: !include templates/apexcharts_standard.yaml
               header:
                 show: true
-                title: Pumpen-Status (24h)
-              graph_span: 24h
+                title: Pumpen-Status (6h)
+              graph_span: 6h
               series:
                 - entity: binary_sensor.zs7_circ_pump_should_run
                   name: Soll-Zustand
