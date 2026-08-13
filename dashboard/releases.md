@@ -1,3 +1,26 @@
+# Release v1.132.0
+
+**Datum:** 2026-08-13  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-7.43** — Release lock on the deploy host against concurrent release pipelines (`none`)
+
+## Bugfixes
+
+- **STG-3.124** — Write bootstrap CSV with 0644 permissions so deploy backups stay readable (`core_restart`)
+- **STG-5.15** — Fix test_dashboard_registration_consistent: missing host-to-container path normalization (`none`)
+- **STG-5.17** — Fix red test test_dashboard_registration_consistent (ha-dashboard-system-info) (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.131.2
 
 **Datum:** 2026-08-13  
