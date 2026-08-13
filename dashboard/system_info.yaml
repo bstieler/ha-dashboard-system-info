@@ -602,15 +602,30 @@ views:
                 entity: input_boolean.zs7_circ_pump_enabled
                 state: "on"
             card:
-              type: history-graph
-              title: Pumpen-Status (24h)
-              hours_to_show: 24
-              refresh_interval: 60
-              entities:
+              type: custom:apexcharts-card
+              apex_config: !include templates/apexcharts_standard.yaml
+              header:
+                show: true
+                title: Pumpen-Status (24h)
+              graph_span: 24h
+              update_interval: 60s
+              yaxis:
+                - min: 0
+                  max: 1
+                  tickAmount: 1
+              series:
                 - entity: binary_sensor.zs7_circ_pump_should_run
                   name: Soll-Zustand
+                  type: area
+                  opacity: 0.4
+                  transform: "return x === 'on' ? 1 : 0;"
+                  color: "#4CB8E0"  # token: --zs7-water
                 - entity: sensor.zs7_circ_selected_switch_state
                   name: Ist-Zustand
+                  type: area
+                  opacity: 0.4
+                  transform: "return x === 'on' ? 1 : 0;"
+                  color: "#3FB96B"  # token: --zs7-ok
 
           - type: conditional
             conditions:
@@ -678,20 +693,35 @@ views:
               var(--zs7-warn)
               {% endif %}
 
-          - type: entities
-            title: Druckerstatus
-            show_header_toggle: false
-            entities:
-              - entity: sensor.brother_hl_3142cw_series
-                name: Drucker
-              - entity: sensor.hl_3142cw_status
-                name: Status
-              - entity: sensor.hl_3142cw_seitenzahler
-                name: Seitenzaehler
-              - entity: sensor.printerstatus_supply_alert_summary
-                name: Bedarfsmeldungen
-              - entity: sensor.printerstatus_supply_alert_count
-                name: Anzahl Bedarfsmeldungen
+          - type: heading
+            heading: Druckerstatus
+            heading_style: title
+            icon: mdi:printer-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.brother_hl_3142cw_series
+            name: Drucker
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_status
+            name: Status
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_seitenzahler
+            name: Seitenzaehler
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.printerstatus_supply_alert_summary
+            name: Bedarfsmeldungen
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.printerstatus_supply_alert_count
+            name: Anzahl Bedarfsmeldungen
+            grid_options:
+              columns: 6
 
           - type: custom:mushroom-entity-card
             entity: sensor.printerstatus_toner_black_percent
@@ -706,29 +736,50 @@ views:
             entity: sensor.printerstatus_toner_yellow_percent
             name: Gelb Toner
 
-          - type: entities
-            title: Lebensdauer Trommeln
-            show_header_toggle: false
-            entities:
-              - entity: sensor.hl_3142cw_restlebensdauer_der_schwarz_trommel
-                name: Schwarz Trommel
-              - entity: sensor.hl_3142cw_restlebensdauer_der_cyan_trommel
-                name: Cyan Trommel
-              - entity: sensor.hl_3142cw_restlebensdauer_der_magenta_trommel
-                name: Magenta Trommel
-              - entity: sensor.hl_3142cw_restlebensdauer_der_gelb_trommel
-                name: Gelb Trommel
+          - type: heading
+            heading: Lebensdauer Trommeln
+            heading_style: title
+            icon: mdi:printer-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_der_schwarz_trommel
+            name: Schwarz Trommel
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_der_cyan_trommel
+            name: Cyan Trommel
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_der_magenta_trommel
+            name: Magenta Trommel
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_der_gelb_trommel
+            name: Gelb Trommel
+            grid_options:
+              columns: 6
 
-          - type: entities
-            title: Lebensdauer Komponenten
-            show_header_toggle: false
-            entities:
-              - entity: sensor.hl_3142cw_restlebensdauer_der_bandeinheit
-                name: Bandeinheit
-              - entity: sensor.hl_3142cw_restlebensdauer_der_fixiereinheit
-                name: Fixiereinheit
-              - entity: sensor.hl_3142cw_restlebensdauer_des_pf_kit_1
-                name: PF Kit 1
+          - type: heading
+            heading: Lebensdauer Komponenten
+            heading_style: title
+            icon: mdi:printer-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_der_bandeinheit
+            name: Bandeinheit
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_der_fixiereinheit
+            name: Fixiereinheit
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.hl_3142cw_restlebensdauer_des_pf_kit_1
+            name: PF Kit 1
+            grid_options:
+              columns: 6
 
       - type: grid
         title: Heizung (Tado)
@@ -839,16 +890,28 @@ views:
               Cloud: {{ states('binary_sensor.tado_smart_radiator_thermostat_va2543013120_cloud_verbindung') }} / {{ states('binary_sensor.tado_smart_radiator_thermostat_va0244534528_cloud_verbindung') }}
             icon: mdi:home-thermometer-outline
 
-          - type: markdown
-            content: >-
-              ## Tado Warnungen/Fehler (letzte 100)
+          - type: custom:mushroom-template-card
+            primary: >-
               {% set count = states('sensor.tado_heating_log_tail') | int(0) %}
-              {% set lines = state_attr('sensor.tado_heating_log_tail', 'lines') %}
               {% if count == 0 %}
-              <small>Keine Warnungen/Fehler gefunden.</small>
+              Keine Warnungen/Fehler
               {% else %}
-              <small>{{ lines | replace('\n', '<br>') }}</small>
+              {{ count }} Warnungen/Fehler
               {% endif %}
+            secondary: >-
+              {% set lines = state_attr('sensor.tado_heating_log_tail', 'lines') %}
+              {% if lines %}
+              {{ lines | replace('\n', ' · ') }}
+              {% else %}
+              Tado Log (letzte 100 Eintraege)
+              {% endif %}
+            icon: mdi:home-thermometer-outline
+            icon_color: >-
+              {% if states('sensor.tado_heating_log_tail') | int(0) == 0 %}var(--zs7-ok)
+              {% else %}var(--zs7-warn){% endif %}
+            multiline_secondary: true
+            grid_options:
+              columns: 12
 
       - type: grid
         title: PV Status
@@ -959,22 +1022,46 @@ views:
             name: Netzleistung
             icon: mdi:transmission-tower
 
-          - type: entities
-            title: Batterie
-            show_header_toggle: false
-            entities:
-              - entity: sensor.pv_battery_soc
-                name: SOC
-              - entity: sensor.alpha_ess_battery_min_cell_temp
-                name: Min Cell Temp
-              - entity: sensor.alpha_ess_battery_max_cell_temp
-                name: Max Cell Temp
-              - entity: sensor.alpha_ess_battery_voltage
-                name: Batterie-Spannung
-              - entity: sensor.alpha_ess_battery_remaining_time
-                name: Restzeit
-              - entity: sensor.alpha_ess_ups_soc_battery
-                name: UPS Reserve SOC
+          - type: heading
+            heading: Batterie
+            heading_style: title
+            icon: mdi:battery-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.pv_battery_soc
+            name: SOC
+            icon: mdi:battery-outline
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_battery_min_cell_temp
+            name: Min Cell Temp
+            icon: mdi:thermometer
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_battery_max_cell_temp
+            name: Max Cell Temp
+            icon: mdi:thermometer
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_battery_voltage
+            name: Batterie-Spannung
+            icon: mdi:battery-outline
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_battery_remaining_time
+            name: Restzeit
+            icon: mdi:timer-outline
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_ups_soc_battery
+            name: UPS Reserve SOC
+            icon: mdi:battery-outline
+            grid_options:
+              columns: 6
 
           - type: custom:apexcharts-card
             apex_config: !include templates/apexcharts_standard.yaml
@@ -1044,134 +1131,217 @@ views:
                 type: line
                 color: "#4C9EEB"  # token: --zs7-accent
 
-          - type: entities
-            title: Netz & Energie
-            show_header_toggle: false
-            entities:
-              - entity: sensor.zs7_energy_grid_import_today_kwh
-                name: Netzimport heute
-              - entity: sensor.zs7_energy_feed_to_grid_today_kwh
-                name: Einspeisung heute
-              - entity: sensor.zs7_energy_pv_today_kwh
-                name: PV-Ertrag heute
-              - entity: sensor.zs7_energy_house_consumption_today_kwh
-                name: Hausverbrauch heute
-              - entity: sensor.zs7_energy_autarky_today_pct
-                name: Autarkie heute
-              - entity: sensor.zs7_energy_self_consumption_today_pct
-                name: Eigenverbrauch heute
+          - type: heading
+            heading: Netz & Energie
+            heading_style: title
+            icon: mdi:transmission-tower
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_grid_import_today_kwh
+            name: Netzimport heute
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_feed_to_grid_today_kwh
+            name: Einspeisung heute
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_pv_today_kwh
+            name: PV-Ertrag heute
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_house_consumption_today_kwh
+            name: Hausverbrauch heute
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_autarky_today_pct
+            name: Autarkie heute
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_self_consumption_today_pct
+            name: Eigenverbrauch heute
+            grid_options:
+              columns: 6
 
-          - type: entities
-            title: Analyse / Prognose
-            show_header_toggle: false
-            entities:
-              - entity: sensor.zs7_energy_pv_to_sunset_forecast_kwh
-                name: PV bis Sunset
-              - entity: sensor.zs7_energy_battery_soc_sunset_forecast_pct
-                name: SOC bei Sunset
-              - entity: sensor.zs7_energy_battery_soc_sunrise_forecast_pct
-                name: SOC bei Sunrise
-              - entity: sensor.zs7_energy_grid_usage_to_sunrise_kwh
-                name: Netzbedarf bis Sunrise
-              - entity: sensor.zs7_energy_house_mode
-                name: Hausmodus
-              - entity: sensor.zs7_energy_battery_surplus_until_sunset_kwh
-                name: Batterieueberschuss bis Sunset
+          - type: heading
+            heading: Analyse / Prognose
+            heading_style: title
+            icon: mdi:chart-timeline-variant
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_pv_to_sunset_forecast_kwh
+            name: PV bis Sunset
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_battery_soc_sunset_forecast_pct
+            name: SOC bei Sunset
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_battery_soc_sunrise_forecast_pct
+            name: SOC bei Sunrise
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_grid_usage_to_sunrise_kwh
+            name: Netzbedarf bis Sunrise
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_house_mode
+            name: Hausmodus
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.zs7_energy_battery_surplus_until_sunset_kwh
+            name: Batterieueberschuss bis Sunset
+            grid_options:
+              columns: 6
 
-          - type: markdown
-            title: Aktuelle Bandbreiten
-            content: >-
+          - type: custom:mushroom-template-card
+            primary: >-
               {% set capacity = states('sensor.alphaess_battery_usable_capacity_estimated') | float(none) %}
+              {% set energy_90 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_90_pct_kwh') | float(none) %}
+              {% if capacity is none or energy_90 is none %}
+              Bandbreiten werden geladen.
+              {% else %}
+              20-90% (linear): {{ (((energy_90 - (capacity * 0.2)) / 70.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent
+              {% endif %}
+            secondary: >-
               {% set energy_90 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_90_pct_kwh') | float(none) %}
               {% set energy_100 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_100_pct_kwh') | float(none) %}
               {% set energy_105 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_105_pct_kwh') | float(none) %}
-              {% if capacity is none or energy_90 is none or energy_100 is none or energy_105 is none %}
-              <small>Bandbreiten werden geladen.</small>
+              {% if energy_90 is none or energy_100 is none or energy_105 is none %}
+              Aktuelle Bandbreiten
               {% else %}
-              <small>
-              - 20-90% (linear): {{ (((energy_90 - (capacity * 0.2)) / 70.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent<br>
-              - 90-100%: {{ (((energy_100 - energy_90) / 10.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent<br>
-              - 100-105% (Top-off): {{ (((energy_105 - energy_100) / 5.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent
-              </small>
+              Bandbreiten · 90-100%: {{ (((energy_100 - energy_90) / 10.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent ·
+              100-105% (Top-off): {{ (((energy_105 - energy_100) / 5.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent
               {% endif %}
+            icon: mdi:battery-outline
+            grid_options:
+              columns: 12
 
-          - type: entities
-            title: Speicher-Kapazitaet
-            show_header_toggle: false
-            entities:
-              - entity: sensor.alphaess_battery_usable_capacity_estimated
-                name: Nutzkapazitaet (linear)
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: charge_energy_factor
-                name: Korrekturfaktor Laden
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: charge_energy_factor_status
-                name: Faktor-Status
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: estimation_status
-                name: Status
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: median_capacity_kwh
-                name: Median
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: weighted_capacity_kwh
-                name: Gewichtet
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: inlier_interval_count
-                name: Inlier-Intervalle
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: valid_interval_count
-                name: Valide Intervalle
-              - type: attribute
-                entity: sensor.alphaess_battery_usable_capacity_estimated
-                attribute: fallback_reason
-                name: Fallback
+          - type: heading
+            heading: Speicher-Kapazitaet
+            heading_style: title
+            icon: mdi:battery-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.alphaess_battery_usable_capacity_estimated
+            name: Nutzkapazitaet (linear)
+            icon: mdi:battery-outline
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-template-card
+            primary: >-
+              Faktor Laden: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'charge_energy_factor') or '–' }}
+              ({{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'charge_energy_factor_status') or '–' }})
+            secondary: >-
+              Status: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'estimation_status') or '–' }} ·
+              Fallback: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'fallback_reason') or '–' }}
+            icon: mdi:tune-variant
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-template-card
+            primary: >-
+              Median: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'median_capacity_kwh') or '–' }} kWh ·
+              Gewichtet: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'weighted_capacity_kwh') or '–' }} kWh
+            secondary: >-
+              Inlier-Intervalle: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'inlier_interval_count') or '–' }} ·
+              Valide Intervalle: {{ state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'valid_interval_count') or '–' }}
+            icon: mdi:battery-outline
+            grid_options:
+              columns: 12
 
-          - type: entities
-            title: Generator / Strings
-            show_header_toggle: false
-            entities:
-              - entity: sensor.alpha_ess_total_power_string_1
-                name: String 1
-              - entity: sensor.alpha_ess_total_power_string_2
-                name: String 2
-              - entity: sensor.alpha_ess_total_power_string_3
-                name: String 3
-              - entity: sensor.alpha_ess_total_power_string_4
-                name: String 4
-              - entity: sensor.alpha_ess_pv1_voltage
-                name: PV1 Spannung
-              - entity: sensor.alpha_ess_pv1_current
-                name: PV1 Strom
-              - entity: sensor.alpha_ess_pv2_voltage
-                name: PV2 Spannung
-              - entity: sensor.alpha_ess_pv2_current
-                name: PV2 Strom
+          - type: heading
+            heading: Generator / Strings
+            heading_style: title
+            icon: mdi:solar-power-variant-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_total_power_string_1
+            name: String 1
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_total_power_string_2
+            name: String 2
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_total_power_string_3
+            name: String 3
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_total_power_string_4
+            name: String 4
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_pv1_voltage
+            name: PV1 Spannung
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_pv1_current
+            name: PV1 Strom
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_pv2_voltage
+            name: PV2 Spannung
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_pv2_current
+            name: PV2 Strom
+            grid_options:
+              columns: 6
 
-          - type: entities
-            title: Systemstatus
-            show_header_toggle: false
-            entities:
-              - entity: sensor.alpha_ess_inverter_mode
-                name: Inverter Mode
-              - entity: sensor.alpha_ess_inv_temperature
-                name: Inverter Temperatur
-              - entity: sensor.alpha_ess_grid_frequency
-                name: Netzfrequenz
-              - entity: sensor.alpha_ess_inverter_fault_1
-                name: Inverter Fault 1
-              - entity: sensor.alpha_ess_inverter_fault_2
-                name: Inverter Fault 2
-              - entity: sensor.alpha_ess_inverter_extended_fault_1
-                name: Extended Fault 1
-              - entity: sensor.alpha_ess_inverter_extended_fault_2
-                name: Extended Fault 2
-              - entity: sensor.alpha_ess_system_fault
-                name: System Fault
+          - type: heading
+            heading: Systemstatus
+            heading_style: title
+            icon: mdi:information-outline
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_inverter_mode
+            name: Inverter Mode
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_inv_temperature
+            name: Inverter Temperatur
+            icon: mdi:thermometer
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_grid_frequency
+            name: Netzfrequenz
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_inverter_fault_1
+            name: Inverter Fault 1
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_inverter_fault_2
+            name: Inverter Fault 2
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_inverter_extended_fault_1
+            name: Extended Fault 1
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_inverter_extended_fault_2
+            name: Extended Fault 2
+            grid_options:
+              columns: 6
+          - type: custom:mushroom-entity-card
+            entity: sensor.alpha_ess_system_fault
+            name: System Fault
+            grid_options:
+              columns: 6
