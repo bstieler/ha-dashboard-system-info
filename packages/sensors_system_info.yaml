@@ -446,10 +446,15 @@ template:
         unique_id: api_health_smartplug
         icon: mdi:power-plug
         state: >-
+          {# STG-8.30: AC legs read the SwitchBot Cloud switches directly
+             (cloud migration STG-8.36); the circ leg keeps the selector-aware
+             connection sensor from ha-circulation-pump. #}
+          {% set ac_dg = 'disconnected' if states('switch.ac_dachgeschoss') in ['unknown', 'unavailable', 'none', ''] else 'connected' %}
+          {% set ac_sz = 'disconnected' if states('switch.ac_schlafzimmer') in ['unknown', 'unavailable', 'none', ''] else 'connected' %}
           {% set plugs = [
             states('sensor.zs7_plug_circ_pump_connection'),
-            states('sensor.zs7_plug_ac_dg_connection'),
-            states('sensor.zs7_plug_ac_sz_connection')
+            ac_dg,
+            ac_sz
           ] %}
           {% if 'disconnected' in plugs %}
             degraded
@@ -459,15 +464,15 @@ template:
             ok
           {% endif %}
         attributes:
-          source_entity: "sensor.zs7_plug_circ_pump_connection, sensor.zs7_plug_ac_dg_connection, sensor.zs7_plug_ac_sz_connection"
+          source_entity: "sensor.zs7_plug_circ_pump_connection, switch.ac_dachgeschoss, switch.ac_schlafzimmer"
           circ_pump: "{{ states('sensor.zs7_plug_circ_pump_connection') }}"
-          ac_dg: "{{ states('sensor.zs7_plug_ac_dg_connection') }}"
-          ac_sz: "{{ states('sensor.zs7_plug_ac_sz_connection') }}"
+          ac_dg: "{{ 'disconnected' if states('switch.ac_dachgeschoss') in ['unknown', 'unavailable', 'none', ''] else 'connected' }}"
+          ac_sz: "{{ 'disconnected' if states('switch.ac_schlafzimmer') in ['unknown', 'unavailable', 'none', ''] else 'connected' }}"
           last_call: >-
             {% set timestamps = [
               states.sensor.zs7_plug_circ_pump_connection.last_updated | default(none, true),
-              states.sensor.zs7_plug_ac_dg_connection.last_updated | default(none, true),
-              states.sensor.zs7_plug_ac_sz_connection.last_updated | default(none, true)
+              states.switch.ac_dachgeschoss.last_updated | default(none, true),
+              states.switch.ac_schlafzimmer.last_updated | default(none, true)
             ] | select('defined') | select('ne', none) | list %}
             {% if timestamps | count > 0 %}
               {{ timestamps | max | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
@@ -482,8 +487,8 @@ template:
             {% endif %}
           details: >-
             circ_pump: {{ states('sensor.zs7_plug_circ_pump_connection') }},
-            ac_dg: {{ states('sensor.zs7_plug_ac_dg_connection') }},
-            ac_sz: {{ states('sensor.zs7_plug_ac_sz_connection') }}
+            ac_dg: {{ 'disconnected' if states('switch.ac_dachgeschoss') in ['unknown', 'unavailable', 'none', ''] else 'connected' }},
+            ac_sz: {{ 'disconnected' if states('switch.ac_schlafzimmer') in ['unknown', 'unavailable', 'none', ''] else 'connected' }}
 
 # STG-6.15: Load the api_health sensor platform so sensor.api_health_overall
 # is created and the api_health.report service becomes available. The overall
