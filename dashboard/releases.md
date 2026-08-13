@@ -15,6 +15,23 @@
 
 ---
 
+# Release v1.129.2
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-4.111** — System dashboard: Zirkulation and Status views design-system compliance (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.129.1
 
 **Datum:** 2026-08-13  
