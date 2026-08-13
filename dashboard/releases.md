@@ -1,3 +1,20 @@
+# Release v1.131.1
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.119** — Pump status chart: render binary states as stepline, not smooth ramps (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.131.0
 
 **Datum:** 2026-08-13  
