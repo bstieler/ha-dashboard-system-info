@@ -1,3 +1,16 @@
+# Release v1.132.1
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.45** — Release pipeline: commit submodule artifacts before remote-ahead rebase (`none`)
+
+
+---
+
 # Release v1.132.0
 
 **Datum:** 2026-08-13  
