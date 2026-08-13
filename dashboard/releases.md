@@ -1,3 +1,20 @@
+# Release v1.129.1
+
+**Datum:** 2026-08-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-12.47** — kvv_trip: POI and locality searches find no connection — wrong EFA type mapping (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.129.0
 
 **Datum:** 2026-08-12  
