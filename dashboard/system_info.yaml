@@ -608,7 +608,6 @@ views:
                 show: true
                 title: Pumpen-Status (24h)
               graph_span: 24h
-              update_interval: 60s
               series:
                 - entity: binary_sensor.zs7_circ_pump_should_run
                   name: Soll-Zustand
