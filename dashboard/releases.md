@@ -1,3 +1,24 @@
+# Release v1.130.0
+
+**Datum:** 2026-08-13  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-9.10** — state_class/device_class und availability für YAML-Energie- und Template-Sensoren nachrüsten (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-8.38** — Circulation pump: false no-power alert with cloud plug + apexcharts config error on pump status chart (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.129.3
 
 **Datum:** 2026-08-13  
