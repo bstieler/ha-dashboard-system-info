@@ -1,3 +1,21 @@
+# Release v1.129.3
+
+**Datum:** 2026-08-13  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-8.36** — AC plugs: switch measurement from SwitchBot BLE to SwitchBot Cloud (`yaml_reload`)
+- **STG-8.37** — Circulation pump: switch measurement and control from SwitchBot BLE to SwitchBot Cloud (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.129.2
 
 **Datum:** 2026-08-13  
