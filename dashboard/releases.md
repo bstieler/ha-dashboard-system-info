@@ -1,3 +1,20 @@
+# Release v1.133.1
+
+**Datum:** 2026-08-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.123** — Fix live-acceptance UX findings on view berechnung-steuerung (STG-4.121 follow-up) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.133.0
 
 **Datum:** 2026-08-20  
