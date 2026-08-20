@@ -1,3 +1,21 @@
+# Release v1.133.0
+
+**Datum:** 2026-08-20  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.121** — Radical rework of view 'berechnung-steuerung' per concept §3 (structure, Mushroom/Sections, reason lines) (`yaml_reload`)
+- **STG-4.122** — Day-timeline chart with phase/crossover markers (ApexCharts standard template) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.132.2
 
 **Datum:** 2026-08-20  
