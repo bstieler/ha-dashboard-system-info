@@ -1,3 +1,31 @@
+# Release v1.132.2
+
+**Datum:** 2026-08-20  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.314** — Separate manual helpers for Ziel-SoC Day-Start vs. Tag and T1 vs. T2 in resolution + dashboard (`core_restart, yaml_reload`)
+
+## Technisch
+
+- **STG-2.315** — Helper/sensor cleanup: legacy dispatch duplicates, dead Verbrauchsmodell config, dead freeze texts (`yaml_reload`)
+- **STG-2.316** — Consolidate magic numbers and defaults into single source of truth (constants.py) (`core_restart`)
+- **STG-2.317** — Align T1 naming with dashboard_terminology.md (entity + card labels) (`yaml_reload`)
+
+## Dokumentation
+
+- **STG-2.313** — Clarify P1/T1 as live hold-low control inputs (docs + presentation) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.132.1
 
 **Datum:** 2026-08-13  
