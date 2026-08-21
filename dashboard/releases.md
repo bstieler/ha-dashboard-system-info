@@ -1,3 +1,20 @@
+# Release v1.135.1
+
+**Datum:** 2026-08-21  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.320** — Load-up freeze locks P2/T2 to manual helper defaults instead of computed values (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.135.0
 
 **Datum:** 2026-08-21  
