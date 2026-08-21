@@ -1,3 +1,29 @@
+# Release v1.134.0
+
+**Datum:** 2026-08-21  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.326** — Configurable winter floor for the no_excess_window safety path (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.321** — Late-day guard is inert with the default load-up helper (105) and untested for winter sunsets (`core_restart`)
+- **STG-2.324** — Morning-crossover gap: source drops crossings after 12:00 while the lag guard allows sunrise+6h (`core_restart`)
+
+## Technisch
+
+- **STG-2.327** — Cleanup: dead lead-release constants and battery-doc drift from the winter analysis (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.133.1
 
 **Datum:** 2026-08-20  
