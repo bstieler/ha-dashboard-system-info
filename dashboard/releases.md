@@ -1,3 +1,29 @@
+# Release v1.134.1
+
+**Datum:** 2026-08-21  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.319** — P3 weather-buffer uplift no longer affects the effective load-up target (STG-4.69 side effect) (`core_restart`)
+- **STG-2.322** — Night-plan revision ignores PV window start shifts (only energy is compared) (`core_restart`)
+- **STG-2.330** — Late-day guard weather-buffer branch can hold a legitimately computed strategy max (`core_restart`)
+- **STG-2.331** — Morning-crossover consumer should apply the absolute cap when sunrise is unavailable (`core_restart`)
+- **STG-2.332** — Plan-curve simulation ignores the configurable safety fallback (STG-2.326) (`core_restart`)
+
+## Dokumentation
+
+- **STG-2.329** — Dashboard help text still describes the removed lead-release ramp (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.134.0
 
 **Datum:** 2026-08-21  
