@@ -1,3 +1,21 @@
+# Release v1.135.0
+
+**Datum:** 2026-08-21  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.323** — Multi-day reserve underestimates when the over-next PV window is beyond the 48 h horizon (`core_restart`)
+- **STG-2.328** — Reserve-maximizing night floor: dynamic headroom cap instead of fixed 60 % strategy max (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.134.1
 
 **Datum:** 2026-08-21  
