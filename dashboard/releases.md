@@ -1,3 +1,24 @@
+# Release v1.137.0
+
+**Datum:** 2026-08-22  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.335** — Clamp charge-control dispatch discharge to the dynamic MIN-SOC floor + margin (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.334** — Plan-curve simulation drifts below the safety floor in dark spells (no grid-hold model) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.136.0
 
 **Datum:** 2026-08-22  
