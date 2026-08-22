@@ -1,3 +1,21 @@
+# Release v1.136.0
+
+**Datum:** 2026-08-22  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.339** — Load-up T2: feed back realized surplus deficit (intraday actuals) (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.135.1
 
 **Datum:** 2026-08-21  
