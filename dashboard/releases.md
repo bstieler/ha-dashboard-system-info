@@ -1,3 +1,16 @@
+# Release v1.137.2
+
+**Datum:** 2026-08-22  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.137.1
 
 **Datum:** 2026-08-22  
