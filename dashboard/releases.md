@@ -1,3 +1,22 @@
+# Release v1.139.0
+
+**Datum:** 2026-08-23  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.65** — House Consumption Forecast: Intraday-Korrektur stundenweise differenzieren (`core_restart`)
+- **STG-3.66** — House Consumption Forecast: Modellpersistenz einfuehren (`core_restart`)
+- **STG-3.69** — House Consumption Forecast: Interaktionsterme fuer Wetter- und Zeitfeatures (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.138.0
 
 **Datum:** 2026-08-23  
