@@ -1,3 +1,20 @@
+# Release v1.140.1
+
+**Datum:** 2026-08-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.345** — Crossover Forecast: morgiger Cross-over wird nicht berechnet (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.140.0
 
 **Datum:** 2026-08-23  
