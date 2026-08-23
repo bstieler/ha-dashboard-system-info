@@ -1,3 +1,20 @@
+# Release v1.137.6
+
+**Datum:** 2026-08-23  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-5.16** — Fix pre-existing red test test_excluded_samples_reduce_evaluated_count (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.137.5
 
 **Datum:** 2026-08-23  
