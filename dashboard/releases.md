@@ -1,3 +1,22 @@
+# Release v1.138.0
+
+**Datum:** 2026-08-23  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.6** — PV-Forecast: Neighbor-Match Detail für stündliche Vorhersagen (`core_restart`)
+- **STG-3.64** — House Consumption Forecast: Quantile kalibrieren (`core_restart`)
+- **STG-3.77** — PV-Forecast: Quantile kalibrieren (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.137.6
 
 **Datum:** 2026-08-23  
