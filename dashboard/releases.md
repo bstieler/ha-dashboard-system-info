@@ -1,3 +1,20 @@
+# Release v1.140.0
+
+**Datum:** 2026-08-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.62** — House Consumption Forecast: Direkten SQLite-Zugriff absichern oder ersetzen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.139.0
 
 **Datum:** 2026-08-23  
