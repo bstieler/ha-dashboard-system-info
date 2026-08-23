@@ -1,3 +1,21 @@
+# Release v1.137.4
+
+**Datum:** 2026-08-23  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.124** — Historie view: fix 'Tage im Detail' table overflow and smartphone chart clipping (`yaml_reload`)
+- **STG-4.125** — Forecast vs Ist per day: align bar timestamps so daily pairs group correctly (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.137.3
 
 **Datum:** 2026-08-23  
