@@ -1,3 +1,21 @@
+# Release v1.137.5
+
+**Datum:** 2026-08-23  
+**Items:** 1  
+**Gesamt-Deployment:** submodule_update
+
+## Bugfixes
+
+- **STG-2.344** — Dynamic MIN-SOC: stop oscillation at evening cross-over and morning load-up (`core_restart, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.137.4
 
 **Datum:** 2026-08-23  
