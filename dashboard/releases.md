@@ -1,3 +1,20 @@
+# Release v1.137.3
+
+**Datum:** 2026-08-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.125** — Restore 14-day quality metrics (MAE/Bias/Drift) zeroed by over-strict anomaly day exclusion (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.137.2
 
 **Datum:** 2026-08-22  
