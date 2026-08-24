@@ -1,3 +1,26 @@
+# Release v1.141.0
+
+**Datum:** 2026-08-24  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.347** — Capacity estimate: persist aggregated statistics in HA Store beyond recorder retention (`core_restart`)
+- **STG-4.126** — Battery control dashboard: expose Recovery-SoC input on the main view Steuerung card (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.346** — Capacity estimate: aggregate long intervals instead of per-tick micro-intervals (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.140.1
 
 **Datum:** 2026-08-23  
