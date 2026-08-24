@@ -1,3 +1,20 @@
+# Release v1.141.2
+
+**Datum:** 2026-08-24  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.127** — ZS7 Energy: PV-Start SoC und Uhrzeit an SoC-Plan-Kurve ausrichten (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.141.1
 
 **Datum:** 2026-08-24  
