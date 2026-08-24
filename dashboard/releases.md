@@ -1,3 +1,20 @@
+# Release v1.141.1
+
+**Datum:** 2026-08-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.348** — Load-up strategy: mean-based night integral + configurable kWh buffer instead of P90 dependence (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.141.0
 
 **Datum:** 2026-08-24  
