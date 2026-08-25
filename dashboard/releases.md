@@ -1,3 +1,22 @@
+# Release v1.142.0
+
+**Datum:** 2026-08-25  
+**Items:** 2  
+**Gesamt-Deployment:** submodule_update
+
+## Neue Features
+
+- **STG-2.351** — Explanation sentences for charge-control targets (Load-up / Day / Day-Start) (`core_restart, submodule_update`)
+- **STG-2.352** — Explanation sentence for dynamic MIN-SOC decisions (`core_restart, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.141.3
 
 **Datum:** 2026-08-25  
