@@ -1,3 +1,21 @@
+# Release v1.141.3
+
+**Datum:** 2026-08-25  
+**Items:** 1  
+**Gesamt-Deployment:** submodule_update
+
+## Bugfixes
+
+- **STG-2.349** — Night ramp monotonicity guard: Min-SOC must not jump up around midnight (`core_restart, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.141.2
 
 **Datum:** 2026-08-24  

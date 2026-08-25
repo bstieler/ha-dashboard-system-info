@@ -1,5 +1,11 @@
 [
   {
+    "version": "v1.141.3",
+    "date": "2026-08-25",
+    "items": 1,
+    "deployment": "submodule_update"
+  },
+  {
     "version": "v1.141.2",
     "date": "2026-08-24",
     "items": 1,
