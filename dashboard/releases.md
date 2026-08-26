@@ -1,3 +1,22 @@
+# Release v1.142.1
+
+**Datum:** 2026-08-26  
+**Items:** 2  
+**Gesamt-Deployment:** submodule_update
+
+## Bugfixes
+
+- **STG-2.355** — Suppress day-start hold in helper_fallback (fallback must be passive, not grid-hold + PV export) (`core_restart, submodule_update`)
+- **STG-2.356** — Resolution card must not label values 'Effektiv' while the control runs on helper_fallback (`core_restart, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.142.0
 
 **Datum:** 2026-08-25  
