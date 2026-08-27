@@ -1,3 +1,28 @@
+# Release v1.143.0
+
+**Datum:** 2026-08-27  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.358** — Load-up night buffer: measure nightly forecast residual (stage 1) (`core_restart`)
+- **STG-2.359** — Control resolution explanation: include expected minimum SOC tonight (`core_restart`)
+- **STG-7.46** — Release-Notification in der HA-Oberfläche (persistent_notification) (`none`)
+
+## Bugfixes
+
+- **STG-2.357** — SOC plan curve: align forecast series with the P3 mean scenario (`core_restart`)
+- **STG-4.128** — Nachtplan view: night-scoped plan chart and readable stat cards (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.142.1
 
 **Datum:** 2026-08-26  
