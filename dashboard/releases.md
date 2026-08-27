@@ -1,3 +1,23 @@
+# Release v1.143.1
+
+**Datum:** 2026-08-27  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.361** — Dynamic MIN-SOC: morning spike from plan-deviation guard in the last partial bucket before the PV window (`core_restart`)
+- **STG-4.129** — Nachtplan view: make the referenced night explicit and follow the night (`yaml_reload`)
+- **STG-7.47** — Release notification: fix click action on iOS companion app (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.143.0
 
 **Datum:** 2026-08-27  
