@@ -1,3 +1,26 @@
+# Release v1.144.0
+
+**Datum:** 2026-08-28  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.362** — SOC plan curve: extend horizon to cover the coming night (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.363** — Crossover/min-SOC sensors: cover morning-crossover bound year-round and flag truncated forecast data (`core_restart`)
+- **STG-2.364** — Dynamic MIN-SOC: stabilize daytime-preview reserve ratchet (`core_restart`)
+- **STG-3.127** — Forecast sensors: recorder pruning must not strip consumer-critical hourly series (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.143.1
 
 **Datum:** 2026-08-27  
