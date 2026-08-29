@@ -1,3 +1,21 @@
+# Release v1.146.3
+
+**Datum:** 2026-08-29  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.368** — Pessimistic night low point: today-side load source carries no P90 band (`core_restart`)
+- **STG-2.369** — Night-min-SoC: past night shows measured actual, anchor no longer masks coming night (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.146.2
 
 **Datum:** 2026-08-29  
