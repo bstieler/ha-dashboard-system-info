@@ -1,3 +1,20 @@
+# Release v1.146.4
+
+**Datum:** 2026-08-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.131** — Consumption dashboard broken: BOD line flat at 0 (midnight transient race) and profile charts read pruned table_rows (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.146.3
 
 **Datum:** 2026-08-29  
