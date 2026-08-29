@@ -1,3 +1,20 @@
+# Release v1.146.1
+
+**Datum:** 2026-08-29  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.130** — Hotfix: zs7 theme forced light mode — dark values into modes.dark (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.146.0
 
 **Datum:** 2026-08-29  
