@@ -1,3 +1,20 @@
+# Release v1.146.2
+
+**Datum:** 2026-08-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.367** — Pessimistic night low point: read PV band from band-carrying daily sensors (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.146.1
 
 **Datum:** 2026-08-29  
