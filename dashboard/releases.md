@@ -1,3 +1,24 @@
+# Release v1.145.0
+
+**Datum:** 2026-08-29  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.366** — Show pessimistic (P10/P90) night low point alongside the mean scenario (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.365** — Display consistency: unify morning-crossover scenario (mean vs P10), night labeling, and chart windows (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.144.0
 
 **Datum:** 2026-08-28  
