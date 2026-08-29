@@ -1,3 +1,20 @@
+# Release v1.146.0
+
+**Datum:** 2026-08-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.129** — Dual CUSUM drift: raw vs. scale-corrected forecast evaluation (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.145.0
 
 **Datum:** 2026-08-29  
