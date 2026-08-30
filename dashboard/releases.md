@@ -1,3 +1,20 @@
+# Release v1.146.5
+
+**Datum:** 2026-08-30  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.370** — min_soc_before_crossover: Plan curve ignores dynamic Min-SOC, floors at hardware UPS register (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.146.4
 
 **Datum:** 2026-08-29  
