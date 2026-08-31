@@ -1,3 +1,25 @@
+# Release v1.147.0
+
+**Datum:** 2026-08-31  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.371** — Night low-point statements: separate clock-night from PV-crossover horizon on dark days (`core_restart`)
+
+## Bugfixes
+
+- **STG-4.132** — SoC-Verlauf chart: rename misleading \"Min-SoC Ist\" series and show measured night minimum (`core_restart`)
+- **STG-5.22** — Fix red plan_curve_sensor tests on ha-pv-config main (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.146.6
 
 **Datum:** 2026-08-31  
