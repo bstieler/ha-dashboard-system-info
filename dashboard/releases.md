@@ -1,3 +1,21 @@
+# Release v1.146.6
+
+**Datum:** 2026-08-31  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.353** — render_day_until_rule reads phantom phase2_soc_delta_pct key (silent 20.0 default) (`core_restart`)
+- **STG-2.354** — charge_control_targets stuck in recomputing/helper_fallback after core restart (phase2_feasibility invalid_window) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.146.5
 
 **Datum:** 2026-08-30  
