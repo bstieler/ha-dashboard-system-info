@@ -1,3 +1,20 @@
+# Release v1.147.1
+
+**Datum:** 2026-08-31  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.372** — Night-min-SoC tracker: reconcile with recorder history at sunrise (missed 7.2 % dip) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.147.0
 
 **Datum:** 2026-08-31  
