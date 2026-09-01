@@ -1,3 +1,20 @@
+# Release v1.148.2
+
+**Datum:** 2026-09-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.376** — Night residual realized measurement broken: load counter template omits battery flows (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.148.1
 
 **Datum:** 2026-09-01  
