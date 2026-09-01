@@ -1,3 +1,20 @@
+# Release v1.148.1
+
+**Datum:** 2026-09-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.135** — Fix SoC-Verlauf Configuration error (scatter series rejected by apexcharts-card) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.148.0
 
 **Datum:** 2026-09-01  
