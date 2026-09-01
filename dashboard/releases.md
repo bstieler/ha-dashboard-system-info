@@ -1,3 +1,27 @@
+# Release v1.147.3
+
+**Datum:** 2026-09-01  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.309** — Dynamic Min-SOC: guard against zero usable battery capacity (`core_restart`)
+
+## Technisch
+
+- **STG-2.250** — Dynamische MIN-SOC: Debugging entfernen (`core_restart`)
+- **STG-2.360** — Night residual & plan curve: deferred gate-review findings (`core_restart`)
+- **STG-8.30** — API Health: SmartPlug-Health auf SwitchBot-Cloud-Quellen ausrichten (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.147.2
 
 **Datum:** 2026-09-01  
