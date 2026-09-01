@@ -1,3 +1,20 @@
+# Release v1.147.2
+
+**Datum:** 2026-09-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.133** — SoC-Verlauf chart: pass epoch-ms x values for SoC Ist/Plan series (ISO strings shift the trace ~2 h) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.147.1
 
 **Datum:** 2026-08-31  
