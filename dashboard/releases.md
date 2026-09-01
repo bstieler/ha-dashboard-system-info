@@ -1,3 +1,20 @@
+# Release v1.148.0
+
+**Datum:** 2026-09-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.134** — Rebuild Home dashboard as energy/PV monitoring page (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.147.4
 
 **Datum:** 2026-09-01  
