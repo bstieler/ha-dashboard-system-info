@@ -1,3 +1,20 @@
+# Release v1.147.4
+
+**Datum:** 2026-09-01  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.375** — Night low-point: bound until-crossover scan to the coming night, honest late-PV-start wording (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.147.3
 
 **Datum:** 2026-09-01  
