@@ -1,3 +1,20 @@
+# Release v1.149.4
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.382** — Load-up why-sentence hides weather-buffer max fallback (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.149.3
 
 **Datum:** 2026-09-02  
