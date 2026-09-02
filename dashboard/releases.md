@@ -1,3 +1,20 @@
+# Release v1.149.6
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.384** — Supergrün phases_today must include today's elapsed phases (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.149.5
 
 **Datum:** 2026-09-02  
