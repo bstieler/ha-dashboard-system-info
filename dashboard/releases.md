@@ -1,3 +1,20 @@
+# Release v1.149.3
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-4.136** — Home dashboard: thematic section order and desktop column balance (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.149.2
 
 **Datum:** 2026-09-02  
