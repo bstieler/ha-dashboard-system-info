@@ -1,3 +1,20 @@
+# Release v1.149.5
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.383** — StromGedacht state-code mapping wrong (1=gruen, not gelb) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.149.4
 
 **Datum:** 2026-09-02  
