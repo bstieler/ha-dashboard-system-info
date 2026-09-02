@@ -1,3 +1,21 @@
+# Release v1.149.2
+
+**Datum:** 2026-09-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.380** — Resolution card: supergreen collapse wording is contradictory (base P1 vs resolved P1, 'Unbekannte Auflösungsregel') (`core_restart`)
+- **STG-2.381** — Readiness gate: tomorrow_weather_buffer:missing_recovery_time freezes the whole control on restored values (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.149.1
 
 **Datum:** 2026-09-02  
