@@ -1,3 +1,20 @@
+# Release v1.150.2
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.386** — Remove discharge-above-target mechanism from charge control runtime (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.150.1
 
 **Datum:** 2026-09-02  
