@@ -1,3 +1,20 @@
+# Release v1.149.1
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.379** — Supergruen status sensor: entity_id gets device prefix under HA 2026.8 (contract broken) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.149.0
 
 **Datum:** 2026-09-02  
