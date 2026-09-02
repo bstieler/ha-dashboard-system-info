@@ -6,7 +6,9 @@ Eigenstaendiges Home-Assistant-Subprojekt fuer das Dashboard `System`.
 - `dashboard/system_info.yaml`
   - produktive YAML-Dashboard-Definition fuer `/config/dashboards/system_info.yaml`
   - Consolidated **System** topic view (STG-4.102): three Sections-layout views —
-    `System` (Raspberry Pi values/charts, releases, API status), `Zirkulation`
+    `System` (Raspberry Pi values/charts, releases, API status for the
+    monitored external interfaces Open-Meteo, AlphaESS, DWD, StromGedacht and
+    SmartPlug), `Zirkulation`
     (circulation pump control/status/logbook) and `Status` (printer, Tado
     heating, PV status). Replaces the former separate sidebar dashboards
     `circulation-pump` and `zs7-status` (both kept registered but hidden as

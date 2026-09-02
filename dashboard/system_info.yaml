@@ -223,6 +223,21 @@ views:
               columns: 6
 
           - type: custom:mushroom-template-card
+            primary: StromGedacht
+            secondary: >-
+              {{ states('sensor.api_health_stromgedacht') }} ·
+              {{ state_attr('sensor.api_health_stromgedacht', 'last_success') | default('—') }}
+            icon: mdi:transmission-tower
+            icon_color: >-
+              {% set s = states('sensor.api_health_stromgedacht') %}
+              {% if s == 'failed' %}var(--zs7-crit)
+              {% elif s == 'degraded' %}var(--zs7-warn)
+              {% elif s == 'ok' %}var(--zs7-ok)
+              {% else %}var(--zs7-offline){% endif %}
+            grid_options:
+              columns: 6
+
+          - type: custom:mushroom-template-card
             primary: SmartPlug
             secondary: >-
               {{ states('sensor.api_health_smartplug') }} ·
