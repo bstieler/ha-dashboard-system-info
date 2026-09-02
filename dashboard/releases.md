@@ -1,3 +1,20 @@
+# Release v1.150.1
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.138** — Home dashboard: explanation cards as separate sections (mobile fix) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.150.0
 
 **Datum:** 2026-09-02  
