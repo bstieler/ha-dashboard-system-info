@@ -1,3 +1,25 @@
+# Release v1.150.0
+
+**Datum:** 2026-09-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.385** — Split resolution explanation into charge-strategy and night-low attributes (`core_restart`)
+
+## Technisch
+
+- **STG-4.137** — Home dashboard: explanation trio full-width, remove grid-state chip (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.149.6
 
 **Datum:** 2026-09-02  
