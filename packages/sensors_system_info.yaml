@@ -442,6 +442,87 @@ template:
               sensor.dwd_radar_image_url: {{ states('sensor.dwd_radar_image_url') | default('unknown') }}
             {% endif %}
 
+      - name: API Health StromGedacht
+        unique_id: api_health_stromgedacht
+        icon: mdi:transmission-tower
+        # STG-2.377: real-time fetch health of the StromGedacht statesRelative
+        # call, reported by alphaess_evaluation as source `stromgedacht.states`
+        # (attributes stromgedacht_states_* on sensor.api_health_overall).
+        # Fallback derivation mirrors the other API health sensors and reads
+        # the supergreen status entity directly.
+        state: >-
+          {% set overall = states('sensor.api_health_overall') %}
+          {% set rt = state_attr('sensor.api_health_overall', 'stromgedacht_states_status') %}
+          {% if overall not in ['unavailable', 'unknown', 'none'] and rt is not none %}
+            {% set statuses = [rt] | select('defined') | select('ne', none) | list %}
+            {% if 'failed' in statuses %}
+              failed
+            {% elif 'degraded' in statuses %}
+              degraded
+            {% elif 'unknown' in statuses %}
+              unknown
+            {% elif statuses | count > 0 %}
+              ok
+            {% else %}
+              unknown
+            {% endif %}
+          {% else %}
+            {% set sg = states('sensor.alphaess_supergreen_status') %}
+            {% if sg in ['unavailable', 'unknown', 'none'] %}
+              unknown
+            {% else %}
+              {% set ds = state_attr('sensor.alphaess_supergreen_status', 'data_status') %}
+              {% if ds == 'ok' %}
+                ok
+              {% elif ds == 'stale' %}
+                degraded
+              {% elif ds == 'api_error' %}
+                failed
+              {% else %}
+                unknown
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        attributes:
+          source_entity: "sensor.api_health_overall, sensor.alphaess_supergreen_status"
+          last_call: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_last_call = state_attr('sensor.api_health_overall', 'stromgedacht_states_last_call') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_call is not none %}
+              {{ rt_last_call | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+            {% else %}
+              {% set sg_ts = state_attr('sensor.alphaess_supergreen_status', 'last_fetch') %}
+              {% if sg_ts not in [none, 'unavailable', 'unknown', ''] %}
+                {{ sg_ts | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% else %}
+                unavailable
+              {% endif %}
+            {% endif %}
+          last_success: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt_last_success = state_attr('sensor.api_health_overall', 'stromgedacht_states_last_success') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt_last_success is not none %}
+              {{ rt_last_success | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+            {% else %}
+              {% set ds = state_attr('sensor.alphaess_supergreen_status', 'data_status') %}
+              {% set sg_ts = state_attr('sensor.alphaess_supergreen_status', 'last_success') %}
+              {% if ds != 'ok' or sg_ts in [none, 'unavailable', 'unknown', ''] %}
+                unavailable
+              {% else %}
+                {{ sg_ts | as_datetime | as_local | as_timestamp | timestamp_custom('%d.%m.%Y %H:%M', true) }}
+              {% endif %}
+            {% endif %}
+          details: >-
+            {% set overall = states('sensor.api_health_overall') %}
+            {% set rt = state_attr('sensor.api_health_overall', 'stromgedacht_states_status') %}
+            {% if overall not in ['unavailable', 'unknown', 'none'] and rt is not none %}
+              states: {{ rt | default('unknown', true) }},
+              {{ state_attr('sensor.api_health_overall', 'stromgedacht_states_details') | default('unknown', true) }}
+            {% else %}
+              data_status: {{ state_attr('sensor.alphaess_supergreen_status', 'data_status') | default('unknown', true) }},
+              Netzzustand: {{ states('sensor.alphaess_supergreen_status') | default('unknown') }}
+            {% endif %}
+
       - name: API Health SmartPlug
         unique_id: api_health_smartplug
         icon: mdi:power-plug
