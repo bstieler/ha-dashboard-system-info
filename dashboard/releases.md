@@ -1,3 +1,20 @@
+# Release v1.149.0
+
+**Datum:** 2026-09-02  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.377** — Charge-Control: Halte-Niedrig (P1/T1) über StromGedacht-Supergrün-Phasen statt Best-Hour-Heuristik steuern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.148.2
 
 **Datum:** 2026-09-01  
