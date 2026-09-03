@@ -1,3 +1,20 @@
+# Release v1.151.0
+
+**Datum:** 2026-09-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.387** — Supergreen hold-low: T1 lead time only when the in-phase surplus is insufficient (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.150.2
 
 **Datum:** 2026-09-02  
