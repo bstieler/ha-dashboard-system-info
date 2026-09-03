@@ -1,3 +1,20 @@
+# Release v1.151.1
+
+**Datum:** 2026-09-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.130** — PV forecast: freeze raw daily forecast at BOD anchor hour (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.151.0
 
 **Datum:** 2026-09-03  
