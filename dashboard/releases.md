@@ -1,3 +1,20 @@
+# Release v1.152.0
+
+**Datum:** 2026-09-03  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.139** — Energy dashboard: rework day card 'Batterie & Prognose' around evening crossover (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.151.1
 
 **Datum:** 2026-09-03  
