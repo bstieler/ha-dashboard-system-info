@@ -1,3 +1,20 @@
+# Release v1.152.1
+
+**Datum:** 2026-09-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.388** — Measured night-min SOC misses the post-sunrise discharge tail (window ends at sunrise) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.152.0
 
 **Datum:** 2026-09-03  
