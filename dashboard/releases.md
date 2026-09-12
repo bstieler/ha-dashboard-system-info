@@ -1,3 +1,20 @@
+# Release v1.153.1
+
+**Datum:** 2026-09-12  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-4.26** — Energy-Dashboard: SOC-Kurvenberechnung deduplizieren (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.153.0
 
 **Datum:** 2026-09-12  
