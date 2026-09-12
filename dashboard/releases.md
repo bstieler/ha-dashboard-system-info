@@ -1,3 +1,23 @@
+# Release v1.154.0
+
+**Datum:** 2026-09-12  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-8.41** — Presence detection from live power data: subproject scaffolding + detection core (`core_restart`)
+- **STG-8.42** — Presence detection: sticky state machine, Bayesian confidence, away mode (`core_restart`)
+- **STG-8.43** — Presence detection: admin-only dashboard card with feedback buttons (`core_restart`)
+- **STG-8.44** — Presence detection: actionable push queries (active learning) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.153.2
 
 **Datum:** 2026-09-12  
