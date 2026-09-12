@@ -1,3 +1,21 @@
+# Release v1.154.2
+
+**Datum:** 2026-09-13  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-8.46** — Presence source unavailable nightly (~23:30–04:00) — rolling baseline starved, SQL warning spam (`yaml_reload`)
+- **STG-8.47** — Presence card: broken uplift entity reference + status label contradicts state machine (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.154.1
 
 **Datum:** 2026-09-12  
