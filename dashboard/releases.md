@@ -1,3 +1,20 @@
+# Release v1.154.1
+
+**Datum:** 2026-09-12  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-8.45** — Hotfix: presence detection wired to energy counter instead of live power sensor (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.154.0
 
 **Datum:** 2026-09-12  
