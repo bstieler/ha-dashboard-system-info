@@ -1,3 +1,26 @@
+# Release v1.153.0
+
+**Datum:** 2026-09-12  
+**Items:** 6  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.30** — PV-Forecast Dashboard V2: Skalierungsfaktor-Berechnung mit aktuellen Werten erklären (`none`)
+- **STG-4.41** — Batterie-Steuerung Dashboard V2: Gesamt-Abnahme (Begriffs-Checkliste, README, Sichtprüfung) (`none`)
+- **STG-8.10** — Circulation pump: deploy persistence script via tree deploy, remove stale manual setup docs (`yaml_reload`)
+
+## Technisch
+
+- **STG-3.41** — IntervalEvaluator: StateReaderService direkt injizieren und Coordinator-Typisierung verbessern (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.152.3
 
 **Datum:** 2026-09-12  
