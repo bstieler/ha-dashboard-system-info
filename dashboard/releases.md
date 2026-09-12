@@ -1,3 +1,22 @@
+# Release v1.153.2
+
+**Datum:** 2026-09-12  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-10.14** — DWD WMS: decommissioned layer dwd:RX-Produkt durch Radar_wn-product_1x1km_ger ersetzen (`yaml_reload`)
+- **STG-3.131** — Forecast-Trainingspools: ProcessPoolExecutor auf fork-Kontext pinnen (Python 3.14) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.153.1
 
 **Datum:** 2026-09-12  
