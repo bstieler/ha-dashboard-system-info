@@ -1,3 +1,21 @@
+# Release v1.152.2
+
+**Datum:** 2026-09-12  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-10.10** — dwd_radar_camera: ModuleNotFoundError homeassistant.util.slug (inkompatibel mit aktueller HA-Core-Version) (`core_restart`)
+- **STG-10.11** — sensor.dwd_forecast_json liefert leeren State ([]) seit >= 2026-08-31 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.152.1
 
 **Datum:** 2026-09-11  
