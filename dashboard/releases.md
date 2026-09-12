@@ -1,3 +1,20 @@
+# Release v1.152.3
+
+**Datum:** 2026-09-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-10.12** — DWD forecast sensors: forecast attribute empty due to Jinja loop scoping (STG-10.11 follow-up) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.152.2
 
 **Datum:** 2026-09-12  
