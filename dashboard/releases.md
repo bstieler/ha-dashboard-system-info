@@ -1,3 +1,20 @@
+# Release v1.154.3
+
+**Datum:** 2026-09-13  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-8.48** — Presence helpers lose runtime state on every HA restart (YAML initial wins over restore_state) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.154.2
 
 **Datum:** 2026-09-13  
