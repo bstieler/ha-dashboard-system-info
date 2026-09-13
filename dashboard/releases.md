@@ -1,3 +1,20 @@
+# Release v1.155.2
+
+**Datum:** 2026-09-13  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-8.8** — Circulation pump: remove leftover hardcoded plug references after SmartPlug abstraction (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.155.1
 
 **Datum:** 2026-09-13  
