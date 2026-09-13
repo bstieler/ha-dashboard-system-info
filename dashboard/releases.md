@@ -1,3 +1,20 @@
+# Release v1.155.1
+
+**Datum:** 2026-09-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.389** — Charge strategy explanation: add target validity times (Day-Start/Day/Load-up apply at different times of day) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.155.0
 
 **Datum:** 2026-09-13  
