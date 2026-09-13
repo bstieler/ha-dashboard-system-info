@@ -1,3 +1,25 @@
+# Release v1.155.6
+
+**Datum:** 2026-09-13  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.301** — Min-SOC control: extract pure math and utility helpers (`core_restart`)
+- **STG-2.302** — Min-SOC control: extract PV excess window search and multi-day reserve (`core_restart`)
+- **STG-2.303** — Min-SOC control: extract night plan lifecycle (`core_restart`)
+- **STG-2.304** — Min-SOC control: extract night log persistence and merging (`core_restart`)
+- **STG-2.305** — Min-SOC control: decouple sensor into input resolution, storage and attribute builders (`core_restart`)
+- **STG-2.306** — Min-SOC control: reorganize tests and update architecture docs (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.155.5
 
 **Datum:** 2026-09-13  
