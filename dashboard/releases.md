@@ -1,3 +1,20 @@
+# Release v1.155.3
+
+**Datum:** 2026-09-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-4.27** — Energy-Dashboard: Intraday-Solar-Forecast auf DataUpdateCoordinator umstellen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.155.2
 
 **Datum:** 2026-09-13  
