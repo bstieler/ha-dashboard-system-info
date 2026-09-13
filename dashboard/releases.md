@@ -1,3 +1,20 @@
+# Release v1.155.0
+
+**Datum:** 2026-09-13  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-8.50** — Presence dashboard section: readability, design conformance and confidence explainability (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.154.3
 
 **Datum:** 2026-09-13  
