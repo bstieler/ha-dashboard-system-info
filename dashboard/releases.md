@@ -1,3 +1,17 @@
+# Release v1.155.4
+
+**Datum:** 2026-09-13  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.48** — zs7status: test_dashboard_registration_consistent fails — deploy path mismatch after HAOS-to-Docker migration (`none`)
+- **STG-8.51** — Circulation pump: align project.yaml contract with live entity IDs (controller automation, daily energy sensor) (`none`)
+
+
+---
+
 # Release v1.155.3
 
 **Datum:** 2026-09-13  
