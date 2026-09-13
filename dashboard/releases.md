@@ -1,3 +1,16 @@
+# Release v1.155.5
+
+**Datum:** 2026-09-13  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-8.52** — Circulation pump: remove invalid entity_registry smoke check for utility meter (not registry-managed) (`none`)
+
+
+---
+
 # Release v1.155.4
 
 **Datum:** 2026-09-13  
