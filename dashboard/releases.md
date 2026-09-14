@@ -1,3 +1,20 @@
+# Release v1.156.0
+
+**Datum:** 2026-09-14  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.231** — Charge-Control: Langzeit-Ereignis-Historie über 24er-Ringpuffer hinaus (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.155.6
 
 **Datum:** 2026-09-13  
