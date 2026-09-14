@@ -1,3 +1,20 @@
+# Release v1.156.3
+
+**Datum:** 2026-09-14  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-9.9** — Shared recorder-read adapter in forecast_common encapsulating direct SQLite schema access (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.156.2
 
 **Datum:** 2026-09-14  
