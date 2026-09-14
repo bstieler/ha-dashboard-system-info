@@ -1,24 +1,3 @@
-# Release v1.159.0
-
-**Datum:** 2026-09-14  
-**Items:** 2  
-**Gesamt-Deployment:** core_restart
-
-## Neue Features
-
-- **STG-6.40** — Feature-Arbeit in Git-Worktrees statt nur Feature-Branch (`none`)
-
-## Technisch
-
-- **STG-4.54** — Energie-Dashboard V2: Cutover — Altdashboard zs7-energy abschalten (`core_restart`)
-
-## Erforderliche Schritte
-
-1. `core_restart`
-
-
----
-
 # Release v1.158.0
 
 **Datum:** 2026-09-14  
