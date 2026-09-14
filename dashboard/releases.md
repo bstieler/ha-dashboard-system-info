@@ -1,3 +1,22 @@
+# Release v1.157.0
+
+**Datum:** 2026-09-14  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.140** — Accuracy chart: rolling raw/corrected accuracy curves + daily scatter points (PV & Home dashboard) (`core_restart, yaml_reload`)
+- **STG-4.141** — Forecast-vs-Ist chart: additional corrected-forecast bar (PV dashboard) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.156.5
 
 **Datum:** 2026-09-14  
