@@ -1,3 +1,16 @@
+# Release v1.156.5
+
+**Datum:** 2026-09-14  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.156.4
 
 **Datum:** 2026-09-14  
