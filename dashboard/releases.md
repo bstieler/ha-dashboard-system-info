@@ -1,3 +1,16 @@
+# Release v1.159.1
+
+**Datum:** 2026-09-15  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.50** — deploy_core: Rename/Loeschung bei Single-File-Projekten zielt auf neuen Zielpfad (DELETE_CONFLICT bzw. rm der neuen Datei) (`none`)
+
+
+---
+
 # Release v1.159.0
 
 **Datum:** 2026-09-14  
