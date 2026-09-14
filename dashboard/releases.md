@@ -1,3 +1,20 @@
+# Release v1.156.4
+
+**Datum:** 2026-09-14  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-8.54** — iPhone umbenannt (divae-M4W99WY610): notify.mobile_app_iphone_bjorn durch divae-Service ersetzen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.156.3
 
 **Datum:** 2026-09-14  
