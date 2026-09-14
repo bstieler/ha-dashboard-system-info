@@ -1,3 +1,21 @@
+# Release v1.156.2
+
+**Datum:** 2026-09-14  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.392** — alphaess_evaluation: add services.yaml for log_charge_control_event (`core_restart`)
+- **STG-7.49** — Release pipeline: non-zero exit code and persisted log on deploy failure (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.156.1
 
 **Datum:** 2026-09-14  
