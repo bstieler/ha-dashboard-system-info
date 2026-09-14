@@ -1,3 +1,20 @@
+# Release v1.158.0
+
+**Datum:** 2026-09-14  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.143** — Accuracy chart: dynamic y-axis (data range + buffer, hard bounds 0-100) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.157.0
 
 **Datum:** 2026-09-14  
