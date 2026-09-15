@@ -1,3 +1,21 @@
+# Release v1.160.0
+
+**Datum:** 2026-09-15  
+**Items:** 1  
+**Gesamt-Deployment:** submodule_update
+
+## Neue Features
+
+- **STG-2.393** — Charge-strategy card: clearer explanation texts and retrospective phase-end summary (`core_restart, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.159.2
 
 **Datum:** 2026-09-15  
