@@ -1,3 +1,21 @@
+# Release v1.159.2
+
+**Datum:** 2026-09-15  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.144** — Fix dynamic accuracy y-axis: column zero-baseline feeds 0 into min function; render daily accuracy as marker-only line series (`yaml_reload`)
+- **STG-7.53** — ha_env: .env-Fallback auf Haupt-Checkout, damit Worktrees Token/URL fuer HA API nutzen koennen (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.159.1
 
 **Datum:** 2026-09-15  
