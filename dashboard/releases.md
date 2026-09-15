@@ -1,3 +1,20 @@
+# Release v1.160.1
+
+**Datum:** 2026-09-15  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Technisch
+
+- **STG-8.56** — Remove Alexa integration and Nabu Casa dependencies (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.160.0
 
 **Datum:** 2026-09-15  
