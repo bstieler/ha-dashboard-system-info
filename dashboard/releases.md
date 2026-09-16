@@ -1,3 +1,27 @@
+# Release v1.161.0
+
+**Datum:** 2026-09-16  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-6.45** — Agent workspace guard: lease-lock and session-start protocol for the main checkout (`none`)
+- **STG-6.46** — Hygiene alert: warn when the main checkout has uncommitted changes older than N hours (`none`)
+
+## Bugfixes
+
+- **STG-4.145** — Dead card: max_radiation_wm2 attribute never defined (PV Forecast V2 dashboards) (`yaml_reload`)
+- **STG-5.23** — Remove continue-on-error from CI quality-gates job (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.160.1
 
 **Datum:** 2026-09-15  
