@@ -1,3 +1,20 @@
+# Release v1.161.1
+
+**Datum:** 2026-09-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.132** — pv_forecast: coordinator teardown on config-entry reload leaks process pool, DB connections and bus listener (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.161.0
 
 **Datum:** 2026-09-16  
