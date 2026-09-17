@@ -1,3 +1,20 @@
+# Release v1.161.2
+
+**Datum:** 2026-09-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.395** — Charge-strategy card: use frozen T2 for time labels during load-up phase (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.161.1
 
 **Datum:** 2026-09-16  
