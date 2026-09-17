@@ -1,3 +1,21 @@
+# Release v1.162.1
+
+**Datum:** 2026-09-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.399** — Target timeline: segment count exceeds cap on live data — quantize segment keys or raise cap (`core_restart`)
+- **STG-6.48** — Fix CI: portable mtime lookup in check_repo_hygiene.sh (BSD stat breaks Linux runners) (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.162.0
 
 **Datum:** 2026-09-17  
