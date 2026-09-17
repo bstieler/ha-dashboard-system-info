@@ -1,3 +1,20 @@
+# Release v1.162.3
+
+**Datum:** 2026-09-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.401** — Target timeline: segment by visible label — one line per regime and displayed target (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.162.2
 
 **Datum:** 2026-09-17  
