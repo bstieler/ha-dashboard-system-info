@@ -1,3 +1,20 @@
+# Release v1.161.3
+
+**Datum:** 2026-09-17  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.394** — Fix AlphaESS modbus phase power registers L1-L3 (all read total register 161) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.161.2
 
 **Datum:** 2026-09-17  
