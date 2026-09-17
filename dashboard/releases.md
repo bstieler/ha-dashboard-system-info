@@ -1,3 +1,20 @@
+# Release v1.161.4
+
+**Datum:** 2026-09-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.134** — MOS dawn bias adds phantom generation on zero-irradiance night hours (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.161.3
 
 **Datum:** 2026-09-17  
