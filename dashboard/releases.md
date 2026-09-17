@@ -1,3 +1,24 @@
+# Release v1.162.0
+
+**Datum:** 2026-09-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.398** — Charge-strategy card: ex-post timeline of the actually applied targets from the recorder (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.397** — Charge-strategy card: render supergreen collapse path as one day target (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.161.4
 
 **Datum:** 2026-09-17  
