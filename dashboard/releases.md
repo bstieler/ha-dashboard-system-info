@@ -1,3 +1,20 @@
+# Release v1.162.2
+
+**Datum:** 2026-09-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.400** — Target timeline: segment on phase + targets only — T1/T2 become display annotations (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.162.1
 
 **Datum:** 2026-09-17  
