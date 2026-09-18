@@ -1,3 +1,23 @@
+# Release v1.164.0
+
+**Datum:** 2026-09-18  
+**Items:** 3  
+**Gesamt-Deployment:** submodule_update
+
+## Neue Features
+
+- **STG-4.146a** — Design governance: fix violations in alphaess_battery_control_v2.yaml (ha-pv-config) (`yaml_reload, submodule_update`)
+- **STG-4.146b** — Design governance: fix violations in consumption_forecast_dashboard_v2.yaml (`yaml_reload`)
+- **STG-4.146c** — Design governance: register both v2 dashboards in MIGRATED_DASHBOARDS and deduplicate home.yaml charts (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `submodule_update`
+
+
+---
+
 # Release v1.163.0
 
 **Datum:** 2026-09-18  
