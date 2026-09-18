@@ -1,3 +1,16 @@
+# Release v1.163.0
+
+**Datum:** 2026-09-18  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-6.47** — Process: enforce gate_preflight before every commit (pre-commit hook) (`none`)
+
+
+---
+
 # Release v1.162.5
 
 **Datum:** 2026-09-18  
