@@ -1,3 +1,20 @@
+# Release v1.162.5
+
+**Datum:** 2026-09-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.403** — Hotfix: STG-2.402 import placement SyntaxError killed the integration (v1.162.4 outage) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.162.4
 
 **Datum:** 2026-09-18  
