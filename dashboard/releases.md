@@ -1,3 +1,20 @@
+# Release v1.165.0
+
+**Datum:** 2026-09-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.396** — Expose loadup_start provenance so load-up labels never claim a non-frozen T2 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.164.0
 
 **Datum:** 2026-09-18  
