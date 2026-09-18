@@ -1,3 +1,20 @@
+# Release v1.162.4
+
+**Datum:** 2026-09-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.402** — Target timeline: use the runtime sensor (actually steered values) as the data source (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.162.3
 
 **Datum:** 2026-09-17  
