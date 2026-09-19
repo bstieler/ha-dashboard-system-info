@@ -84,10 +84,16 @@ command_line:
       scan_interval: 300
 
   - sensor:
+      # STG-6.49: only the five fields rendered by the Projekt Report tables
+      # (system_info.yaml / system_info_legacy.yaml) are published, with short
+      # keys and compact separators — the full per-project deploy state pushed
+      # the attributes past the 16 KB recorder limit and HA stopped persisting
+      # them. Keep the recorded payload compact; full state stays in
+      # /config/.ha-config-deploy/state/ on the server.
       name: HA Config Deploy Overview
       unique_id: ha_config_deploy_overview
       command: >-
-        python3 -c "import json, glob; files=sorted(glob.glob('/config/.ha-config-deploy/state/*.json')); projects=[]; [projects.append(json.load(open(f))) for f in files if f.endswith('.json')]; print(json.dumps({'count': len(projects), 'projects': projects}))"
+        python3 -c "import json, glob; files=sorted(glob.glob('/config/.ha-config-deploy/state/*.json')); projects=[]; [projects.append(json.load(open(f))) for f in files if f.endswith('.json')]; compact=[{'project': p.get('project_id'), 'version': p.get('version'), 'created': p.get('created_at_local'), 'deployed': p.get('deployed_at_local'), 'branch': p.get('branch')} for p in projects]; print(json.dumps({'count': len(compact), 'projects': compact}, separators=(',', ':')))"
       value_template: "{{ value_json.count }}"
       json_attributes:
         - projects

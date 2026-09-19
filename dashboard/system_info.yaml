@@ -152,7 +152,7 @@ views:
               | Projekt | Version | Erstellt | Letzter Deploy | Branch |
               |---------|---------|----------|----------------|--------|
               {%- for p in projects %}
-              | {{ p.project_id }} | `{{ p.version }}` | {{ p.created_at_local | default('—') }} | {{ p.deployed_at_local | default('—') }} | {{ p.branch }} |
+              | {{ p.project }} | `{{ p.version }}` | {{ p.created | default('—') }} | {{ p.deployed | default('—') }} | {{ p.branch }} |
               {%- endfor -%}
               {%- endif -%}
 
