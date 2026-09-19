@@ -1,3 +1,21 @@
+# Release v1.167.1
+
+**Datum:** 2026-09-19  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-10.13** — dwd_radar_camera: DWD WMS endpoint returns HTTP 403 on image fetch (`none`)
+- **STG-5.21** — Best-hour minimum-energy threshold: all-zero forecast produces a T1 artefact at 21:00 (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.167.0
 
 **Datum:** 2026-09-19  
