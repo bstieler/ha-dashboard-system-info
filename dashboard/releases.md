@@ -1,3 +1,24 @@
+# Release v1.166.0
+
+**Datum:** 2026-09-19  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.150** — Static check: validate dashboard !include paths against the deployment layout (`none`)
+
+## Bugfixes
+
+- **STG-6.49** — sensor.ha_config_deploy_overview attributes exceed the 16 KB recorder limit (17.6 KB) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.165.1
 
 **Datum:** 2026-09-18  
