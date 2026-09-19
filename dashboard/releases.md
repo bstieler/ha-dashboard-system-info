@@ -1,3 +1,20 @@
+# Release v1.167.3
+
+**Datum:** 2026-09-19  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-10.17** — Precipitation radar card: migrate picture card to picture-entity (HA 2026.9) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.167.2
 
 **Datum:** 2026-09-19  
