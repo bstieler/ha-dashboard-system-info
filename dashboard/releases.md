@@ -1,3 +1,20 @@
+# Release v1.167.2
+
+**Datum:** 2026-09-19  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-12.49** — kvv-trip: stopfinder client swallows upstream errors — outages render as 'no results' (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.167.1
 
 **Datum:** 2026-09-19  
