@@ -1,3 +1,25 @@
+# Release v1.167.0
+
+**Datum:** 2026-09-19  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.151** — Saldo-zum-BoD-Chart: gelbe Ist-Linie mit gestrichelter Erwartungsfortsetzung (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.406** — Charge-control runtime: phase downgrade to day after restart (lost phase anchor + frozen T2) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.166.0
 
 **Datum:** 2026-09-19  
