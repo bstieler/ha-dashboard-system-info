@@ -1,3 +1,20 @@
+# Release v1.167.4
+
+**Datum:** 2026-09-19  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.154** — ApexCharts standard template: right-edge x-axis labels clipped (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.167.3
 
 **Datum:** 2026-09-19  
