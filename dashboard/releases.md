@@ -1,3 +1,17 @@
+# Release v1.173.0
+
+**Datum:** 2026-09-21  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.6** — PULSE: EnergyFlowHero component (custom SVG flow, SoC ring, detail drawer) (`none`)
+- **STG-13.7** — PULSE: Base components (KpiTile, StatusChipRow, ExplanationDrawer, helpers) (`none`)
+
+
+---
+
 # Release v1.172.0
 
 **Datum:** 2026-09-21  
