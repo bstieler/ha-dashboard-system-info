@@ -1,3 +1,17 @@
+# Release v1.171.0
+
+**Datum:** 2026-09-20  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.10** — PULSE: Home view composition, navigation and responsive behavior (`none`)
+- **STG-13.8** — PULSE: Home view chart cards (SoC, PV bands, intraday, balance, consumption, accuracy) (`none`)
+
+
+---
+
 # Release v1.170.0
 
 **Datum:** 2026-09-20  
