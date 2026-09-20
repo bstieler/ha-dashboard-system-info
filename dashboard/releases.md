@@ -1,3 +1,16 @@
+# Release v1.168.0
+
+**Datum:** 2026-09-20  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.1** — PULSE: Scaffold ha-pulse subproject (app skeleton, tokens, app shell) (`none`)
+
+
+---
+
 # Release v1.167.4
 
 **Datum:** 2026-09-19  
