@@ -1,3 +1,16 @@
+# Release v1.174.0
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.9** — PULSE: PresencePanel (admin-only, proxy-enforced, feedback with confirm) (`none`)
+
+
+---
+
 # Release v1.173.0
 
 **Datum:** 2026-09-21  
