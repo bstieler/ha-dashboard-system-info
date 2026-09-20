@@ -1,3 +1,17 @@
+# Release v1.169.0
+
+**Datum:** 2026-09-20  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.2** — PULSE: Backend proxy (Fastify, HA WebSocket, roles, service gateway) (`none`)
+- **STG-13.3** — PULSE: Frontend data layer (WS client, entity registry, store, formatting) (`none`)
+
+
+---
+
 # Release v1.168.1
 
 **Datum:** 2026-09-20  
