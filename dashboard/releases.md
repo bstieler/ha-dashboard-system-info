@@ -1,3 +1,17 @@
+# Release v1.170.0
+
+**Datum:** 2026-09-20  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.4** — PULSE: Transform library (pure HassEntity → ChartSeries ports, fixture-tested) (`none`)
+- **STG-13.5** — PULSE: ECharts pulseTheme, TimeSeriesCard and BandChart components (`none`)
+
+
+---
+
 # Release v1.169.0
 
 **Datum:** 2026-09-20  
