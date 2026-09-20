@@ -1,3 +1,26 @@
+# Release v1.172.0
+
+**Datum:** 2026-09-21  
+**Items:** 5  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.16** — PULSE chart-layer hardening: hidden-view setOption deferral + legend-independent now marker (`none`)
+
+## Bugfixes
+
+- **STG-13.15** — PULSE: explicit connect() must clear pending client reconnect timer (`none`)
+- **STG-13.18** — PULSE chart polish: oversized shared tooltip + intraday band rendering (`none`)
+- **STG-13.19** — PULSE proxy: real-HA delta forwarding broken (compressed format) + states snapshot on connect (`none`)
+
+## Dokumentation
+
+- **STG-13.17** — PULSE: reconcile area-fill alpha rule between UX concept (10–25 %) and mapping doc (§6 fill 30 %) (`none`)
+
+
+---
+
 # Release v1.171.1
 
 **Datum:** 2026-09-20  
