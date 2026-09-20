@@ -1,3 +1,20 @@
+# Release v1.168.1
+
+**Datum:** 2026-09-20  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.155** — Accuracy-Karten: Phantom-Punkt für aktuellen Tag entfernen (extend_to) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.168.0
 
 **Datum:** 2026-09-20  
