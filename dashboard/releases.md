@@ -1,3 +1,16 @@
+# Release v1.179.0
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.28** — PULSE: remember login (stay signed in across browser restarts and redeploys) (`none`)
+
+
+---
+
 # Release v1.178.0
 
 **Datum:** 2026-09-21  
