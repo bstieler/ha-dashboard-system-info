@@ -1,3 +1,21 @@
+# Release v1.178.0
+
+**Datum:** 2026-09-21  
+**Items:** 3  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.25** — PULSE Home: EnergyFlowHero neben SoC-Verlauf oben, Hero halbe Breite (`none`)
+
+## Bugfixes
+
+- **STG-13.26** — PULSE EnergyFlowHero: flow lines overlap value/direction labels (`none`)
+- **STG-13.27** — PULSE SoC-Verlauf: Min-SOC Ist (gemessen) missing for past days (`none`)
+
+
+---
+
 # Release v1.177.1
 
 **Datum:** 2026-09-21  
