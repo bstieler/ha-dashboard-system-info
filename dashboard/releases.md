@@ -1,3 +1,16 @@
+# Release v1.179.1
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-13.30** — PULSE SoC-Verlauf: Min-SoC Soll as constant line instead of varying stepline (`none`)
+
+
+---
+
 # Release v1.179.0
 
 **Datum:** 2026-09-21  
