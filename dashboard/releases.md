@@ -1,3 +1,16 @@
+# Release v1.177.0
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.20** — PULSE M3: Energy view migration (ha-dashboard-energy topics → PULSE view) (`none`)
+
+
+---
+
 # Release v1.176.0
 
 **Datum:** 2026-09-21  
