@@ -1,3 +1,16 @@
+# Release v1.177.1
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-13.22** — PULSE: login screen (browser cookie session has no UI path to authenticate) (`none`)
+
+
+---
+
 # Release v1.177.0
 
 **Datum:** 2026-09-21  
