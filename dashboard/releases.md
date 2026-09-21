@@ -1,3 +1,16 @@
+# Release v1.179.2
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-13.31** — PULSE history parser expects REST wire format — real proxy path (WS) returns dict of compressed states (`none`)
+
+
+---
+
 # Release v1.179.1
 
 **Datum:** 2026-09-21  
