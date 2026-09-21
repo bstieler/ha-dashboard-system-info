@@ -1,3 +1,16 @@
+# Release v1.175.0
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.13** — PULSE M2: Kiosk mode, hardening, contract tests and performance budgets (`none`)
+
+
+---
+
 # Release v1.174.1
 
 **Datum:** 2026-09-21  
