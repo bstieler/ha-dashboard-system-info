@@ -1,3 +1,16 @@
+# Release v1.176.0
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-13.14** — PULSE M3: StatusChipRow cross-view integration (view migrations split out) (`none`)
+
+
+---
+
 # Release v1.175.0
 
 **Datum:** 2026-09-21  
