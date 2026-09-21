@@ -1,3 +1,12 @@
+# Release v1.174.1
+
+**Datum:** 2026-09-21  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+
+---
+
 # Release v1.174.0
 
 **Datum:** 2026-09-21  
