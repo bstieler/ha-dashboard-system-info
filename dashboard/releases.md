@@ -1,3 +1,20 @@
+# Release v1.180.0
+
+**Datum:** 2026-09-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.156** — Saldo-zum-BoD chart: secondary percentage axis (right) referenced to BoD (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.179.2
 
 **Datum:** 2026-09-21  
