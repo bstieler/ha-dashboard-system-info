@@ -1,3 +1,20 @@
+# Release v1.180.1
+
+**Datum:** 2026-09-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.157** — Fix Saldo-BoD %-axis card hang (ApexCharts setSeriesYAxisMappings crash) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.180.0
 
 **Datum:** 2026-09-24  
