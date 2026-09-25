@@ -1,3 +1,16 @@
+# Release v1.180.2
+
+**Datum:** 2026-09-25  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-13.24** — PULSE proxy: unbounded memory growth with all-entities subscription (full-collection copy per delta) (`none`)
+
+
+---
+
 # Release v1.180.1
 
 **Datum:** 2026-09-24  
