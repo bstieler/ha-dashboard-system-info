@@ -1,3 +1,24 @@
+# Release v1.180.3
+
+**Datum:** 2026-09-28  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.135** — House consumption forecast: quantile calibration produces zero-width intervals (`core_restart`)
+- **STG-4.149** — Hotfix: !include paths in migrated dashboards have 4 dots instead of 6 — dashboards fail to load (v1.164.0 regression) (`yaml_reload`)
+- **STG-4.152** — Design governance lint: skip migrated dashboards in uninitialized (private) submodules so CI passes (`none`)
+- **STG-4.153** — Design governance lint: skip unavailable dashboards in test_each_migrated_dashboard_individually (CI residual) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.180.2
 
 **Datum:** 2026-09-25  
