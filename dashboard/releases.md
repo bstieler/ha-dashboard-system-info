@@ -1,3 +1,16 @@
+# Release v1.182.1
+
+**Datum:** 2026-09-29  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.57** — Post-deploy smoke check races integration setup for new entities (20s stabilization) (`none`)
+
+
+---
+
 # Release v1.182.0
 
 **Datum:** 2026-09-29  
