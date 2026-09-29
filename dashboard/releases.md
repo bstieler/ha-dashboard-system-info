@@ -1,3 +1,21 @@
+# Release v1.181.0
+
+**Datum:** 2026-09-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.159** — Consumption chart: plan vs. actual for the past 24 h on the Home dashboard (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.180.3
 
 **Datum:** 2026-09-28  
