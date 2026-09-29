@@ -1,3 +1,20 @@
+# Release v1.182.0
+
+**Datum:** 2026-09-29  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.136** — Quantile calibration: enrich period-scope training pairs (structural fix for degenerate fits) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.181.0
 
 **Datum:** 2026-09-29  
