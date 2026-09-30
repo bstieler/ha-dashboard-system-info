@@ -1,3 +1,20 @@
+# Release v1.182.2
+
+**Datum:** 2026-09-30  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.138** — Quantile calibration: row-coverage filter for intraday remaining pairs (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.182.1
 
 **Datum:** 2026-09-29  
