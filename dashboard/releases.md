@@ -1,3 +1,22 @@
+# Release v1.183.0
+
+**Datum:** 2026-09-30  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.407** — Adaptive load-up night buffer from measured night residuals (stage 2 of STG-2.358) (`core_restart, yaml_reload`)
+- **STG-2.408** — Tomorrow-reserve outcome measurement with auto-activation once enough data exists (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.182.2
 
 **Datum:** 2026-09-30  
