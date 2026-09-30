@@ -1,3 +1,20 @@
+# Release v1.184.1
+
+**Datum:** 2026-09-30  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.418** — Rollout flags must persist their state across restarts (remove initial: from helper YAML) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.184.0
 
 **Datum:** 2026-09-30  
