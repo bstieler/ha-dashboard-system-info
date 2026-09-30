@@ -1,3 +1,34 @@
+# Release v1.184.0
+
+**Datum:** 2026-09-30  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.415** — Account for top-off headroom in battery energy estimates (`yaml_reload, core_restart`)
+
+## Bugfixes
+
+- **STG-2.411** — Hotfix: publish adaptive night-buffer attributes (v1.183.0 live finding) (`core_restart`)
+- **STG-2.412** — Backtest: metric A must handle load-up targets above 100 % (SOC entity caps at 100) (`none`)
+
+## Technisch
+
+- **STG-2.416** — Runtime: explicit decision reason for charge-until-full targets above 100 % (`core_restart`)
+
+## Dokumentation
+
+- **STG-2.414** — Document AlphaESS SOC 100 % cap and the nonlinear top-off model (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.183.0
 
 **Datum:** 2026-09-30  
