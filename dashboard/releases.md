@@ -1,3 +1,20 @@
+# Release v1.185.0
+
+**Datum:** 2026-10-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.160** — Intraday chart: X-axis limited to sunrise-1h .. sunset+1h (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.184.2
 
 **Datum:** 2026-10-01  
