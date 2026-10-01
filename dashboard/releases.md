@@ -1,3 +1,25 @@
+# Release v1.184.2
+
+**Datum:** 2026-10-01  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.420** — Load-up retrospective must not present Day-Start helper fallback (20 %) as an effective/historical hold target (`core_restart`)
+- **STG-2.422** — Clarify load-up \"Netto-Nachtverbrauch\" wording to name the PV offset (`core_restart`)
+
+## Technisch
+
+- **STG-2.421** — Dedup repeated load-up-phase statements in the charge-strategy explanation card (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.184.1
 
 **Datum:** 2026-09-30  
