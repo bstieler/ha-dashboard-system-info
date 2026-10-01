@@ -1,3 +1,22 @@
+# Release v1.185.2
+
+**Datum:** 2026-10-01  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.424** — Current/ended-day window labels must not use the coming night's recovery time as morning anchor (`core_restart`)
+- **STG-2.425** — Drop the inverted load-up window end (T2 at/after the evening crossover) (`core_restart`)
+- **STG-2.426** — Day no-crossover \"Warum\": name the day-charge profile context (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.185.1
 
 **Datum:** 2026-10-01  
