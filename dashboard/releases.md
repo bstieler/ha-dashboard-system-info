@@ -1,3 +1,20 @@
+# Release v1.185.3
+
+**Datum:** 2026-10-01  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.162** — Intraday chart x-axis start: floor(sunrise), not floor(sunrise)-1h (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.185.2
 
 **Datum:** 2026-10-01  
