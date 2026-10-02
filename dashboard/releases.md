@@ -1,3 +1,24 @@
+# Release v1.186.0
+
+**Datum:** 2026-10-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.427** — Virtual SOC sensor: measured SOC above 100 % via charge/discharge counters (stage 1) (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.430** — measure_topoff_ratio.py: export-gated run end and quantization-aware summary (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.185.3
 
 **Datum:** 2026-10-01  
