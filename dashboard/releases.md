@@ -1,3 +1,22 @@
+# Release v1.187.0
+
+**Datum:** 2026-10-02  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.428** — Estimates consume virtual SOC (flag-gated, stage 2) (`core_restart, yaml_reload`)
+- **STG-2.429** — Charge control consumes virtual SOC (flag-gated, stage 3) (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.186.0
 
 **Datum:** 2026-10-02  
