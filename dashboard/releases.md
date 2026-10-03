@@ -1,3 +1,20 @@
+# Release v1.187.3
+
+**Datum:** 2026-10-03  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.432** — Virtual SOC: physically_full must exclude controller holds and unconfirmed stops (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.187.2
 
 **Datum:** 2026-10-03  
