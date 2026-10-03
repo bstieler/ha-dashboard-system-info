@@ -1,3 +1,23 @@
+# Release v1.187.1
+
+**Datum:** 2026-10-03  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.423** — sensor.py: _LOGGER is undefined in _target_timeline_payload except path (NameError) (`core_restart`)
+- **STG-4.158** — ZS7 energy today-kWh template sensors: recorder total_increasing jitter warnings (`yaml_reload`)
+- **STG-7.59** — Emergency deploy applies files but skips core restart and deploy-history record (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.187.0
 
 **Datum:** 2026-10-02  
