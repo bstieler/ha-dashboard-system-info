@@ -1,3 +1,20 @@
+# Release v1.187.2
+
+**Datum:** 2026-10-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-9.14** — house_consumption_forecast interval sensors: recorder query runs on the event loop (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.187.1
 
 **Datum:** 2026-10-03  
