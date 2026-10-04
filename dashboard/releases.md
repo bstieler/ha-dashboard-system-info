@@ -1,3 +1,21 @@
+# Release v1.189.0
+
+**Datum:** 2026-10-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.433** — Virtual SOC: learn the display release offset so the virtual and display curves meet at 100 % (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.188.0
 
 **Datum:** 2026-10-04  
