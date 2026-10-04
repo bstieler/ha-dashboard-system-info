@@ -1,3 +1,20 @@
+# Release v1.188.0
+
+**Datum:** 2026-10-04  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.163** — Home dashboard: measured virtual SOC series in the SoC-Verlauf chart (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.187.3
 
 **Datum:** 2026-10-03  
