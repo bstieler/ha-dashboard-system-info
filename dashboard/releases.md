@@ -1,3 +1,20 @@
+# Release v1.189.1
+
+**Datum:** 2026-10-06  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.139** — Publish band-consistent Forecast Latest point (calibrated median) in intraday comparison rows (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.189.0
 
 **Datum:** 2026-10-04  
