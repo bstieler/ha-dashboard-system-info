@@ -1,3 +1,20 @@
+# Release v1.192.0
+
+**Datum:** 2026-10-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.137** — PV forecast: persist remaining-day period bands for calibration pair enrichment (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.191.0
 
 **Datum:** 2026-10-07  
