@@ -1,3 +1,21 @@
+# Release v1.189.2
+
+**Datum:** 2026-10-07  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.434** — Sun-aware intra-hour distribution of hourly PV forecast energy in the SOC plan-curve simulation (`core_restart`)
+- **STG-2.435** — Reject pre-sunrise timestamps in the morning crossover search (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.189.1
 
 **Datum:** 2026-10-06  
