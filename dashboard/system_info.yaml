@@ -1226,11 +1226,17 @@ views:
               {% set energy_90 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_90_pct_kwh') | float(none) %}
               {% set energy_100 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_100_pct_kwh') | float(none) %}
               {% set energy_105 = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_105_pct_kwh') | float(none) %}
-              {% if energy_90 is none or energy_100 is none or energy_105 is none %}
+              {% set max_soc = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'measured_max_soc_pct') | float(none) %}
+              {% set energy_measured = state_attr('sensor.alphaess_battery_usable_capacity_estimated', 'energy_at_measured_max_pct_kwh') | float(none) %}
+              {% set measured_ok = max_soc is not none and energy_measured is not none and max_soc > 100.0 %}
+              {% set top_pct = max_soc if measured_ok else 105.0 %}
+              {% set energy_max = energy_measured if measured_ok else energy_105 %}
+              {% if energy_90 is none or energy_100 is none or energy_max is none %}
               Aktuelle Bandbreiten
               {% else %}
+              {% set top_pct_str = (top_pct | round(1) | string) | replace('.', ',') %}
               Bandbreiten · 90-100%: {{ (((energy_100 - energy_90) / 10.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent ·
-              100-105% (Top-off): {{ (((energy_105 - energy_100) / 5.0) | round(3) | string) | replace('.', ',') }} kWh je Prozent
+              {{ ('Top-off (gemessen, max ' ~ top_pct_str ~ ' %)') if measured_ok else 'Top-off (Skala 105 %)' }}: {{ (((energy_max - energy_100) / (top_pct - 100.0)) | round(3) | string) | replace('.', ',') }} kWh je Prozent
               {% endif %}
             icon: mdi:battery-outline
             grid_options:
