@@ -1,3 +1,22 @@
+# Release v1.190.0
+
+**Datum:** 2026-10-07  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.437** — Apply-failure grace: require consecutive dispatch apply failures before auto-disabling Charge Control (`core_restart`)
+- **STG-2.438** — Notify when Charge Control auto-disables after persistent dispatch apply failure (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.189.3
 
 **Datum:** 2026-10-07  
