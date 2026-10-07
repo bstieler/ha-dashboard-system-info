@@ -1,3 +1,20 @@
+# Release v1.190.1
+
+**Datum:** 2026-10-07  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.439** — Hotfix: choose/default mis-indentation disabled the apply-failure fallback script (STG-2.437 regression) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.190.0
 
 **Datum:** 2026-10-07  
