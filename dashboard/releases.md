@@ -1,3 +1,20 @@
+# Release v1.193.1
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.441** — Retire the artificial 105 % top-off sentinel in favor of the measured physical maximum (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.193.0
 
 **Datum:** 2026-10-07  
