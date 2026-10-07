@@ -1,3 +1,21 @@
+# Release v1.191.0
+
+**Datum:** 2026-10-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.141** — Fix D Option A: presence-conditioned morning-peak uplift for the battery plan curve (consumer-side, incl. morning-peak probability producer) (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.190.1
 
 **Datum:** 2026-10-07  
