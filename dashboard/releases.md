@@ -1,3 +1,26 @@
+# Release v1.193.0
+
+**Datum:** 2026-10-07  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.440** — alphaess_evaluation: publish planned min-soc trajectory in plan_curve (`core_restart`)
+- **STG-4.165** — Home dashboard: SoC chart 24h forward, phase targets, 2/3 width (`yaml_reload`)
+
+## Technisch
+
+- **STG-4.164** — Home dashboard: remove Nachtpuffer status card (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.192.1
 
 **Datum:** 2026-10-07  
