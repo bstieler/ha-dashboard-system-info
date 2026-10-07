@@ -1,3 +1,20 @@
+# Release v1.189.3
+
+**Datum:** 2026-10-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.436** — Honest dark-day Tiefpunkt lead: quote the real expected low, fix clock-night min semantics (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.189.2
 
 **Datum:** 2026-10-07  
