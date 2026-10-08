@@ -1,3 +1,20 @@
+# Release v1.194.0
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.442** — Dynamic MIN-SOC: simple guard mode with recovery margin (feature toggle) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.193.1
 
 **Datum:** 2026-10-08  
