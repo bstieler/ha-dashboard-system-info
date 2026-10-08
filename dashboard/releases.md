@@ -1,3 +1,20 @@
+# Release v1.197.0
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.446** — Guard mode: graduated 4-h response (hold vs. one-step-deeper) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.196.1
 
 **Datum:** 2026-10-08  
