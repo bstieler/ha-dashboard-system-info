@@ -1,3 +1,20 @@
+# Release v1.198.0
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.447** — Archive daily sunrise-anchored SOC plan curve and render 24h plan history in the SoC chart (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.197.0
 
 **Datum:** 2026-10-08  
