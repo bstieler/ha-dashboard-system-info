@@ -1,3 +1,20 @@
+# Release v1.196.1
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.445** — Guard explanation: drop redundant value bullet lines (formatting broken) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.196.0
 
 **Datum:** 2026-10-08  
