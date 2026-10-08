@@ -1,3 +1,20 @@
+# Release v1.196.0
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.166** — Home-Dashboard: kumulierte Verbrauchsabweichung zum BoD (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.195.0
 
 **Datum:** 2026-10-08  
