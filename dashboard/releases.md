@@ -1,3 +1,20 @@
+# Release v1.195.0
+
+**Datum:** 2026-10-08  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.444** — Guard mode: show both guard checks in explanation, restart-safe toggle (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.194.0
 
 **Datum:** 2026-10-08  
