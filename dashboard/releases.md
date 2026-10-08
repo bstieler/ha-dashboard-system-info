@@ -1,3 +1,20 @@
+# Release v1.199.0
+
+**Datum:** 2026-10-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.448** — Guard mode: 10% fallback on missing/partial forecast, midnight-robust PV stitching (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.198.0
 
 **Datum:** 2026-10-08  
