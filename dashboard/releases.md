@@ -1,3 +1,25 @@
+# Release v1.203.0
+
+**Datum:** 2026-10-09  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.452** — Surface SOC plan-curve staleness in the dashboard (preserve-path indicator) (`core_restart, yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.451** — Align SOC plan curve load forecast with rolling 24h source (parity with crossover/dynamic Min-SOC) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.202.0
 
 **Datum:** 2026-10-09  
