@@ -1,3 +1,20 @@
+# Release v1.203.1
+
+**Datum:** 2026-10-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.453** — Ladestrategie-Karte: chronologischer Tagesverlauf (Bisher/Jetzt/Danach) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.203.0
 
 **Datum:** 2026-10-09  
