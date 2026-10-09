@@ -1,3 +1,16 @@
+# Release v1.202.0
+
+**Datum:** 2026-10-09  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-7.61** — Deployment lock: prevent concurrent/parallel deploys across agents (`none`)
+
+
+---
+
 # Release v1.201.0
 
 **Datum:** 2026-10-09  
