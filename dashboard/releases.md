@@ -1,3 +1,20 @@
+# Release v1.201.0
+
+**Datum:** 2026-10-09  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.449** — Usable-capacity sensor: retry with backoff after recorder_unavailable (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.200.1
 
 **Datum:** 2026-10-09  
