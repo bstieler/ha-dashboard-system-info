@@ -1,3 +1,24 @@
+# Release v1.211.0
+
+**Datum:** 2026-10-10  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.464** — Min-SoC-Guard-Karte strukturiert: Bullets, Einzel-Verdicts mit Haken/Kreuz, Gesamtverdict (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.463** — Tagesende-Gate fuer 'Heute geplant': auf T2 statt Abend-Crossover verankern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.210.2
 
 **Datum:** 2026-10-10  
