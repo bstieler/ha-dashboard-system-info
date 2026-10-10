@@ -1,3 +1,20 @@
+# Release v1.210.1
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.459** — Hotfix: None day target crashes _compute_day_start after STG-2.458 (sensor unavailable) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.210.0
 
 **Datum:** 2026-10-10  
