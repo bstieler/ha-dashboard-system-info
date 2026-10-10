@@ -1,3 +1,20 @@
+# Release v1.211.1
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.171** — Intraday chart x-axis window computed 2h early (sun.sun UTC vs browser tz) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.211.0
 
 **Datum:** 2026-10-10  
