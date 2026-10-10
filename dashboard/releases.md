@@ -1,3 +1,20 @@
+# Release v1.210.2
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.462** — Tiefststand-Kachel: Abends immer frischen Live-Plan für heute Nacht, nicht Morgen-Archiv (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.210.1
 
 **Datum:** 2026-10-10  
