@@ -1,3 +1,22 @@
+# Release v1.204.0
+
+**Datum:** 2026-10-10  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.454** — Day-Start-Warum: Supergrün-Kontext auch anzeigen, wenn P1-Adjustment gegriffen hat (`core_restart`)
+- **STG-4.168** — SoC-Verlauf auf Home als Hero-Chart (400 px, kompakte Bottom-Legende) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.203.1
 
 **Datum:** 2026-10-09  
