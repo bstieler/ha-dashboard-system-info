@@ -1,3 +1,16 @@
+# Release v1.207.0
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-7.63** — Deploy timeout resilience: pipeline killed mid-deploy leaves apply-without-verify (`none`)
+
+
+---
+
 # Release v1.206.1
 
 **Datum:** 2026-10-10  
