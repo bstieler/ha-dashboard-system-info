@@ -1,3 +1,20 @@
+# Release v1.212.0
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.466** — SoC-Plan berücksichtigt Überladen über 100 %; Min-SoC-Plan-Linie entfernen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.211.1
 
 **Datum:** 2026-10-10  
