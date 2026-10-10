@@ -1,3 +1,20 @@
+# Release v1.205.0
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.455** — Tiefststand-Kachel: Lead fokussiert laufenden Morgen-Tiefpunkt bis zur Finalisierung (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.204.0
 
 **Datum:** 2026-10-10  
