@@ -1,3 +1,20 @@
+# Release v1.205.1
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.456** — Quote crossover night low in Ladestrategie 'Danach' section (parity with Tiefstand card) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.205.0
 
 **Datum:** 2026-10-10  
