@@ -1,3 +1,21 @@
+# Release v1.210.0
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.458** — Decouple Max signal from numeric 105 target; precise virtual-SOC loadup targets >100 (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.209.0
 
 **Datum:** 2026-10-10  
