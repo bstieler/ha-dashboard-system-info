@@ -1,3 +1,20 @@
+# Release v1.206.1
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.143** — House Consumption Forecast: short recorder gaps must not distort the intraday correction (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.206.0
 
 **Datum:** 2026-10-10  
