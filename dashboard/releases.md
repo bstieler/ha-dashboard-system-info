@@ -1,3 +1,20 @@
+# Release v1.206.0
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.169** — SoC-Hero Nachjustierung: Stat-Tiles unter Energie-Hero, kurze Seriennamen (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.205.1
 
 **Datum:** 2026-10-10  
