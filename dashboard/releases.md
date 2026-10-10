@@ -1,3 +1,20 @@
+# Release v1.208.0
+
+**Datum:** 2026-10-10  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.457** — Ladestrategie 'Heute geplant': Ziel-SOC direkt in den Bullets rendern (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.207.0
 
 **Datum:** 2026-10-10  
