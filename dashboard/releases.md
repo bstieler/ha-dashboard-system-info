@@ -1,3 +1,25 @@
+# Release v1.209.0
+
+**Datum:** 2026-10-10  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.170** — Consumption dashboard: show bias-corrected forecast instead of raw values (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-3.144** — House Consumption Forecast: bias correction sign inverted since STG-3.98 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.208.0
 
 **Datum:** 2026-10-10  
