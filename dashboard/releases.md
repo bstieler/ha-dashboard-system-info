@@ -1,3 +1,25 @@
+# Release v1.216.0
+
+**Datum:** 2026-10-11  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-8.60** — Negative Bayesian observations for intraday absence confidence (posterior-only) (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.478** — control_targets payload traegt control_target_phase3_calculation (None=Max) — Plan-Sensor Override greift live (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.215.0
 
 **Datum:** 2026-10-11  
