@@ -333,6 +333,45 @@ views:
                 state_not: "unavailable"
             card:
               type: custom:mushroom-entity-card
+              entity: input_boolean.zs7_circ_boost_enabled
+              name: Anwesenheits-Boost
+              icon: mdi:home-account-outline
+              tap_action:
+                action: more-info
+              hold_action:
+                action: toggle
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-template-card
+              primary: Anwesenheits-Boost – Info
+              secondary: >-
+                Pumpe läuft zwischen 06:00 und 23:00 Uhr zusätzlich zu den
+                Zeitfenstern, wenn jemand zu Hause ist (Anwesenheitserkennung).
+                Zeitfenster bleiben unverändert aktiv; der Boost ergänzt sie nur.
+                Tippen für Details.
+              icon: mdi:information-outline
+              tap_action:
+                action: more-info
+                entity: binary_sensor.zs7_circ_presence_boost
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unknown"
+              - condition: state
+                entity: input_select.zs7_circ_pump_switch
+                state_not: "unavailable"
+            card:
+              type: custom:mushroom-entity-card
               entity: input_boolean.zs7_circ_flush_enabled
               name: Durchspülung aktivieren
               icon: mdi:water-outline
@@ -414,6 +453,19 @@ views:
               entity: binary_sensor.zs7_circ_window_active
               name: Zeitfenster aktiv
               icon: mdi:calendar-clock-outline
+
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: input_boolean.zs7_circ_boost_enabled
+                state_not: "off"
+            card:
+              type: custom:mushroom-entity-card
+              entity: binary_sensor.zs7_circ_presence_boost
+              name: Anwesenheits-Boost aktiv
+              icon: mdi:home-account-outline
+              tap_action:
+                action: more-info
 
           - type: conditional
             conditions:
