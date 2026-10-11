@@ -1,3 +1,20 @@
+# Release v1.218.1
+
+**Datum:** 2026-10-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.474** — Day-Start reason chain: explicit max_battery branch instead of 'Unbekannte Auflösungsregel' fall-through (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.218.0
 
 **Datum:** 2026-10-11  
