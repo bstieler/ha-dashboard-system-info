@@ -1,3 +1,16 @@
+# Release v1.217.3
+
+**Datum:** 2026-10-11  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-6.53** — Release pipeline: fail-silent git error in collect_items_since_tag yields empty release notes (`none`)
+
+
+---
+
 # Release v1.217.2
 
 **Datum:** 2026-10-11  
