@@ -1,3 +1,21 @@
+# Release v1.214.1
+
+**Datum:** 2026-10-11  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.477** — SoC-Plan plant Max-Ziel (None) als Top-off bis gemessenes Maximum (bzw. LOADUP_TARGET_MAX), 105-Anchor ersetzt (`core_restart`)
+- **STG-6.52** — Release pipeline: collect_items_since_tag uses commit date instead of ancestry, skipping items merged after a tag (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.214.0
 
 **Datum:** 2026-10-11  
