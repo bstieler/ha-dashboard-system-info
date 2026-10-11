@@ -1,3 +1,20 @@
+# Release v1.212.4
+
+**Datum:** 2026-10-11  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.172** — CI fix: sync Verbrauch chart copy in home.yaml with canonical STG-4.170 card (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.212.3
 
 **Datum:** 2026-10-11  
