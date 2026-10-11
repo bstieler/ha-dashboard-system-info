@@ -1,3 +1,20 @@
+# Release v1.213.1
+
+**Datum:** 2026-10-11  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.174** — Plotly v4.0.0: Achsen-Titel auf Objektform umstellen (String-title Removal) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.213.0
 
 **Datum:** 2026-10-11  
