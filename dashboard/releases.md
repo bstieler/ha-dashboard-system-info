@@ -1,3 +1,22 @@
+# Release v1.213.0
+
+**Datum:** 2026-10-11  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.471** — Crossover-Terminologie alltagssprachlich: pessimistischer Fall vs. Durchschnittsprognose (`core_restart`)
+- **STG-4.173** — Consumption chart: blue forecast only from the current hour, green area fills the last measured hour (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.212.4
 
 **Datum:** 2026-10-11  
