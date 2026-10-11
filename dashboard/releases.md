@@ -1,3 +1,28 @@
+# Release v1.218.0
+
+**Datum:** 2026-10-11  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.409** — Harden night-residual store against duplicate finalize after ambiguous save failure (`core_restart`)
+- **STG-2.461** — day_charge_feasibility reports DEFAULT_TARGET_DAY stand-in 80 without signalling target_day_is_max (`core_restart`)
+
+## Technisch
+
+- **STG-2.318** — MIN-SOC helper friendly-name compliance (dashboard_terminology.md) (`yaml_reload`)
+- **STG-2.333** — Hygiene: pre-existing ruff F841 in dynamic_min_soc.py and submodule ruff-config anchoring (`none`)
+- **STG-2.378** — Supergruen follow-up: gate-review low findings (test hardening, attribute naming, cosmetics) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.217.3
 
 **Datum:** 2026-10-11  
