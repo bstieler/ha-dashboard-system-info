@@ -1,3 +1,20 @@
+# Release v1.212.3
+
+**Datum:** 2026-10-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.469** — Over-capacity Max falsely rendered as strategy calculation failure (Grund: unbekannt) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.212.2
 
 **Datum:** 2026-10-11  
