@@ -1,3 +1,20 @@
+# Release v1.217.0
+
+**Datum:** 2026-10-11  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.146** — Implement the evening-forecast stability fix decided by spike STG-3.145 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.216.0
 
 **Datum:** 2026-10-11  
