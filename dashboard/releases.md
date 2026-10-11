@@ -1,3 +1,24 @@
+# Release v1.214.0
+
+**Datum:** 2026-10-11  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.472** — Over-capacity sentence names evening/morning crossover times (`core_restart`)
+
+## Technisch
+
+- **STG-2.470** — STG-2.469 hardening: precedence pins, marker/status gate, rounding, constant import (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.213.1
 
 **Datum:** 2026-10-11  
