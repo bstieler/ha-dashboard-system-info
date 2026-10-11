@@ -1,3 +1,20 @@
+# Release v1.212.2
+
+**Datum:** 2026-10-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.147** — House Consumption Forecast: BOD resolver must skip restored stale-day rows instead of publishing zeros (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.212.1
 
 **Datum:** 2026-10-11  
