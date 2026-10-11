@@ -1,3 +1,20 @@
+# Release v1.217.2
+
+**Datum:** 2026-10-11  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-8.63** — Fix presence_labels.jsonl shell_command — HA runs templated commands without a shell, so >> never redirects (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.217.1
 
 **Datum:** 2026-10-11  
