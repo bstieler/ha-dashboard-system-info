@@ -1,3 +1,20 @@
+# Release v1.217.1
+
+**Datum:** 2026-10-11  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.151** — House Consumption Forecast: rank-based pair classification + gap-separation signal check in metric learning (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.217.0
 
 **Datum:** 2026-10-11  
