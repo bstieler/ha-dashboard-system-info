@@ -1,3 +1,20 @@
+# Release v1.219.1
+
+**Datum:** 2026-10-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.482** — Runtime never holds at reached numeric day target: hold gated behind 5-tick surplus streak that the absorbed surplus resets (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.219.0
 
 **Datum:** 2026-10-12  
