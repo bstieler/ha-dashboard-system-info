@@ -1,3 +1,21 @@
+# Release v1.218.4
+
+**Datum:** 2026-10-12  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-1.14** — forecast_common recorder_reader: SQLite-Connection cross-thread close noise bei jedem Shutdown (`core_restart`)
+- **STG-9.15** — forecast_common: RecorderReader 'Failed to close Recorder DB' on core stop (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.218.3
 
 **Datum:** 2026-10-12  
