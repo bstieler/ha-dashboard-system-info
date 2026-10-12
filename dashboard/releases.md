@@ -1,3 +1,20 @@
+# Release v1.218.2
+
+**Datum:** 2026-10-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.479** — SoC-Plan: Day-Max (P1/P2=None) als Vollladen-Rampe + Collapse-Konsistenz (T1>=T2 tageweise mit P2 planen) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.218.1
 
 **Datum:** 2026-10-11  
