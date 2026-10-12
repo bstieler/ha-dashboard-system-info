@@ -1,3 +1,20 @@
+# Release v1.218.3
+
+**Datum:** 2026-10-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.480** — Day explanation claims 'no PV crossover' although the crossover search never ran (phase3_not_needed / missing_interval_inputs not distinguished) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.218.2
 
 **Datum:** 2026-10-12  
