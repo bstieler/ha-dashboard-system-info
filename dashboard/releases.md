@@ -1,3 +1,20 @@
+# Release v1.219.2
+
+**Datum:** 2026-10-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.483** — Guard R24: level branch must test live SOC (>50%), not +24h value (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.219.1
 
 **Datum:** 2026-10-12  
