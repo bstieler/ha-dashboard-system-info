@@ -1,3 +1,20 @@
+# Release v1.219.0
+
+**Datum:** 2026-10-12  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.481** — Over-capacity/Max days: numeric day target = measured_max - p2_delta (battery health: avoid hours at high SOC) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.218.4
 
 **Datum:** 2026-10-12  
