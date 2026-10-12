@@ -1,9 +1,20 @@
 # Release v1.219.3
 
 **Datum:** 2026-10-12  
-**Items:** 1  
-**Gesamt-Deployment:** none
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
 
+## Neue Features
+
+- **STG-2.485** — Discharge floor guard via dispatch (replace dynamic MIN-SOC register writes) (`core_restart` — ausgeliefert mit Rollout-Flag OFF; erste Nacht läuft unter Live-Wache, Archivierung nach Clearance)
+
+## Spikes & Analysen
+
+- **STG-2.484** — Spike: validate dispatch charge-direction hold (discharge stop) on SMILE-G3-B10 (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
 
 ---
 
