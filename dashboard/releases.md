@@ -1,3 +1,20 @@
+# Release v1.223.1
+
+**Datum:** 2026-10-14  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.495** — Fix energy SOC-floor alias availability (has_value entity-id form) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.223.0
 
 **Datum:** 2026-10-14  
