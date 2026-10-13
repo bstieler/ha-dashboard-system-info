@@ -1,3 +1,21 @@
+# Release v1.222.0
+
+**Datum:** 2026-10-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.494** — measured_max: downward re-anchor from full-stop evidence + capacity cross-check + 30-day calibration notification (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.221.1
 
 **Datum:** 2026-10-13  
