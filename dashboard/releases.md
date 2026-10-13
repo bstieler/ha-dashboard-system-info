@@ -1,3 +1,20 @@
+# Release v1.220.0
+
+**Datum:** 2026-10-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.490** — SoC-Plan nutzt pending full_candidate_virtual_soc_pct als Max-Planziel waehrend laufendem Top-off (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.219.4
 
 **Datum:** 2026-10-13  
