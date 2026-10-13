@@ -1,3 +1,20 @@
+# Release v1.219.4
+
+**Datum:** 2026-10-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.489** — Guard R24: peak branch needs real margin (>= SOC + 5 pp), not EPS hair-trigger (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.219.3
 
 **Datum:** 2026-10-12  
