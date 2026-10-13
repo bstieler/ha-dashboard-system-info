@@ -1,3 +1,21 @@
+# Release v1.221.0
+
+**Datum:** 2026-10-13  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.491** — Overdelivery-Promotion: ueberlieferte Tage laden frueher aufs Load-up-Ziel (`core_restart`)
+- **STG-2.492** — Dark-Day-Regel: Max-Pfad faellt bei Unerreichbarkeit auf Max statt Max-20 (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.220.0
 
 **Datum:** 2026-10-13  
