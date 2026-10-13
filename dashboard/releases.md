@@ -1,3 +1,20 @@
+# Release v1.221.1
+
+**Datum:** 2026-10-13  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.493** — Rollback: Day-Ziel-Semantik zurueck zur Vorbild (Revert STG-2.481/2.482/2.491/2.492) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.221.0
 
 **Datum:** 2026-10-13  
