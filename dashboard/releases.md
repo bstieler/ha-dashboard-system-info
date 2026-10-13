@@ -1,3 +1,20 @@
+# Release v1.223.0
+
+**Datum:** 2026-10-14  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-2.486** — Frontend: switch MIN-SOC displays from register readback to software floor (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.222.0
 
 **Datum:** 2026-10-13  
