@@ -1,3 +1,20 @@
+# Release v1.226.0
+
+**Datum:** 2026-10-14  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.504** — Guard mode: configurable SOC Min-Floor (Mindest-Floor) anchors the 4-h rule (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.225.0
 
 **Datum:** 2026-10-14  
