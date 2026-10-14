@@ -1,3 +1,20 @@
+# Release v1.224.0
+
+**Datum:** 2026-10-14  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.497** — Max/over-capacity path: numeric day target = measured_max - p2_delta (restore pre-STG-2.458 hold behavior) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.223.2
 
 **Datum:** 2026-10-14  
