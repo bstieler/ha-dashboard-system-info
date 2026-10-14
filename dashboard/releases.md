@@ -1,3 +1,20 @@
+# Release v1.225.0
+
+**Datum:** 2026-10-14  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.499** — Phase start latching: fix reached phase starts as 'seit', in-phase target-only updates, persistent self_use at Max target (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.224.0
 
 **Datum:** 2026-10-14  
