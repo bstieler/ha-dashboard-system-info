@@ -1,3 +1,20 @@
+# Release v1.223.2
+
+**Datum:** 2026-10-14  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.496** — SOC-Floor wording in the dynamic-floor explanation renderer (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.223.1
 
 **Datum:** 2026-10-14  
