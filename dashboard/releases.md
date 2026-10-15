@@ -1,3 +1,21 @@
+# Release v1.227.2
+
+**Datum:** 2026-10-15  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.518** — Discharge guard unconditional — remove rollout toggle and all register 2128 writes (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.227.1
 
 **Datum:** 2026-10-15  
