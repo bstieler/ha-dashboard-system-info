@@ -1,3 +1,20 @@
+# Release v1.226.1
+
+**Datum:** 2026-10-15  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.506** — Fix invalid input_text max: 1000 (grid-stress notified-keys) that kills the whole input_text platform (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.226.0
 
 **Datum:** 2026-10-14  
