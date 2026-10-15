@@ -1,3 +1,29 @@
+# Release v1.227.0
+
+**Datum:** 2026-10-15  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-6.56** — Mandatory 'Affected Files / Scope' section for backlog items (`none`)
+
+## Technisch
+
+- **STG-2.508** — Grid-stress: remove battery-control override for Stromgedacht orange/red — announce-only phases (`core_restart, yaml_reload`)
+
+## Dokumentation
+
+- **STG-6.55** — Slim agent context: fixed session overhead from ~165 KB to < 35 KB (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.226.1
 
 **Datum:** 2026-10-15  
