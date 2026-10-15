@@ -1,3 +1,25 @@
+# Release v1.227.1
+
+**Datum:** 2026-10-15  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.487** — Remove legacy dynamic MIN-SOC register write path (`core_restart, yaml_reload`)
+
+## Test
+
+- **STG-2.510** — Pin accepted behavior: guard floor above live SOC (hold trickle-charges toward the floor) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.227.0
 
 **Datum:** 2026-10-15  
