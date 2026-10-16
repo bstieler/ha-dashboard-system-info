@@ -1,3 +1,20 @@
+# Release v1.232.2
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.531** — Pin contracted entity ids in evaluation sensor classes (STG-2.379) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.232.1
 
 **Datum:** 2026-10-16  
