@@ -1,3 +1,22 @@
+# Release v1.232.1
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** submodule_update
+
+## Technisch
+
+- **STG-2.528** — Unify battery floor terminology: Min-SOC vs Dynamic SOC-Floor vs SOC Min-Floor vs Night Low Point (`core_restart, yaml_reload, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.232.0
 
 **Datum:** 2026-10-16  
