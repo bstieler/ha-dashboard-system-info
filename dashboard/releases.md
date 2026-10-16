@@ -1,3 +1,20 @@
+# Release v1.231.0
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.529** — Show effective per-band kWh used by the night floor in the band-curve table (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.230.1
 
 **Datum:** 2026-10-16  
