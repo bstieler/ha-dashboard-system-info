@@ -1,3 +1,20 @@
+# Release v1.230.1
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.147** — pv_forecast sensor naming fragility: fresh install creates sensor.pv_forecast_latest_today vs registry-pinned sensor.pv_forecast_today (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.230.0
 
 **Datum:** 2026-10-16  
