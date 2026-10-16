@@ -1,3 +1,20 @@
+# Release v1.228.1
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.523** — Fix duplicate unique_id: STG-2.522 band-curve sensor dropped by HA (entity never registered) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.228.0
 
 **Datum:** 2026-10-16  
