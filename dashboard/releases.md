@@ -1,3 +1,26 @@
+# Release v1.230.0
+
+**Datum:** 2026-10-16  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.524** — Consume learned SOC-energy band curve in dynamic MIN-SOC conversions (band-aware floor/reserve) (`core_restart`)
+- **STG-2.526** — Present learned SOC band curve table on the battery control dashboard (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.527** — Harden band walk linear branch against non-finite energy input (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.229.0
 
 **Datum:** 2026-10-16  
