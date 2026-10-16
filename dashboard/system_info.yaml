@@ -1121,7 +1121,7 @@ views:
             grid_options:
               columns: 6
           - type: custom:mushroom-entity-card
-            entity: sensor.alpha_ess_ups_soc_battery
+            entity: sensor.alphaess_safety_floor_pct
             name: UPS Reserve SOC
             icon: mdi:battery-outline
             grid_options:
@@ -1190,7 +1190,7 @@ views:
                 name: SOC
                 type: line
                 color: "#9B6DE0"  # token: --zs7-battery
-              - entity: sensor.alpha_ess_ups_soc_battery
+              - entity: sensor.alphaess_safety_floor_pct
                 name: UPS Reserve
                 type: line
                 color: "#4C9EEB"  # token: --zs7-accent
