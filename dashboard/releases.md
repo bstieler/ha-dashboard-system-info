@@ -1,3 +1,20 @@
+# Release v1.233.1
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.152** — Freeze day-start (BoD) consumption plan curve: persist once per day, never overwrite (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.233.0
 
 **Datum:** 2026-10-16  
