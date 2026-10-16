@@ -1,3 +1,30 @@
+# Release v1.228.0
+
+**Datum:** 2026-10-16  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.522** — Learned SOC-energy band curve: rolling per-band kWh learning from pure discharge segments (data collection only) (`core_restart`)
+- **STG-6.57** — Agent context budget ratchet: check_agent_context.py + CI gate (`none`)
+- **STG-6.58** — Session governance: model routing, cache discipline, exploration subagent rule (`none`)
+
+## Bugfixes
+
+- **STG-3.126** — House Consumption Forecast: URI-encode recorder DB path in read-only sqlite3 URI (`core_restart`)
+
+## Technisch
+
+- **STG-6.59** — Cap pytest output in run_tests.sh (context-safe failure reporting) (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.227.2
 
 **Datum:** 2026-10-15  
