@@ -1,3 +1,20 @@
+# Release v1.233.2
+
+**Datum:** 2026-10-16  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.51** — deploy_manifest: basename(source) == basename(target) fuer Single-File-Projekte validieren (`none`)
+
+## Dokumentation
+
+- **STG-6.44** — Document external repo dependency ha-energy-forecast in ha-dashboard-energy (`none`)
+
+
+---
+
 # Release v1.233.1
 
 **Datum:** 2026-10-16  
