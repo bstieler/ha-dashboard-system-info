@@ -1,3 +1,20 @@
+# Release v1.233.0
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-4.177** — Rework Berechnung Dynamischer SOC-Floor view for guard-mode floor control (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.232.4
 
 **Datum:** 2026-10-16  
