@@ -1,3 +1,20 @@
+# Release v1.229.0
+
+**Datum:** 2026-10-16  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-6.61** — Strengthen parallel-session coordination: guard main-checkout occupation and prevent duplicate backlog items (`none`)
+
+## Bugfixes
+
+- **STG-6.60** — Fix Gate-Agent model routing: subagent pool instead of force-pin (`none`)
+
+
+---
+
 # Release v1.228.1
 
 **Datum:** 2026-10-16  
