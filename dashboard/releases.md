@@ -1,3 +1,21 @@
+# Release v1.232.3
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.532** — Remove Nacht-Auswertung dashboard view and night-history table rendering (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.232.2
 
 **Datum:** 2026-10-16  
