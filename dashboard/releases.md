@@ -1,3 +1,16 @@
+# Release v1.232.0
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Neue Features
+
+- **STG-6.62** — Backlog claim transactions must not live uncommitted on main (guard staleness + checkout refusal) (`none`)
+
+
+---
+
 # Release v1.231.0
 
 **Datum:** 2026-10-16  
