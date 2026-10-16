@@ -1,3 +1,16 @@
+# Release v1.232.4
+
+**Datum:** 2026-10-16  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-13.32** — PULSE: Remove ha-pulse subproject (project discontinued) (`none`)
+
+
+---
+
 # Release v1.232.3
 
 **Datum:** 2026-10-16  
