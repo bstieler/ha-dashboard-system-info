@@ -1,3 +1,31 @@
+# Release v1.233.3
+
+**Datum:** 2026-10-17  
+**Items:** 7  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-6.42** — Release pipeline: roll back released_items.json commit when tag creation fails (`none`)
+- **STG-7.44** — Release lock: require minimum age before breaking an ownerless lock (`none`)
+- **STG-7.52** — deploy_core: Rollback kann nach Single-File-Rename die alte Datei nicht wiederherstellen (`none`)
+- **STG-7.60** — Deploy-Ordering: ha-dashboard-home depends_on fehlt Saldo-Template-Projekte (`none`)
+- **STG-7.64** — Treat docs/backlog paths as bookkeeping so docs-only merges do not block deploy authorization (`none`)
+- **STG-8.66** — Circulation pump persist save should also fire at HA start (`yaml_reload`)
+
+## Technisch
+
+- **STG-8.14** — Circulation-Pump: Helper-Dreifachdefinition auflösen und Persistenz-Mechanismus gegen nativen Restore prüfen (`yaml_reload, ha-circulation-pump/customize.yaml, ha-circulation-pump/README.md`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `ha-circulation-pump/customize.yaml`
+1. `ha-circulation-pump/README.md`
+
+
+---
+
 # Release v1.233.2
 
 **Datum:** 2026-10-16  
