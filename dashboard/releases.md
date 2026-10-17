@@ -1,3 +1,20 @@
+# Release v1.233.4
+
+**Datum:** 2026-10-17  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.533** — Guard-Modus: Dunkeltag-Hold einfrieren (Ceil-Hold-Floor, 24/7-Entlade-Guard, Release-Hysterese) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.233.3
 
 **Datum:** 2026-10-17  
