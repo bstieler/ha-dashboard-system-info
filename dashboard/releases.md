@@ -1,3 +1,22 @@
+# Release v1.234.0
+
+**Datum:** 2026-10-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.535** — SOC-Floor-Erklärungskarte: Freigabe-Sicht statt Setz-Sicht (reine Textumformulierung) (`core_restart`)
+- **STG-4.178** — Home-Chipreihe: Live-Modus-Chip Batteriesteuerung (Self-use / Hold (Load) / Hold (Floor)) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.233.4
 
 **Datum:** 2026-10-17  
