@@ -1,3 +1,22 @@
+# Release v1.235.0
+
+**Datum:** 2026-10-17  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.536** — Simulate dynamic SOC-Floor (incl. guard mode) 24 h ahead in the plan-curve sensor and derive floor-faithful SOC plan + night low point (`core_restart`)
+- **STG-4.179** — SoC-Verlauf cards: render the 24-h dynamic SOC-Floor forecast series from plan_curve[].soc_floor again (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.234.0
 
 **Datum:** 2026-10-17  
