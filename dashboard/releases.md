@@ -1,3 +1,26 @@
+# Release v1.237.0
+
+**Datum:** 2026-10-18  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.511** — Control mode foundation: mode request helpers, effective mode and mode-profile override layer (`core_restart, yaml_reload`)
+- **STG-4.182** — Live-Modus-Chip: Freigabegrund mit Live-Richtung (Release-Context) (`core_restart, yaml_reload`)
+
+## Spikes & Analysen
+
+- **STG-2.513** — Spike: verify grid force-charge Modbus path on AlphaESS SMILE-G3 (registers, limits, test protocol) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.236.2
 
 **Datum:** 2026-10-18  
