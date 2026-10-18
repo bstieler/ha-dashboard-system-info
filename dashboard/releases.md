@@ -1,3 +1,26 @@
+# Release v1.238.1
+
+**Datum:** 2026-10-18  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.515** — Remove period-bands toggle: P10/P50/P90 band logic always active (`core_restart, yaml_reload`)
+- **STG-2.516** — Remove Dynamic SOC-Floor enable toggle: dynamic floor always active (`core_restart, yaml_reload`)
+
+## Dokumentation
+
+- **STG-2.519** — Document residual role of the STG-2.257 output damping (see-saw protection) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.238.0
 
 **Datum:** 2026-10-18  
