@@ -1,3 +1,20 @@
+# Release v1.239.0
+
+**Datum:** 2026-10-18  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Neue Features
+
+- **STG-2.517** — Dashboard: rebuild Steuerung card for the control-mode model (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.238.1
 
 **Datum:** 2026-10-18  
