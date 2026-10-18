@@ -1,3 +1,22 @@
+# Release v1.238.0
+
+**Datum:** 2026-10-18  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.512** — Force-load placeholder: decision logic + sensor for safety/emergency grid charging, no Modbus writes (`core_restart, yaml_reload`)
+- **STG-2.514** — Day phases in safety/emergency: direct load-up between sunrise and sunset (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.237.0
 
 **Datum:** 2026-10-18  
