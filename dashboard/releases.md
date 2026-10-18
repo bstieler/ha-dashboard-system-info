@@ -1,3 +1,20 @@
+# Release v1.236.1
+
+**Datum:** 2026-10-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.538** — Plan-curve guard forecast horizon: stitch day-after-tomorrow PV/load like the floor sensor so late-window steps can compute real guard verdicts (pre-sunrise release was invisible) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.236.0
 
 **Datum:** 2026-10-18  
