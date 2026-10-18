@@ -1,3 +1,20 @@
+# Release v1.235.1
+
+**Datum:** 2026-10-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.537** — Plan-curve guard simulation: carry the floor forward on forecast-coverage gaps instead of safety-fallback drain (false nightly dip to 10 %) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.235.0
 
 **Datum:** 2026-10-17  
