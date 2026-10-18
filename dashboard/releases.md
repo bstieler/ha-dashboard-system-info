@@ -1,3 +1,24 @@
+# Release v1.236.0
+
+**Datum:** 2026-10-18  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.180** — SOC-Floor-Erklärungskarte: verständlicheres Redesign der Entscheidungskette (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.539** — Guard 24h-Regel: Tagespeak-Verzweigung nur bei nicht-negativem Tagesnetto (Ratschen-Stopp) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.235.1
 
 **Datum:** 2026-10-18  
