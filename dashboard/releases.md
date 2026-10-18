@@ -1,3 +1,20 @@
+# Release v1.236.2
+
+**Datum:** 2026-10-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.181** — SOC-Floor-Karte: Gruppen-Trennung (Markdown-Fix) und präzisere Freigabe-Ketten-Formulierung (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.236.1
 
 **Datum:** 2026-10-18  
