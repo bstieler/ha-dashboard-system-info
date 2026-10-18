@@ -1,3 +1,20 @@
+# Release v1.240.0
+
+**Datum:** 2026-10-18  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.544** — Guard-Modus: konfigurierbares Kurzzeit-Fenster (Near-Window 1-12 h, Start 12 h) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.239.0
 
 **Datum:** 2026-10-18  
