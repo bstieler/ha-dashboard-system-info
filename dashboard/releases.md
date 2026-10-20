@@ -1,3 +1,26 @@
+# Release v1.241.0
+
+**Datum:** 2026-10-21  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.485** — Discharge floor guard via dispatch (replace Dynamic SOC-Floor register writes) (`core_restart, yaml_reload`)
+
+## Technisch
+
+- **STG-2.443** — Remove legacy Dynamic SOC-Floor strategy and guard feature toggle (`core_restart`)
+- **STG-2.488** — Remove Dynamic SOC-Floor upward output damping (STG-2.257 30-min rate limit) (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.240.3
 
 **Datum:** 2026-10-20  
