@@ -1,3 +1,25 @@
+# Release v1.240.3
+
+**Datum:** 2026-10-20  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.546** — SOC-Floor card: fix inverted Tagespeak bullet, state saldo basis, add 24 h saldo chart (`core_restart, yaml_reload`)
+
+## Technisch
+
+- **STG-2.548** — Single mean SoC-plan computation: plan sensor owns the curve, crossover consumes it (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.240.2
 
 **Datum:** 2026-10-20  
