@@ -1,3 +1,20 @@
+# Release v1.240.1
+
+**Datum:** 2026-10-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.547** — Thread SOC band curve summary into crossover/night-low-point sensor (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.240.0
 
 **Datum:** 2026-10-18  
