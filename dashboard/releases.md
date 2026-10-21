@@ -1,3 +1,20 @@
+# Release v1.242.0
+
+**Datum:** 2026-10-21  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.553** — Guard-Release: Level-Hysterese um festen 4-h-Level-Peak > 55 % erweitert (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.241.0
 
 **Datum:** 2026-10-21  
