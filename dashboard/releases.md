@@ -1,3 +1,38 @@
+# Release v1.243.0
+
+**Datum:** 2026-10-21  
+**Items:** 7  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.555** — Erklärungskarte: 24h-Block auf Zwei-Wege-Modell umbauen (Level / Tageszyklus) (`core_restart`)
+- **STG-2.557** — Guard Level-Fenster links abgeschlossen: Live-Komponente in 4h-Peak absorbieren (`core_restart`)
+- **STG-2.559** — MaxFloor (55-%-Recovery-Level) konfigurierbar machen, restart-robust (`core_restart`)
+
+## Bugfixes
+
+- **STG-2.560** — Guard Near-Window-Helfer restart-robust machen (initial: 12 entfernen) (`core_restart`)
+
+## Technisch
+
+- **STG-2.554** — Guard Check B: klassische 24h-Margin-Regel entfernen (subsumiert durch Tagespeak) (`core_restart`)
+
+## Dokumentation
+
+- **STG-2.558** — Tagespeak-Marge (+5 pp) als Schutz invariant dokumentieren (`none`)
+
+## Test
+
+- **STG-2.556** — Guard-Regeln gegen Zukunft pinnen: Subsumptions-Test und Live-Band-Test (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.242.0
 
 **Datum:** 2026-10-21  
