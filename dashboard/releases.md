@@ -1,3 +1,20 @@
+# Release v1.244.0
+
+**Datum:** 2026-10-22  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.561** — Erklärungskarte: Level- und Netday-Zeilen vereinfachen (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.243.0
 
 **Datum:** 2026-10-21  
