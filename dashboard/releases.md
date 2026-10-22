@@ -1,3 +1,20 @@
+# Release v1.244.1
+
+**Datum:** 2026-10-22  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.183** — Fix zs7-energy Verlauf charts: wrong per-period values from cumulative AlphaESS counters (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.244.0
 
 **Datum:** 2026-10-22  
