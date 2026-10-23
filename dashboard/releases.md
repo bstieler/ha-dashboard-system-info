@@ -1,3 +1,20 @@
+# Release v1.244.2
+
+**Datum:** 2026-10-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.155** — Morning uplift (STG-3.141): include partial start hour and switch to additive expected-peak semantics (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.244.1
 
 **Datum:** 2026-10-22  
