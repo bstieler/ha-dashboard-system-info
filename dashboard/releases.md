@@ -1,3 +1,20 @@
+# Release v1.244.4
+
+**Datum:** 2026-10-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.563** — DST-fold hardening: remaining wall-stepped integrations and walks in ha-pv-config (audit follow-up to STG-2.562) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.244.3
 
 **Datum:** 2026-10-24  
