@@ -1,3 +1,20 @@
+# Release v1.244.5
+
+**Datum:** 2026-10-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.156** — DST-fold audit follow-ups: producer payloads, weather archive, interval integration (ha-pv-forecast, ha-house-consumption-forecast, ha-dashboard-energy) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.244.4
 
 **Datum:** 2026-10-24  
