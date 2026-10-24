@@ -1,3 +1,20 @@
+# Release v1.244.6
+
+**Datum:** 2026-10-24  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.564** — SOC Min-Floor und Recovery-SoC verlieren Owner-Werte bei HA-Neustart (initial: entfernen) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.244.5
 
 **Datum:** 2026-10-24  
