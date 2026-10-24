@@ -1,3 +1,26 @@
+# Release v1.244.3
+
+**Datum:** 2026-10-24  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.562** — Guard: DST-fold coverage gap routes dynamic SOC-Floor to missing_forecast for ~24 h (`core_restart`)
+
+## Technisch
+
+- **STG-12.51** — Mobility: HA host runtime cleanup (OpenPublicTransport, kvv_trip, kvv-cards) (`core_restart`)
+- **STG-12.52** — Mobility: remove ha-dashboard-oepnv and ha-kvv-trip subprojects + deploy registry (`none`)
+- **STG-12.53** — Mobility: governance docs cleanup + epic STG-12 discontinuation (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.244.2
 
 **Datum:** 2026-10-23  
