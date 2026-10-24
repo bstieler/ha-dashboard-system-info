@@ -1,3 +1,20 @@
+# Release v1.244.7
+
+**Datum:** 2026-10-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.565** — Guard level way: netday-gate the live-SOC anchor echo of the closed 4 h level window (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.244.6
 
 **Datum:** 2026-10-24  
