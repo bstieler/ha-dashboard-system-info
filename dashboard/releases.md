@@ -1,3 +1,24 @@
+# Release v1.245.0
+
+**Datum:** 2026-10-25  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-6.63** — Allow k3.1-pro as exception model (whitelist, template, rules) (`none`)
+
+## Technisch
+
+- **STG-2.566** — Clarify dynamic SOC-floor guard explanation (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.244.7
 
 **Datum:** 2026-10-24  
