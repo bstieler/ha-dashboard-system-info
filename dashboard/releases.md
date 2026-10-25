@@ -1,3 +1,20 @@
+# Release v1.246.0
+
+**Datum:** 2026-10-25  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.567** — Add grid-outage reserve duration to Tiefststand card (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.245.0
 
 **Datum:** 2026-10-25  
