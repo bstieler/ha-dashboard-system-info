@@ -1,3 +1,20 @@
+# Release v1.247.0
+
+**Datum:** 2026-10-26  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.184** — Accuracy-Karte: 30-Tage-Rolling und 14 Tage X-Achse (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.246.0
 
 **Datum:** 2026-10-25  
