@@ -1,3 +1,21 @@
+# Release v1.247.2
+
+**Datum:** 2026-10-27  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.569** — Preserve virtual-SOC top-off energy across restore (`core_restart`)
+- **STG-2.570** — Unify virtual-SOC chart and plan energy scale (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.247.1
 
 **Datum:** 2026-10-26  
