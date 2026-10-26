@@ -1,3 +1,20 @@
+# Release v1.247.1
+
+**Datum:** 2026-10-26  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-2.568** — Use 5% protection cutoff in outage simulation (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.247.0
 
 **Datum:** 2026-10-26  
