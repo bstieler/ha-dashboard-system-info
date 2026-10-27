@@ -1,3 +1,20 @@
+# Release v1.247.5
+
+**Datum:** 2026-10-27  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-4.2** — Add a mypy baseline for scripts/ to CI (`none`)
+
+## Dokumentation
+
+- **STG-6.65** — Restore agent-context budget and pointer hygiene (`none`)
+
+
+---
+
 # Release v1.247.4
 
 **Datum:** 2026-10-27  
