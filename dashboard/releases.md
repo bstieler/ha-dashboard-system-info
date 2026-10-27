@@ -1,3 +1,21 @@
+# Release v1.248.0
+
+**Datum:** 2026-10-27  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.149** — House Consumption Forecast: calibrate train/query weather endpoint skew (archive vs forecast) (`core_restart`)
+- **STG-3.150** — House Consumption Forecast: pin recent archive weather rows instead of wholesale full-sync replacement (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.247.5
 
 **Datum:** 2026-10-27  
