@@ -1,3 +1,20 @@
+# Release v1.248.1
+
+**Datum:** 2026-10-27  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.157** — House Consumption Forecast: bound weather pins to completed hours (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.248.0
 
 **Datum:** 2026-10-27  
