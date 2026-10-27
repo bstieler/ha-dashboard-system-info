@@ -1,3 +1,22 @@
+# Release v1.247.3
+
+**Datum:** 2026-10-27  
+**Items:** 1  
+**Gesamt-Deployment:** submodule_update
+
+## Technisch
+
+- **STG-2.571** — Remove tomorrow-reserve learning from charge control (`core_restart, yaml_reload, submodule_update`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+1. `submodule_update`
+
+
+---
+
 # Release v1.247.2
 
 **Datum:** 2026-10-27  
