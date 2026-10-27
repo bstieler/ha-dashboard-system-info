@@ -1,3 +1,20 @@
+# Release v1.247.4
+
+**Datum:** 2026-10-27  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-3.68** — House Consumption Forecast: Totes HTTP-/Profil-Engine-Cleanup (src/ Shared Layer bleibt) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.247.3
 
 **Datum:** 2026-10-27  
