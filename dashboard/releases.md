@@ -1,3 +1,20 @@
+# Release v1.249.1
+
+**Datum:** 2026-10-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.572** — SOC-Floor explanation: disclose non-uplifted reserve forecast (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.249.0
 
 **Datum:** 2026-10-27  
