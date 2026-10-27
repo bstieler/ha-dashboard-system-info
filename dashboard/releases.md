@@ -1,3 +1,21 @@
+# Release v1.249.0
+
+**Datum:** 2026-10-27  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.507** — Deploy-time config validation: catch platform-level YAML schema errors (input_text lesson) before/with deploys (`none`)
+- **STG-2.525** — Correct loadup top-off energy model from learned vsoc measurements (NONLINEAR_TOPOFF_ENERGY_RATIO) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.248.1
 
 **Datum:** 2026-10-27  
