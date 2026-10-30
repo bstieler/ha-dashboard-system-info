@@ -1,3 +1,22 @@
+# Release v1.250.0
+
+**Datum:** 2026-10-30  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.573** — Anchor SOC plan archive at evening crossover (`core_restart`)
+- **STG-4.185** — Show complete evening SOC plan cycle (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.249.1
 
 **Datum:** 2026-10-28  
