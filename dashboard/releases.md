@@ -1,3 +1,29 @@
+# Release v1.252.0
+
+**Datum:** 2026-11-03  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.90** — Consumption-Forecast-Dashboard V2: P10/P90 corridor in view 'Ausblick' (`yaml_reload`)
+
+## Bugfixes
+
+- **STG-2.574** — Gate SOC plan archive on stabilized startup inputs (`core_restart`)
+
+## Test
+
+- **STG-5.28** — Separate hardware Min-SOC expectation from outage protection (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.251.0
 
 **Datum:** 2026-11-03  
