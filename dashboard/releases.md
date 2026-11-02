@@ -1,3 +1,22 @@
+# Release v1.251.0
+
+**Datum:** 2026-11-03  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.575** — Measure avoidable grid import caused by charge and discharge holds (`core_restart`)
+- **STG-4.186** — Rename Home night-low card to Entladung & Bilanz (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.250.0
 
 **Datum:** 2026-10-30  
