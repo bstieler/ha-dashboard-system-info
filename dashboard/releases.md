@@ -1,3 +1,20 @@
+# Release v1.252.2
+
+**Datum:** 2026-11-03  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.190** — Use actual ApexCharts axis label classes in light-mode overrides (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.252.1
 
 **Datum:** 2026-11-03  
