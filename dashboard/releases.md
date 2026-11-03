@@ -1,3 +1,28 @@
+# Release v1.252.1
+
+**Datum:** 2026-11-03  
+**Items:** 3  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.188** — Restore ZS7 chart text legibility in light mode (`yaml_reload`)
+
+## Technisch
+
+- **STG-4.189** — Replace deprecated section titles and enforce heading-card governance (`yaml_reload`)
+
+## Spikes & Analysen
+
+- **STG-4.187** — Measure chart-heavy Lovelace rendering and define optimization (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.252.0
 
 **Datum:** 2026-11-03  
