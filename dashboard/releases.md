@@ -1,3 +1,20 @@
+# Release v1.252.4
+
+**Datum:** 2026-11-03  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.576** — Tolerate five-minute runtime gaps in hold energy balance (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.252.3
 
 **Datum:** 2026-11-03  
