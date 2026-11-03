@@ -1,3 +1,20 @@
+# Release v1.252.3
+
+**Datum:** 2026-11-03  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.191** — Resolve ApexCharts theme text colors through EVAL configuration (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.252.2
 
 **Datum:** 2026-11-03  
