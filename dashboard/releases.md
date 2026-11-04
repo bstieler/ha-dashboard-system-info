@@ -1,3 +1,20 @@
+# Release v1.253.1
+
+**Datum:** 2026-11-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.578** — Guard explanation: show overall verdicts directly after way labels (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.253.0
 
 **Datum:** 2026-11-04  
