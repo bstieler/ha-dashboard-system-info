@@ -1,3 +1,20 @@
+# Release v1.253.0
+
+**Datum:** 2026-11-04  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.577** — Guard: conditional early discharge release before PV clipping (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.252.4
 
 **Datum:** 2026-11-03  
