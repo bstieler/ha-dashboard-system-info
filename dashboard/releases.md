@@ -1,3 +1,25 @@
+# Release v1.254.0
+
+**Datum:** 2026-11-05  
+**Items:** 3  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-4.193** — Split Home into task-oriented monitoring views (`core_restart`)
+- **STG-4.194** — Add concise battery decision summaries to Home Start (`core_restart`)
+
+## Bugfixes
+
+- **STG-4.192** — Make the Home SoC hero genuinely full-width (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.253.1
 
 **Datum:** 2026-11-04  
