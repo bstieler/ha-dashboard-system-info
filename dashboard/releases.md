@@ -1,3 +1,20 @@
+# Release v1.254.1
+
+**Datum:** 2026-11-05  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-4.195** — Fill the SoC hero card within its span-2 section (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.254.0
 
 **Datum:** 2026-11-05  
