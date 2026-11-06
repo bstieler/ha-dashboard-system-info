@@ -1,3 +1,20 @@
+# Release v1.256.0
+
+**Datum:** 2026-11-06  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.583** — Make hold energy balance resilient against data gaps (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.255.0
 
 **Datum:** 2026-11-06  
