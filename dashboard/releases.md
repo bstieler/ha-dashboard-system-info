@@ -1,3 +1,20 @@
+# Release v1.255.0
+
+**Datum:** 2026-11-06  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.580** — Guard way C: drop the fixed 5 h imminent-rebound gate (early clipping release) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.254.3
 
 **Datum:** 2026-11-06  
