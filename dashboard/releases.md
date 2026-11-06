@@ -1,3 +1,16 @@
+# Release v1.254.3
+
+**Datum:** 2026-11-06  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.67** — Condense ha-pv-config/AGENTS.md to restore agent-context budget headroom (`none`)
+
+
+---
+
 # Release v1.254.2
 
 **Datum:** 2026-11-06  
