@@ -1,3 +1,16 @@
+# Release v1.254.2
+
+**Datum:** 2026-11-06  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.66** — Governance overhead: cheap hotfix lane + small-change Gate tier + Superpowers subordination (`none`)
+
+
+---
+
 # Release v1.254.1
 
 **Datum:** 2026-11-05  
