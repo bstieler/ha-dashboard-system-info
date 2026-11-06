@@ -1,3 +1,20 @@
+# Release v1.256.1
+
+**Datum:** 2026-11-06  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.584** — Fix hold balance store schema bump: HA Store v1->v2 migration missing (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.256.0
 
 **Datum:** 2026-11-06  
