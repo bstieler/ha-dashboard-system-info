@@ -1,3 +1,21 @@
+# Release v1.257.0
+
+**Datum:** 2026-11-07  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.587** — Dynamischer SOC-Floor: energiebasierter Kappungs-Gate für Weg C mit Feature-Toggle (`yaml_reload, core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.256.2
 
 **Datum:** 2026-11-07  
