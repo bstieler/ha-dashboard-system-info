@@ -1,3 +1,21 @@
+# Release v1.258.0
+
+**Datum:** 2026-11-07  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.589** — SOC-Floor-Erklärungskarte: Energie-Gate als eigener Entscheidungspfad darstellen (`core_restart`)
+- **STG-2.591** — Energie-Gate: Bypass durch Nutzer-Variante B ersetzen (Gate als Weg 1.d, Prüfung 2 gilt immer) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.257.0
 
 **Datum:** 2026-11-07  
