@@ -1,3 +1,21 @@
+# Release v1.256.2
+
+**Datum:** 2026-11-07  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.585** — Stale-Zero-Ausnahme: fehlende PV-Daten mit letztem Wert < 200 W als bekannte 0 W behandeln (`core_restart`)
+- **STG-2.586** — Cloud-Fallback-Freshness an realen Cloud-Takt anpassen (90 s → 300 s) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.256.1
 
 **Datum:** 2026-11-06  
