@@ -1,3 +1,24 @@
+# Release v1.258.1
+
+**Datum:** 2026-11-09  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.592** — Hold-Bilanz: Entlade-Nachtauswertung nie auswertbar (Reserve-None an dunklen Tagen) (`core_restart`)
+
+## Ops
+
+- **STG-5.29** — Dev-stack refresh: HA dev pin to deployed generation 2026.10, GitHub Actions v7, venv tooling update (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.258.0
 
 **Datum:** 2026-11-07  
