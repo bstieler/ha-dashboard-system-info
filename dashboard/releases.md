@@ -1,3 +1,25 @@
+# Release v1.258.2
+
+**Datum:** 2026-11-12  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.593** — Hold-Bilanz: Zähler-Lücken in flachen (batterieversorgten) Phasen fälschlich nicht auswertbar (`core_restart`)
+
+## Ops
+
+- **STG-4.196** — Vendor-Bump energy-flow-card-plus auf v0.5.1 inkl. collection_key-Patch (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.258.1
 
 **Datum:** 2026-11-09  
