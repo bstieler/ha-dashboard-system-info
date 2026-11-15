@@ -1,3 +1,24 @@
+# Release v1.258.3
+
+**Datum:** 2026-11-15  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.158** — Cap additive MOS dawn bias at weather baseline (`core_restart`)
+
+## Ops
+
+- **STG-4.197** — energy-flow-card-plus: Vendor-Pin und Deploy-Eintrag abbauen (Marketplace-Verwaltung) (`none`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.258.2
 
 **Datum:** 2026-11-12  
