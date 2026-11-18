@@ -1,3 +1,16 @@
+# Release v1.258.5
+
+**Datum:** 2026-11-18  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.73** — Exclude PV forecast runtime files from the local deploy plan (`none`)
+
+
+---
+
 # Release v1.258.4
 
 **Datum:** 2026-11-18  
