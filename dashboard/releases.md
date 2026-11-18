@@ -1,3 +1,16 @@
+# Release v1.258.4
+
+**Datum:** 2026-11-18  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Bugfixes
+
+- **STG-7.68** — Roll back the failing project after a partial apply (`none`)
+
+
+---
+
 # Release v1.258.3
 
 **Datum:** 2026-11-15  
