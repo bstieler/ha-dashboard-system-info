@@ -1,3 +1,30 @@
+# Release v1.258.6
+
+**Datum:** 2026-11-18  
+**Items:** 4  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.550** — Fix apply_target UndefinedError: use reserve_soc_raw for dispatch_soc_raw (`yaml_reload`)
+- **STG-5.30** — Fix agent-context budget overflow — check_agent_context BUDGET_EXCEEDED breaks CI and one test on main (`none`)
+
+## Technisch
+
+- **STG-2.542** — Control mode: resolve effective mode once per tick and thread through both collectors (`core_restart`)
+
+## Test
+
+- **STG-5.26** — Live regression: widen night-plan anchor bound for measured SOC above 100 % (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.258.5
 
 **Datum:** 2026-11-18  
