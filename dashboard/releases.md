@@ -1,3 +1,16 @@
+# Release v1.258.9
+
+**Datum:** 2026-11-19  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Dokumentation
+
+- **STG-6.70** — Make superpowers skills optional help instead of a mandatory pre-check (`none`)
+
+
+---
+
 # Release v1.258.8
 
 **Datum:** 2026-11-19  
