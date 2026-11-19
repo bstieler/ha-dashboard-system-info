@@ -1,3 +1,16 @@
+# Release v1.258.11
+
+**Datum:** 2026-11-19  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.72** — Move legacy verdict files and loose archive items out of the way (`none`)
+
+
+---
+
 # Release v1.258.10
 
 **Datum:** 2026-11-19  
