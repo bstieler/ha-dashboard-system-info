@@ -1,3 +1,18 @@
+# Release v1.258.7
+
+**Datum:** 2026-11-19  
+**Items:** 3  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.68** — Make project rules independent of AI vendor and model names (`none`)
+- **STG-6.69** — Simplify Gate-Agent review: inline by default, full protocol only for critical paths (`none`)
+- **STG-7.74** — Script-first post-deploy verification; agent only on failure (`none`)
+
+
+---
+
 # Release v1.258.6
 
 **Datum:** 2026-11-18  
