@@ -1,3 +1,16 @@
+# Release v1.258.8
+
+**Datum:** 2026-11-19  
+**Items:** 1  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-7.75** — Releases with deployment step none skip the deploy automatically (`none`)
+
+
+---
+
 # Release v1.258.7
 
 **Datum:** 2026-11-19  
