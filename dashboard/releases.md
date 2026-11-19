@@ -1,3 +1,17 @@
+# Release v1.258.10
+
+**Datum:** 2026-11-19  
+**Items:** 2  
+**Gesamt-Deployment:** none
+
+## Technisch
+
+- **STG-6.71** — Shrink the critical-path list that forces a full Gate-Agent review (`none`)
+- **STG-7.76** — Bump custom-component manifest versions only when the component changed (`none`)
+
+
+---
+
 # Release v1.258.9
 
 **Datum:** 2026-11-19  
