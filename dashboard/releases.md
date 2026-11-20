@@ -1,3 +1,38 @@
+# Release v1.259.0
+
+**Datum:** 2026-11-20  
+**Items:** 9  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.74** — house_consumption_forecast: k-NN Distanzberechnung vektorisieren (`core_restart`)
+- **STG-4.176** — Circulation pump presence boost: master toggle + System dashboard cards (Zirkulation view) (`yaml_reload`)
+- **STG-7.62** — Remote deploy lease: PID-liveness reclaim for same-host dead holders (`none`)
+
+## Bugfixes
+
+- **STG-2.467** — Propagate Max day target to charge control — None day/day_start must reach runtime as charge_until_full (`core_restart`)
+- **STG-2.503** — Grid-stress dismiss automation: add boolean-tolerant to-state check; document window_key hour-bucket collision (`yaml_reload`)
+- **STG-2.540** — Release-State Write-Back: bei unverfügbarem Runtime-Sensor nicht löschen (`yaml_reload`)
+
+## Technisch
+
+- **STG-9.5** — PV-Forecast: History backfill liest Recorder-DB pro Tag separat – auf einen Bulk-Range-Query umstellen (`core_restart`)
+
+## Ops
+
+- **STG-2.581** — Remove orphaned entity-registry entries (legacy AlphaESS dynamic-Min-SOC/grid-stress helpers) (`none`)
+- **STG-2.582** — Remove remaining non-project registry orphans (owner decision, follow-up to STG-2.581) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.258.11
 
 **Datum:** 2026-11-19  
