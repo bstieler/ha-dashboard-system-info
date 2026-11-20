@@ -1,3 +1,20 @@
+# Release v1.259.1
+
+**Datum:** 2026-11-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Ops
+
+- **STG-2.595** — Silence AlphaESS coordinator warning (integration v0.9.0, upstream #291) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.259.0
 
 **Datum:** 2026-11-20  
