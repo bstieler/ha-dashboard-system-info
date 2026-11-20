@@ -1,3 +1,20 @@
+# Release v1.259.2
+
+**Datum:** 2026-11-20  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Spikes & Analysen
+
+- **STG-3.154** — Investigate: sensor.pv_forecast_intraday_latest_today publishes state without hourly attributes for hours (triggered the STG-2.537 false-drain plan) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.259.1
 
 **Datum:** 2026-11-20  
