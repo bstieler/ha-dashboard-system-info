@@ -1,3 +1,20 @@
+# Release v1.259.3
+
+**Datum:** 2026-11-23  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.597** — Accept measured SOC maxima above the load-up ceiling in the guard (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.259.2
 
 **Datum:** 2026-11-20  
