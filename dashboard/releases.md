@@ -1,3 +1,21 @@
+# Release v1.260.0
+
+**Datum:** 2026-11-23  
+**Items:** 2  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.598** — Fall back to 100 % for unavailable measured SOC maximum (`core_restart`)
+- **STG-4.198** — Home dashboard Verbrauch: consumption forecast accuracy chart (14 days + 30-day rolling) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.259.3
 
 **Datum:** 2026-11-23  
