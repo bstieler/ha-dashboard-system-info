@@ -1,3 +1,20 @@
+# Release v1.260.3
+
+**Datum:** 2026-11-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-3.160** — MOS dawn bias: dedupe history per hour and require distinct days (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.260.2
 
 **Datum:** 2026-11-24  
