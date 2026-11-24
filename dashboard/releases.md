@@ -1,3 +1,24 @@
+# Release v1.260.2
+
+**Datum:** 2026-11-24  
+**Items:** 2  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-4.199** — Battery control dashboard: show measured battery power and clarify dispatch power labels (`yaml_reload`)
+
+## Ops
+
+- **STG-6.73** — Python environment: direnv .envrc and clear failure on system Python 3.9 (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.260.1
 
 **Datum:** 2026-11-24  
