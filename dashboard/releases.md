@@ -1,3 +1,20 @@
+# Release v1.260.1
+
+**Datum:** 2026-11-24  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.599** — Discharge guard: compare the raw SOC instead of the virtual SOC (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.260.0
 
 **Datum:** 2026-11-23  
