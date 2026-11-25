@@ -1,3 +1,20 @@
+# Release v1.260.4
+
+**Datum:** 2026-11-25  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.600** — Smooth virtual-SOC display after the raw 100% release (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.260.3
 
 **Datum:** 2026-11-24  
