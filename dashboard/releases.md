@@ -1,3 +1,20 @@
+# Release v1.260.5
+
+**Datum:** 2026-11-26  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.473** — physically_full detector: tolerate short charge-power pulses near 100 % (pulse-tolerant low-charge streak) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.260.4
 
 **Datum:** 2026-11-25  
