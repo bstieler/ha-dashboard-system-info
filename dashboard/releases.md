@@ -1,3 +1,20 @@
+# Release v1.260.6
+
+**Datum:** 2026-11-26  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.601** — physically_full pulse tolerance: cumulative pulse budget per sustain streak (STG-2.473 Gate-Agent follow-up) (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.260.5
 
 **Datum:** 2026-11-26  
