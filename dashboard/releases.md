@@ -33,6 +33,41 @@
 
 ---
 
+# Release v1.261.0
+
+**Datum:** 2026-11-26  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-6.74** — Vertical backlog slices and session retrospectives (`none`)
+
+## Bugfixes
+
+- **STG-3.159** — Recorder attribute budget: apply HA-attribute reserve to house_consumption_forecast and make it the default for entity callers (`core_restart`)
+
+## Technisch
+
+- **STG-7.58** — Smoke-test entity retry budgets stack sequentially; cap with a shared deadline (`none`)
+
+## Dokumentation
+
+- **STG-6.43** — Docs: translate post-rule German sections and fix absolute-path links in root README and repo_topology (`none`)
+- **STG-6.75** — Sustainable agent context headroom (`none`)
+
+## Ops
+
+- **STG-2.417** — Review rollout flag (adaptive night buffer) for legacy-path removal (`core_restart, yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.260.6
 
 **Datum:** 2026-11-26  
