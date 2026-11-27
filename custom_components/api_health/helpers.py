@@ -6,7 +6,16 @@ in any Python environment.
 
 from __future__ import annotations
 
+import logging
+from datetime import datetime, timedelta
 from typing import Any
+
+_LOGGER = logging.getLogger(__name__)
+
+# Reports older than this are treated as stale: their status no longer counts
+# towards the overall state, because the reporting integration presumably
+# stopped calling ``api_health.report``.
+DEFAULT_MAX_REPORT_AGE = timedelta(hours=6)
 
 # Warnings that indicate the API call itself failed.
 FAILURE_WARNING_CODES = {
@@ -41,6 +50,46 @@ def compute_overall_status(reports: dict[str, dict[str, Any]]) -> str:
     if all(status == "ok" for status in statuses):
         return "ok"
     return "unknown"
+
+
+def is_report_stale(
+    report: dict[str, Any],
+    now: datetime,
+    max_age: timedelta = DEFAULT_MAX_REPORT_AGE,
+) -> bool:
+    """Return True when the report timestamp is older than ``max_age``.
+
+    Reports without a parseable, timezone-aware timestamp are never
+    considered stale — their age cannot be determined reliably.
+    """
+    timestamp = report.get("timestamp")
+    if not isinstance(timestamp, str):
+        return False
+    try:
+        parsed = datetime.fromisoformat(timestamp)
+    except ValueError:
+        return False
+    if parsed.tzinfo is None or now.tzinfo is None:
+        return False
+    return now - parsed > max_age
+
+
+def apply_staleness(
+    reports: dict[str, dict[str, Any]],
+    now: datetime,
+    max_age: timedelta = DEFAULT_MAX_REPORT_AGE,
+) -> dict[str, dict[str, Any]]:
+    """Return the reports with stale entries downgraded to status ``unknown``.
+
+    The input mapping and its report dicts are not mutated.
+    """
+    effective: dict[str, dict[str, Any]] = {}
+    for source, report in reports.items():
+        if is_report_stale(report, now, max_age):
+            effective[source] = {**report, "status": "unknown"}
+        else:
+            effective[source] = report
+    return effective
 
 
 def _get_value(result: Any, name: str, default: Any = None) -> Any:
@@ -115,10 +164,24 @@ def build_attributes(reports: dict[str, dict[str, Any]]) -> dict[str, Any]:
     - ``<name>_last_success`` (only when the latest report status is ``ok``)
     - ``<name>_error``
     - ``<name>_details``
+
+    Sources that normalize to the same attribute key (e.g. ``alpha.ess`` and
+    ``alpha_ess``) collide; the first source wins and later ones are skipped
+    with a warning instead of silently overwriting the attributes.
     """
     attrs: dict[str, Any] = {}
+    seen: dict[str, str] = {}
     for source, report in reports.items():
         safe = _safe_source_key(source)
+        owner = seen.setdefault(safe, source)
+        if owner != source:
+            _LOGGER.warning(
+                "api_health source %r collides with %r on attribute key %r; skipping report",
+                source,
+                owner,
+                safe,
+            )
+            continue
         attrs[f"{safe}_status"] = report.get("status")
         attrs[f"{safe}_last_call"] = report.get("timestamp")
         attrs[f"{safe}_last_success"] = report.get("timestamp") if report.get("status") == "ok" else None

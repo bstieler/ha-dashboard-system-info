@@ -16,7 +16,7 @@ from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
-from homeassistant.helpers.issue_registry import IssueSeverity, create_issue
+from homeassistant.helpers.issue_registry import IssueSeverity, create_issue, delete_issue
 from rpi_bad_power import UnderVoltage
 
 from . import RpiPowerConfigEntry
@@ -83,4 +83,7 @@ class RaspberryChargerBinarySensor(BinarySensorEntity):
                 )
             else:
                 _LOGGER.debug(DESCRIPTION_NORMALIZED)
+                # Clear the persistent repair issue once the voltage is back
+                # to normal; otherwise it would linger in Repairs forever.
+                delete_issue(self.hass, DOMAIN, "under_voltage_detected")
             self._attr_is_on = value

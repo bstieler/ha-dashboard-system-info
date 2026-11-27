@@ -31,7 +31,12 @@
 
 ## Architecture Decisions
 
-- No project-specific architecture decisions beyond root AGENTS.md.
+- `api_health` staleness semantics (STG-8.57): reports older than
+  `DEFAULT_MAX_REPORT_AGE` (6 h, `custom_components/api_health/helpers.py`)
+  are downgraded to `unknown` when `sensor.api_health_overall` recomputes, so
+  a source that stopped reporting cannot pin the overall state at `failed`
+  forever. The sensor re-evaluates staleness every 30 min via
+  `async_track_time_interval` without requiring new reports.
 
 ## Deployment
 
