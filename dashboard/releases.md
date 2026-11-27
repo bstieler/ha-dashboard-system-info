@@ -1,3 +1,37 @@
+# Release v1.262.0
+
+**Datum:** 2026-11-27  
+**Items:** 8  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.153** — BoD freeze follow-ups: quality gate on first write, write amplification, None-point guard (`core_restart`)
+- **STG-9.1** — Performance-Regression-Tests für kritische Pfade einführen (`none`)
+
+## Bugfixes
+
+- **STG-2.460** — Supergreen in-phase P2 requirement optimistic (0.0 kWh) with Max day target while P3 uses never-0 ceiling proxy (`core_restart`)
+- **STG-6.76** — Fix CI context checks without private submodules (`none`)
+
+## Technisch
+
+- **STG-3.120** — STG-3.117 follow-up: harden anomaly timezone handling and align naming (`core_restart`)
+- **STG-4.115** — Refactor pv_forecast_dashboard_v2.yaml into per-view includes (`yaml_reload`)
+- **STG-9.11** — Migrate house_consumption_forecast state_reader recorder reads to the shared adapter (`core_restart`)
+
+## Test
+
+- **STG-2.545** — Guard near-window tests: class membership + shared 8h-dip series helper (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.261.0
 
 **Datum:** 2026-11-26  
