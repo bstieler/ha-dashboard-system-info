@@ -10,12 +10,12 @@ from __future__ import annotations
 import logging
 from datetime import datetime
 from typing import Any
-from zoneinfo import ZoneInfo
 
 import voluptuous as vol
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.typing import ConfigType
+from homeassistant.util import dt as dt_util
 
 DOMAIN = "api_health"
 _LOGGER = logging.getLogger(__name__)
@@ -45,8 +45,9 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
         if isinstance(timestamp, datetime):
             data["timestamp"] = timestamp.isoformat()
         elif timestamp is None:
-            tz = ZoneInfo(str(hass.config.time_zone))
-            data["timestamp"] = datetime.now(tz).isoformat()
+            # dt_util.now() uses the configured default time zone without
+            # blocking the event loop on a ZoneInfo disk lookup.
+            data["timestamp"] = dt_util.now().isoformat()
 
         store = hass.data[DOMAIN]
         store["reports"][source] = data

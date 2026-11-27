@@ -7,7 +7,9 @@ without a Home Assistant runtime.
 from __future__ import annotations
 
 import importlib.util
+import logging
 import sys
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -24,6 +26,9 @@ _helpers_spec.loader.exec_module(helpers)
 compute_overall_status = helpers.compute_overall_status
 build_attributes = helpers.build_attributes
 derive_api_health_report = helpers.derive_api_health_report
+is_report_stale = helpers.is_report_stale
+apply_staleness = helpers.apply_staleness
+DEFAULT_MAX_REPORT_AGE = helpers.DEFAULT_MAX_REPORT_AGE
 
 
 class TestApiHealthOverallStatus:
@@ -114,6 +119,67 @@ class TestApiHealthAttributes:
         attrs = build_attributes(reports)
         assert "open_meteo_status" in attrs
         assert "alpha_ess_status" in attrs
+
+    def test_colliding_source_keys_first_wins_and_warns(self, caplog):
+        reports = {
+            "alpha.ess": {"status": "ok", "timestamp": "2026-06-26T10:00:00"},
+            "alpha_ess": {"status": "failed", "timestamp": "2026-06-26T11:00:00"},
+        }
+        with caplog.at_level(logging.WARNING):
+            attrs = build_attributes(reports)
+        assert attrs["alpha_ess_status"] == "ok"
+        assert attrs["alpha_ess_last_call"] == "2026-06-26T10:00:00"
+        assert any("collides" in record.message for record in caplog.records)
+
+
+class TestReportStaleness:
+    """Tests for is_report_stale / apply_staleness."""
+
+    NOW = datetime(2026, 6, 26, 12, 0, 0, tzinfo=UTC)
+
+    def test_fresh_report_is_not_stale(self):
+        report = {"status": "failed", "timestamp": "2026-06-26T11:30:00+00:00"}
+        assert is_report_stale(report, self.NOW) is False
+
+    def test_old_report_is_stale(self):
+        report = {"status": "failed", "timestamp": "2026-06-26T05:00:00+00:00"}
+        assert is_report_stale(report, self.NOW) is True
+
+    def test_missing_timestamp_is_not_stale(self):
+        assert is_report_stale({"status": "failed"}, self.NOW) is False
+
+    def test_unparseable_timestamp_is_not_stale(self):
+        report = {"status": "failed", "timestamp": "not-a-timestamp"}
+        assert is_report_stale(report, self.NOW) is False
+
+    def test_naive_timestamp_is_not_stale(self):
+        report = {"status": "failed", "timestamp": "2026-06-26T05:00:00"}
+        assert is_report_stale(report, self.NOW) is False
+
+    def test_custom_max_age(self):
+        report = {"status": "ok", "timestamp": "2026-06-26T11:00:00+00:00"}
+        assert is_report_stale(report, self.NOW, max_age=timedelta(hours=2)) is False
+        assert is_report_stale(report, self.NOW, max_age=timedelta(minutes=30)) is True
+
+    def test_apply_staleness_downgrades_stale_report(self):
+        reports = {
+            "open_meteo": {"status": "ok", "timestamp": "2026-06-26T11:30:00+00:00"},
+            "alphaess": {"status": "failed", "timestamp": "2026-06-26T01:00:00+00:00"},
+        }
+        effective = apply_staleness(reports, self.NOW)
+        assert effective["open_meteo"]["status"] == "ok"
+        assert effective["alphaess"]["status"] == "unknown"
+        # A stale source no longer pins the overall state at "failed"; per the
+        # status priority (failed > degraded > unknown > ok) it becomes "unknown".
+        assert compute_overall_status(effective) == "unknown"
+
+    def test_apply_staleness_does_not_mutate_input(self):
+        reports = {"alphaess": {"status": "failed", "timestamp": "2026-06-26T01:00:00+00:00"}}
+        apply_staleness(reports, self.NOW)
+        assert reports["alphaess"]["status"] == "failed"
+
+    def test_default_max_report_age_is_six_hours(self):
+        assert DEFAULT_MAX_REPORT_AGE == timedelta(hours=6)
 
 
 class TestDeriveApiHealthReport:
