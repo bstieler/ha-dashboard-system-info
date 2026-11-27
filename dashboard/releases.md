@@ -1,3 +1,45 @@
+# Release v1.263.0
+
+**Datum:** 2026-11-27  
+**Items:** 10  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-3.63** — House Consumption Forecast: replace sys.path manipulation for the src import (`core_restart`)
+
+## Bugfixes
+
+- **STG-4.201** — zs7status-Printer: Supply-Alert-Liste aus Sensor-State in Attribut auslagern (255-Zeichen-Limit) (`yaml_reload`)
+
+## Technisch
+
+- **STG-2.237** — Dynamische SOC-Floor-Konfiguration in Dataclass bündeln (`core_restart`)
+- **STG-2.498** — STG-2.497 follow-ups: provenance mirror refactor, fallback equality test, low test hardening (`core_restart`)
+- **STG-8.65** — Hardening follow-ups from STG-8.60 Gate-Agent review (evaluator + negative-observation templates) (`yaml_reload`)
+- **STG-9.13** — Migrate alphaess_evaluation db_queries to the shared recorder adapter (`core_restart`)
+
+## Chore
+
+- **STG-3.99** — Consumption Forecast: Temperatur-Feature ohne messbaren Beitrag — entfernen oder Schwellenlogik prüfen (`core_restart`)
+
+## Ops
+
+- **STG-7.65** — Remove retired backup shim directory from hadock.local after observation period (`none`)
+
+## Test
+
+- **STG-2.509** — Grid-stress: SSOT drift guard for kept detection entity-ID constants (`none`)
+- **STG-2.543** — Force-load test hardening: latch-clear order, mode-switch mid-session, window-abort paths (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.262.2
 
 **Datum:** 2026-11-27  
