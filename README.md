@@ -13,6 +13,13 @@ Eigenstaendiges Home-Assistant-Subprojekt fuer das Dashboard `System`.
     heating, PV status). Replaces the former separate sidebar dashboards
     `circulation-pump` and `zs7-status` (both kept registered but hidden as
     `*_legacy.yaml` until owner acceptance).
+  - Since STG-4.114 a thin loader: the three views live in
+    `dashboard/system_info_system.yaml`, `dashboard/system_info_zirkulation.yaml`
+    and `dashboard/system_info_status.yaml`, loaded as view-level `!include`
+    entries and deployed next to the loader by their own deploy projects
+    (`deploy/projects.json`).
+- `dashboard/system_info_system.yaml`, `dashboard/system_info_zirkulation.yaml`, `dashboard/system_info_status.yaml`
+  - per-view dashboard files (STG-4.114), deployed to `/config/dashboards/`
 - `dashboard/system_info_legacy.yaml`
   - pre-consolidation dashboard kept until owner acceptance (not registered)
 - `packages/sensors_system_info.yaml`

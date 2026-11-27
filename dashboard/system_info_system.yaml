@@ -1,0 +1,251 @@
+title: System
+type: sections
+theme: zs7
+path: system-info
+icon: mdi:server-outline
+max_columns: 3
+header:
+  card:
+    type: heading
+    heading: System
+    subheading: Raspberry Pi · Releases · API Status
+sections:
+  - type: grid
+    cards:
+      - type: heading
+        heading: Raspberry Pi
+        heading_style: title
+        icon: mdi:raspberry-pi
+      - type: custom:mushroom-entity-card
+        entity: sensor.processor_use
+        name: Prozessorlast
+        icon: mdi:chart-line
+        grid_options:
+          columns: 6
+      - type: custom:mushroom-entity-card
+        entity: sensor.processor_temperature
+        name: Prozessortemperatur
+        icon: mdi:thermometer
+        grid_options:
+          columns: 6
+      - type: custom:mushroom-entity-card
+        entity: sensor.memory_usage
+        name: Speichernutzung
+        icon: mdi:memory
+        grid_options:
+          columns: 6
+      - type: custom:mushroom-entity-card
+        entity: sensor.disk_free
+        name: Festplatte frei (/)
+        icon: mdi:harddisk
+        grid_options:
+          columns: 6
+      - type: custom:mushroom-entity-card
+        entity: sensor.last_boot
+        name: Letzter Boot
+        icon: mdi:restart
+        grid_options:
+          columns: 6
+      - type: custom:mushroom-entity-card
+        entity: sensor.system_since_last_boot
+        name: Uptime
+        icon: mdi:timer-outline
+        grid_options:
+          columns: 6
+
+  - type: grid
+    column_span: 2
+    cards:
+      - type: heading
+        heading: Verlauf
+        heading_style: title
+        icon: mdi:chart-timeline-variant
+      - type: custom:apexcharts-card
+        apex_config: !include templates/apexcharts_standard.yaml
+        header:
+          show: true
+          title: Prozessorlast (2h)
+        graph_span: 2h
+        series:
+          - entity: sensor.processor_use
+            name: Prozessor
+            type: line
+            color: "#4C9EEB"  # token: --zs7-accent
+
+      - type: custom:apexcharts-card
+        apex_config: !include templates/apexcharts_standard.yaml
+        header:
+          show: true
+          title: Kerne (2h)
+        graph_span: 2h
+        series:
+          - entity: sensor.processor_use_core_0
+            name: Core 0
+            type: line
+            color: "#F5B942"  # token: --zs7-pv
+          - entity: sensor.processor_use_core_1
+            name: Core 1
+            type: line
+            color: "#E0584C"  # token: --zs7-grid-import
+          - entity: sensor.processor_use_core_2
+            name: Core 2
+            type: line
+            color: "#3FB96B"  # token: --zs7-grid-export
+          - entity: sensor.processor_use_core_3
+            name: Core 3
+            type: line
+            color: "#9B6DE0"  # token: --zs7-battery
+
+      - type: custom:apexcharts-card
+        apex_config: !include templates/apexcharts_standard.yaml
+        header:
+          show: true
+          title: Speichernutzung (2h)
+        graph_span: 2h
+        series:
+          - entity: sensor.memory_usage
+            name: Speicher
+            type: line
+            color: "#4C9EEB"  # token: --zs7-accent
+
+      - type: custom:apexcharts-card
+        apex_config: !include templates/apexcharts_standard.yaml
+        header:
+          show: true
+          title: Festplatte frei / (48h)
+        graph_span: 48h
+        series:
+          - entity: sensor.disk_free
+            name: Frei
+            type: line
+            color: "#4C9EEB"  # token: --zs7-accent
+
+      - type: custom:apexcharts-card
+        apex_config: !include templates/apexcharts_standard.yaml
+        header:
+          show: true
+          title: Prozessortemperatur (2h)
+        graph_span: 2h
+        series:
+          - entity: sensor.processor_temperature
+            name: Temperatur
+            type: line
+            color: "#E08A3C"  # token: --zs7-heat
+
+  - type: grid
+    cards:
+      - type: heading
+        heading: Releases
+        heading_style: title
+        icon: mdi:rocket-launch-outline
+      - type: markdown
+        title: Projekt Report
+        content: |
+          <small>Dokumentativer Report der aktuellen Deploy-Metadaten.</small>
+
+          {%- set projects = state_attr('sensor.ha_config_deploy_overview', 'projects') or [] -%}
+          {%- if projects | count == 0 -%}
+          _Keine Deploy-Daten verfuegbar. Ein Deploy mit dem aktuellen Skript erzeugt die Metadaten._
+          {%- else -%}
+          | Projekt | Version | Erstellt | Letzter Deploy | Branch |
+          |---------|---------|----------|----------------|--------|
+          {%- for p in projects %}
+          | {{ p.project }} | `{{ p.version }}` | {{ p.created | default('—') }} | {{ p.deployed | default('—') }} | {{ p.branch }} |
+          {%- endfor -%}
+          {%- endif -%}
+
+      - !include releases_card.yaml
+
+  - type: grid
+    cards:
+      - type: heading
+        heading: API Status
+        heading_style: title
+        icon: mdi:cloud-outline
+      - type: custom:mushroom-template-card
+        primary: "{{ states('sensor.api_health_overall') }}"
+        secondary: Gesamtstatus externe Schnittstellen
+        icon: mdi:cloud-outline
+        icon_color: >-
+          {% set s = states('sensor.api_health_overall') %}
+          {% if s == 'failed' %}var(--zs7-crit)
+          {% elif s == 'degraded' %}var(--zs7-warn)
+          {% elif s == 'ok' %}var(--zs7-ok)
+          {% else %}var(--zs7-offline){% endif %}
+        grid_options:
+          columns: 12
+
+      - type: custom:mushroom-template-card
+        primary: Open-Meteo
+        secondary: >-
+          {{ states('sensor.api_health_open_meteo') }} ·
+          {{ state_attr('sensor.api_health_open_meteo', 'last_success') | default('—') }}
+        icon: mdi:weather-partly-cloudy
+        icon_color: >-
+          {% set s = states('sensor.api_health_open_meteo') %}
+          {% if s == 'failed' %}var(--zs7-crit)
+          {% elif s == 'degraded' %}var(--zs7-warn)
+          {% elif s == 'ok' %}var(--zs7-ok)
+          {% else %}var(--zs7-offline){% endif %}
+        grid_options:
+          columns: 6
+
+      - type: custom:mushroom-template-card
+        primary: AlphaESS
+        secondary: >-
+          {{ states('sensor.api_health_alphaess') }} ·
+          {{ state_attr('sensor.api_health_alphaess', 'last_success') | default('—') }}
+        icon: mdi:solar-power-variant-outline
+        icon_color: >-
+          {% set s = states('sensor.api_health_alphaess') %}
+          {% if s == 'failed' %}var(--zs7-crit)
+          {% elif s == 'degraded' %}var(--zs7-warn)
+          {% elif s == 'ok' %}var(--zs7-ok)
+          {% else %}var(--zs7-offline){% endif %}
+        grid_options:
+          columns: 6
+
+      - type: custom:mushroom-template-card
+        primary: DWD
+        secondary: >-
+          {{ states('sensor.api_health_dwd') }} ·
+          {{ state_attr('sensor.api_health_dwd', 'last_success') | default('—') }}
+        icon: mdi:weather-lightning
+        icon_color: >-
+          {% set s = states('sensor.api_health_dwd') %}
+          {% if s == 'failed' %}var(--zs7-crit)
+          {% elif s == 'degraded' %}var(--zs7-warn)
+          {% elif s == 'ok' %}var(--zs7-ok)
+          {% else %}var(--zs7-offline){% endif %}
+        grid_options:
+          columns: 6
+
+      - type: custom:mushroom-template-card
+        primary: StromGedacht
+        secondary: >-
+          {{ states('sensor.api_health_stromgedacht') }} ·
+          {{ state_attr('sensor.api_health_stromgedacht', 'last_success') | default('—') }}
+        icon: mdi:transmission-tower
+        icon_color: >-
+          {% set s = states('sensor.api_health_stromgedacht') %}
+          {% if s == 'failed' %}var(--zs7-crit)
+          {% elif s == 'degraded' %}var(--zs7-warn)
+          {% elif s == 'ok' %}var(--zs7-ok)
+          {% else %}var(--zs7-offline){% endif %}
+        grid_options:
+          columns: 6
+
+      - type: custom:mushroom-template-card
+        primary: SmartPlug
+        secondary: >-
+          {{ states('sensor.api_health_smartplug') }} ·
+          {{ state_attr('sensor.api_health_smartplug', 'last_success') | default('—') }}
+        icon: mdi:power-plug-outline
+        icon_color: >-
+          {% set s = states('sensor.api_health_smartplug') %}
+          {% if s == 'failed' %}var(--zs7-crit)
+          {% elif s == 'degraded' %}var(--zs7-warn)
+          {% elif s == 'ok' %}var(--zs7-ok)
+          {% else %}var(--zs7-offline){% endif %}
+        grid_options:
+          columns: 6

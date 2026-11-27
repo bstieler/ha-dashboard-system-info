@@ -40,6 +40,21 @@
       "path": "/opt/homeassistant/config/dashboards/system_info.yaml"
     },
     {
+      "type": "remote_file_exists",
+      "label": "system info dashboard view include system",
+      "path": "/opt/homeassistant/config/dashboards/system_info_system.yaml"
+    },
+    {
+      "type": "remote_file_exists",
+      "label": "system info dashboard view include zirkulation",
+      "path": "/opt/homeassistant/config/dashboards/system_info_zirkulation.yaml"
+    },
+    {
+      "type": "remote_file_exists",
+      "label": "system info dashboard view include status",
+      "path": "/opt/homeassistant/config/dashboards/system_info_status.yaml"
+    },
+    {
       "type": "remote_file_contains",
       "label": "system info dashboard registration",
       "path": "/opt/homeassistant/config/packages/ha_dashboard_system_info.yaml",
