@@ -1,3 +1,20 @@
+# Release v1.262.1
+
+**Datum:** 2026-11-27  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.602** — House consumption drops to 0 W on skewed Modbus samples (energy flow hero) (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.262.0
 
 **Datum:** 2026-11-27  
