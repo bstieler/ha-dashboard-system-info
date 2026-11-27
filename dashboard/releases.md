@@ -1,3 +1,36 @@
+# Release v1.262.2
+
+**Datum:** 2026-11-27  
+**Items:** 7  
+**Gesamt-Deployment:** core_restart
+
+## Technisch
+
+- **STG-10.15** — dwd_radar_camera minor batch: remove misleading manifest key, add entity-level tests (`none`)
+- **STG-4.114** — Refactor system_info.yaml into per-view includes (`yaml_reload`)
+- **STG-4.24** — zs7status-Printer: Supply-Alert-Logik deduplizieren und Schwellwerte konfigurierbar machen (`yaml_reload`)
+
+## Spikes & Analysen
+
+- **STG-7.77** — Audit unavailable/unknown entities: investigate causes and recommend handling (`none`)
+
+## Ops
+
+- **STG-8.62** — Recalibrate negative Bayesian observation weights from accumulated labels (`yaml_reload`)
+
+## Test
+
+- **STG-5.8** — Fehlende Tests: DWD-Package-Test und nowcast-Guards für ha-dashboard-dwd (`yaml_reload`)
+- **STG-8.57** — api_health + rpi_power hardening batch: service-path test coverage, staleness, blocking ZoneInfo, repair-issue cleanup (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.262.1
 
 **Datum:** 2026-11-27  
