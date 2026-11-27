@@ -1,3 +1,20 @@
+# Release v1.263.1
+
+**Datum:** 2026-11-28  
+**Items:** 1  
+**Gesamt-Deployment:** yaml_reload
+
+## Bugfixes
+
+- **STG-2.603** — House load sensor unavailable at night (PV freshness check) — flow card shows Home 0 W (`yaml_reload`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+
+
+---
+
 # Release v1.263.0
 
 **Datum:** 2026-11-27  
