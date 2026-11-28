@@ -95,9 +95,7 @@ class TestSystemInfoViewIncludes:
                 assert templates_by_target[template] in project.get("depends_on", [])
         # The System view also includes the generated releases card.
         system_project = self.by_source["ha-dashboard-system-info/dashboard/system_info_system.yaml"]
-        assert "releases_card.yaml" in (DASHBOARD_YAML.parent / "system_info_system.yaml").read_text(
-            encoding="utf-8"
-        )
+        assert "releases_card.yaml" in (DASHBOARD_YAML.parent / "system_info_system.yaml").read_text(encoding="utf-8")
         assert "ha-dashboard-system-info-releases-card" in system_project.get("depends_on", [])
 
     def test_project_smoke_checks_cover_view_files(self) -> None:
