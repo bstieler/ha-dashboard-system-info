@@ -1,3 +1,32 @@
+# Release v1.263.2
+
+**Datum:** 2026-11-28  
+**Items:** 6  
+**Gesamt-Deployment:** core_restart
+
+## Bugfixes
+
+- **STG-2.594** — Force-load state write-back: skip write when runtime sensor attribute is unavailable (`yaml_reload`)
+
+## Technisch
+
+- **STG-2.530** — Remove Shadow-Vergleich dashboard view and shadow comparison sensor (`yaml_reload`)
+- **STG-4.116** — Refactor alphaess_battery_control_v2.yaml into per-view includes (`yaml_reload`)
+- **STG-9.16** — Migrate alphaess_evaluation target_timeline and hold_energy_balance_recorder to the shared recorder adapter (`core_restart`)
+
+## Test
+
+- **STG-2.551** — STG-2.546 Gate-Agent follow-ups: trajectory payload polish (`none`)
+- **STG-2.552** — Restore guard-only explanation renderer test coverage (wording pins lost in STG-2.443) (`none`)
+
+## Erforderliche Schritte
+
+1. `yaml_reload`
+1. `core_restart`
+
+
+---
+
 # Release v1.263.1
 
 **Datum:** 2026-11-28  
