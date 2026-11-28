@@ -1,3 +1,20 @@
+# Release v1.265.0
+
+**Datum:** 2026-11-28  
+**Items:** 1  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.611** — Price helpers and EUR valuation of control episodes (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.264.1
 
 **Datum:** 2026-11-28  
