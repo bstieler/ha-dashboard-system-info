@@ -1,3 +1,27 @@
+# Release v1.264.0
+
+**Datum:** 2026-11-28  
+**Items:** 5  
+**Gesamt-Deployment:** core_restart
+
+## Neue Features
+
+- **STG-2.607** — Backtest: shadow self-use battery with model-quality report (`none`)
+- **STG-2.608** — Backtest: episode ledger with hold-attributed costs in kWh and EUR (`none`)
+- **STG-2.609** — Backtest: outage range and coverage, control vs self-use (`none`)
+- **STG-2.610** — Live shadow battery and episode ledger sensor (kWh) (`core_restart`)
+
+## Technisch
+
+- **STG-2.606** — Split SAFETY_FLOOR_PCT into battery-protection cutoff and UPS reserve (`core_restart`)
+
+## Erforderliche Schritte
+
+1. `core_restart`
+
+
+---
+
 # Release v1.263.2
 
 **Datum:** 2026-11-28  
